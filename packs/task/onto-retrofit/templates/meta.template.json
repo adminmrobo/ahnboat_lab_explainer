@@ -1,0 +1,35 @@
+{
+ "title": "{페이지 제목 그대로}",
+ "number": "{번호, 예 3-2}",
+ "series": "{시리즈 이름}",
+ "about": [
+  "lab:concept/relu"
+ ],
+ "basedOn": [
+  "{참고문헌 id}"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "{페이지에 적힌 저자 또는 사용자가 준 이름, 없으면 빈칸}",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "{꼬리표 단 날 YYYY-MM-DD}",
+ "version": "{기존 판 + 0.1}",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "{KG_00 커버리지 지도 주소, 없으면 빈칸}",
+ "suggestedCitation": "{저자} ({연도}). {제목}. {시리즈} {번호}, v{판}."
+}

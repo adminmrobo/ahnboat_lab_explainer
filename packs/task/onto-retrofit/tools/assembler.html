@@ -1,0 +1,2741 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>꼬리표 조립기</title>
+<style>
+:root{--bg:#13141f;--panel:#1c1e2d;--panel2:#25283a;--rule:#363a52;--text:#eceaf3;--muted:#9d9bb8;--gfp:#5ee39c;--eye:#f0604d;--amber:#f1b646}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 20px}
+.row{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;margin:10px 0}
+.row b{display:block;margin-bottom:4px}.row small{color:var(--muted)}
+input[type=file]{max-width:100%;color:var(--muted)}
+select,button{font:inherit}
+button{background:var(--gfp);color:#10251a;border:0;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer}
+button[disabled]{opacity:.4;cursor:default}
+pre{white-space:pre-wrap;background:var(--panel2);border-radius:8px;padding:12px;font-size:13px;max-height:420px;overflow:auto}
+.e{color:var(--eye)}.w{color:var(--amber)}.ok{color:var(--gfp)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>꼬리표 조립기</h1>
+<p class="sub">완성된 HTML에 지식 색인과 꾸러미를 붙입니다. 파일은 이 브라우저 안에서만 처리하고 어디로도 보내지 않습니다. 본문은 바꾸지 않습니다.</p>
+<div class="row"><b>1. 원본 HTML</b><input type="file" id="fPage" accept=".html,.htm"><br><small>여러 파일로 된 사이트라면 메인 HTML만 넣습니다. 이미지 경로는 그대로 둡니다.</small></div>
+<div class="row"><b>2. AI가 만든 JSON 세 개</b><input type="file" id="fJson" accept=".json" multiple><br><small>kg.json · refs.json · meta.json (이름에 kg, refs, meta가 들어가면 됩니다)</small></div>
+<div class="row"><b>3. 스크립트 넣는 방식</b>
+<select id="mode"><option value="inline">HTML 안에 넣기 (단일 파일)</option><option value="assets/js/kgx.js">assets/js/kgx.js로 연결 (여러 파일 사이트)</option></select><br>
+<small>연결 방식을 고르면 kgx.js도 함께 받아 같은 경로에 두세요.</small></div>
+<p><button id="go" disabled>조립하고 점검하기</button> <button id="dl" disabled>결과 HTML 받기</button> <button id="dljs" disabled>kgx.js 받기</button></p>
+<pre id="out">파일을 넣으면 여기에 점검 결과가 나옵니다.</pre>
+</div>
+<script type="text/plain" id="kgx-src">/* ai-lab-retrofit 휴대판 (색 변수가 없는 페이지에서도 동작) */
+/* ══ KG: 지식 색인(#kg) + 온톨로지·서지 꾸러미(#export) — 공용 모듈 ══
+   데이터 블록: #kg-raw(중립 JSON), #refs-csl(CSL-JSON), #page-meta, #kg-ld(빌드 때 생성)
+   외부 라이브러리 없음. 모든 내보내기는 kg-raw에서 만든다. */
+var KGX=(function(){
+'use strict';
+function $id(i){return document.getElementById(i);}
+function J(id){var e=$id(id); return e?JSON.parse(e.textContent):null;}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function el(tag,cls,html){var e=document.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e;}
+
+var TYPE={Concept:['개념','#82b8ff'],Method:['방법','#5ee39c'],BioAnalogue:['생물 대응','#ef5b5b'],Claim:['주장','#f1b646'],
+  Question:['열린 질문','#d672d6'],Limitation:['한계','#ff9a7a'],Task:['과제','#7fe0c8'],Metric:['지표','#b9a8ff'],
+  Dataset:['데이터','#c9c4a4'],Simulation:['시뮬레이션','#8a88a8'],QuizItem:['퀴즈','#6f6d8c'],Work:['문헌','#e0d7a8'],
+  Area:['영역','#eceaf3'],Topic:['주제','#9d9bb8'],Analogy:['비유','#ff86b8'],Term:['용어','#82b8ff'],
+  Theory:['이론·모형','#9ab0d0'],Assumption:['가정','#c9b8ff'],Identity:['항등식','#b8a27a'],Standard:['기준·법령','#d9a066'],
+  Account:['계정과목','#b8a27a'],Indicator:['공식 지표','#7fd1a8'],Distribution:['확률분포','#9ab0d0'],Framework:['분석 틀','#d98c6a']};
+var REL={prerequisiteOf:'먼저 알아야 함',hasLimitation:'한계',addressedBy:'해결됨',partOf:'부분',bioAnalogueOf:'생물 대응',
+  contrastsWith:'대비',supports:'뒷받침',assertedIn:'출처',evaluatedBy:'지표로 평가',evaluatedOn:'데이터로 평가',
+  demonstratedBy:'시뮬레이션',raises:'질문을 낳음',relatedTo:'관련',solves:'해결 과제',analogyOf:'비유',assesses:'퀴즈 확인',
+  broader:'상위 주제',explainedIn:'설명 위치',inspiredBy:'착상',assumes:'가정',derivedFrom:'유도됨',governedBy:'기준',
+  supersededBy:'개정으로 대체',measuredBy:'지표로 잼',appliesIn:'적용 관할'};
+function tl(t){return (TYPE[t]||[t])[0];} function tc(t){return (TYPE[t]||[0,'#9d9bb8'])[1];}
+function pn(p){return p.replace(/^lab:/,'');}
+function lab(n){return n.label?(n.label.ko||n.label.en):n.id;}
+
+/* ── 변환기 ─────────────────────────────────────────── */
+var NS='urn:lab:';
+var CTX={'@vocab':NS,lab:NS,skos:'http://www.w3.org/2004/02/skos/core#',schema:'https://schema.org/',
+  dct:'http://purl.org/dc/terms/',prov:'http://www.w3.org/ns/prov#',rdfs:'http://www.w3.org/2000/01/rdf-schema#'};
+var SKOS_T={Concept:1,Method:1,Task:1,Term:1,Limitation:1,BioAnalogue:1,Metric:1,Area:1,Topic:1,Theory:1,Assumption:1,Identity:1,Account:1,Distribution:1,Framework:1};
+var SCH_T={Work:'schema:ScholarlyArticle',Claim:'schema:Claim',Dataset:'schema:Dataset',QuizItem:'schema:Question',Question:'schema:Question',Simulation:'schema:SoftwareApplication',Standard:'schema:Legislation',Indicator:'schema:StatisticalVariable'};
+function lit(o){var a=[]; Object.keys(o||{}).forEach(function(k){ var v=o[k]; (Array.isArray(v)?v:[v]).forEach(function(x){a.push({'@value':x,'@language':k});});}); return a;}
+function toJsonLd(g,meta){
+  var graph=g.nodes.map(function(n){
+    var t=['lab:'+n.type]; if(SKOS_T[n.type])t.push('skos:Concept'); if(SCH_T[n.type])t.push(SCH_T[n.type]);
+    var o={'@id':n.id,'@type':t,'skos:prefLabel':lit(n.label)};
+    if(n.altLabel)o['skos:altLabel']=lit(n.altLabel);
+    if(n.definition)o['skos:definition']=lit(n.definition);
+    ['level','status','confidence','coverage','family','page','anchor'].forEach(function(k){ if(n[k]!=null)o['lab:'+k]=n[k];});
+    (n.match||[]).forEach(function(m){ var p=m.rel==='exact'?'skos:exactMatch':'skos:closeMatch'; (o[p]=o[p]||[]).push({'@id':m.iri});});
+    return o;});
+  var byS={}; graph.forEach(function(o){byS[o['@id']]=o;});
+  g.edges.forEach(function(e){ var s=byS[e.s]; if(!s)return; var k=e.p; (s[k]=s[k]||[]).push({'@id':e.o});
+    if(e.p==='lab:broader')(s['skos:broader']=s['skos:broader']||[]).push({'@id':e.o});
+    if(e.p==='lab:assertedIn')(s['prov:wasDerivedFrom']=s['prov:wasDerivedFrom']||[]).push({'@id':e.o});
+    if(e.p==='lab:relatedTo')(s['skos:related']=s['skos:related']||[]).push({'@id':e.o}); });
+  if(meta)graph.unshift({'@id':NS+'page/'+meta.number,'@type':['schema:LearningResource','schema:WebPage'],'schema:name':meta.title,
+    'schema:inLanguage':meta.language,'schema:dateCreated':meta.date,'schema:version':meta.version,'dct:isPartOf':meta.series,
+    'schema:about':(meta.about||[]).map(function(a){return {'@id':a};}),'schema:educationalLevel':meta.educationalLevel,
+    'schema:learningResourceType':meta.learningResourceType,'dct:source':(meta.basedOn||[]).map(function(b){return {'@id':'lab:work/'+b};})});
+  return {'@context':CTX,'@graph':graph};
+}
+function ttlS(s){return '"'+String(s).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n')+'"';}
+function ttlI(id){return id.indexOf('lab:')===0?'lab:'+id.slice(4).replace(/[^A-Za-z0-9_\-]/g,function(c){return c==='/'?'_':encodeURIComponent(c).replace(/%/g,'_');}):'<'+id+'>';}
+function toTurtle(g){
+  var L=['@prefix lab: <'+NS+'> .','@prefix skos: <http://www.w3.org/2004/02/skos/core#> .','@prefix schema: <https://schema.org/> .',
+    '@prefix prov: <http://www.w3.org/ns/prov#> .',''];
+  var out={}; g.edges.forEach(function(e){(out[e.s]=out[e.s]||[]).push(e);});
+  g.nodes.forEach(function(n){
+    var P=['a lab:'+n.type+(SKOS_T[n.type]?', skos:Concept':'')];
+    Object.keys(n.label||{}).forEach(function(k){P.push('skos:prefLabel '+ttlS(n.label[k])+'@'+k);});
+    Object.keys(n.altLabel||{}).forEach(function(k){[].concat(n.altLabel[k]).forEach(function(v){P.push('skos:altLabel '+ttlS(v)+'@'+k);});});
+    Object.keys(n.definition||{}).forEach(function(k){P.push('skos:definition '+ttlS(n.definition[k])+'@'+k);});
+    if(n.status)P.push('lab:status '+ttlS(n.status)); if(n.level!=null)P.push('lab:level '+n.level);
+    if(n.anchor)P.push('lab:anchor '+ttlS(n.anchor));
+    (out[n.id]||[]).forEach(function(e){P.push(ttlI(e.p)+' '+ttlI(e.o)); if(e.p==='lab:broader')P.push('skos:broader '+ttlI(e.o));});
+    L.push(ttlI(n.id)+'\n  '+P.join(' ;\n  ')+' .\n');});
+  return L.join('\n');
+}
+function csvq(v){v=v==null?'':String(v); return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function toNodesCsv(g){return ['id,type,label_ko,label_en,status,level,family,page,anchor,coverage,confidence'].concat(g.nodes.map(function(n){
+  return [n.id,n.type,n.label&&n.label.ko,n.label&&n.label.en,n.status,n.level,n.family,n.page,n.anchor,n.coverage,n.confidence].map(csvq).join(',');})).join('\r\n');}
+function toEdgesCsv(g){return ['source,predicate,target,anchor,confidence'].concat(g.edges.map(function(e){return [e.s,e.p,e.o,e.anchor,e.confidence].map(csvq).join(',');})).join('\r\n');}
+function toMermaid(g){
+  var keep=g.nodes.filter(function(n){return n.type!=='QuizItem'&&n.type!=='Simulation'&&n.type!=='Work';}).slice(0,40);
+  var ix={}; keep.forEach(function(n,i){ix[n.id]='n'+i;});
+  var L=['graph LR']; keep.forEach(function(n){L.push('  '+ix[n.id]+'["'+lab(n).replace(/"/g,"'")+'"]');});
+  g.edges.forEach(function(e){ if(ix[e.s]&&ix[e.o])L.push('  '+ix[e.s]+' -- '+(REL[pn(e.p)]||pn(e.p))+' --> '+ix[e.o]);});
+  return L.join('\n');
+}
+function toProvCsv(g,refs){
+  var R={}; refs.forEach(function(r){R[r.id]=r;});
+  var L=['item,kind,work,loc,confidence,verified,pageAnchor'];
+  g.nodes.forEach(function(n){(n.source||[]).forEach(function(s){ var r=R[s.ref]; var v=r&&r.lab&&r.lab.verified;
+    L.push([n.id,'node',s.ref,s.loc||'',n.confidence,v?(v.title&&v.year&&v.venue?'bib-checked':'partial'):'no',n.anchor].map(csvq).join(','));});});
+  g.edges.forEach(function(e){ if(e.p==='lab:assertedIn')L.push([e.s+' '+e.p+' '+e.o,'edge',e.o.replace('lab:work/',''),'',e.confidence,'',e.anchor].map(csvq).join(','));});
+  return L.join('\r\n');
+}
+/* CSL → BibTeX · RIS · 문장 */
+var BIBT={'article-journal':'article','paper-conference':'inproceedings','book':'book','chapter':'incollection','webpage':'misc','dataset':'misc','report':'techreport','thesis':'phdthesis','software':'misc'};
+var RIST={'article-journal':'JOUR','paper-conference':'CPAPER','book':'BOOK','chapter':'CHAP','webpage':'ELEC','dataset':'DATA','report':'RPRT','thesis':'THES','software':'COMP'};
+function names(a){return (a||[]).map(function(p){return p.literal||(p.family+(p.given?', '+p.given:''));});}
+function yr(r){return r.issued&&r.issued['date-parts']&&r.issued['date-parts'][0][0];}
+function toBib(r){var f=[],add=function(k,v){ if(v!==undefined&&v!==null&&v!=='')f.push('  '+k+' = {'+v+'}');};
+  add('title',r.title); add('author',names(r.author).map(function(n){return n==='et al.'?'others':n;}).join(' and ')); add('year',yr(r));
+  add(r.type==='article-journal'?'journal':'booktitle',r['container-title']); add('volume',r.volume); add('number',r.issue);
+  add('pages',(r.page||'').replace('-','--')); add('publisher',r.publisher); add('doi',r.DOI); add('url',r.URL);
+  if(r.lab&&r.lab.note)add('note',r.lab.note);
+  return '@'+(BIBT[r.type]||'misc')+'{'+r.id+',\n'+f.join(',\n')+'\n}';}
+function toRis(r){var L=['TY  - '+(RIST[r.type]||'GEN')],add=function(t,v){ if(v)L.push(t+'  - '+v);};
+  add('TI',r.title); names(r.author).forEach(function(n){add('AU',n);}); add('PY',yr(r)); add('T2',r['container-title']);
+  add('VL',r.volume); add('IS',r.issue); var pg=(r.page||'').split('-'); add('SP',pg[0]); add('EP',pg[1]); add('DO',r.DOI); add('UR',r.URL);
+  if(r.lab&&r.lab.note)add('N1',r.lab.note); L.push('ER  - '); return L.join('\r\n');}
+function toText(r){ var a=names(r.author), first=a[0]?a[0].split(',')[0]:''; var au=a.length>2||a.indexOf('et al.')>=0?first+' 외':a.map(function(x){return x.split(',')[0];}).join(' & ');
+  return au+' ('+(yr(r)||'연도 미상')+'). '+r.title+'. '+(r['container-title']||'')+(r.volume?', '+r.volume:'')+(r.issue?'('+r.issue+')':'')+(r.page?', '+r.page:'')+'.'+(r.DOI?' https://doi.org/'+r.DOI:'');}
+function pageBib(m){var f=['  title = {'+m.title+'}','  year = {'+m.date.slice(0,4)+'}','  howpublished = {'+m.series+' '+m.number+', v'+m.version+'}'];
+  if(m.creator&&m.creator.length&&m.creator[0].name)f.unshift('  author = {'+m.creator.map(function(c){return c.name;}).join(' and ')+'}'); if(m.url)f.push('  url = {'+m.url+'}');
+  return '@misc{lab_page_'+m.number+',\n'+f.join(',\n')+'\n}';}
+function pageRis(m){var L=['TY  - ELEC','TI  - '+m.title]; (m.creator||[]).forEach(function(c){ if(c.name)L.push('AU  - '+c.name);}); L.push('PY  - '+m.date.slice(0,4),'T2  - '+m.series,'ET  - '+m.version); if(m.url)L.push('UR  - '+m.url); L.push('ER  - '); return L.join('\r\n');}
+function pageText(m){ var who=(m.creator||[]).filter(function(c){return c.name;}).map(function(c){return c.name;}).join(', ')||'{저자}';
+  return who+' ('+m.date.slice(0,4)+'). '+m.title+'. '+m.series+' '+m.number+', v'+m.version+'.'+(m.url?' '+m.url:'');}
+
+/* ── ZIP (압축 없음) ─────────────────────────────────── */
+var CRC=(function(){var t=[],c;for(var n=0;n<256;n++){c=n;for(var k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0;}
+  return function(u8){var x=0xFFFFFFFF;for(var i=0;i<u8.length;i++)x=t[(x^u8[i])&255]^(x>>>8);return (x^0xFFFFFFFF)>>>0;};})();
+function makeZip(files){
+  var enc=new TextEncoder(),parts=[],central=[],off=0;
+  function u16(v){return [v&255,(v>>8)&255];} function u32(v){return [v&255,(v>>8)&255,(v>>16)&255,(v>>>24)&255];}
+  files.forEach(function(f){var name=enc.encode(f.name),data=enc.encode(f.text),crc=CRC(data);
+    var head=[].concat(u32(0x04034b50),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0));
+    parts.push(new Uint8Array(head),name,data);
+    central.push(new Uint8Array([].concat(u32(0x02014b50),u16(20),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),
+      u16(name.length),u16(0),u16(0),u16(0),u16(0),u32(0),u32(off))),name);
+    off+=head.length+name.length+data.length;});
+  var cdLen=0; central.forEach(function(c){parts.push(c); cdLen+=c.length;});
+  parts.push(new Uint8Array([].concat(u32(0x06054b50),u16(0),u16(0),u16(files.length),u16(files.length),u32(cdLen),u32(off),u16(0))));
+  return new Blob(parts,{type:'application/zip'});
+}
+/* 내려받기: claude.ai 아티팩트 안에서는 downloads 능력, 파일로 열면 일반 링크 */
+var DLP=(window.claude&&typeof window.claude.use==='function')?window.claude.use('downloads').catch(function(){return null;}):Promise.resolve(null);
+var OKX=/\.(json|txt|csv|md|zip|html|svg|pdf)$/i;
+function anchorSave(blob,name){var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},800);}
+function download(blob,name){
+  return DLP.then(function(d){
+    if(!d){anchorSave(blob,name); return;}
+    var fn=OKX.test(name)?name:name+'.txt';   // .bib .ris .ttl .jsonld 은 .txt를 붙여 저장 (확장자만 지우면 원래 형식)
+    return d.save({filename:fn,data:blob}).catch(function(e){ if(e&&e.code==='declined')return;
+      if(e&&(e.code==='unavailable'||e.code==='not_granted'))anchorSave(blob,name);
+      else console.warn('저장 실패',e&&e.code);});
+  });
+}
+function dlText(text,name,type){download(new Blob([text],{type:(type||'text/plain')+';charset=utf-8'}),name);}
+
+/* ── 범위 ───────────────────────────────────────────── */
+function filterScope(KG,scope){
+  if(scope==='all')return KG;
+  var keepT={terms:{Concept:1,Method:1,BioAnalogue:1,Limitation:1,Task:1,Metric:1,Dataset:1},
+             claims:{Claim:1,Work:1},prereq:null}[scope];
+  var nodes,edges;
+  if(scope==='prereq'){ edges=KG.edges.filter(function(e){return e.p==='lab:prerequisiteOf'||e.p==='lab:hasLimitation'||e.p==='lab:addressedBy';});
+    var ids={}; edges.forEach(function(e){ids[e.s]=1;ids[e.o]=1;}); nodes=KG.nodes.filter(function(n){return ids[n.id];}); }
+  else { nodes=KG.nodes.filter(function(n){return keepT[n.type];}); var ix={}; nodes.forEach(function(n){ix[n.id]=1;});
+    if(scope==='claims'){ KG.edges.forEach(function(e){ if(e.p==='lab:supports'&&ix[e.s])ix[e.o]=2;});
+      nodes=KG.nodes.filter(function(n){return ix[n.id];}); }
+    edges=KG.edges.filter(function(e){return ix[e.s]&&(ix[e.o]||/^lab:(topic|area)\//.test(e.o));}); }
+  return {version:KG.version,page:KG.page,scope:scope,nodes:nodes,edges:edges};
+}
+function readme(meta,g,refs){
+  var un=refs.filter(function(r){var v=r.lab&&r.lab.verified; return !v||Object.keys(v).some(function(k){return !v[k];});});
+  return ['온톨로지·서지 꾸러미 — '+meta.title,'시리즈: '+meta.series+' '+meta.number+' · 버전 '+meta.version+' · 만든 날 '+meta.date,'',
+   '범위: '+(g.scope||'all')+' · 노드 '+g.nodes.length+' · 관계 '+g.edges.length+' · 문헌 '+refs.length,'',
+   '[파일]','manifest.json 목록 · page_meta.json 페이지 서지 · kg.json 중립 그래프(원본) · kg.jsonld JSON-LD · kg.ttl Turtle',
+   'nodes.csv / edges.csv 표(UTF-8 BOM) · references.csl.json 참고문헌 원본 · references.bib BibTeX · references.ris RIS',
+   'provenance.csv 주장↔문헌 대응 · mermaid.md 그림용','',
+   '[이 페이지 인용]',pageText(meta),'',
+   '[확인 필요]',(un.length?un.map(function(r){var v=r.lab.verified;return '- '+r.id+': '+Object.keys(v).filter(function(k){return !v[k];}).join(', ');}).join('\n'):'- 문헌 서지 항목 모두 확인됨'),
+   '- 주장(Claim)의 원문 위치(쪽·그림 번호)는 아직 비어 있다. 원문을 보고 provenance.csv의 loc를 채울 것.',
+   '- 페이지 저자 이름·라이선스·공개 주소는 비워 두었다. 사용자가 채워 넣을 것.','',
+   '[규칙] lab: 접두어 IRI는 '+NS+' (임시). 외부 온톨로지 ID는 확인한 것만 skos:exactMatch/closeMatch로 넣는다.',
+   '[주의] 뼈대 영역(lab:topic/*, lab:area/*)은 작성자 초안이며 공식 분류 체계가 아니다.'].join('\n');
+}
+function buildPackage(scope){
+  var KG=J('kg-raw'),REF=J('refs-csl'),META=J('page-meta'); var g=filterScope(KG,scope);
+  var used={}; g.nodes.forEach(function(n){(n.source||[]).forEach(function(s){used[s.ref]=1;}); if(n.type==='Work')used[n.id.replace('lab:work/','')]=1;});
+  var refs=scope==='all'?REF:REF.filter(function(r){return used[r.id];});
+  var files=[{name:'page_meta.json',text:JSON.stringify(META,null,2)},{name:'kg.json',text:JSON.stringify(g,null,2)},
+    {name:'kg.jsonld',text:JSON.stringify(toJsonLd(g,META),null,2)},{name:'kg.ttl',text:toTurtle(g)},
+    {name:'nodes.csv',text:'﻿'+toNodesCsv(g)},{name:'edges.csv',text:'﻿'+toEdgesCsv(g)},
+    {name:'references.csl.json',text:JSON.stringify(refs,null,2)},{name:'references.bib',text:[pageBib(META)].concat(refs.map(toBib)).join('\n\n')},
+    {name:'references.ris',text:[pageRis(META)].concat(refs.map(toRis)).join('\r\n')},{name:'provenance.csv',text:'﻿'+toProvCsv(g,refs)},
+    {name:'mermaid.md',text:'```mermaid\n'+toMermaid(g)+'\n```\n'},{name:'README.txt',text:readme(META,g,refs)}];
+  files.unshift({name:'manifest.json',text:JSON.stringify({package:'lab-kg',packageVersion:'1.0',page:META.number,pageId:KG.page,pageVersion:META.version,
+    registry:META.registry||'',created:META.date,scope:scope,counts:{nodes:g.nodes.length,edges:g.edges.length,refs:refs.length},
+    files:files.map(function(f){return f.name;})},null,2)});
+  return files;
+}
+
+/* ── 공통 화면 조각 ─────────────────────────────────── */
+var CSS='.kgx-sec{background:var(--bg,#13141f);color:var(--text,#eceaf3);padding:48px 0;font-family:inherit}.kgx-sec .kgx-wrap{max-width:1080px;margin:0 auto;padding:0 16px}.kgx-sec h2{margin:0 0 6px;font-size:24px}.kgx-sec .kgx-sub{color:var(--muted,#9d9bb8);margin:0 0 18px}\
+\
+.kgx .tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}\
+.kgx input[type=search]{flex:1 1 220px;min-width:0;background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);color:var(--text,#eceaf3);border-radius:8px;padding:8px 12px;font:inherit;font-size:15px}\
+.kgx .tchip{font-size:12.5px;border-radius:999px;padding:3px 10px;border:1px solid var(--rule,#363a52);background:var(--panel2,#25283a);color:var(--muted,#9d9bb8);cursor:pointer}\
+.kgx .tchip[aria-pressed=true]{color:#13141f;font-weight:700}\
+.kgx .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px}\
+@media (max-width:860px){.kgx .grid2{grid-template-columns:1fr}}\
+.kgx .list{max-height:520px;overflow:auto;border:1px solid var(--rule,#363a52);border-radius:10px;background:var(--panel,#1c1e2d)}\
+.kgx .it{padding:10px 14px;border-bottom:1px solid var(--rule,#363a52);cursor:pointer}\
+.kgx .it:last-child{border-bottom:0}.kgx .it:hover{background:var(--panel2,#25283a)}\
+.kgx .it.sel{background:var(--panel2,#25283a);box-shadow:inset 3px 0 0 var(--gfp,#5ee39c)}\
+.kgx .it .h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}\
+.kgx .it .nm{font-weight:700}.kgx .it .en{color:var(--muted,#9d9bb8);font-size:13px}\
+.kgx .ty{font-size:11.5px;border-radius:5px;padding:0 6px;color:#13141f;font-weight:700;white-space:nowrap}\
+.kgx .it .df{color:#d7d4e6;font-size:14px;margin:3px 0 0}\
+.kgx .it .more{display:none;margin-top:6px;font-size:13.5px;color:var(--muted,#9d9bb8)}.kgx .it.sel .more{display:block}\
+.kgx .it a{color:var(--gfp,#5ee39c)}\
+.kgx .rel{display:inline-block;margin:2px 6px 2px 0;padding:1px 8px;border-radius:6px;background:var(--bg,#13141f);border:1px solid var(--rule,#363a52);font-size:12.5px;cursor:pointer;color:var(--text,#eceaf3)}\
+.kgx .gbox{position:relative;border:1px solid var(--rule,#363a52);border-radius:10px;background:#101119;overflow:hidden}\
+.kgx .gbox canvas{display:block;width:100%;height:420px}\
+.kgx .legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted,#9d9bb8);margin-top:8px}\
+.kgx .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}\
+.kgx .path{display:flex;flex-wrap:wrap;gap:6px;align-items:center}\
+.kgx .path span.s{background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);border-radius:8px;padding:4px 10px;font-size:14px}\
+.kgx .path span.a{color:var(--muted,#9d9bb8)}.kgx .path span.lim{border-color:#ff9a7a;color:#ffbda8}\
+.kgx .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}\
+.kgx .stats div{background:var(--panel,#1c1e2d);border:1px solid var(--rule,#363a52);border-radius:10px;padding:10px 12px}\
+.kgx .stats b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.kgx .stats span{color:var(--muted,#9d9bb8);font-size:13px}\
+.kgx .say{display:flex;gap:12px;align-items:flex-start;margin:6px 0 14px}\
+.kgx .say .who{flex:none;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:13px;color:#13141f}\
+.kgx .say p{margin:0;background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);border-radius:12px;padding:10px 14px;font-size:15px}\
+.kgx .refs .r{padding:12px 14px;border-bottom:1px solid var(--rule,#363a52)}.kgx .refs .r:last-child{border-bottom:0}\
+.kgx .badge{display:inline-block;font-size:11.5px;border-radius:5px;padding:0 6px;margin-left:6px;font-weight:700}\
+.kgx .badge.ok{background:var(--gfp,#5ee39c);color:#0d2419}.kgx .badge.no{background:transparent;border:1px solid var(--amber,#f1b646);color:var(--amber,#f1b646)}\
+.kgx .badge.role{background:var(--panel2,#25283a);color:var(--muted,#9d9bb8);border:1px solid var(--rule,#363a52)}\
+.kgx pre.cite{white-space:pre-wrap;word-break:break-word;background:#101119;border:1px solid var(--rule,#363a52);border-radius:8px;padding:10px 12px;font-size:13px;margin:8px 0;max-height:220px;overflow:auto}\
+.kgx .files{display:flex;flex-wrap:wrap;gap:6px}\
+.kgx .todo li{margin:4px 0;color:#d7d4e6}\
+.kgx h3{font-size:17px;margin:20px 0 8px}\
+';
+function addCss(){ if($id('kgx-css'))return; var s=el('style'); s.id='kgx-css'; s.textContent=CSS; document.head.appendChild(s);}
+function copy(text,btn){ function ok(){var o=btn.textContent; btn.textContent='복사됨'; setTimeout(function(){btn.textContent=o;},1200);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok,fallback);} else fallback();
+  function fallback(){var p=btn.parentNode.parentNode.querySelector('pre.cite'); if(p){var r=document.createRange(); r.selectNodeContents(p); var s=getSelection(); s.removeAllRanges(); s.addRange(r);} btn.textContent='선택됨 — Ctrl+C';}}
+
+/* ── 지식 색인 ──────────────────────────────────────── */
+function mountIndex(root){
+  var KG=J('kg-raw'); var N={},OUT={},IN={};
+  KG.nodes.forEach(function(n){N[n.id]=n;OUT[n.id]=[];IN[n.id]=[];});
+  KG.edges.forEach(function(e){ if(OUT[e.s])OUT[e.s].push(e); if(IN[e.o])IN[e.o].push(e);});
+  var types=Object.keys(KG.nodes.reduce(function(a,n){a[n.type]=(a[n.type]||0)+1;return a;},{}));
+  var count={}; KG.nodes.forEach(function(n){count[n.type]=(count[n.type]||0)+1;});
+  var on={}; types.forEach(function(t){on[t]=t!=='QuizItem'&&t!=='Simulation'&&t!=='Work';});
+  var sel=null,q='';
+  root.classList.add('kgx');
+  var topics=0; KG.edges.forEach(function(e){if(e.p==='lab:broader')topics++;});
+  var claims=KG.nodes.filter(function(n){return n.type==='Claim';}), csrc=claims.filter(function(n){return (n.source||[]).length;}).length;
+  root.innerHTML='<div class="stats"><div><b>'+KG.nodes.length+'</b><span>항목(노드)</span></div><div><b>'+KG.edges.length+'</b><span>관계</span></div>'+
+    '<div><b>'+(count.Concept||0)+(count.Method||0)+'</b><span>개념·방법</span></div><div><b>'+(count.BioAnalogue||0)+'</b><span>생물 대응</span></div>'+
+    '<div><b>'+csrc+'/'+claims.length+'</b><span>출처 있는 주장</span></div><div><b>'+topics+'</b><span>뼈대 주제 연결</span></div></div>'+
+    '<div class="tools"><input type="search" placeholder="찾기 — 가중치, overfitting, 케니언, 냄새 기억 노트 …" aria-label="지식 색인 검색"></div>'+
+    '<div class="tools chips" role="group" aria-label="종류"></div>'+
+    '<div class="grid2"><div class="list" role="listbox" aria-label="검색 결과"></div>'+
+    '<div><div class="gbox"><canvas aria-label="선택한 항목과 이웃 관계 그래프"></canvas></div><div class="legend"></div>'+
+    '<p class="note gnote">항목을 고르면 그 항목과 바로 이어진 이웃만 보여 준다. 그래프의 점을 눌러도 된다.</p></div></div>'+
+    '<h3>사다리 경로 — 먼저 알아야 할 것과 한계의 사슬</h3><div class="path ladder"></div>'+
+    '<h3>열린 질문 · 확인 필요</h3><ul class="todo qs"></ul>';
+  // 칸 수 계산 오류 방지: 개념+방법 합
+  root.querySelector('.stats div:nth-child(3) b').textContent=(count.Concept||0)+(count.Method||0);
+  var inp=root.querySelector('input'), chips=root.querySelector('.chips'), list=root.querySelector('.list'), cv=root.querySelector('canvas');
+  types.forEach(function(t){var b=el('button','tchip',tl(t)+' '+count[t]); b.type='button'; b.setAttribute('aria-pressed',on[t]);
+    if(on[t])b.style.background=tc(t),b.style.borderColor=tc(t);
+    b.onclick=function(){on[t]=!on[t]; b.setAttribute('aria-pressed',on[t]); b.style.background=on[t]?tc(t):''; b.style.borderColor=on[t]?tc(t):''; render();};
+    chips.appendChild(b);});
+  var lg=root.querySelector('.legend'); types.forEach(function(t){lg.insertAdjacentHTML('beforeend','<span><i style="background:'+tc(t)+'"></i>'+tl(t)+'</span>');});
+  lg.insertAdjacentHTML('beforeend','<span>── 화살표: 관계 방향</span>');
+  inp.addEventListener('input',function(){q=inp.value.trim().toLowerCase(); render();});
+  function hay(n){return [n.id,n.label&&n.label.ko,n.label&&n.label.en,n.definition&&n.definition.ko,n.altLabel&&[].concat(n.altLabel.ko||[]).join(' ')].join(' ').toLowerCase();}
+  function relHtml(n){
+    var h=[]; OUT[n.id].forEach(function(e){ var o=N[e.o]; var nm=o?lab(o):((KG.topicLabels||{})[e.o]||e.o.replace(/^lab:(topic|area)\//,'').replace(/-/g,' '));
+      h.push('<span class="rel" data-go="'+esc(o?e.o:'')+'">'+esc(REL[pn(e.p)]||pn(e.p))+' → '+esc(nm)+'</span>');});
+    IN[n.id].forEach(function(e){ var s=N[e.s]; if(!s)return; h.push('<span class="rel" data-go="'+esc(e.s)+'">'+esc(lab(s))+' → '+esc(REL[pn(e.p)]||pn(e.p))+'</span>');});
+    return h.join('');}
+  function render(){
+    var arr=KG.nodes.filter(function(n){return on[n.type]&&(!q||hay(n).indexOf(q)>=0);});
+    list.innerHTML=arr.length?'':'<div class="it">찾는 항목이 없다. 종류 칩이 꺼져 있지 않은지 보자.</div>';
+    arr.forEach(function(n){var d=el('div','it'+(sel===n.id?' sel':'')); d.setAttribute('role','option'); d.dataset.id=n.id;
+      var alt=n.altLabel&&n.altLabel.ko?' · '+[].concat(n.altLabel.ko).join(', '):'';
+      var src=(n.source||[]).length?' · 출처 '+n.source.length:'';
+      d.innerHTML='<div class="h"><span class="ty" style="background:'+tc(n.type)+'">'+tl(n.type)+'</span><span class="nm">'+esc(lab(n))+'</span><span class="en">'+esc((n.label&&n.label.en)||'')+esc(alt)+'</span></div>'+
+        (n.definition?'<p class="df">'+esc(n.definition.ko)+'</p>':'')+
+        '<div class="more">'+(n.anchor?'<a href="'+n.anchor+'">설명 보러 가기 →</a>':'')+' <span>'+esc(src)+(n.confidence&&n.confidence!=='high'?' · 확신도 '+n.confidence:'')+'</span><div style="margin-top:6px">'+relHtml(n)+'</div></div>';
+      d.onclick=function(ev){var g=ev.target.closest('.rel'); if(g){ if(g.dataset.go)pick(g.dataset.go,true); ev.stopPropagation(); return;}
+        if(ev.target.tagName==='A')return; pick(n.id);};
+      list.appendChild(d);});
+    draw();
+  }
+  function pick(id,scroll){ sel=id; var n=N[id]; if(n&&!on[n.type]){on[n.type]=true; var b=[].slice.call(chips.children)[types.indexOf(n.type)]; b.setAttribute('aria-pressed',true); b.style.background=tc(n.type); b.style.borderColor=tc(n.type);}
+    if(scroll&&q){q='';inp.value='';} render(); var it=list.querySelector('.it.sel'); if(it)it.scrollIntoView({block:'nearest'});}
+  // 그래프
+  var G={pts:[]};
+  function layout(){
+    var center=sel||KG.edges.reduce(function(best,e){return best;},null);
+    var ids={},pts=[];
+    if(!sel){ // 개요: 퀴즈·시뮬·문헌 빼고 연결 많은 순 최대 60
+      var deg={}; KG.edges.forEach(function(e){deg[e.s]=(deg[e.s]||0)+1;deg[e.o]=(deg[e.o]||0)+1;});
+      KG.nodes.filter(function(n){return on[n.type];}).sort(function(a,b){return (deg[b.id]||0)-(deg[a.id]||0);}).slice(0,60).forEach(function(n){ids[n.id]=1;});
+    } else { ids[sel]=1; OUT[sel].forEach(function(e){if(N[e.o])ids[e.o]=1;}); IN[sel].forEach(function(e){ids[e.s]=1;}); }
+    var r=mulberry(7); Object.keys(ids).forEach(function(id){pts.push({id:id,x:r()-.5,y:r()-.5,vx:0,vy:0});});
+    var ix={}; pts.forEach(function(p,i){ix[p.id]=i;});
+    var es=KG.edges.filter(function(e){return ix[e.s]!=null&&ix[e.o]!=null;});
+    for(var it=0;it<220;it++){
+      for(var i=0;i<pts.length;i++)for(var j=i+1;j<pts.length;j++){var a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+1e-4,f=0.0016/d2;
+        a.vx+=dx*f;a.vy+=dy*f;b.vx-=dx*f;b.vy-=dy*f;}
+      es.forEach(function(e){var a=pts[ix[e.s]],b=pts[ix[e.o]],dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)+1e-6,f=(d-0.22)*0.04;
+        a.vx+=dx/d*f;a.vy+=dy/d*f;b.vx-=dx/d*f;b.vy-=dy/d*f;});
+      pts.forEach(function(p){ if(p.id===sel){p.x*=.9;p.y*=.9;} p.vx-=p.x*0.004;p.vy-=p.y*0.004; p.x+=p.vx;p.y+=p.vy;p.vx*=.6;p.vy*=.6;});
+    }
+    G={pts:pts,es:es,ix:ix};
+  }
+  function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function draw(){
+    layout(); var dpr=Math.min(2,window.devicePixelRatio||1), W=cv.clientWidth||600, H=cv.clientHeight||420;
+    cv.width=W*dpr; cv.height=H*dpr; var c=cv.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0); c.clearRect(0,0,W,H);
+    var xs=G.pts.map(function(p){return p.x;}),ys=G.pts.map(function(p){return p.y;});
+    var mx=Math.min.apply(0,xs),Mx=Math.max.apply(0,xs),my=Math.min.apply(0,ys),My=Math.max.apply(0,ys);
+    var pad=54, sx=(W-2*pad)/Math.max(1e-3,Mx-mx), sy=(H-2*pad)/Math.max(1e-3,My-my);
+    G.pts.forEach(function(p){p.X=pad+(p.x-mx)*sx; p.Y=pad+(p.y-my)*sy; if(G.pts.length===1){p.X=W/2;p.Y=H/2;}});
+    c.lineWidth=1;
+    G.es.forEach(function(e){var a=G.pts[G.ix[e.s]],b=G.pts[G.ix[e.o]]; var hot=sel&&(e.s===sel||e.o===sel);
+      c.strokeStyle=hot?'rgba(236,234,243,.55)':'rgba(157,155,184,.22)'; c.beginPath(); c.moveTo(a.X,a.Y); c.lineTo(b.X,b.Y); c.stroke();
+      var ang=Math.atan2(b.Y-a.Y,b.X-a.X), ex=b.X-Math.cos(ang)*9, ey=b.Y-Math.sin(ang)*9;
+      c.fillStyle=c.strokeStyle; c.beginPath(); c.moveTo(ex,ey); c.lineTo(ex-Math.cos(ang-.4)*7,ey-Math.sin(ang-.4)*7); c.lineTo(ex-Math.cos(ang+.4)*7,ey-Math.sin(ang+.4)*7); c.fill();
+      if(sel&&hot&&G.pts.length<26){c.fillStyle='#9d9bb8'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='center';
+        c.fillText(REL[pn(e.p)]||pn(e.p),(a.X+b.X)/2,(a.Y+b.Y)/2-4);} });
+    c.textAlign='center'; c.font='12.5px '+getComputedStyle(document.body).fontFamily;
+    G.pts.forEach(function(p){var n=N[p.id]; var R=p.id===sel?9:6; c.fillStyle=tc(n.type); c.beginPath(); c.arc(p.X,p.Y,R,0,7); c.fill();
+      if(p.id===sel){c.strokeStyle='#eceaf3';c.lineWidth=2;c.stroke();c.lineWidth=1;}
+      var t=lab(n); if(t.length>14)t=t.slice(0,13)+'…'; c.fillStyle=p.id===sel?'#fff':'#d7d4e6'; c.fillText(t,p.X,p.Y-R-5);});
+    c.fillStyle='rgba(241,182,70,.9)'; c.font='11px '+getComputedStyle(document.body).fontFamily; c.textAlign='left';
+    c.fillText(sel?'이웃 '+(G.pts.length-1)+'개':'개요 — 연결 많은 항목 '+G.pts.length+'개',10,18);
+  }
+  cv.addEventListener('click',function(ev){var r=cv.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top,best=null,bd=400;
+    G.pts.forEach(function(p){var d=(p.X-x)*(p.X-x)+(p.Y-y)*(p.Y-y); if(d<bd){bd=d;best=p;}}); if(best)pick(best.id,true);});
+  var rt; window.addEventListener('resize',function(){clearTimeout(rt); rt=setTimeout(draw,150);});
+  // 사다리 경로
+  var lad=root.querySelector('.ladder'), chainE=KG.edges.filter(function(e){return (e.p==='lab:prerequisiteOf'&&N[e.s].type==='Method'&&N[e.o]&&N[e.o].type==='Method');});
+  var nexts={},has={}; chainE.forEach(function(e){nexts[e.s]=e.o;has[e.o]=1;});
+  var start=Object.keys(nexts).filter(function(k){return !has[k];})[0], seen={};
+  var html=[]; for(var cur=start;cur&&!seen[cur];cur=nexts[cur]){ seen[cur]=1;
+    html.push('<span class="s" data-go="'+cur+'" style="border-color:'+tc('Method')+'">'+esc(lab(N[cur]))+'</span>');
+    var lim=OUT[cur].filter(function(e){return e.p==='lab:hasLimitation';})[0];
+    if(lim)html.push('<span class="a">→ 한계</span><span class="s lim" data-go="'+lim.o+'">'+esc(lab(N[lim.o]))+'</span>');
+    if(nexts[cur])html.push('<span class="a">→ 해결</span>');}
+  lad.innerHTML=html.length?html.join(''):'<span class="note">이 페이지에는 사다리 사슬이 없다.</span>';
+  lad.addEventListener('click',function(ev){var s=ev.target.closest('[data-go]'); if(s)pick(s.dataset.go,true);});
+  var qs=root.querySelector('.qs'); KG.nodes.filter(function(n){return n.type==='Question';}).forEach(function(n){
+    var li=el('li',null,'<b>'+esc(lab(n))+'</b>'+(n.definition?' — '+esc(n.definition.ko):'')+(n.confidence==='low'?' <span class="badge no">확인 필요</span>':'')+(n.anchor?' <a href="'+n.anchor+'" style="color:var(--gfp,#5ee39c)">본문</a>':''));
+    qs.appendChild(li);});
+  render();
+}
+
+/* ── 꾸러미 ─────────────────────────────────────────── */
+function mountExport(root){
+  var KG=J('kg-raw'),REF=J('refs-csl'),META=J('page-meta'); root.classList.add('kgx');
+  var verifiedAll=function(r){var v=r.lab&&r.lab.verified; return v&&Object.keys(v).every(function(k){return v[k];});};
+  var vb=REF.filter(verifiedAll).length;
+  var claims=KG.nodes.filter(function(n){return n.type==='Claim';});
+  var todo=[]; REF.forEach(function(r){var v=r.lab&&r.lab.verified||{}; Object.keys(v).forEach(function(k){if(!v[k])todo.push(r.id+' — '+k+' 미확인 (빈칸으로 둠)');});});
+  todo.push('주장 '+claims.length+'개의 원문 위치(쪽·그림 번호) — provenance.csv의 loc 칸이 비어 있음');
+  todo.push('페이지 저자 이름·라이선스·공개 주소 — page_meta.json에서 비워 둠');
+  var sup={}; KG.edges.forEach(function(e){ if(e.p==='lab:assertedIn'){var k=e.o.replace('lab:work/',''); (sup[k]=sup[k]||[]).push(e.s);} });
+  KG.nodes.forEach(function(n){(n.source||[]).forEach(function(s){(sup[s.ref]=sup[s.ref]||[]); if(sup[s.ref].indexOf(n.id)<0)sup[s.ref].push(n.id);});});
+  var N={}; KG.nodes.forEach(function(n){N[n.id]=n;});
+  root.innerHTML='<div class="say"><div class="who" style="background:var(--c-asst,#ff86b8)">조수</div><p>출처 없는 주장은 꾸러미에 넣지 않았어요. 사람이 확인할 항목 '+todo.length+'개는 아래에 있어요.</p></div>'+
+    '<div class="stats"><div><b>'+KG.nodes.length+'</b><span>노드</span></div><div><b>'+KG.edges.length+'</b><span>관계</span></div><div><b>'+REF.length+'</b><span>문헌</span></div>'+
+    '<div><b>'+Math.round(100*vb/Math.max(1,REF.length))+'%</b><span>서지 전부 확인된 문헌</span></div>'+
+    '<div><b>'+Math.round(100*claims.filter(function(n){return (n.source||[]).length;}).length/Math.max(1,claims.length))+'%</b><span>출처 있는 주장</span></div></div>'+
+    '<h3>이 페이지 인용하기</h3><div class="tools"><button class="tchip cf" data-f="text" aria-pressed="true" style="background:var(--gfp,#5ee39c);border-color:var(--gfp,#5ee39c)">일반 문장</button><button class="tchip cf" data-f="bib" aria-pressed="false">BibTeX</button><button class="tchip cf" data-f="ris" aria-pressed="false">RIS</button><button class="bt cp" type="button">복사</button></div><pre class="cite pc"></pre>'+
+    '<h3>참고문헌 — 확인 배지와 뒷받침하는 개념</h3><div class="refs list"></div>'+
+    '<h3>범위와 형식 고르기</h3><div class="tools sc" role="group" aria-label="범위"></div><div class="tools"><button class="bt primary zip" type="button">꾸러미 ZIP 내려받기</button><span class="note zc"></span></div>'+
+    '<div class="files"></div><p class="note">claude.ai 화면에서 개별 파일을 받으면 .bib·.ris·.ttl·.jsonld 이름 끝에 .txt가 붙는다(끝의 .txt만 지우면 원래 형식). ZIP 안의 파일은 원래 이름 그대로다.</p>'+
+    (META.seeAlso?'<p class="note">여러 페이지의 꾸러미를 합쳐 영역 지도와 맞대어 보려면 → <a style="color:var(--gfp,#5ee39c)" href="'+esc(META.seeAlso)+'"'+(/^https?:/.test(META.seeAlso)?' target="_blank" rel="noopener"':'')+'>영역 지도 합치기 (KG_00)</a></p>':'')+
+    '<h3>사람이 확인할 항목</h3><ul class="todo">'+todo.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul>'+
+    '<p class="note">꾸러미 버전 1.0 · 만든 날 '+esc(META.date)+' · 등록부 '+esc(META.registry||'KG_00_registry (시제품)')+' · lab: 접두어 '+NS+' (임시) · 뼈대 주제(lab:topic/*)는 작성자 초안</p>';
+  var fmt='text', pc=root.querySelector('.pc');
+  function cite(){pc.textContent=fmt==='bib'?pageBib(META):fmt==='ris'?pageRis(META):pageText(META);}
+  [].forEach.call(root.querySelectorAll('.cf'),function(b){b.onclick=function(){fmt=b.dataset.f; [].forEach.call(root.querySelectorAll('.cf'),function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#5ee39c)':''; x.style.borderColor=o?'var(--gfp,#5ee39c)':'';}); cite();};});
+  root.querySelector('.cp').onclick=function(){copy(pc.textContent,this);}; cite();
+  var RL=root.querySelector('.refs');
+  REF.forEach(function(r){var v=r.lab&&r.lab.verified||{}; var bad=Object.keys(v).filter(function(k){return !v[k];});
+    var d=el('div','r','<div>'+esc(toText(r))+'<span class="badge role">'+esc({primary:'주 자료',background:'배경',data:'수치',figure:'그림'}[r.lab&&r.lab.role]||'배경')+'</span>'+
+      (bad.length?'<span class="badge no">확인 필요: '+esc(bad.join(', '))+'</span>':'<span class="badge ok">서지 확인됨</span>')+'</div>'+
+      '<div style="margin-top:6px">'+(sup[r.id]||[]).map(function(id){var n=N[id]; return n?'<a class="rel" href="'+(n.anchor||'#kg')+'">'+esc(lab(n))+'</a>':'';}).join('')+'</div>');
+    RL.appendChild(d);});
+  var scope='all', SC=root.querySelector('.sc'), zc=root.querySelector('.zc');
+  [['all','전체'],['terms','개념·방법만'],['claims','주장 + 출처만'],['prereq','선수 관계만']].forEach(function(s,i){
+    var b=el('button','tchip',s[1]); b.type='button'; b.setAttribute('aria-pressed',i===0); if(i===0)b.style.background='var(--gfp,#5ee39c)',b.style.borderColor='var(--gfp,#5ee39c)';
+    b.onclick=function(){scope=s[0]; [].forEach.call(SC.children,function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#5ee39c)':''; x.style.borderColor=o?'var(--gfp,#5ee39c)':'';}); info();};
+    SC.appendChild(b);});
+  var FL=root.querySelector('.files');
+  function info(){var f=buildPackage(scope), m=JSON.parse(f[0].text); zc.textContent='노드 '+m.counts.nodes+' · 관계 '+m.counts.edges+' · 문헌 '+m.counts.refs+' · 파일 '+f.length+'개';
+    FL.innerHTML=''; f.forEach(function(x){var b=el('button','bt',esc(x.name)); b.type='button'; b.onclick=function(){dlText(x.text,x.name);}; FL.appendChild(b);});}
+  root.querySelector('.zip').onclick=function(){download(makeZip(buildPackage(scope)),'kg_'+META.number+'_'+scope+'.zip');};
+  info();
+}
+function init(){addCss(); var a=$id('kg-mount'),b=$id('export-mount'); if(a)mountIndex(a); if(b)mountExport(b);}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+return {download:download,buildPackage:buildPackage,makeZip:makeZip,toJsonLd:toJsonLd,toTurtle:toTurtle,toBib:toBib,toRis:toRis};
+})();
+</script>
+<script type="application/json" id="bb">{
+ "version": "0.1",
+ "name": "딥러닝·AI 영역 뼈대 (초안)",
+ "note": "표준 교과서 목차와 분야 구분을 참고해 이 시리즈용으로 만든 작성자 초안. 공식 분류 체계(ACM CCS, CSO 등)가 아니며, 대응은 추후 확인 필요.",
+ "nodes": [
+  {
+   "id": "lab:area/math",
+   "type": "Area",
+   "label": {
+    "ko": "수학 기초",
+    "en": "Mathematical foundations"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/linear-algebra",
+   "type": "Topic",
+   "label": {
+    "ko": "선형대수",
+    "en": "Linear algebra"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/probability-statistics",
+   "type": "Topic",
+   "label": {
+    "ko": "확률·통계",
+    "en": "Probability and statistics"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/information-theory",
+   "type": "Topic",
+   "label": {
+    "ko": "정보 이론",
+    "en": "Information theory"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/ml-basics",
+   "type": "Area",
+   "label": {
+    "ko": "머신러닝 기초",
+    "en": "Machine learning basics"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/supervised-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "지도 학습",
+    "en": "Supervised learning"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/unsupervised-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "비지도 학습 개념",
+    "en": "Unsupervised learning (concept)"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/generalization",
+   "type": "Topic",
+   "label": {
+    "ko": "일반화·과적합",
+    "en": "Generalization and overfitting"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bias-variance",
+   "type": "Topic",
+   "label": {
+    "ko": "편향-분산 균형",
+    "en": "Bias–variance trade-off"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-splitting",
+   "type": "Topic",
+   "label": {
+    "ko": "훈련·검증·시험 분리",
+    "en": "Train/validation/test split"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/feature-engineering",
+   "type": "Topic",
+   "label": {
+    "ko": "특징 공학",
+    "en": "Feature engineering"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rule-vs-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "규칙 기반 vs 학습 기반",
+    "en": "Rule-based vs learned systems"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/classical",
+   "type": "Area",
+   "label": {
+    "ko": "고전 모델",
+    "en": "Classical models"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/linear-regression",
+   "type": "Topic",
+   "label": {
+    "ko": "선형 회귀",
+    "en": "Linear regression"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/logistic-regression",
+   "type": "Topic",
+   "label": {
+    "ko": "로지스틱 회귀",
+    "en": "Logistic regression"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/svm",
+   "type": "Topic",
+   "label": {
+    "ko": "서포트 벡터 머신",
+    "en": "Support vector machine"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/knn",
+   "type": "Topic",
+   "label": {
+    "ko": "k-최근접 이웃",
+    "en": "k-nearest neighbors"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/decision-tree",
+   "type": "Topic",
+   "label": {
+    "ko": "결정 트리",
+    "en": "Decision tree"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/naive-bayes",
+   "type": "Topic",
+   "label": {
+    "ko": "나이브 베이즈",
+    "en": "Naive Bayes"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/ensemble",
+   "type": "Area",
+   "label": {
+    "ko": "앙상블",
+    "en": "Ensemble methods"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/bagging",
+   "type": "Topic",
+   "label": {
+    "ko": "배깅",
+    "en": "Bagging"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/random-forest",
+   "type": "Topic",
+   "label": {
+    "ko": "랜덤 포레스트",
+    "en": "Random forest"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/boosting",
+   "type": "Topic",
+   "label": {
+    "ko": "부스팅",
+    "en": "Boosting"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stacking",
+   "type": "Topic",
+   "label": {
+    "ko": "스태킹",
+    "en": "Stacking"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/nn-basics",
+   "type": "Area",
+   "label": {
+    "ko": "신경망 기초",
+    "en": "Neural network basics"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/weights-and-biases",
+   "type": "Topic",
+   "label": {
+    "ko": "가중치와 편향",
+    "en": "Weights and biases"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/perceptron",
+   "type": "Topic",
+   "label": {
+    "ko": "퍼셉트론",
+    "en": "Perceptron"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mlp",
+   "type": "Topic",
+   "label": {
+    "ko": "다층 퍼셉트론",
+    "en": "Multilayer perceptron"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/activation-function",
+   "type": "Topic",
+   "label": {
+    "ko": "활성화 함수",
+    "en": "Activation function"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/loss-function",
+   "type": "Topic",
+   "label": {
+    "ko": "손실 함수",
+    "en": "Loss function"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/backpropagation",
+   "type": "Topic",
+   "label": {
+    "ko": "역전파",
+    "en": "Backpropagation"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/universal-approximation",
+   "type": "Topic",
+   "label": {
+    "ko": "보편 근사 정리",
+    "en": "Universal approximation"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/optimization",
+   "type": "Area",
+   "label": {
+    "ko": "최적화",
+    "en": "Optimization"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/gradient-descent",
+   "type": "Topic",
+   "label": {
+    "ko": "경사하강법",
+    "en": "Gradient descent"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sgd-minibatch",
+   "type": "Topic",
+   "label": {
+    "ko": "확률적 경사하강·미니배치",
+    "en": "SGD and mini-batches"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/momentum-adam",
+   "type": "Topic",
+   "label": {
+    "ko": "모멘텀·Adam",
+    "en": "Momentum and Adam"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/learning-rate-schedule",
+   "type": "Topic",
+   "label": {
+    "ko": "학습률 조정",
+    "en": "Learning-rate schedules"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/regularization",
+   "type": "Area",
+   "label": {
+    "ko": "정규화·일반화 기법",
+    "en": "Regularization"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/weight-decay",
+   "type": "Topic",
+   "label": {
+    "ko": "가중치 감쇠(L2)",
+    "en": "Weight decay (L2)"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dropout",
+   "type": "Topic",
+   "label": {
+    "ko": "드롭아웃",
+    "en": "Dropout"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/early-stopping",
+   "type": "Topic",
+   "label": {
+    "ko": "조기 종료",
+    "en": "Early stopping"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/normalization-layers",
+   "type": "Topic",
+   "label": {
+    "ko": "정규화 층",
+    "en": "Normalization layers"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-augmentation",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 증강",
+    "en": "Data augmentation"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/vision",
+   "type": "Area",
+   "label": {
+    "ko": "합성곱·시각",
+    "en": "Convolutional networks and vision"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/convolution",
+   "type": "Topic",
+   "label": {
+    "ko": "합성곱·가중치 공유",
+    "en": "Convolution and weight sharing"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pooling",
+   "type": "Topic",
+   "label": {
+    "ko": "풀링",
+    "en": "Pooling"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/receptive-field",
+   "type": "Topic",
+   "label": {
+    "ko": "수용 영역",
+    "en": "Receptive field"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/residual-connections",
+   "type": "Topic",
+   "label": {
+    "ko": "잔차 연결",
+    "en": "Residual connections"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/object-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "객체 탐지",
+    "en": "Object detection"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/segmentation",
+   "type": "Topic",
+   "label": {
+    "ko": "분할",
+    "en": "Segmentation"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/sequence",
+   "type": "Area",
+   "label": {
+    "ko": "시퀀스 모델",
+    "en": "Sequence models"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/rnn",
+   "type": "Topic",
+   "label": {
+    "ko": "순환 신경망",
+    "en": "Recurrent neural network"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lstm-gru",
+   "type": "Topic",
+   "label": {
+    "ko": "LSTM·GRU",
+    "en": "LSTM and GRU"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/seq2seq",
+   "type": "Topic",
+   "label": {
+    "ko": "시퀀스-투-시퀀스",
+    "en": "Sequence-to-sequence"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/time-series",
+   "type": "Topic",
+   "label": {
+    "ko": "시계열 예측",
+    "en": "Time-series forecasting"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/attention",
+   "type": "Area",
+   "label": {
+    "ko": "어텐션·트랜스포머",
+    "en": "Attention and transformers"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/attention-mechanism",
+   "type": "Topic",
+   "label": {
+    "ko": "어텐션 메커니즘",
+    "en": "Attention mechanism"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/self-attention",
+   "type": "Topic",
+   "label": {
+    "ko": "셀프 어텐션",
+    "en": "Self-attention"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multi-head-attention",
+   "type": "Topic",
+   "label": {
+    "ko": "멀티헤드 어텐션",
+    "en": "Multi-head attention"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/positional-encoding",
+   "type": "Topic",
+   "label": {
+    "ko": "위치 인코딩",
+    "en": "Positional encoding"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transformer",
+   "type": "Topic",
+   "label": {
+    "ko": "트랜스포머",
+    "en": "Transformer"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/language",
+   "type": "Area",
+   "label": {
+    "ko": "언어 모델·자연어 처리",
+    "en": "Language models and NLP"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/tokenization",
+   "type": "Topic",
+   "label": {
+    "ko": "토큰화",
+    "en": "Tokenization"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/word-embedding",
+   "type": "Topic",
+   "label": {
+    "ko": "단어 임베딩",
+    "en": "Word embeddings"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pretrained-lm",
+   "type": "Topic",
+   "label": {
+    "ko": "사전학습 언어 모델",
+    "en": "Pretrained language models"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transfer-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "전이 학습·파인튜닝",
+    "en": "Transfer learning and fine-tuning"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lora",
+   "type": "Topic",
+   "label": {
+    "ko": "LoRA·어댑터",
+    "en": "LoRA and adapters"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/prompting",
+   "type": "Topic",
+   "label": {
+    "ko": "프롬프팅",
+    "en": "Prompting"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rag",
+   "type": "Topic",
+   "label": {
+    "ko": "검색 증강 생성",
+    "en": "Retrieval-augmented generation"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/generative",
+   "type": "Area",
+   "label": {
+    "ko": "생성 모델",
+    "en": "Generative models"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/autoencoder",
+   "type": "Topic",
+   "label": {
+    "ko": "오토인코더",
+    "en": "Autoencoder"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/vae",
+   "type": "Topic",
+   "label": {
+    "ko": "변분 오토인코더",
+    "en": "Variational autoencoder"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/gan",
+   "type": "Topic",
+   "label": {
+    "ko": "적대적 생성 신경망",
+    "en": "Generative adversarial network"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/diffusion",
+   "type": "Topic",
+   "label": {
+    "ko": "확산 모델",
+    "en": "Diffusion models"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/autoregressive-generation",
+   "type": "Topic",
+   "label": {
+    "ko": "자기회귀 생성",
+    "en": "Autoregressive generation"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/representation",
+   "type": "Area",
+   "label": {
+    "ko": "표현 학습",
+    "en": "Representation learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/embedding-space",
+   "type": "Topic",
+   "label": {
+    "ko": "임베딩 공간",
+    "en": "Embedding space"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/self-supervised",
+   "type": "Topic",
+   "label": {
+    "ko": "자기지도 학습",
+    "en": "Self-supervised learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/contrastive",
+   "type": "Topic",
+   "label": {
+    "ko": "대조 학습",
+    "en": "Contrastive learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sparse-representation",
+   "type": "Topic",
+   "label": {
+    "ko": "희소 표현",
+    "en": "Sparse representation"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/random-features",
+   "type": "Topic",
+   "label": {
+    "ko": "무작위 특징",
+    "en": "Random features"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multi-task-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "멀티태스크 학습",
+    "en": "Multi-task learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/rl",
+   "type": "Area",
+   "label": {
+    "ko": "강화 학습",
+    "en": "Reinforcement learning"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/mdp",
+   "type": "Topic",
+   "label": {
+    "ko": "마르코프 결정 과정",
+    "en": "Markov decision process"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reward",
+   "type": "Topic",
+   "label": {
+    "ko": "보상",
+    "en": "Reward"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/value-function",
+   "type": "Topic",
+   "label": {
+    "ko": "가치 함수",
+    "en": "Value function"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/q-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "Q-러닝",
+    "en": "Q-learning"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/policy-gradient",
+   "type": "Topic",
+   "label": {
+    "ko": "정책 경사",
+    "en": "Policy gradient"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/exploration",
+   "type": "Topic",
+   "label": {
+    "ko": "탐험과 활용",
+    "en": "Exploration–exploitation"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reward-prediction-error",
+   "type": "Topic",
+   "label": {
+    "ko": "보상 예측 오차",
+    "en": "Reward prediction error"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/unsupervised",
+   "type": "Area",
+   "label": {
+    "ko": "비지도 기법",
+    "en": "Unsupervised methods"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/clustering",
+   "type": "Topic",
+   "label": {
+    "ko": "군집화",
+    "en": "Clustering"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pca",
+   "type": "Topic",
+   "label": {
+    "ko": "주성분 분석",
+    "en": "Principal component analysis"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tsne-umap",
+   "type": "Topic",
+   "label": {
+    "ko": "t-SNE·UMAP",
+    "en": "t-SNE and UMAP"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/density-estimation",
+   "type": "Topic",
+   "label": {
+    "ko": "밀도 추정",
+    "en": "Density estimation"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/anomaly-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "이상 탐지",
+    "en": "Anomaly detection"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/evaluation",
+   "type": "Area",
+   "label": {
+    "ko": "평가",
+    "en": "Evaluation"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/accuracy-metrics",
+   "type": "Topic",
+   "label": {
+    "ko": "정확도·손실 지표",
+    "en": "Accuracy and loss metrics"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/precision-recall",
+   "type": "Topic",
+   "label": {
+    "ko": "정밀도·재현율",
+    "en": "Precision and recall"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/roc-auc",
+   "type": "Topic",
+   "label": {
+    "ko": "ROC·AUC",
+    "en": "ROC and AUC"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/confusion-matrix",
+   "type": "Topic",
+   "label": {
+    "ko": "혼동 행렬",
+    "en": "Confusion matrix"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-leakage",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 누수",
+    "en": "Data leakage"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ablation",
+   "type": "Topic",
+   "label": {
+    "ko": "절제 실험",
+    "en": "Ablation study"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/graph",
+   "type": "Area",
+   "label": {
+    "ko": "그래프 학습",
+    "en": "Graph learning"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/gnn",
+   "type": "Topic",
+   "label": {
+    "ko": "그래프 신경망",
+    "en": "Graph neural networks"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/message-passing",
+   "type": "Topic",
+   "label": {
+    "ko": "메시지 전달",
+    "en": "Message passing"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/knowledge-graph",
+   "type": "Topic",
+   "label": {
+    "ko": "지식 그래프",
+    "en": "Knowledge graphs"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/systems",
+   "type": "Area",
+   "label": {
+    "ko": "시스템·MLOps",
+    "en": "ML systems and MLOps"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/deployment",
+   "type": "Topic",
+   "label": {
+    "ko": "배포",
+    "en": "Deployment"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/distribution-shift",
+   "type": "Topic",
+   "label": {
+    "ko": "분포 이동",
+    "en": "Distribution shift"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/monitoring",
+   "type": "Topic",
+   "label": {
+    "ko": "모니터링",
+    "en": "Monitoring"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reproducibility",
+   "type": "Topic",
+   "label": {
+    "ko": "재현성",
+    "en": "Reproducibility"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/responsible",
+   "type": "Area",
+   "label": {
+    "ko": "책임 있는 AI",
+    "en": "Responsible AI"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/fairness",
+   "type": "Topic",
+   "label": {
+    "ko": "공정성",
+    "en": "Fairness"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/interpretability",
+   "type": "Topic",
+   "label": {
+    "ko": "설명 가능성·해석",
+    "en": "Interpretability"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ai-safety",
+   "type": "Topic",
+   "label": {
+    "ko": "안전성",
+    "en": "AI safety"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/privacy",
+   "type": "Topic",
+   "label": {
+    "ko": "프라이버시",
+    "en": "Privacy"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/neuro",
+   "type": "Area",
+   "label": {
+    "ko": "신경과학과 AI",
+    "en": "Neuroscience and AI"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/biological-neuron",
+   "type": "Topic",
+   "label": {
+    "ko": "생물 뉴런과 스파이크",
+    "en": "Biological neurons and spikes"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/synaptic-plasticity",
+   "type": "Topic",
+   "label": {
+    "ko": "시냅스 가소성",
+    "en": "Synaptic plasticity"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/connectome",
+   "type": "Topic",
+   "label": {
+    "ko": "커넥톰",
+    "en": "Connectome"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sensory-processing",
+   "type": "Topic",
+   "label": {
+    "ko": "감각 처리",
+    "en": "Sensory processing"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/learning-memory-circuits",
+   "type": "Topic",
+   "label": {
+    "ko": "학습·기억 회로",
+    "en": "Learning and memory circuits"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/circuit-methods",
+   "type": "Topic",
+   "label": {
+    "ko": "신경 회로 실험 기법",
+    "en": "Circuit neuroscience methods"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/linear-algebra",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/probability-statistics",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/calculus-optimization-math",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/information-theory",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/unsupervised-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/generalization",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/bias-variance",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/data-splitting",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/feature-engineering",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/rule-vs-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/linear-regression",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/logistic-regression",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/svm",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/knn",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/decision-tree",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/naive-bayes",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/bagging",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/random-forest",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/boosting",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/stacking",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/weights-and-biases",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/perceptron",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/mlp",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/activation-function",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/loss-function",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/backpropagation",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/universal-approximation",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/gradient-descent",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/sgd-minibatch",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/momentum-adam",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/learning-rate-schedule",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/weight-decay",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/dropout",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/early-stopping",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/normalization-layers",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/data-augmentation",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/convolution",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/pooling",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/receptive-field",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/residual-connections",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/object-detection",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/segmentation",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/rnn",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/lstm-gru",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/seq2seq",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/time-series",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/attention-mechanism",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/self-attention",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/multi-head-attention",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/positional-encoding",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/transformer",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/tokenization",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/word-embedding",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/pretrained-lm",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/transfer-learning",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/lora",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/prompting",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/rag",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/autoencoder",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/vae",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/gan",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/diffusion",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/autoregressive-generation",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/embedding-space",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/self-supervised",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/contrastive",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/sparse-representation",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/random-features",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/multi-task-learning",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/mdp",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/reward",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/value-function",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/q-learning",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/policy-gradient",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/exploration",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/reward-prediction-error",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/clustering",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/pca",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/tsne-umap",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/density-estimation",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/anomaly-detection",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/accuracy-metrics",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/precision-recall",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/roc-auc",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/confusion-matrix",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/data-leakage",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/ablation",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/gnn",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/message-passing",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/knowledge-graph",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/deployment",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/distribution-shift",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/monitoring",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/reproducibility",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/fairness",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/interpretability",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/ai-safety",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/privacy",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/biological-neuron",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/synaptic-plasticity",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/connectome",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/sensory-processing",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/learning-memory-circuits",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/circuit-methods",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:area/math",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:area/classical",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:area/optimization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:area/sequence",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:area/attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:area/evaluation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:area/evaluation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/perceptron",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/mlp"
+  },
+  {
+   "s": "lab:topic/loss-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/gradient-descent"
+  },
+  {
+   "s": "lab:topic/gradient-descent",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/backpropagation"
+  },
+  {
+   "s": "lab:topic/mlp",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/backpropagation"
+  },
+  {
+   "s": "lab:topic/data-splitting",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/early-stopping"
+  },
+  {
+   "s": "lab:topic/generalization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/early-stopping"
+  },
+  {
+   "s": "lab:topic/convolution",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/receptive-field"
+  },
+  {
+   "s": "lab:topic/rnn",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/lstm-gru"
+  },
+  {
+   "s": "lab:topic/attention-mechanism",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/self-attention"
+  },
+  {
+   "s": "lab:topic/self-attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/multi-head-attention"
+  },
+  {
+   "s": "lab:topic/multi-head-attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/transformer"
+  },
+  {
+   "s": "lab:topic/transformer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/pretrained-lm"
+  },
+  {
+   "s": "lab:topic/pretrained-lm",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/transfer-learning"
+  },
+  {
+   "s": "lab:topic/transfer-learning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/lora"
+  },
+  {
+   "s": "lab:topic/word-embedding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/rag"
+  },
+  {
+   "s": "lab:topic/reward",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/reward-prediction-error"
+  },
+  {
+   "s": "lab:topic/value-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/q-learning"
+  },
+  {
+   "s": "lab:topic/biological-neuron",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/synaptic-plasticity"
+  },
+  {
+   "s": "lab:topic/synaptic-plasticity",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/learning-memory-circuits"
+  },
+  {
+   "s": "lab:topic/weights-and-biases",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/perceptron"
+  },
+  {
+   "s": "lab:topic/activation-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/mlp"
+  }
+ ]
+}</script>
+<script>
+(0,eval)(document.getElementById('kgx-src').textContent);
+var BB=JSON.parse(document.getElementById('bb').textContent);
+var MK={head:['<!-- lab-kg:head -->','<!-- /lab-kg:head -->'],body:['<!-- lab-kg:body -->','<!-- /lab-kg:body -->'],script:['<!-- lab-kg:script -->','<!-- /lab-kg:script -->']};
+var S={page:null,name:'',kg:null,refs:null,meta:null,result:null};
+function $(i){return document.getElementById(i);}
+function rx(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+var COVER=['<!-- lab-cover -->','<!-- /lab-cover -->'];
+function strip(h,cov){var L=Object.keys(MK).map(function(k){return MK[k];}); if(cov)L.push(COVER); L.forEach(function(m){h=h.replace(new RegExp(rx(m[0])+'[\\s\\S]*?'+rx(m[1])+'\\n?','g'),'');});return h;}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function js(o){return JSON.stringify(o).replace(/<\//g,'<\\/');}
+function read(f){return new Promise(function(r){var x=new FileReader();x.onload=function(){r(x.result);};x.readAsText(f,'utf-8');});}
+function ready(){$('go').disabled=!(S.page&&S.kg&&S.refs&&S.meta);}
+$('fPage').onchange=function(){var f=this.files[0]; if(!f)return; S.name=f.name; read(f).then(function(t){S.page=t;ready();});};
+$('fJson').onchange=function(){[].forEach.call(this.files,function(f){read(f).then(function(t){var o;try{o=JSON.parse(t);}catch(e){$('out').textContent=f.name+': JSON 오류 '+e.message;return;}
+  var n=f.name.toLowerCase(); if(/refs?/.test(n))S.refs=o; else if(/meta/.test(n))S.meta=o; else if(/kg/.test(n))S.kg=o; ready();});});};
+function sec(i,t,sub,m){return '<section class="kgx kgx-sec" id="'+i+'"><div class="kgx-wrap">\n<h2>'+t+'</h2>\n<p class="kgx-sub">'+sub+'</p>\n<div id="'+m+'"></div>\n</div></section>\n';}
+function build(){
+  var H=strip(S.page), kg=JSON.parse(JSON.stringify(S.kg)), refs=S.refs, meta=S.meta, mode=$('mode').value;
+  kg.topicLabels={}; BB.nodes.forEach(function(n){kg.topicLabels[n.id]=n.label.ko;});
+  var ld=KGX.toJsonLd(kg,meta), t=meta.title||'';
+  var head=['<meta name="citation_title" content="'+esc(t)+'">','<meta name="dc.title" content="'+esc(t)+'">','<meta name="dc.date" content="'+esc(meta.date||'')+'">',
+    '<meta name="dc.language" content="ko">','<meta name="dc.type" content="InteractiveResource">'];
+  (meta.creator||[]).forEach(function(c){if(c.name)head.push('<meta name="citation_author" content="'+esc(c.name)+'">');});
+  if(meta.series)head.push('<meta name="dcterms.isPartOf" content="'+esc(meta.series)+'">');
+  refs.forEach(function(r){if(r.DOI)head.push('<meta name="dc.source" content="doi:'+esc(r.DOI)+'">');});
+  var bh=MK.head[0]+'\n'+head.join('\n')+'\n'+MK.head[1]+'\n';
+  var body=MK.body[0]+'\n'+sec('kg','지식 색인 — 이 페이지에서 찾아보기','이 페이지에 나온 개념, 방법, 생물 대응, 주장, 열린 질문을 한곳에 모았다. 검색하고, 항목을 눌러 이웃 관계를 보고, "설명 보러 가기"로 본문에 돌아간다.','kg-mount')+
+    sec('export','온톨로지·서지 꾸러미 — 이 페이지의 지식을 가져가기','지식 색인을 출처와 함께 파일로 내려받는다. Zotero(BibTeX·RIS), Protégé(Turtle), Neo4j·Gephi(CSV), 여러 페이지 합치기(kg.json)에 쓴다.','export-mount')+
+    '<script type="application/json" id="kg-raw">'+js(kg)+'</'+'script>\n<script type="application/ld+json" id="kg-ld">'+js(ld)+'</'+'script>\n'+
+    '<script type="application/json" id="refs-csl">'+js(refs)+'</'+'script>\n<script type="application/json" id="page-meta">'+js(meta)+'</'+'script>\n'+MK.body[1]+'\n';
+  var sc=MK.script[0]+'\n'+(mode==='inline'?'<script>\n'+$('kgx-src').textContent+'\n</'+'script>':'<script src="'+esc(mode)+'"></'+'script>')+'\n'+MK.script[1]+'\n';
+  if(H.indexOf('</head>')<0||H.indexOf('</body>')<0)throw new Error('</head> 또는 </body>가 없습니다');
+  H=H.replace('</head>',bh+'</head>');
+  var i=H.lastIndexOf('<footer'), j=H.lastIndexOf('</body>'), p=(i>=0&&i<j)?i:j; H=H.slice(0,p)+body+H.slice(p);
+  j=H.lastIndexOf('</body>'); H=H.slice(0,j)+sc+H.slice(j);
+  return H;
+}
+function check(O,N){
+  var E=[],W=[],K=[];
+  if(strip(O,1)===strip(N,1))K.push('본문 차이 0'); else E.push('본문이 바뀜');
+  var kg=S.kg, nodes={}; kg.nodes.forEach(function(n){if(nodes[n.id])E.push('같은 id 두 번: '+n.id); nodes[n.id]=n;});
+  var ids={}; strip(O).replace(/\sid="([^"]+)"/g,function(_,x){ids[x]=1;});
+  var bb={}; BB.nodes.forEach(function(n){bb[n.id]=1;});
+  var deg={}; Object.keys(nodes).forEach(function(k){deg[k]=0;});
+  kg.nodes.forEach(function(n){var a=(n.anchor||'').replace('#',''); if(a&&!ids[a]&&a!=='kg'&&a!=='export')E.push('본문에 없는 anchor #'+a+': '+n.id);
+    if(n.coverage&&n.coverage!=='explained'&&n.coverage!=='mentioned')E.push('coverage 값 오류: '+n.id);});
+  var rel=0; kg.edges.forEach(function(e){ if(e.p==='lab:relatedTo')rel++; [e.s,e.o].forEach(function(x){ if(nodes[x])deg[x]++; else if(!bb[x])E.push('끊긴 관계 또는 뼈대에 없는 주제: '+x);});});
+  var iso=Object.keys(deg).filter(function(k){return !deg[k];}); if(iso.length)E.push('고립 노드 '+iso.length+'개: '+iso.slice(0,6).join(', '));
+  if(kg.edges.length&&rel/kg.edges.length>.15)W.push('relatedTo 비율이 15%를 넘음');
+  var rid={}; S.refs.forEach(function(r){rid[r.id]=1; if(r.DOI&&strip(O).toLowerCase().indexOf(r.DOI.toLowerCase())<0)W.push('원본 페이지에 없는 DOI '+r.DOI+' — 확인한 근거를 verified에');});
+  kg.nodes.forEach(function(n){(n.source||[]).forEach(function(s){if(!rid[s.ref])E.push('참고문헌에 없는 출처 '+s.ref);});});
+  ['title','number','date','version'].forEach(function(f){if(!S.meta[f])E.push('meta에 '+f+' 없음');});
+  if(!(S.meta.creator||[]).some(function(c){return c.name;}))W.push('저자 이름이 비어 있음 (직접 채우세요)');
+  K.push('노드 '+kg.nodes.length+' · 관계 '+kg.edges.length+' · 문헌 '+S.refs.length);
+  return {E:E,W:W,K:K};
+}
+$('go').onclick=function(){
+  try{S.result=build();}catch(e){$('out').textContent='오류: '+e.message;return;}
+  var c=check(S.page,S.result), o=$('out'); o.innerHTML='';
+  function line(cls,t){var d=document.createElement('div');d.className=cls;d.textContent=t;o.appendChild(d);}
+  line(c.E.length?'e':'ok',c.E.length?'오류 '+c.E.length+'개 — 고친 뒤 다시 조립하세요':'오류 없음');
+  c.E.forEach(function(x){line('e','· '+x);}); c.W.forEach(function(x){line('w','· '+x);}); c.K.forEach(function(x){line('ok','· '+x);});
+  $('dl').disabled=false; $('dljs').disabled=$('mode').value==='inline';
+};
+function save(text,name,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:type+';charset=utf-8'}));a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);}
+$('dl').onclick=function(){save(S.result,S.name||'page.html','text/html');};
+$('dljs').onclick=function(){save($('kgx-src').textContent,'kgx.js','text/javascript');};
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "repo": "ahnboat_lab_explainer",
+  "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
+  "updated": "2026-11-02",
+  "core": {"id": "ai-lab-explainer", "path": "SKILL.md", "version": "1.9", "builtin_domain": "ai"},
+  "packs": [
+    {"id": "character/lab4", "kind": "character", "path": "packs/character/CHAR_lab4.md", "version": "1.0", "core_min": "1.9", "required": true,
+     "assets": {"path": "packs/character/character_pack/", "version": "1.1", "source": "https://github.com/adminmrobo/fruitfly-lab-expressions", "commit": "ea5da3f"},
+     "reference_images": "packs/character/setting_shots/", "license": "all-rights-reserved"},
+    {"id": "domain/stats", "kind": "domain", "code": "stats", "label": "통계학", "path": "packs/domain/DOMAIN_stats.md", "version": "1.0", "core_min": "1.8"},
+    {"id": "domain/econ", "kind": "domain", "code": "econ", "label": "경제학", "path": "packs/domain/DOMAIN_econ.md", "version": "1.0", "core_min": "1.8"},
+    {"id": "domain/acct", "kind": "domain", "code": "acct", "label": "회계학", "path": "packs/domain/DOMAIN_acct.md", "version": "1.0", "core_min": "1.8"},
+    {"id": "domain/biz", "kind": "domain", "code": "biz", "label": "경영학", "path": "packs/domain/DOMAIN_biz.md", "version": "1.0", "core_min": "1.8"},
+    {"id": "lang/series-build-i18n", "kind": "lang", "path": "packs/lang/LANG_series_build_instructions.md", "version": "1.0", "core_min": "1.9",
+     "tools": {"path": "packs/lang/langpack/", "version": "1.3", "langs": ["en", "zh", "ja", "uz", "ru", "vi"]},
+     "also": "미션형 형식 (SKILL.md 4-4)"},
+    {"id": "task/add-lang", "kind": "task", "path": "packs/task/TASK_add_lang.md", "version": "1.0", "core_min": "1.9", "needs": ["lang/series-build-i18n"], "default_lang": "vi"},
+    {"id": "task/review", "kind": "task", "path": "packs/task/TASK_review.md", "version": "1.0", "core_min": "1.9", "needs": ["character/lab4"]},
+    {"id": "task/onto-retrofit", "kind": "task", "path": "packs/task/onto-retrofit/SKILL.md", "version": "1.3", "core_min": "1.9",
+     "includes": ["packs/task/onto-retrofit/O5_pipeline.md", "packs/task/onto-retrofit/tools/", "packs/task/onto-retrofit/templates/"],
+     "needs_data": ["data/KG_00_registry.json", "data/backbone_ai.json"]}
+  ],
+  "data": [
+    {"path": "data/KG_00_registry.json", "what": "개념·문헌 ID 등록부 (모든 분야 공용)"},
+    {"path": "data/backbone_ai.json", "what": "인공지능 영역 뼈대 초안 v0.1 (작성자 초안, 공식 분류 체계 아님)"}
+  ],
+  "domains": {"ai": "SKILL.md (내장)", "stats": "domain/stats", "econ": "domain/econ", "acct": "domain/acct", "biz": "domain/biz"},
+  "related_repos": {"character_add_packs": "ahnboat_lab_character_add_packs (준비 중)", "expressions_source": "adminmrobo/fruitfly-lab-expressions"}
+}

@@ -1,0 +1,39 @@
+[
+ {
+  "id": "{참고문헌 id: 제1저자성+연도+제목첫단어, 예 nair2010rectified}",
+  "type": "paper-conference",
+  "title": "{페이지에 적힌 제목 그대로}",
+  "author": [
+   {
+    "family": "{성}",
+    "given": "{이름}"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010
+    ]
+   ]
+  },
+  "container-title": "{페이지에 적힌 학술지·학회}",
+  "lab": {
+   "work": "lab:work/{참고문헌 id}",
+   "role": "background",
+   "supports": [
+    "lab:claim/relu-trains-faster"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": false,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ }
+]

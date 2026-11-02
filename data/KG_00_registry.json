@@ -1,0 +1,1634 @@
+{
+ "version": "0.2",
+ "updated": "2026-10-25",
+ "note": "시리즈 개념·문헌 ID 좌석표. 같은 개념이면 이 ID를 쓴다. 뼈대(Area·Topic)는 작성자 초안.",
+ "entries": [
+  {
+   "id": "lab:area/math",
+   "type": "Area",
+   "label_ko": "수학 기초",
+   "label_en": "Mathematical foundations",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/linear-algebra",
+   "type": "Topic",
+   "label_ko": "선형대수",
+   "label_en": "Linear algebra",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/probability-statistics",
+   "type": "Topic",
+   "label_ko": "확률·통계",
+   "label_en": "Probability and statistics",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label_ko": "미적분과 최적화 수학",
+   "label_en": "Calculus for optimization",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/information-theory",
+   "type": "Topic",
+   "label_ko": "정보 이론",
+   "label_en": "Information theory",
+   "pages": []
+  },
+  {
+   "id": "lab:area/ml-basics",
+   "type": "Area",
+   "label_ko": "머신러닝 기초",
+   "label_en": "Machine learning basics",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/supervised-learning",
+   "type": "Topic",
+   "label_ko": "지도 학습",
+   "label_en": "Supervised learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/unsupervised-learning",
+   "type": "Topic",
+   "label_ko": "비지도 학습 개념",
+   "label_en": "Unsupervised learning (concept)",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/generalization",
+   "type": "Topic",
+   "label_ko": "일반화·과적합",
+   "label_en": "Generalization and overfitting",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bias-variance",
+   "type": "Topic",
+   "label_ko": "편향-분산 균형",
+   "label_en": "Bias–variance trade-off",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-splitting",
+   "type": "Topic",
+   "label_ko": "훈련·검증·시험 분리",
+   "label_en": "Train/validation/test split",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/feature-engineering",
+   "type": "Topic",
+   "label_ko": "특징 공학",
+   "label_en": "Feature engineering",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rule-vs-learning",
+   "type": "Topic",
+   "label_ko": "규칙 기반 vs 학습 기반",
+   "label_en": "Rule-based vs learned systems",
+   "pages": []
+  },
+  {
+   "id": "lab:area/classical",
+   "type": "Area",
+   "label_ko": "고전 모델",
+   "label_en": "Classical models",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/linear-regression",
+   "type": "Topic",
+   "label_ko": "선형 회귀",
+   "label_en": "Linear regression",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/logistic-regression",
+   "type": "Topic",
+   "label_ko": "로지스틱 회귀",
+   "label_en": "Logistic regression",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/svm",
+   "type": "Topic",
+   "label_ko": "서포트 벡터 머신",
+   "label_en": "Support vector machine",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/knn",
+   "type": "Topic",
+   "label_ko": "k-최근접 이웃",
+   "label_en": "k-nearest neighbors",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/decision-tree",
+   "type": "Topic",
+   "label_ko": "결정 트리",
+   "label_en": "Decision tree",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/naive-bayes",
+   "type": "Topic",
+   "label_ko": "나이브 베이즈",
+   "label_en": "Naive Bayes",
+   "pages": []
+  },
+  {
+   "id": "lab:area/ensemble",
+   "type": "Area",
+   "label_ko": "앙상블",
+   "label_en": "Ensemble methods",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bagging",
+   "type": "Topic",
+   "label_ko": "배깅",
+   "label_en": "Bagging",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/random-forest",
+   "type": "Topic",
+   "label_ko": "랜덤 포레스트",
+   "label_en": "Random forest",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/boosting",
+   "type": "Topic",
+   "label_ko": "부스팅",
+   "label_en": "Boosting",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stacking",
+   "type": "Topic",
+   "label_ko": "스태킹",
+   "label_en": "Stacking",
+   "pages": []
+  },
+  {
+   "id": "lab:area/nn-basics",
+   "type": "Area",
+   "label_ko": "신경망 기초",
+   "label_en": "Neural network basics",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/weights-and-biases",
+   "type": "Topic",
+   "label_ko": "가중치와 편향",
+   "label_en": "Weights and biases",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/perceptron",
+   "type": "Topic",
+   "label_ko": "퍼셉트론",
+   "label_en": "Perceptron",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mlp",
+   "type": "Topic",
+   "label_ko": "다층 퍼셉트론",
+   "label_en": "Multilayer perceptron",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/activation-function",
+   "type": "Topic",
+   "label_ko": "활성화 함수",
+   "label_en": "Activation function",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/loss-function",
+   "type": "Topic",
+   "label_ko": "손실 함수",
+   "label_en": "Loss function",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/backpropagation",
+   "type": "Topic",
+   "label_ko": "역전파",
+   "label_en": "Backpropagation",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/universal-approximation",
+   "type": "Topic",
+   "label_ko": "보편 근사 정리",
+   "label_en": "Universal approximation",
+   "pages": []
+  },
+  {
+   "id": "lab:area/optimization",
+   "type": "Area",
+   "label_ko": "최적화",
+   "label_en": "Optimization",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gradient-descent",
+   "type": "Topic",
+   "label_ko": "경사하강법",
+   "label_en": "Gradient descent",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sgd-minibatch",
+   "type": "Topic",
+   "label_ko": "확률적 경사하강·미니배치",
+   "label_en": "SGD and mini-batches",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/momentum-adam",
+   "type": "Topic",
+   "label_ko": "모멘텀·Adam",
+   "label_en": "Momentum and Adam",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/learning-rate-schedule",
+   "type": "Topic",
+   "label_ko": "학습률 조정",
+   "label_en": "Learning-rate schedules",
+   "pages": []
+  },
+  {
+   "id": "lab:area/regularization",
+   "type": "Area",
+   "label_ko": "정규화·일반화 기법",
+   "label_en": "Regularization",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/weight-decay",
+   "type": "Topic",
+   "label_ko": "가중치 감쇠(L2)",
+   "label_en": "Weight decay (L2)",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dropout",
+   "type": "Topic",
+   "label_ko": "드롭아웃",
+   "label_en": "Dropout",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/early-stopping",
+   "type": "Topic",
+   "label_ko": "조기 종료",
+   "label_en": "Early stopping",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/normalization-layers",
+   "type": "Topic",
+   "label_ko": "정규화 층",
+   "label_en": "Normalization layers",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-augmentation",
+   "type": "Topic",
+   "label_ko": "데이터 증강",
+   "label_en": "Data augmentation",
+   "pages": []
+  },
+  {
+   "id": "lab:area/vision",
+   "type": "Area",
+   "label_ko": "합성곱·시각",
+   "label_en": "Convolutional networks and vision",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/convolution",
+   "type": "Topic",
+   "label_ko": "합성곱·가중치 공유",
+   "label_en": "Convolution and weight sharing",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/pooling",
+   "type": "Topic",
+   "label_ko": "풀링",
+   "label_en": "Pooling",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/receptive-field",
+   "type": "Topic",
+   "label_ko": "수용 영역",
+   "label_en": "Receptive field",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/residual-connections",
+   "type": "Topic",
+   "label_ko": "잔차 연결",
+   "label_en": "Residual connections",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/object-detection",
+   "type": "Topic",
+   "label_ko": "객체 탐지",
+   "label_en": "Object detection",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/segmentation",
+   "type": "Topic",
+   "label_ko": "분할",
+   "label_en": "Segmentation",
+   "pages": []
+  },
+  {
+   "id": "lab:area/sequence",
+   "type": "Area",
+   "label_ko": "시퀀스 모델",
+   "label_en": "Sequence models",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rnn",
+   "type": "Topic",
+   "label_ko": "순환 신경망",
+   "label_en": "Recurrent neural network",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lstm-gru",
+   "type": "Topic",
+   "label_ko": "LSTM·GRU",
+   "label_en": "LSTM and GRU",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/seq2seq",
+   "type": "Topic",
+   "label_ko": "시퀀스-투-시퀀스",
+   "label_en": "Sequence-to-sequence",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/time-series",
+   "type": "Topic",
+   "label_ko": "시계열 예측",
+   "label_en": "Time-series forecasting",
+   "pages": []
+  },
+  {
+   "id": "lab:area/attention",
+   "type": "Area",
+   "label_ko": "어텐션·트랜스포머",
+   "label_en": "Attention and transformers",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/attention-mechanism",
+   "type": "Topic",
+   "label_ko": "어텐션 메커니즘",
+   "label_en": "Attention mechanism",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/self-attention",
+   "type": "Topic",
+   "label_ko": "셀프 어텐션",
+   "label_en": "Self-attention",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multi-head-attention",
+   "type": "Topic",
+   "label_ko": "멀티헤드 어텐션",
+   "label_en": "Multi-head attention",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/positional-encoding",
+   "type": "Topic",
+   "label_ko": "위치 인코딩",
+   "label_en": "Positional encoding",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transformer",
+   "type": "Topic",
+   "label_ko": "트랜스포머",
+   "label_en": "Transformer",
+   "pages": []
+  },
+  {
+   "id": "lab:area/language",
+   "type": "Area",
+   "label_ko": "언어 모델·자연어 처리",
+   "label_en": "Language models and NLP",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tokenization",
+   "type": "Topic",
+   "label_ko": "토큰화",
+   "label_en": "Tokenization",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/word-embedding",
+   "type": "Topic",
+   "label_ko": "단어 임베딩",
+   "label_en": "Word embeddings",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/pretrained-lm",
+   "type": "Topic",
+   "label_ko": "사전학습 언어 모델",
+   "label_en": "Pretrained language models",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transfer-learning",
+   "type": "Topic",
+   "label_ko": "전이 학습·파인튜닝",
+   "label_en": "Transfer learning and fine-tuning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lora",
+   "type": "Topic",
+   "label_ko": "LoRA·어댑터",
+   "label_en": "LoRA and adapters",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/prompting",
+   "type": "Topic",
+   "label_ko": "프롬프팅",
+   "label_en": "Prompting",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rag",
+   "type": "Topic",
+   "label_ko": "검색 증강 생성",
+   "label_en": "Retrieval-augmented generation",
+   "pages": []
+  },
+  {
+   "id": "lab:area/generative",
+   "type": "Area",
+   "label_ko": "생성 모델",
+   "label_en": "Generative models",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/autoencoder",
+   "type": "Topic",
+   "label_ko": "오토인코더",
+   "label_en": "Autoencoder",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vae",
+   "type": "Topic",
+   "label_ko": "변분 오토인코더",
+   "label_en": "Variational autoencoder",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gan",
+   "type": "Topic",
+   "label_ko": "적대적 생성 신경망",
+   "label_en": "Generative adversarial network",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/diffusion",
+   "type": "Topic",
+   "label_ko": "확산 모델",
+   "label_en": "Diffusion models",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/autoregressive-generation",
+   "type": "Topic",
+   "label_ko": "자기회귀 생성",
+   "label_en": "Autoregressive generation",
+   "pages": []
+  },
+  {
+   "id": "lab:area/representation",
+   "type": "Area",
+   "label_ko": "표현 학습",
+   "label_en": "Representation learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/embedding-space",
+   "type": "Topic",
+   "label_ko": "임베딩 공간",
+   "label_en": "Embedding space",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/self-supervised",
+   "type": "Topic",
+   "label_ko": "자기지도 학습",
+   "label_en": "Self-supervised learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/contrastive",
+   "type": "Topic",
+   "label_ko": "대조 학습",
+   "label_en": "Contrastive learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sparse-representation",
+   "type": "Topic",
+   "label_ko": "희소 표현",
+   "label_en": "Sparse representation",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/random-features",
+   "type": "Topic",
+   "label_ko": "무작위 특징",
+   "label_en": "Random features",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multi-task-learning",
+   "type": "Topic",
+   "label_ko": "멀티태스크 학습",
+   "label_en": "Multi-task learning",
+   "pages": []
+  },
+  {
+   "id": "lab:area/rl",
+   "type": "Area",
+   "label_ko": "강화 학습",
+   "label_en": "Reinforcement learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mdp",
+   "type": "Topic",
+   "label_ko": "마르코프 결정 과정",
+   "label_en": "Markov decision process",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/reward",
+   "type": "Topic",
+   "label_ko": "보상",
+   "label_en": "Reward",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/value-function",
+   "type": "Topic",
+   "label_ko": "가치 함수",
+   "label_en": "Value function",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/q-learning",
+   "type": "Topic",
+   "label_ko": "Q-러닝",
+   "label_en": "Q-learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/policy-gradient",
+   "type": "Topic",
+   "label_ko": "정책 경사",
+   "label_en": "Policy gradient",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/exploration",
+   "type": "Topic",
+   "label_ko": "탐험과 활용",
+   "label_en": "Exploration–exploitation",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/reward-prediction-error",
+   "type": "Topic",
+   "label_ko": "보상 예측 오차",
+   "label_en": "Reward prediction error",
+   "pages": []
+  },
+  {
+   "id": "lab:area/unsupervised",
+   "type": "Area",
+   "label_ko": "비지도 기법",
+   "label_en": "Unsupervised methods",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/clustering",
+   "type": "Topic",
+   "label_ko": "군집화",
+   "label_en": "Clustering",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/pca",
+   "type": "Topic",
+   "label_ko": "주성분 분석",
+   "label_en": "Principal component analysis",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tsne-umap",
+   "type": "Topic",
+   "label_ko": "t-SNE·UMAP",
+   "label_en": "t-SNE and UMAP",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/density-estimation",
+   "type": "Topic",
+   "label_ko": "밀도 추정",
+   "label_en": "Density estimation",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/anomaly-detection",
+   "type": "Topic",
+   "label_ko": "이상 탐지",
+   "label_en": "Anomaly detection",
+   "pages": []
+  },
+  {
+   "id": "lab:area/evaluation",
+   "type": "Area",
+   "label_ko": "평가",
+   "label_en": "Evaluation",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/accuracy-metrics",
+   "type": "Topic",
+   "label_ko": "정확도·손실 지표",
+   "label_en": "Accuracy and loss metrics",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/precision-recall",
+   "type": "Topic",
+   "label_ko": "정밀도·재현율",
+   "label_en": "Precision and recall",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/roc-auc",
+   "type": "Topic",
+   "label_ko": "ROC·AUC",
+   "label_en": "ROC and AUC",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/confusion-matrix",
+   "type": "Topic",
+   "label_ko": "혼동 행렬",
+   "label_en": "Confusion matrix",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-leakage",
+   "type": "Topic",
+   "label_ko": "데이터 누수",
+   "label_en": "Data leakage",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ablation",
+   "type": "Topic",
+   "label_ko": "절제 실험",
+   "label_en": "Ablation study",
+   "pages": []
+  },
+  {
+   "id": "lab:area/graph",
+   "type": "Area",
+   "label_ko": "그래프 학습",
+   "label_en": "Graph learning",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gnn",
+   "type": "Topic",
+   "label_ko": "그래프 신경망",
+   "label_en": "Graph neural networks",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/message-passing",
+   "type": "Topic",
+   "label_ko": "메시지 전달",
+   "label_en": "Message passing",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/knowledge-graph",
+   "type": "Topic",
+   "label_ko": "지식 그래프",
+   "label_en": "Knowledge graphs",
+   "pages": []
+  },
+  {
+   "id": "lab:area/systems",
+   "type": "Area",
+   "label_ko": "시스템·MLOps",
+   "label_en": "ML systems and MLOps",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/deployment",
+   "type": "Topic",
+   "label_ko": "배포",
+   "label_en": "Deployment",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/distribution-shift",
+   "type": "Topic",
+   "label_ko": "분포 이동",
+   "label_en": "Distribution shift",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/monitoring",
+   "type": "Topic",
+   "label_ko": "모니터링",
+   "label_en": "Monitoring",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/reproducibility",
+   "type": "Topic",
+   "label_ko": "재현성",
+   "label_en": "Reproducibility",
+   "pages": []
+  },
+  {
+   "id": "lab:area/responsible",
+   "type": "Area",
+   "label_ko": "책임 있는 AI",
+   "label_en": "Responsible AI",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fairness",
+   "type": "Topic",
+   "label_ko": "공정성",
+   "label_en": "Fairness",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/interpretability",
+   "type": "Topic",
+   "label_ko": "설명 가능성·해석",
+   "label_en": "Interpretability",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ai-safety",
+   "type": "Topic",
+   "label_ko": "안전성",
+   "label_en": "AI safety",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/privacy",
+   "type": "Topic",
+   "label_ko": "프라이버시",
+   "label_en": "Privacy",
+   "pages": []
+  },
+  {
+   "id": "lab:area/neuro",
+   "type": "Area",
+   "label_ko": "신경과학과 AI",
+   "label_en": "Neuroscience and AI",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/biological-neuron",
+   "type": "Topic",
+   "label_ko": "생물 뉴런과 스파이크",
+   "label_en": "Biological neurons and spikes",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/synaptic-plasticity",
+   "type": "Topic",
+   "label_ko": "시냅스 가소성",
+   "label_en": "Synaptic plasticity",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/connectome",
+   "type": "Topic",
+   "label_ko": "커넥톰",
+   "label_en": "Connectome",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sensory-processing",
+   "type": "Topic",
+   "label_ko": "감각 처리",
+   "label_en": "Sensory processing",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/learning-memory-circuits",
+   "type": "Topic",
+   "label_ko": "학습·기억 회로",
+   "label_en": "Learning and memory circuits",
+   "pages": []
+  },
+  {
+   "id": "lab:topic/circuit-methods",
+   "type": "Topic",
+   "label_ko": "신경 회로 실험 기법",
+   "label_en": "Circuit neuroscience methods",
+   "pages": []
+  },
+  {
+   "id": "lab:question/how-flies-perceive",
+   "type": "Question",
+   "label_ko": "초파리는 어떻게 맡고, 보고, 알아차리는가",
+   "label_en": "How does a fly smell, see and recognize?",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/connectome",
+   "type": "Concept",
+   "label_ko": "커넥톰",
+   "label_en": "Connectome",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/spike",
+   "type": "Concept",
+   "label_ko": "스파이크",
+   "label_en": "Spike (action potential)",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/firing-rate",
+   "type": "Concept",
+   "label_ko": "발화 빈도",
+   "label_en": "Firing rate",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/synapse",
+   "type": "Concept",
+   "label_ko": "시냅스",
+   "label_en": "Synapse",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/graded-potential",
+   "type": "Concept",
+   "label_ko": "연속 전압 신호",
+   "label_en": "Graded potential",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/olfactory-receptor-neurons",
+   "type": "BioAnalogue",
+   "label_ko": "후각 수용 뉴런",
+   "label_en": "Olfactory receptor neurons",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/compound-eye",
+   "type": "BioAnalogue",
+   "label_ko": "겹눈",
+   "label_en": "Compound eye",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/antennal-lobe",
+   "type": "BioAnalogue",
+   "label_ko": "더듬이엽",
+   "label_en": "Antennal lobe",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/mushroom-body",
+   "type": "BioAnalogue",
+   "label_ko": "버섯체",
+   "label_en": "Mushroom body",
+   "pages": [
+    "01",
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/kenyon-cells",
+   "type": "BioAnalogue",
+   "label_ko": "케니언 세포",
+   "label_en": "Kenyon cells",
+   "pages": [
+    "01",
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/lateral-horn",
+   "type": "BioAnalogue",
+   "label_ko": "측각",
+   "label_en": "Lateral horn",
+   "pages": [
+    "01",
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/dopamine-neurons",
+   "type": "BioAnalogue",
+   "label_ko": "도파민 뉴런",
+   "label_en": "Dopaminergic neurons",
+   "pages": [
+    "01",
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/medulla-columns",
+   "type": "BioAnalogue",
+   "label_ko": "메둘라 기둥",
+   "label_en": "Medulla columns",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/lplc2",
+   "type": "BioAnalogue",
+   "label_ko": "LPLC2 뉴런",
+   "label_en": "LPLC2 neurons",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:bio/giant-fiber",
+   "type": "BioAnalogue",
+   "label_ko": "거대 섬유",
+   "label_en": "Giant fiber",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/rule-based",
+   "type": "Concept",
+   "label_ko": "규칙 기반",
+   "label_en": "Rule-based system",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/learning-based",
+   "type": "Concept",
+   "label_ko": "학습 기반",
+   "label_en": "Learning-based system",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/prediction-error-update",
+   "type": "Concept",
+   "label_ko": "예측 오차 갱신",
+   "label_en": "Prediction-error update",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/threshold-unit",
+   "type": "Method",
+   "label_ko": "문턱 모델",
+   "label_en": "Threshold unit",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/weight",
+   "type": "Concept",
+   "label_ko": "가중치",
+   "label_en": "Weight",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/bias",
+   "type": "Concept",
+   "label_ko": "편향",
+   "label_en": "Bias",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-input",
+   "type": "Limitation",
+   "label_ko": "입력을 하나만 본다",
+   "label_en": "Only one input",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/perceptron",
+   "type": "Method",
+   "label_ko": "퍼셉트론",
+   "label_en": "Perceptron",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/sigmoid",
+   "type": "Concept",
+   "label_ko": "시그모이드",
+   "label_en": "Sigmoid",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/cross-entropy-loss",
+   "type": "Concept",
+   "label_ko": "손실(교차 엔트로피)",
+   "label_en": "Cross-entropy loss",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/gradient-descent",
+   "type": "Method",
+   "label_ko": "경사하강법",
+   "label_en": "Gradient descent",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/learning-rate",
+   "type": "Concept",
+   "label_ko": "학습률",
+   "label_en": "Learning rate",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-linear-boundary",
+   "type": "Limitation",
+   "label_ko": "곧은 경계 하나뿐",
+   "label_en": "Single linear boundary",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/underfitting",
+   "type": "Concept",
+   "label_ko": "과소적합",
+   "label_en": "Underfitting",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/mlp",
+   "type": "Method",
+   "label_ko": "다층 퍼셉트론",
+   "label_en": "Multilayer perceptron",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/hidden-layer",
+   "type": "Concept",
+   "label_ko": "은닉층",
+   "label_en": "Hidden layer",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/backpropagation",
+   "type": "Method",
+   "label_ko": "역전파",
+   "label_en": "Backpropagation",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/random-features",
+   "type": "Method",
+   "label_ko": "무작위 고정 은닉층 + 출력만 학습",
+   "label_en": "Random features with trained readout",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/sparse-coding",
+   "type": "Concept",
+   "label_ko": "희소 표현",
+   "label_en": "Sparse representation",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/overfitting",
+   "type": "Concept",
+   "label_ko": "과적합",
+   "label_en": "Overfitting",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/train-validation-split",
+   "type": "Concept",
+   "label_ko": "훈련·검증 분리",
+   "label_en": "Train/validation split",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/early-stopping",
+   "type": "Method",
+   "label_ko": "조기 종료",
+   "label_en": "Early stopping",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:metric/validation-accuracy",
+   "type": "Metric",
+   "label_ko": "검증 정확도",
+   "label_en": "Validation accuracy",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:metric/train-accuracy",
+   "type": "Metric",
+   "label_ko": "훈련 정확도",
+   "label_en": "Training accuracy",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:limitation/many-hidden-units",
+   "type": "Limitation",
+   "label_ko": "입력이 크면 은닉 뉴런이 매우 많이 필요",
+   "label_en": "Width explodes with input size",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:method/cnn",
+   "type": "Method",
+   "label_ko": "합성곱 신경망",
+   "label_en": "Convolutional neural network",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/weight-sharing",
+   "type": "Concept",
+   "label_ko": "가중치 공유",
+   "label_en": "Weight sharing",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/receptive-field",
+   "type": "Concept",
+   "label_ko": "수용 영역",
+   "label_en": "Receptive field",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:task/looming-detection",
+   "type": "Task",
+   "label_ko": "다가옴 검출",
+   "label_en": "Looming detection",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:limitation/depth-cost",
+   "type": "Limitation",
+   "label_ko": "깊을수록 데이터·계산이 많이 든다",
+   "label_en": "Depth costs data and compute",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:concept/frozen-weights",
+   "type": "Concept",
+   "label_ko": "동결된 사전학습 가중치",
+   "label_en": "Frozen pretrained weights",
+   "pages": [
+    "01",
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/input-normalization",
+   "type": "Concept",
+   "label_ko": "입력 정규화",
+   "label_en": "Input normalization",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:question/dopamine-rpe",
+   "type": "Question",
+   "label_ko": "초파리 도파민 신호는 예측 오차를 계산하는가",
+   "label_en": "Do fly dopamine neurons encode prediction error?",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:question/brain-without-backprop",
+   "type": "Question",
+   "label_ko": "뇌는 역전파 없이 깊은 층을 어떻게 학습하나",
+   "label_en": "How do brains learn deep layers without backprop?",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:dataset/band-toy",
+   "type": "Dataset",
+   "label_ko": "띠 모양 냄새 장난감 데이터",
+   "label_en": "Band-shaped toy odor data",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/dorkenwald2024neuronal",
+   "type": "Work",
+   "label_ko": "dorkenwald2024neuronal",
+   "label_en": "dorkenwald2024neuronal",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/aso2014neuronal",
+   "type": "Work",
+   "label_ko": "aso2014neuronal",
+   "label_en": "aso2014neuronal",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/couto2005molecular",
+   "type": "Work",
+   "label_ko": "couto2005molecular",
+   "label_en": "couto2005molecular",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/suh2004single",
+   "type": "Work",
+   "label_ko": "suh2004single",
+   "label_en": "suh2004single",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/semmelhack2009select",
+   "type": "Work",
+   "label_ko": "semmelhack2009select",
+   "label_en": "semmelhack2009select",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/maisak2013directional",
+   "type": "Work",
+   "label_ko": "maisak2013directional",
+   "label_en": "maisak2013directional",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/klapoetke2017ultra",
+   "type": "Work",
+   "label_ko": "klapoetke2017ultra",
+   "label_en": "klapoetke2017ultra",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:work/azevedo2009equal",
+   "type": "Work",
+   "label_ko": "azevedo2009equal",
+   "label_en": "azevedo2009equal",
+   "pages": [
+    "01"
+   ]
+  },
+  {
+   "id": "lab:question/how-memory-becomes-action",
+   "type": "Question",
+   "label_ko": "배운 기억은 어떻게 행동이 되나",
+   "label_en": "How is a learned memory turned into behavior?",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/convergence-neurons",
+   "type": "BioAnalogue",
+   "label_ko": "합류 뉴런",
+   "label_en": "PD2a1/b1 lateral horn output neurons",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/mbon-a2sc",
+   "type": "BioAnalogue",
+   "label_ko": "기억 출력 뉴런",
+   "label_en": "MBON-α2sc",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/mbon-a-prime-2",
+   "type": "BioAnalogue",
+   "label_ko": "보상 기억 뉴런",
+   "label_en": "MBON-α′2",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:bio/projection-neurons",
+   "type": "BioAnalogue",
+   "label_ko": "냄새 배달부",
+   "label_en": "Projection neurons",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/memory-retrieval",
+   "type": "Concept",
+   "label_ko": "기억 인출",
+   "label_en": "Memory retrieval",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/aversive-conditioning",
+   "type": "Concept",
+   "label_ko": "혐오 조건화",
+   "label_en": "Aversive olfactory conditioning",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/innate-learned-convergence",
+   "type": "Concept",
+   "label_ko": "타고난 경로와 배운 경로의 합류",
+   "label_en": "Convergence of innate and learned pathways",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/gal4",
+   "type": "Method",
+   "label_ko": "유전자 주소표",
+   "label_en": "GAL4 / split-GAL4",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/shibire-ts",
+   "type": "Method",
+   "label_ko": "온도 스위치",
+   "label_en": "Shibire-ts",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/calcium-imaging",
+   "type": "Method",
+   "label_ko": "활동 형광 카메라",
+   "label_en": "Calcium imaging",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/em-connectomics",
+   "type": "Method",
+   "label_ko": "뇌 배선도 (전자현미경)",
+   "label_en": "EM connectomics",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/t-maze",
+   "type": "Method",
+   "label_ko": "선택 시험장",
+   "label_en": "T-maze assay",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:metric/performance-index",
+   "type": "Metric",
+   "label_ko": "기억 점수",
+   "label_en": "Performance index",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/residual-connection",
+   "type": "Concept",
+   "label_ko": "잔차 연결",
+   "label_en": "Residual connection",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:method/lora",
+   "type": "Method",
+   "label_ko": "LoRA",
+   "label_en": "LoRA",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/rag-like-retrieval",
+   "type": "Concept",
+   "label_ko": "검색 증강과 닮은 기억 꺼내기",
+   "label_en": "RAG-like retrieval (analogy)",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/ablation-study",
+   "type": "Concept",
+   "label_ko": "절제 실험",
+   "label_en": "Ablation study",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/activation-inspection",
+   "type": "Concept",
+   "label_ko": "활성값 관찰",
+   "label_en": "Activation inspection",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:concept/shared-unit",
+   "type": "Concept",
+   "label_ko": "공유 유닛",
+   "label_en": "Shared hidden unit",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:question/sc-meaning",
+   "type": "Question",
+   "label_ko": "MBON-α2sc의 \"sc\"는 무엇의 약자인가",
+   "label_en": "What does \"sc\" stand for in MBON-α2sc?",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:question/calcium-specificity",
+   "type": "Question",
+   "label_ko": "훈련 후 반응 약화는 훈련 냄새에만 해당하는가",
+   "label_en": "Is the reduced response odor-specific?",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:work/dolan2018communication",
+   "type": "Work",
+   "label_ko": "dolan2018communication",
+   "label_en": "dolan2018communication",
+   "pages": [
+    "02"
+   ]
+  },
+  {
+   "id": "lab:work/zheng2018complete",
+   "type": "Work",
+   "label_ko": "zheng2018complete",
+   "label_en": "zheng2018complete",
+   "pages": [
+    "02"
+   ]
+  }
+ ]
+}

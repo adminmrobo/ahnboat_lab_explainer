@@ -1,0 +1,2234 @@
+{
+ "version": "0.1",
+ "name": "딥러닝·AI 영역 뼈대 (초안)",
+ "note": "표준 교과서 목차와 분야 구분을 참고해 이 시리즈용으로 만든 작성자 초안. 공식 분류 체계(ACM CCS, CSO 등)가 아니며, 대응은 추후 확인 필요.",
+ "nodes": [
+  {
+   "id": "lab:area/math",
+   "type": "Area",
+   "label": {
+    "ko": "수학 기초",
+    "en": "Mathematical foundations"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/linear-algebra",
+   "type": "Topic",
+   "label": {
+    "ko": "선형대수",
+    "en": "Linear algebra"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/probability-statistics",
+   "type": "Topic",
+   "label": {
+    "ko": "확률·통계",
+    "en": "Probability and statistics"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/information-theory",
+   "type": "Topic",
+   "label": {
+    "ko": "정보 이론",
+    "en": "Information theory"
+   },
+   "level": 1,
+   "family": "math",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/ml-basics",
+   "type": "Area",
+   "label": {
+    "ko": "머신러닝 기초",
+    "en": "Machine learning basics"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/supervised-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "지도 학습",
+    "en": "Supervised learning"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/unsupervised-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "비지도 학습 개념",
+    "en": "Unsupervised learning (concept)"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/generalization",
+   "type": "Topic",
+   "label": {
+    "ko": "일반화·과적합",
+    "en": "Generalization and overfitting"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bias-variance",
+   "type": "Topic",
+   "label": {
+    "ko": "편향-분산 균형",
+    "en": "Bias–variance trade-off"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-splitting",
+   "type": "Topic",
+   "label": {
+    "ko": "훈련·검증·시험 분리",
+    "en": "Train/validation/test split"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/feature-engineering",
+   "type": "Topic",
+   "label": {
+    "ko": "특징 공학",
+    "en": "Feature engineering"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rule-vs-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "규칙 기반 vs 학습 기반",
+    "en": "Rule-based vs learned systems"
+   },
+   "level": 1,
+   "family": "ml-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/classical",
+   "type": "Area",
+   "label": {
+    "ko": "고전 모델",
+    "en": "Classical models"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/linear-regression",
+   "type": "Topic",
+   "label": {
+    "ko": "선형 회귀",
+    "en": "Linear regression"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/logistic-regression",
+   "type": "Topic",
+   "label": {
+    "ko": "로지스틱 회귀",
+    "en": "Logistic regression"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/svm",
+   "type": "Topic",
+   "label": {
+    "ko": "서포트 벡터 머신",
+    "en": "Support vector machine"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/knn",
+   "type": "Topic",
+   "label": {
+    "ko": "k-최근접 이웃",
+    "en": "k-nearest neighbors"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/decision-tree",
+   "type": "Topic",
+   "label": {
+    "ko": "결정 트리",
+    "en": "Decision tree"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/naive-bayes",
+   "type": "Topic",
+   "label": {
+    "ko": "나이브 베이즈",
+    "en": "Naive Bayes"
+   },
+   "level": 2,
+   "family": "classical",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/ensemble",
+   "type": "Area",
+   "label": {
+    "ko": "앙상블",
+    "en": "Ensemble methods"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/bagging",
+   "type": "Topic",
+   "label": {
+    "ko": "배깅",
+    "en": "Bagging"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/random-forest",
+   "type": "Topic",
+   "label": {
+    "ko": "랜덤 포레스트",
+    "en": "Random forest"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/boosting",
+   "type": "Topic",
+   "label": {
+    "ko": "부스팅",
+    "en": "Boosting"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stacking",
+   "type": "Topic",
+   "label": {
+    "ko": "스태킹",
+    "en": "Stacking"
+   },
+   "level": 2,
+   "family": "ensemble",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/nn-basics",
+   "type": "Area",
+   "label": {
+    "ko": "신경망 기초",
+    "en": "Neural network basics"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/weights-and-biases",
+   "type": "Topic",
+   "label": {
+    "ko": "가중치와 편향",
+    "en": "Weights and biases"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/perceptron",
+   "type": "Topic",
+   "label": {
+    "ko": "퍼셉트론",
+    "en": "Perceptron"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mlp",
+   "type": "Topic",
+   "label": {
+    "ko": "다층 퍼셉트론",
+    "en": "Multilayer perceptron"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/activation-function",
+   "type": "Topic",
+   "label": {
+    "ko": "활성화 함수",
+    "en": "Activation function"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/loss-function",
+   "type": "Topic",
+   "label": {
+    "ko": "손실 함수",
+    "en": "Loss function"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/backpropagation",
+   "type": "Topic",
+   "label": {
+    "ko": "역전파",
+    "en": "Backpropagation"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/universal-approximation",
+   "type": "Topic",
+   "label": {
+    "ko": "보편 근사 정리",
+    "en": "Universal approximation"
+   },
+   "level": 2,
+   "family": "nn-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/optimization",
+   "type": "Area",
+   "label": {
+    "ko": "최적화",
+    "en": "Optimization"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/gradient-descent",
+   "type": "Topic",
+   "label": {
+    "ko": "경사하강법",
+    "en": "Gradient descent"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sgd-minibatch",
+   "type": "Topic",
+   "label": {
+    "ko": "확률적 경사하강·미니배치",
+    "en": "SGD and mini-batches"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/momentum-adam",
+   "type": "Topic",
+   "label": {
+    "ko": "모멘텀·Adam",
+    "en": "Momentum and Adam"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/learning-rate-schedule",
+   "type": "Topic",
+   "label": {
+    "ko": "학습률 조정",
+    "en": "Learning-rate schedules"
+   },
+   "level": 2,
+   "family": "optimization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/regularization",
+   "type": "Area",
+   "label": {
+    "ko": "정규화·일반화 기법",
+    "en": "Regularization"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/weight-decay",
+   "type": "Topic",
+   "label": {
+    "ko": "가중치 감쇠(L2)",
+    "en": "Weight decay (L2)"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dropout",
+   "type": "Topic",
+   "label": {
+    "ko": "드롭아웃",
+    "en": "Dropout"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/early-stopping",
+   "type": "Topic",
+   "label": {
+    "ko": "조기 종료",
+    "en": "Early stopping"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/normalization-layers",
+   "type": "Topic",
+   "label": {
+    "ko": "정규화 층",
+    "en": "Normalization layers"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-augmentation",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 증강",
+    "en": "Data augmentation"
+   },
+   "level": 3,
+   "family": "regularization",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/vision",
+   "type": "Area",
+   "label": {
+    "ko": "합성곱·시각",
+    "en": "Convolutional networks and vision"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/convolution",
+   "type": "Topic",
+   "label": {
+    "ko": "합성곱·가중치 공유",
+    "en": "Convolution and weight sharing"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pooling",
+   "type": "Topic",
+   "label": {
+    "ko": "풀링",
+    "en": "Pooling"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/receptive-field",
+   "type": "Topic",
+   "label": {
+    "ko": "수용 영역",
+    "en": "Receptive field"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/residual-connections",
+   "type": "Topic",
+   "label": {
+    "ko": "잔차 연결",
+    "en": "Residual connections"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/object-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "객체 탐지",
+    "en": "Object detection"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/segmentation",
+   "type": "Topic",
+   "label": {
+    "ko": "분할",
+    "en": "Segmentation"
+   },
+   "level": 3,
+   "family": "vision",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/sequence",
+   "type": "Area",
+   "label": {
+    "ko": "시퀀스 모델",
+    "en": "Sequence models"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/rnn",
+   "type": "Topic",
+   "label": {
+    "ko": "순환 신경망",
+    "en": "Recurrent neural network"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lstm-gru",
+   "type": "Topic",
+   "label": {
+    "ko": "LSTM·GRU",
+    "en": "LSTM and GRU"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/seq2seq",
+   "type": "Topic",
+   "label": {
+    "ko": "시퀀스-투-시퀀스",
+    "en": "Sequence-to-sequence"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/time-series",
+   "type": "Topic",
+   "label": {
+    "ko": "시계열 예측",
+    "en": "Time-series forecasting"
+   },
+   "level": 3,
+   "family": "sequence",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/attention",
+   "type": "Area",
+   "label": {
+    "ko": "어텐션·트랜스포머",
+    "en": "Attention and transformers"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/attention-mechanism",
+   "type": "Topic",
+   "label": {
+    "ko": "어텐션 메커니즘",
+    "en": "Attention mechanism"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/self-attention",
+   "type": "Topic",
+   "label": {
+    "ko": "셀프 어텐션",
+    "en": "Self-attention"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multi-head-attention",
+   "type": "Topic",
+   "label": {
+    "ko": "멀티헤드 어텐션",
+    "en": "Multi-head attention"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/positional-encoding",
+   "type": "Topic",
+   "label": {
+    "ko": "위치 인코딩",
+    "en": "Positional encoding"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transformer",
+   "type": "Topic",
+   "label": {
+    "ko": "트랜스포머",
+    "en": "Transformer"
+   },
+   "level": 4,
+   "family": "attention",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/language",
+   "type": "Area",
+   "label": {
+    "ko": "언어 모델·자연어 처리",
+    "en": "Language models and NLP"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/tokenization",
+   "type": "Topic",
+   "label": {
+    "ko": "토큰화",
+    "en": "Tokenization"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/word-embedding",
+   "type": "Topic",
+   "label": {
+    "ko": "단어 임베딩",
+    "en": "Word embeddings"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pretrained-lm",
+   "type": "Topic",
+   "label": {
+    "ko": "사전학습 언어 모델",
+    "en": "Pretrained language models"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transfer-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "전이 학습·파인튜닝",
+    "en": "Transfer learning and fine-tuning"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lora",
+   "type": "Topic",
+   "label": {
+    "ko": "LoRA·어댑터",
+    "en": "LoRA and adapters"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/prompting",
+   "type": "Topic",
+   "label": {
+    "ko": "프롬프팅",
+    "en": "Prompting"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rag",
+   "type": "Topic",
+   "label": {
+    "ko": "검색 증강 생성",
+    "en": "Retrieval-augmented generation"
+   },
+   "level": 4,
+   "family": "language",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/generative",
+   "type": "Area",
+   "label": {
+    "ko": "생성 모델",
+    "en": "Generative models"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/autoencoder",
+   "type": "Topic",
+   "label": {
+    "ko": "오토인코더",
+    "en": "Autoencoder"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/vae",
+   "type": "Topic",
+   "label": {
+    "ko": "변분 오토인코더",
+    "en": "Variational autoencoder"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/gan",
+   "type": "Topic",
+   "label": {
+    "ko": "적대적 생성 신경망",
+    "en": "Generative adversarial network"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/diffusion",
+   "type": "Topic",
+   "label": {
+    "ko": "확산 모델",
+    "en": "Diffusion models"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/autoregressive-generation",
+   "type": "Topic",
+   "label": {
+    "ko": "자기회귀 생성",
+    "en": "Autoregressive generation"
+   },
+   "level": 4,
+   "family": "generative",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/representation",
+   "type": "Area",
+   "label": {
+    "ko": "표현 학습",
+    "en": "Representation learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/embedding-space",
+   "type": "Topic",
+   "label": {
+    "ko": "임베딩 공간",
+    "en": "Embedding space"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/self-supervised",
+   "type": "Topic",
+   "label": {
+    "ko": "자기지도 학습",
+    "en": "Self-supervised learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/contrastive",
+   "type": "Topic",
+   "label": {
+    "ko": "대조 학습",
+    "en": "Contrastive learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sparse-representation",
+   "type": "Topic",
+   "label": {
+    "ko": "희소 표현",
+    "en": "Sparse representation"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/random-features",
+   "type": "Topic",
+   "label": {
+    "ko": "무작위 특징",
+    "en": "Random features"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multi-task-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "멀티태스크 학습",
+    "en": "Multi-task learning"
+   },
+   "level": 3,
+   "family": "representation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/rl",
+   "type": "Area",
+   "label": {
+    "ko": "강화 학습",
+    "en": "Reinforcement learning"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/mdp",
+   "type": "Topic",
+   "label": {
+    "ko": "마르코프 결정 과정",
+    "en": "Markov decision process"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reward",
+   "type": "Topic",
+   "label": {
+    "ko": "보상",
+    "en": "Reward"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/value-function",
+   "type": "Topic",
+   "label": {
+    "ko": "가치 함수",
+    "en": "Value function"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/q-learning",
+   "type": "Topic",
+   "label": {
+    "ko": "Q-러닝",
+    "en": "Q-learning"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/policy-gradient",
+   "type": "Topic",
+   "label": {
+    "ko": "정책 경사",
+    "en": "Policy gradient"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/exploration",
+   "type": "Topic",
+   "label": {
+    "ko": "탐험과 활용",
+    "en": "Exploration–exploitation"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reward-prediction-error",
+   "type": "Topic",
+   "label": {
+    "ko": "보상 예측 오차",
+    "en": "Reward prediction error"
+   },
+   "level": 3,
+   "family": "rl",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/unsupervised",
+   "type": "Area",
+   "label": {
+    "ko": "비지도 기법",
+    "en": "Unsupervised methods"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/clustering",
+   "type": "Topic",
+   "label": {
+    "ko": "군집화",
+    "en": "Clustering"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pca",
+   "type": "Topic",
+   "label": {
+    "ko": "주성분 분석",
+    "en": "Principal component analysis"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tsne-umap",
+   "type": "Topic",
+   "label": {
+    "ko": "t-SNE·UMAP",
+    "en": "t-SNE and UMAP"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/density-estimation",
+   "type": "Topic",
+   "label": {
+    "ko": "밀도 추정",
+    "en": "Density estimation"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/anomaly-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "이상 탐지",
+    "en": "Anomaly detection"
+   },
+   "level": 2,
+   "family": "unsupervised",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/evaluation",
+   "type": "Area",
+   "label": {
+    "ko": "평가",
+    "en": "Evaluation"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/accuracy-metrics",
+   "type": "Topic",
+   "label": {
+    "ko": "정확도·손실 지표",
+    "en": "Accuracy and loss metrics"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/precision-recall",
+   "type": "Topic",
+   "label": {
+    "ko": "정밀도·재현율",
+    "en": "Precision and recall"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/roc-auc",
+   "type": "Topic",
+   "label": {
+    "ko": "ROC·AUC",
+    "en": "ROC and AUC"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/confusion-matrix",
+   "type": "Topic",
+   "label": {
+    "ko": "혼동 행렬",
+    "en": "Confusion matrix"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-leakage",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 누수",
+    "en": "Data leakage"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ablation",
+   "type": "Topic",
+   "label": {
+    "ko": "절제 실험",
+    "en": "Ablation study"
+   },
+   "level": 2,
+   "family": "evaluation",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/graph",
+   "type": "Area",
+   "label": {
+    "ko": "그래프 학습",
+    "en": "Graph learning"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/gnn",
+   "type": "Topic",
+   "label": {
+    "ko": "그래프 신경망",
+    "en": "Graph neural networks"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/message-passing",
+   "type": "Topic",
+   "label": {
+    "ko": "메시지 전달",
+    "en": "Message passing"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/knowledge-graph",
+   "type": "Topic",
+   "label": {
+    "ko": "지식 그래프",
+    "en": "Knowledge graphs"
+   },
+   "level": 4,
+   "family": "graph",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/systems",
+   "type": "Area",
+   "label": {
+    "ko": "시스템·MLOps",
+    "en": "ML systems and MLOps"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/deployment",
+   "type": "Topic",
+   "label": {
+    "ko": "배포",
+    "en": "Deployment"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/distribution-shift",
+   "type": "Topic",
+   "label": {
+    "ko": "분포 이동",
+    "en": "Distribution shift"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/monitoring",
+   "type": "Topic",
+   "label": {
+    "ko": "모니터링",
+    "en": "Monitoring"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reproducibility",
+   "type": "Topic",
+   "label": {
+    "ko": "재현성",
+    "en": "Reproducibility"
+   },
+   "level": 4,
+   "family": "systems",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/responsible",
+   "type": "Area",
+   "label": {
+    "ko": "책임 있는 AI",
+    "en": "Responsible AI"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/fairness",
+   "type": "Topic",
+   "label": {
+    "ko": "공정성",
+    "en": "Fairness"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/interpretability",
+   "type": "Topic",
+   "label": {
+    "ko": "설명 가능성·해석",
+    "en": "Interpretability"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ai-safety",
+   "type": "Topic",
+   "label": {
+    "ko": "안전성",
+    "en": "AI safety"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/privacy",
+   "type": "Topic",
+   "label": {
+    "ko": "프라이버시",
+    "en": "Privacy"
+   },
+   "level": 4,
+   "family": "responsible",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/neuro",
+   "type": "Area",
+   "label": {
+    "ko": "신경과학과 AI",
+    "en": "Neuroscience and AI"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/biological-neuron",
+   "type": "Topic",
+   "label": {
+    "ko": "생물 뉴런과 스파이크",
+    "en": "Biological neurons and spikes"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/synaptic-plasticity",
+   "type": "Topic",
+   "label": {
+    "ko": "시냅스 가소성",
+    "en": "Synaptic plasticity"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/connectome",
+   "type": "Topic",
+   "label": {
+    "ko": "커넥톰",
+    "en": "Connectome"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sensory-processing",
+   "type": "Topic",
+   "label": {
+    "ko": "감각 처리",
+    "en": "Sensory processing"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/learning-memory-circuits",
+   "type": "Topic",
+   "label": {
+    "ko": "학습·기억 회로",
+    "en": "Learning and memory circuits"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/circuit-methods",
+   "type": "Topic",
+   "label": {
+    "ko": "신경 회로 실험 기법",
+    "en": "Circuit neuroscience methods"
+   },
+   "level": 3,
+   "family": "neuro",
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/linear-algebra",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/probability-statistics",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/calculus-optimization-math",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/information-theory",
+   "p": "lab:broader",
+   "o": "lab:area/math"
+  },
+  {
+   "s": "lab:topic/supervised-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/unsupervised-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/generalization",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/bias-variance",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/data-splitting",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/feature-engineering",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/rule-vs-learning",
+   "p": "lab:broader",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:topic/linear-regression",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/logistic-regression",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/svm",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/knn",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/decision-tree",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/naive-bayes",
+   "p": "lab:broader",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:topic/bagging",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/random-forest",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/boosting",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/stacking",
+   "p": "lab:broader",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:topic/weights-and-biases",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/perceptron",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/mlp",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/activation-function",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/loss-function",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/backpropagation",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/universal-approximation",
+   "p": "lab:broader",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:topic/gradient-descent",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/sgd-minibatch",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/momentum-adam",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/learning-rate-schedule",
+   "p": "lab:broader",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:topic/weight-decay",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/dropout",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/early-stopping",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/normalization-layers",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/data-augmentation",
+   "p": "lab:broader",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:topic/convolution",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/pooling",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/receptive-field",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/residual-connections",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/object-detection",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/segmentation",
+   "p": "lab:broader",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:topic/rnn",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/lstm-gru",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/seq2seq",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/time-series",
+   "p": "lab:broader",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:topic/attention-mechanism",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/self-attention",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/multi-head-attention",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/positional-encoding",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/transformer",
+   "p": "lab:broader",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:topic/tokenization",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/word-embedding",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/pretrained-lm",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/transfer-learning",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/lora",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/prompting",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/rag",
+   "p": "lab:broader",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:topic/autoencoder",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/vae",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/gan",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/diffusion",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/autoregressive-generation",
+   "p": "lab:broader",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:topic/embedding-space",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/self-supervised",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/contrastive",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/sparse-representation",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/random-features",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/multi-task-learning",
+   "p": "lab:broader",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:topic/mdp",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/reward",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/value-function",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/q-learning",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/policy-gradient",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/exploration",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/reward-prediction-error",
+   "p": "lab:broader",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:topic/clustering",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/pca",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/tsne-umap",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/density-estimation",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/anomaly-detection",
+   "p": "lab:broader",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:topic/accuracy-metrics",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/precision-recall",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/roc-auc",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/confusion-matrix",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/data-leakage",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/ablation",
+   "p": "lab:broader",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:topic/gnn",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/message-passing",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/knowledge-graph",
+   "p": "lab:broader",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:topic/deployment",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/distribution-shift",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/monitoring",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/reproducibility",
+   "p": "lab:broader",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:topic/fairness",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/interpretability",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/ai-safety",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/privacy",
+   "p": "lab:broader",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:topic/biological-neuron",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/synaptic-plasticity",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/connectome",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/sensory-processing",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/learning-memory-circuits",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/circuit-methods",
+   "p": "lab:broader",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:area/math",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/ml-basics"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/classical"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/nn-basics"
+  },
+  {
+   "s": "lab:area/classical",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/ensemble"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/optimization"
+  },
+  {
+   "s": "lab:area/optimization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/regularization"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/vision"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/sequence"
+  },
+  {
+   "s": "lab:area/sequence",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/attention"
+  },
+  {
+   "s": "lab:area/attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/language"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/generative"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/representation"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/rl"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/unsupervised"
+  },
+  {
+   "s": "lab:area/ml-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/evaluation"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/graph"
+  },
+  {
+   "s": "lab:area/evaluation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/systems"
+  },
+  {
+   "s": "lab:area/evaluation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/responsible"
+  },
+  {
+   "s": "lab:area/nn-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/neuro"
+  },
+  {
+   "s": "lab:topic/perceptron",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/mlp"
+  },
+  {
+   "s": "lab:topic/loss-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/gradient-descent"
+  },
+  {
+   "s": "lab:topic/gradient-descent",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/backpropagation"
+  },
+  {
+   "s": "lab:topic/mlp",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/backpropagation"
+  },
+  {
+   "s": "lab:topic/data-splitting",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/early-stopping"
+  },
+  {
+   "s": "lab:topic/generalization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/early-stopping"
+  },
+  {
+   "s": "lab:topic/convolution",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/receptive-field"
+  },
+  {
+   "s": "lab:topic/rnn",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/lstm-gru"
+  },
+  {
+   "s": "lab:topic/attention-mechanism",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/self-attention"
+  },
+  {
+   "s": "lab:topic/self-attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/multi-head-attention"
+  },
+  {
+   "s": "lab:topic/multi-head-attention",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/transformer"
+  },
+  {
+   "s": "lab:topic/transformer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/pretrained-lm"
+  },
+  {
+   "s": "lab:topic/pretrained-lm",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/transfer-learning"
+  },
+  {
+   "s": "lab:topic/transfer-learning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/lora"
+  },
+  {
+   "s": "lab:topic/word-embedding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/rag"
+  },
+  {
+   "s": "lab:topic/reward",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/reward-prediction-error"
+  },
+  {
+   "s": "lab:topic/value-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/q-learning"
+  },
+  {
+   "s": "lab:topic/biological-neuron",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/synaptic-plasticity"
+  },
+  {
+   "s": "lab:topic/synaptic-plasticity",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/learning-memory-circuits"
+  },
+  {
+   "s": "lab:topic/weights-and-biases",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/perceptron"
+  },
+  {
+   "s": "lab:topic/activation-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/mlp"
+  }
+ ]
+}

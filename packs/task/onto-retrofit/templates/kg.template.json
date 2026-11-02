@@ -1,0 +1,151 @@
+{
+ "version": "1.0",
+ "page": "{번호}_{영문-슬러그}",
+ "nodes": [
+  {
+   "id": "lab:concept/relu",
+   "type": "Concept",
+   "label": {
+    "ko": "ReLU",
+    "en": "Rectified linear unit"
+   },
+   "page": "{번호}_{영문-슬러그}",
+   "anchor": "#{본문 섹션 id}",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "{페이지에 적힌 정의를 한 문장으로}"
+   },
+   "family": "nn-basics",
+   "altLabel": {
+    "ko": [
+     "렐루"
+    ]
+   },
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/dying-relu",
+   "type": "Limitation",
+   "label": {
+    "ko": "죽은 ReLU",
+    "en": "Dying ReLU"
+   },
+   "page": "{번호}_{영문-슬러그}",
+   "anchor": "#{섹션 id}",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/relu-trains-faster",
+   "type": "Claim",
+   "label": {
+    "ko": "{페이지의 사실 문장}",
+    "en": "{영문}"
+   },
+   "page": "{번호}_{영문-슬러그}",
+   "anchor": "#{섹션 id}",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "source": [
+    {
+     "ref": "{참고문헌 id}",
+     "loc": ""
+    }
+   ],
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/{참고문헌 id}",
+   "type": "Work",
+   "label": {
+    "ko": "{제1저자} 외 ({연도}) {학술지}",
+    "en": "{원 제목}"
+   },
+   "page": "{번호}",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p{번호}-relu-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "{퀴즈 질문 요약}",
+    "en": "{퀴즈 질문 요약}"
+   },
+   "page": "{번호}_{영문-슬러그}",
+   "anchor": "#{퀴즈 섹션 id}",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/relu",
+   "p": "lab:broader",
+   "o": "lab:topic/activation-function",
+   "anchor": "#{섹션 id}",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/relu",
+   "p": "lab:hasLimitation",
+   "o": "lab:concept/dying-relu",
+   "anchor": "#{섹션 id}",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dying-relu",
+   "p": "lab:broader",
+   "o": "lab:topic/activation-function",
+   "anchor": "#{섹션 id}",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/relu-trains-faster",
+   "p": "lab:supports",
+   "o": "lab:concept/relu",
+   "anchor": "#{섹션 id}",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/relu-trains-faster",
+   "p": "lab:assertedIn",
+   "o": "lab:work/{참고문헌 id}",
+   "anchor": "#{섹션 id}",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p{번호}-relu-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/relu",
+   "anchor": "#{퀴즈 섹션 id}",
+   "confidence": "high"
+  }
+ ]
+}
