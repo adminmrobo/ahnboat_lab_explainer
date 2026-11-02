@@ -1,15 +1,13 @@
 ---
 name: ai-lab-explainer
-description: 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·Money-Robo 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념 사다리, 직접 돌려 보는 시뮬레이션, 초파리와 Money-Robo의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
-version: 1.9
-targets: Claude, ChatGPT, Gemini, Genspark (모델 공통)
-domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md
-required_packs: packs/character/CHAR_lab4.md (모든 페이지)
-repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md
-language: ko
+description: 논문·교과서 한 장을 박사·조수·초파리 연구원·Money-Robo가 진행하는 단일 HTML 교육 대시보드로 만든다. 인공지능·통계·경제·회계·경영. 먼저 분야를 묻는다. '연구실 HTML로' 같은 요청에 쓴다.
 ---
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
+
+> **스킬 정보:** version: 1.9 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+>
+> **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·Money-Robo 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념 사다리, 직접 돌려 보는 시뮬레이션, 초파리와 Money-Robo의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
 > 스킬 이름 `ai-lab-explainer`는 기존 페이지·등록부·호출 문구와의 호환을 위해 그대로 둔다. v1.8부터 다루는 분야는 다섯 개이고, 인공지능 규칙은 이 문서 안에 **기본 분야 팩**으로 들어 있다.
 >
