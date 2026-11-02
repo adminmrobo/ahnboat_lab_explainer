@@ -1,12 +1,13 @@
 ---
 name: ai-lab-retrofit
-description: 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
-version: 1.3
-targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통
-language: ko
+description: 완성된 해설 HTML의 본문은 그대로 두고 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)만 덧붙인다. 글 표지 보강과 시리즈 커버리지(O5)도 맡는다. '기존 페이지에 꼬리표 달아 줘'에 쓴다.
 ---
 
 # 완성된 HTML 꼬리표 달기 스킬 (ai-lab-retrofit)
+
+> **스킬 정보:** version: 1.3 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
+>
+> **자세한 설명:** 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
 
 > **한 줄 요약:** 완성된 페이지를 읽는다 → 지식 그래프·참고문헌·페이지 정보 JSON 세 개를 만든다 → 조립 도구로 페이지 끝에 두 섹션을 붙인다 → 점검 도구로 "본문 차이 0"을 확인한다 → 꾸러미를 KG_00 지도에 넣는다.
 >
