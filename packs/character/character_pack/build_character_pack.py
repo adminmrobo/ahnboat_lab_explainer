@@ -207,7 +207,7 @@ def build(repo, out, sizes, quality):
         "package": "fruitfly-lab-character-pack", "version": "1.0",
         "source": {"repo": REPO_URL, "commit": commit},
         "who": {w: {"repo_folder": f} for w, f in WHO.items()},
-        "names": {"doc": "박사", "asst": "하루(조수)", "fly": "초파리 연구원", "robo": "주판봇"},
+        "names": {"doc": "박사", "asst": "조수(하루)", "fly": "초파리 연구원", "robo": "주판봇"},
         "key_format": "{who}_e{NN}  예: fly_e08 = 초파리 E08 안내",
         "sizes": sizes, "expressions": [{"id": e, "slug": s, "ko": k} for e, s, k in EXPRESSIONS],
         "aliases": aliases, "images": items,
