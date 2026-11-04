@@ -189,7 +189,7 @@ KG_00 v3에는 G1~G3가 있다. G4·G5는 다음 판에 넣는다(O5-11).
 - 개념 사다리 초안: 칸1 → 칸2 → … (각 칸의 한계 한 줄)
 - 비유 앵커 후보: {7장 표에서} · 초파리 비유가 맞지 않으면 그렇다고 적는다
 - 필요한 출처 종류: {원 논문 / 교과서 장 / 서베이} — 서지는 P7에서 확인
-- 대결 질문 (Money-Robo): {한 줄}
+- 대결 질문 (주판봇): {한 줄}
 - 예상 지표 변화: 건드린 주제 +{n}, 건드린 영역 +{n} (추정)
 ```
 
@@ -261,7 +261,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 | 장면 | 캐릭터 | 대사 틀 |
 |---|---|---|
 | 지표 발표 | 조수 | "뼈대 주제 {N}개 중 {n}개를 건드렸어요. 근거까지 있는 건 {k}개예요." |
-| G1 | Money-Robo | "우리 시리즈가 아직 안 다룬 영역이 {N}개! {영역 셋} … 내가 먼저 깃발 꽂는다." |
+| G1 | 주판봇 | "우리 시리즈가 아직 안 다룬 영역이 {N}개! {영역 셋} … 내가 먼저 깃발 꽂는다." |
 | G2 | 초파리 연구원 | "{선수 주제}를 이미 설명했으니까, 바로 다음은 {주제}예요. 사다리 한 칸만 더요." |
 | G4 | 박사 | "설명은 했는데 근거가 없는 주제가 {n}개다. 출처 없는 설명은 소문이야." |
 | G5 | 초파리 연구원 | "제 이야기만 너무 많아요. {영역}은 다른 비유가 필요해요." |
@@ -329,7 +329,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 |---|---|
 | 생성 | 16:9, 가로 1920 이상 |
 | 빌드 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나를 base64로 |
-| 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, Money-Robo |
+| 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, 주판봇 |
 | 안전 영역 | 얼굴·손·핵심 소품은 좌우 12%, 위 10%, 아래 18% 안쪽 |
 | 왼쪽 아래 | 30% × 20%는 어둡고 단순하게 (시리즈 칩 자리) |
 | 금지 | 그림 안 글자·숫자·로고, 승패 암시(표지는 대결 전 장면), 생물 앵커가 아닌 편의 현미경·해부 소품, 실존 브랜드 |
@@ -338,9 +338,9 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 
 페이지마다 아래 네 가지를 정한다. 같은 시리즈 표지끼리 장소·포즈·소품이 겹치지 않게 한다.
 
-1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 밤의 연구실 / 장부(돈·금융) → 금화와 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실 보라 조명을 한쪽에 남긴다)
+1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 밤의 연구실 / 장부(돈·금융) → 큰 주판과 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실 보라 조명을 한쪽에 남긴다)
 2. **주제 은유:** 페이지 핵심 개념을 글자 없는 장면 하나로 (예: 어텐션 → 질문 카드에서 책들로 뻗는 빛줄기)
-3. **네 캐릭터 포즈:** 초파리는 왼쪽에서 오른쪽을, Money-Robo는 오른쪽에서 왼쪽을 본다. 박사는 가운데 뒤, 조수는 한쪽 옆
+3. **네 캐릭터 포즈:** 초파리는 왼쪽에서 오른쪽을, 주판봇은 오른쪽에서 왼쪽을 본다. 박사는 가운데 뒤, 조수는 한쪽 옆
 4. **대체 글:** 한국어 한 문장
 
 **Genspark에 붙여 넣기 틀** (참고 이미지: 네 캐릭터 기본 그림 4장, 기준 GitHub `adminmrobo/fruitfly-lab-expressions`)
@@ -348,7 +348,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, Money-Robo)를 같은 그림체·같은 외형으로, 넷 모두 등장
+- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)을 같은 그림체·같은 외형으로, 넷 모두 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
 - 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 어둡고 단순하게
 아래 영어 프롬프트를 그대로 써 줘.
@@ -361,7 +361,7 @@ All four characters together:
 the chibi scientist (thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie) at the back center, {포즈};
 the girl researcher (long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans) at one side, {포즈};
 the anthropomorphic fruit fly researcher (black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings), on the left facing right, {포즈};
-the round white floating robot Money-Robo (short antenna, black face screen with yellow pixel eyes, blue chest light, no legs, oval shadow below), on the right facing left, {포즈}.
+the boxy beige retro CRT-monitor robot 주판봇 (dark green screen face with mint pixel eyes, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus), on the right facing left, {포즈}.
 Visual metaphor of the topic: {주제 은유 영어, 글자 없이}.
 Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner dark and simple; the light falls on {핵심 소품}.
 Mood: curious, friendly rivalry, the moment before the result.

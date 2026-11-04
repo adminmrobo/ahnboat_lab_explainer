@@ -489,7 +489,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 |---|---|
 | 생성 | 16:9, 가로 1920 이상 |
 | 빌드 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나를 base64로 |
-| 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, Money-Robo |
+| 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, 주판봇 |
 | 안전 영역 | 얼굴·손·핵심 소품은 좌우 12%, 위 10%, 아래 18% 안쪽 |
 | 왼쪽 아래 | 30% × 20%는 어둡고 단순하게 (시리즈 칩 자리) |
 | 금지 | 그림 안 글자·숫자·로고, 승패 암시(표지는 대결 전 장면), 생물 앵커가 아닌 편의 현미경·해부 소품, 실존 브랜드 |
@@ -498,9 +498,9 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 
 페이지마다 아래 네 가지를 정한다. 같은 시리즈 표지끼리 장소·포즈·소품이 겹치지 않게 한다.
 
-1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 밤의 연구실 / 장부(돈·금융) → 금화와 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실 보라 조명을 한쪽에 남긴다)
+1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 밤의 연구실 / 장부(돈·금융) → 큰 주판과 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실 보라 조명을 한쪽에 남긴다)
 2. **주제 은유:** 페이지 핵심 개념을 글자 없는 장면 하나로 (예: 어텐션 → 질문 카드에서 책들로 뻗는 빛줄기)
-3. **네 캐릭터 포즈:** 초파리는 왼쪽에서 오른쪽을, Money-Robo는 오른쪽에서 왼쪽을 본다. 박사는 가운데 뒤, 조수는 한쪽 옆
+3. **네 캐릭터 포즈:** 초파리는 왼쪽에서 오른쪽을, 주판봇은 오른쪽에서 왼쪽을 본다. 박사는 가운데 뒤, 조수는 한쪽 옆
 4. **대체 글:** 한국어 한 문장
 
 **Genspark에 붙여 넣기 틀** (참고 이미지: 네 캐릭터 기본 그림 4장, 기준 GitHub `adminmrobo/fruitfly-lab-expressions`)
@@ -508,7 +508,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, Money-Robo)를 같은 그림체·같은 외형으로, 넷 모두 등장
+- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)을 같은 그림체·같은 외형으로, 넷 모두 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
 - 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 어둡고 단순하게
 아래 영어 프롬프트를 그대로 써 줘.
@@ -521,7 +521,7 @@ All four characters together:
 the chibi scientist (thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie) at the back center, {포즈};
 the girl researcher (long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans) at one side, {포즈};
 the anthropomorphic fruit fly researcher (black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings), on the left facing right, {포즈};
-the round white floating robot Money-Robo (short antenna, black face screen with yellow pixel eyes, blue chest light, no legs, oval shadow below), on the right facing left, {포즈}.
+the boxy beige retro CRT-monitor robot 주판봇 (dark green screen face with mint pixel eyes, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus), on the right facing left, {포즈}.
 Visual metaphor of the topic: {주제 은유 영어, 글자 없이}.
 Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner dark and simple; the light falls on {핵심 소품}.
 Mood: curious, friendly rivalry, the moment before the result.

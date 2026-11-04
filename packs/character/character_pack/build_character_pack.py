@@ -3,7 +3,7 @@
 초파리 연구실 캐릭터 팩 빌드 스크립트 (ai-lab-explainer 스킬 v1.6 부록 E)
 
 원본: https://github.com/adminmrobo/fruitfly-lab-expressions
-  images/{doctor,haru,fruitfly,money_robo}/E01_joy.png ... E24_shock.png (불투명 단색·그라데이션 배경)
+  images/{doctor,haru,fruitfly,jupanbot}/E01_joy.png ... E24_shock.png (불투명 단색·그라데이션 배경)
 
 하는 일
   1) 배경 제거: 테두리에서 시작해 이웃 픽셀과 색이 비슷한 영역만 투명하게 만든다
@@ -26,7 +26,8 @@ import argparse, base64, collections, hashlib, json, os, subprocess, sys
 REPO_URL = "https://github.com/adminmrobo/fruitfly-lab-expressions"
 
 # 스킬의 캐릭터 이름(who) ↔ 저장소 폴더
-WHO = {"doc": "doctor", "asst": "haru", "fly": "fruitfly", "robo": "money_robo"}
+# robo = 주판봇(AbaBot). 2026-11 Money-Robo((주)M-Robo 회사 캐릭터)를 대신함. 키 이름 robo는 호환을 위해 그대로 둠
+WHO = {"doc": "doctor", "asst": "haru", "fly": "fruitfly", "robo": "jupanbot"}
 
 EXPRESSIONS = [
     ("E01", "joy", "기쁨"), ("E02", "sadness", "슬픔"), ("E03", "anger", "분노"),
@@ -66,16 +67,17 @@ ALIASES = {
     "fly_cry":     ("E21", "exact", "폭포 눈물"),
     "fly_type":    ("E09", "exact", "키보드 타이핑"),
     "fly_magnify": ("E07", "exact", "돋보기"),
-    "robo_smile":  ("E13", "exact", "원형 눈 + 곡선 미소"),
-    "robo_coin":   ("E16", "exact", "반쯤 감은 눈 + 금화"),
-    "robo_chart":  ("E07", "exact", "상승 차트 판"),
-    "robo_happy":  ("E12", "exact", "두 팔 듦 + 상승 화살표"),
+    # 주판봇: 명세 기준(specs/jupanbot). 그림이 임시(placeholder)인 동안은 모두 같은 그림이 나옴
+    "robo_smile":  ("E13", "exact", "네모 픽셀 눈 + 작은 미소, 주판을 듦"),
+    "robo_coin":   ("E16", "exact", "반쯤 감은 눈 + 반짝이는 주판알 (키 이름은 옛 금화 시절 그대로)"),
+    "robo_chart":  ("E07", "exact", "상승 막대 차트 판을 가리킴"),
+    "robo_happy":  ("E12", "exact", "주판을 머리 위로 + 상승 화살표"),
     "robo_sigh":   ("E20", "near",  "점 눈 + 땀방울 (본전·손절)"),
-    "robo_meh":    ("E18", "exact", "일자 눈"),
-    "robo_cry":    ("E21", "exact", "폭포 눈물 + 금화 (금화에 B 표시 — 눈에 띄는 자리 피함)"),
+    "robo_meh":    ("E18", "exact", "일자 눈 + 팔짱"),
+    "robo_cry":    ("E21", "exact", "폭포 눈물 + 흩어진 주판알"),
     "robo_wow":    ("E04", "exact", "동그란 눈 + o 입"),
-    "robo_blush":  ("E14", "exact", "분홍 볼"),
-    "robo_calc":   ("E09", "near",  "톱니바퀴 생각 (계산기 없음)"),
+    "robo_blush":  ("E14", "exact", "분홍 픽셀 볼"),
+    "robo_calc":   ("E09", "exact", "주판알을 튕기며 계산"),
 }
 
 # 그림이 바라보는 쪽 (눈으로 판정, 대결 화면 좌우 뒤집기에 씀). 적지 않은 것은 front.
@@ -84,8 +86,7 @@ FACING = {
     "asst_e07": "left", "asst_e08": "left", "asst_e10": "left",
     "fly_e07": "left", "fly_e08": "left", "fly_e09": "left", "fly_e10": "left",
     "fly_e13": "left", "fly_e18": "left",
-    "robo_e06": "right", "robo_e07": "right", "robo_e08": "right", "robo_e09": "left",
-    "robo_e10": "left",
+    # 주판봇은 새 그림이 오면 눈으로 보고 다시 적는다 (임시 그림은 모두 정면)
 }
 
 
@@ -146,7 +147,6 @@ BG_OPTIONS = {"fly": {"enclosed_min": 30}}  # 초파리만 갇힌 배경 덩어�
 BG_NOTES = {
     "doc_e24": "위쪽에 회보라 띠와 세로 효과선이 남음 (번개가 양옆을 덮어 배경색 추정 불가). 충격 연출로 그대로 둠",
     "fly_e24": "위쪽에 옅은 세로 효과선이 일부 남음",
-    "robo_e22": "원본에서 안테나 위가 잘려 있음",
 }
 
 
@@ -207,7 +207,7 @@ def build(repo, out, sizes, quality):
         "package": "fruitfly-lab-character-pack", "version": "1.0",
         "source": {"repo": REPO_URL, "commit": commit},
         "who": {w: {"repo_folder": f} for w, f in WHO.items()},
-        "names": {"doc": "박사", "asst": "하루(조수)", "fly": "초파리 연구원", "robo": "Money-Robo"},
+        "names": {"doc": "박사", "asst": "하루(조수)", "fly": "초파리 연구원", "robo": "주판봇"},
         "key_format": "{who}_e{NN}  예: fly_e08 = 초파리 E08 안내",
         "sizes": sizes, "expressions": [{"id": e, "slug": s, "ko": k} for e, s, k in EXPRESSIONS],
         "aliases": aliases, "images": items,

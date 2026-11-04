@@ -16,14 +16,14 @@
    "repo_folder": "fruitfly"
   },
   "robo": {
-   "repo_folder": "money_robo"
+   "repo_folder": "jupanbot"
   }
  },
  "names": {
   "doc": "박사",
   "asst": "하루(조수)",
   "fly": "초파리 연구원",
-  "robo": "Money-Robo"
+  "robo": "주판봇"
  },
  "key_format": "{who}_e{NN}  예: fly_e08 = 초파리 E08 안내",
  "sizes": [
@@ -271,22 +271,22 @@
   "robo_smile": {
    "key": "robo_e13",
    "match": "exact",
-   "note": "원형 눈 + 곡선 미소"
+   "note": "네모 픽셀 눈 + 작은 미소, 주판을 듦"
   },
   "robo_coin": {
    "key": "robo_e16",
    "match": "exact",
-   "note": "반쯤 감은 눈 + 금화"
+   "note": "반쯤 감은 눈 + 반짝이는 주판알 (키 이름은 옛 금화 시절 그대로)"
   },
   "robo_chart": {
    "key": "robo_e07",
    "match": "exact",
-   "note": "상승 차트 판"
+   "note": "상승 막대 차트 판을 가리킴"
   },
   "robo_happy": {
    "key": "robo_e12",
    "match": "exact",
-   "note": "두 팔 듦 + 상승 화살표"
+   "note": "주판을 머리 위로 + 상승 화살표"
   },
   "robo_sigh": {
    "key": "robo_e20",
@@ -296,12 +296,12 @@
   "robo_meh": {
    "key": "robo_e18",
    "match": "exact",
-   "note": "일자 눈"
+   "note": "일자 눈 + 팔짱"
   },
   "robo_cry": {
    "key": "robo_e21",
    "match": "exact",
-   "note": "폭포 눈물 + 금화 (금화에 B 표시 — 눈에 띄는 자리 피함)"
+   "note": "폭포 눈물 + 흩어진 주판알"
   },
   "robo_wow": {
    "key": "robo_e04",
@@ -311,12 +311,12 @@
   "robo_blush": {
    "key": "robo_e14",
    "match": "exact",
-   "note": "분홍 볼"
+   "note": "분홍 픽셀 볼"
   },
   "robo_calc": {
    "key": "robo_e09",
-   "match": "near",
-   "note": "톱니바퀴 생각 (계산기 없음)"
+   "match": "exact",
+   "note": "주판알을 튕기며 계산"
   }
  },
  "images": [
@@ -2056,21 +2056,21 @@
    "id": "E01",
    "slug": "joy",
    "ko": "기쁨",
-   "source": "images/money_robo/E01_joy.png",
+   "source": "images/jupanbot/E01_joy.png",
    "source_size": [
-    332,
-    335
+    512,
+    512
    ],
-   "bg_removed": 0.581,
+   "bg_removed": 0.511,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e01.webp",
-     "bytes": 3520
+     "bytes": 3840
     },
     "192": {
      "path": "webp/192/robo/robo_e01.webp",
-     "bytes": 7032
+     "bytes": 8596
     }
    }
   },
@@ -2080,21 +2080,21 @@
    "id": "E02",
    "slug": "sadness",
    "ko": "슬픔",
-   "source": "images/money_robo/E02_sadness.png",
+   "source": "images/jupanbot/E02_sadness.png",
    "source_size": [
-    334,
-    332
+    512,
+    512
    ],
-   "bg_removed": 0.58,
+   "bg_removed": 0.513,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e02.webp",
-     "bytes": 3698
+     "bytes": 3498
     },
     "192": {
      "path": "webp/192/robo/robo_e02.webp",
-     "bytes": 7398
+     "bytes": 7746
     }
    }
   },
@@ -2104,21 +2104,21 @@
    "id": "E03",
    "slug": "anger",
    "ko": "분노",
-   "source": "images/money_robo/E03_anger.png",
+   "source": "images/jupanbot/E03_anger.png",
    "source_size": [
-    334,
-    334
+    512,
+    512
    ],
-   "bg_removed": 0.564,
+   "bg_removed": 0.509,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e03.webp",
-     "bytes": 4550
+     "bytes": 3950
     },
     "192": {
      "path": "webp/192/robo/robo_e03.webp",
-     "bytes": 9518
+     "bytes": 8684
     }
    }
   },
@@ -2128,21 +2128,21 @@
    "id": "E04",
    "slug": "surprise",
    "ko": "놀람",
-   "source": "images/money_robo/E04_surprise.png",
+   "source": "images/jupanbot/E04_surprise.png",
    "source_size": [
-    332,
-    332
+    512,
+    512
    ],
-   "bg_removed": 0.576,
+   "bg_removed": 0.509,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e04.webp",
-     "bytes": 3556
+     "bytes": 3740
     },
     "192": {
      "path": "webp/192/robo/robo_e04.webp",
-     "bytes": 7140
+     "bytes": 8382
     }
    }
   },
@@ -2152,21 +2152,21 @@
    "id": "E05",
    "slug": "fear",
    "ko": "두려움",
-   "source": "images/money_robo/E05_fear.png",
+   "source": "images/jupanbot/E05_fear.png",
    "source_size": [
-    408,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.694,
+   "bg_removed": 0.511,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e05.webp",
-     "bytes": 3784
+     "bytes": 3836
     },
     "192": {
      "path": "webp/192/robo/robo_e05.webp",
-     "bytes": 8312
+     "bytes": 8712
     }
    }
   },
@@ -2176,21 +2176,21 @@
    "id": "E06",
    "slug": "disgust",
    "ko": "혐오",
-   "source": "images/money_robo/E06_disgust.png",
+   "source": "images/jupanbot/E06_disgust.png",
    "source_size": [
-    407,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.745,
-   "facing": "right",
+   "bg_removed": 0.511,
+   "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e06.webp",
-     "bytes": 3374
+     "bytes": 3858
     },
     "192": {
      "path": "webp/192/robo/robo_e06.webp",
-     "bytes": 7228
+     "bytes": 8688
     }
    }
   },
@@ -2200,21 +2200,21 @@
    "id": "E07",
    "slug": "explaining",
    "ko": "설명",
-   "source": "images/money_robo/E07_explaining.png",
+   "source": "images/jupanbot/E07_explaining.png",
    "source_size": [
-    408,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.657,
-   "facing": "right",
+   "bg_removed": 0.487,
+   "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e07.webp",
-     "bytes": 3738
+     "bytes": 3800
     },
     "192": {
      "path": "webp/192/robo/robo_e07.webp",
-     "bytes": 8174
+     "bytes": 8386
     }
    }
   },
@@ -2224,21 +2224,21 @@
    "id": "E08",
    "slug": "guiding",
    "ko": "안내",
-   "source": "images/money_robo/E08_guiding.png",
+   "source": "images/jupanbot/E08_guiding.png",
    "source_size": [
-    408,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.747,
-   "facing": "right",
+   "bg_removed": 0.506,
+   "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e08.webp",
-     "bytes": 3418
+     "bytes": 3758
     },
     "192": {
      "path": "webp/192/robo/robo_e08.webp",
-     "bytes": 7074
+     "bytes": 8310
     }
    }
   },
@@ -2248,21 +2248,21 @@
    "id": "E09",
    "slug": "thinking",
    "ko": "생각",
-   "source": "images/money_robo/E09_thinking.png",
+   "source": "images/jupanbot/E09_thinking.png",
    "source_size": [
-    407,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.73,
-   "facing": "left",
+   "bg_removed": 0.503,
+   "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e09.webp",
-     "bytes": 3632
+     "bytes": 3946
     },
     "192": {
      "path": "webp/192/robo/robo_e09.webp",
-     "bytes": 7972
+     "bytes": 8794
     }
    }
   },
@@ -2272,21 +2272,21 @@
    "id": "E10",
    "slug": "confirming",
    "ko": "확인",
-   "source": "images/money_robo/E10_confirming.png",
+   "source": "images/jupanbot/E10_confirming.png",
    "source_size": [
-    408,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.729,
-   "facing": "left",
+   "bg_removed": 0.508,
+   "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e10.webp",
-     "bytes": 3794
+     "bytes": 3812
     },
     "192": {
      "path": "webp/192/robo/robo_e10.webp",
-     "bytes": 7890
+     "bytes": 8476
     }
    }
   },
@@ -2296,21 +2296,21 @@
    "id": "E11",
    "slug": "apologizing",
    "ko": "사과",
-   "source": "images/money_robo/E11_apologizing.png",
+   "source": "images/jupanbot/E11_apologizing.png",
    "source_size": [
-    407,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.737,
+   "bg_removed": 0.512,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e11.webp",
-     "bytes": 2528
+     "bytes": 3716
     },
     "192": {
      "path": "webp/192/robo/robo_e11.webp",
-     "bytes": 5262
+     "bytes": 8148
     }
    }
   },
@@ -2320,21 +2320,21 @@
    "id": "E12",
    "slug": "cheering",
    "ko": "응원",
-   "source": "images/money_robo/E12_cheering.png",
+   "source": "images/jupanbot/E12_cheering.png",
    "source_size": [
-    407,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.664,
+   "bg_removed": 0.504,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e12.webp",
-     "bytes": 4554
+     "bytes": 4122
     },
     "192": {
      "path": "webp/192/robo/robo_e12.webp",
-     "bytes": 9566
+     "bytes": 9104
     }
    }
   },
@@ -2344,21 +2344,21 @@
    "id": "E13",
    "slug": "neutral",
    "ko": "기본",
-   "source": "images/money_robo/E13_neutral.png",
+   "source": "images/jupanbot/E13_neutral.png",
    "source_size": [
-    334,
-    335
+    512,
+    512
    ],
-   "bg_removed": 0.584,
+   "bg_removed": 0.513,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e13.webp",
-     "bytes": 3610
+     "bytes": 3506
     },
     "192": {
      "path": "webp/192/robo/robo_e13.webp",
-     "bytes": 7070
+     "bytes": 7756
     }
    }
   },
@@ -2368,21 +2368,21 @@
    "id": "E14",
    "slug": "sheepish",
    "ko": "머쓱함",
-   "source": "images/money_robo/E14_sheepish.png",
+   "source": "images/jupanbot/E14_sheepish.png",
    "source_size": [
-    332,
-    334
+    512,
+    512
    ],
-   "bg_removed": 0.576,
+   "bg_removed": 0.512,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e14.webp",
-     "bytes": 3638
+     "bytes": 3732
     },
     "192": {
      "path": "webp/192/robo/robo_e14.webp",
-     "bytes": 7368
+     "bytes": 8148
     }
    }
   },
@@ -2392,21 +2392,21 @@
    "id": "E15",
    "slug": "flustered",
    "ko": "당황",
-   "source": "images/money_robo/E15_flustered.png",
+   "source": "images/jupanbot/E15_flustered.png",
    "source_size": [
-    408,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.665,
+   "bg_removed": 0.505,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e15.webp",
-     "bytes": 4746
+     "bytes": 4214
     },
     "192": {
      "path": "webp/192/robo/robo_e15.webp",
-     "bytes": 10348
+     "bytes": 9342
     }
    }
   },
@@ -2416,21 +2416,21 @@
    "id": "E16",
    "slug": "proud",
    "ko": "뿌듯함",
-   "source": "images/money_robo/E16_proud.png",
+   "source": "images/jupanbot/E16_proud.png",
    "source_size": [
-    334,
-    332
+    512,
+    512
    ],
-   "bg_removed": 0.551,
+   "bg_removed": 0.509,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e16.webp",
-     "bytes": 4282
+     "bytes": 3940
     },
     "192": {
      "path": "webp/192/robo/robo_e16.webp",
-     "bytes": 8622
+     "bytes": 8732
     }
    }
   },
@@ -2440,21 +2440,21 @@
    "id": "E17",
    "slug": "sleepy",
    "ko": "졸림",
-   "source": "images/money_robo/E17_sleepy.png",
+   "source": "images/jupanbot/E17_sleepy.png",
    "source_size": [
-    334,
-    334
+    512,
+    512
    ],
-   "bg_removed": 0.572,
+   "bg_removed": 0.51,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e17.webp",
-     "bytes": 3606
+     "bytes": 3584
     },
     "192": {
      "path": "webp/192/robo/robo_e17.webp",
-     "bytes": 7308
+     "bytes": 8108
     }
    }
   },
@@ -2464,21 +2464,21 @@
    "id": "E18",
    "slug": "sulking",
    "ko": "삐짐",
-   "source": "images/money_robo/E18_sulking.png",
+   "source": "images/jupanbot/E18_sulking.png",
    "source_size": [
-    334,
-    335
+    512,
+    512
    ],
-   "bg_removed": 0.584,
+   "bg_removed": 0.502,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e18.webp",
-     "bytes": 3476
+     "bytes": 3746
     },
     "192": {
      "path": "webp/192/robo/robo_e18.webp",
-     "bytes": 6782
+     "bytes": 8274
     }
    }
   },
@@ -2488,21 +2488,21 @@
    "id": "E19",
    "slug": "sparkle_eyes",
    "ko": "반짝눈",
-   "source": "images/money_robo/E19_sparkle_eyes.png",
+   "source": "images/jupanbot/E19_sparkle_eyes.png",
    "source_size": [
-    407,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.616,
+   "bg_removed": 0.507,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e19.webp",
-     "bytes": 5706
+     "bytes": 4084
     },
     "192": {
      "path": "webp/192/robo/robo_e19.webp",
-     "bytes": 11658
+     "bytes": 8966
     }
    }
   },
@@ -2512,21 +2512,21 @@
    "id": "E20",
    "slug": "sweat_drop",
    "ko": "식은땀",
-   "source": "images/money_robo/E20_sweat_drop.png",
+   "source": "images/jupanbot/E20_sweat_drop.png",
    "source_size": [
-    407,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.697,
+   "bg_removed": 0.51,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e20.webp",
-     "bytes": 3028
+     "bytes": 3630
     },
     "192": {
      "path": "webp/192/robo/robo_e20.webp",
-     "bytes": 6048
+     "bytes": 8056
     }
    }
   },
@@ -2536,21 +2536,21 @@
    "id": "E21",
    "slug": "waterfall_tears",
    "ko": "폭포 눈물",
-   "source": "images/money_robo/E21_waterfall_tears.png",
+   "source": "images/jupanbot/E21_waterfall_tears.png",
    "source_size": [
-    408,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.583,
+   "bg_removed": 0.51,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e21.webp",
-     "bytes": 5404
+     "bytes": 3800
     },
     "192": {
      "path": "webp/192/robo/robo_e21.webp",
-     "bytes": 12170
+     "bytes": 8560
     }
    }
   },
@@ -2560,24 +2560,23 @@
    "id": "E22",
    "slug": "puffed_angry",
    "ko": "뿔남",
-   "source": "images/money_robo/E22_puffed_angry.png",
+   "source": "images/jupanbot/E22_puffed_angry.png",
    "source_size": [
-    407,
-    407
+    512,
+    512
    ],
-   "bg_removed": 0.508,
+   "bg_removed": 0.502,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e22.webp",
-     "bytes": 4628
+     "bytes": 4110
     },
     "192": {
      "path": "webp/192/robo/robo_e22.webp",
-     "bytes": 10254
+     "bytes": 9472
     }
-   },
-   "bg_note": "원본에서 안테나 위가 잘려 있음"
+   }
   },
   {
    "key": "robo_e23",
@@ -2585,21 +2584,21 @@
    "id": "E23",
    "slug": "blank_dot_eyes",
    "ko": "멍",
-   "source": "images/money_robo/E23_blank_dot_eyes.png",
+   "source": "images/jupanbot/E23_blank_dot_eyes.png",
    "source_size": [
-    406,
-    406
+    512,
+    512
    ],
-   "bg_removed": 0.518,
+   "bg_removed": 0.498,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e23.webp",
-     "bytes": 3486
+     "bytes": 3660
     },
     "192": {
      "path": "webp/192/robo/robo_e23.webp",
-     "bytes": 7002
+     "bytes": 8222
     }
    }
   },
@@ -2609,21 +2608,21 @@
    "id": "E24",
    "slug": "shock",
    "ko": "충격",
-   "source": "images/money_robo/E24_shock.png",
+   "source": "images/jupanbot/E24_shock.png",
    "source_size": [
-    408,
-    408
+    512,
+    512
    ],
-   "bg_removed": 0.489,
+   "bg_removed": 0.478,
    "facing": "front",
    "files": {
     "96": {
      "path": "webp/96/robo/robo_e24.webp",
-     "bytes": 6042
+     "bytes": 4350
     },
     "192": {
      "path": "webp/192/robo/robo_e24.webp",
-     "bytes": 13506
+     "bytes": 9864
     }
    }
   }

@@ -117,22 +117,22 @@
  "robo_smile": {
   "key": "robo_e13",
   "match": "exact",
-  "note": "원형 눈 + 곡선 미소"
+  "note": "네모 픽셀 눈 + 작은 미소, 주판을 듦"
  },
  "robo_coin": {
   "key": "robo_e16",
   "match": "exact",
-  "note": "반쯤 감은 눈 + 금화"
+  "note": "반쯤 감은 눈 + 반짝이는 주판알 (키 이름은 옛 금화 시절 그대로)"
  },
  "robo_chart": {
   "key": "robo_e07",
   "match": "exact",
-  "note": "상승 차트 판"
+  "note": "상승 막대 차트 판을 가리킴"
  },
  "robo_happy": {
   "key": "robo_e12",
   "match": "exact",
-  "note": "두 팔 듦 + 상승 화살표"
+  "note": "주판을 머리 위로 + 상승 화살표"
  },
  "robo_sigh": {
   "key": "robo_e20",
@@ -142,12 +142,12 @@
  "robo_meh": {
   "key": "robo_e18",
   "match": "exact",
-  "note": "일자 눈"
+  "note": "일자 눈 + 팔짱"
  },
  "robo_cry": {
   "key": "robo_e21",
   "match": "exact",
-  "note": "폭포 눈물 + 금화 (금화에 B 표시 — 눈에 띄는 자리 피함)"
+  "note": "폭포 눈물 + 흩어진 주판알"
  },
  "robo_wow": {
   "key": "robo_e04",
@@ -157,11 +157,11 @@
  "robo_blush": {
   "key": "robo_e14",
   "match": "exact",
-  "note": "분홍 볼"
+  "note": "분홍 픽셀 볼"
  },
  "robo_calc": {
   "key": "robo_e09",
-  "match": "near",
-  "note": "톱니바퀴 생각 (계산기 없음)"
+  "match": "exact",
+  "note": "주판알을 튕기며 계산"
  }
 }

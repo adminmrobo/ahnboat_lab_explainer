@@ -4,7 +4,7 @@
 
 | 폴더·파일 | 라이선스 |
 |---|---|
-| `packs/character/` 전체 (캐릭터 이름·설정 문서 `CHAR_lab4.md`, 표정 그림, 설정샷, sprites) 와 `docs/preview_all_96.png` | **All rights reserved.** © 안상선 ((주)M-Robo). 저작권자의 허락 없이 복제·수정·배포·상업적 이용을 할 수 없다. 저작권 등록 준비 중. 이용 문의는 저장소 이슈로. |
+| `packs/character/` 전체 (캐릭터 이름·설정 문서 `CHAR_lab4.md`, 표정 그림, 설정샷, sprites) 와 `docs/preview_all_96.png` | **All rights reserved.** © 안상선. 저작권자의 허락 없이 복제·수정·배포·상업적 이용을 할 수 없다. 저작권 등록 준비 중. 이용 문의는 저장소 이슈로. |
 | 그 밖의 모든 문서와 도구 (`SKILL.md`, `packs/domain/`, `packs/lang/`, `packs/task/`, `data/`, `manifest.json`, `README.md`) | **크리에이티브 커먼즈 저작자표시-비영리 4.0 국제 (CC BY-NC 4.0)** — https://creativecommons.org/licenses/by-nc/4.0/deed.ko |
 
 출처 표기 예: `ahnboat_lab_explainer, 안상선 ((주)M-Robo), CC BY-NC 4.0`
