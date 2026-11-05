@@ -150,6 +150,21 @@ BG_NOTES = {
 }
 
 
+# 작은 칸(말풍선·카드)에서 잘 보이도록 크기별로 당겨 자르는 창 — 원본 512px 기준 (x0, y0, x1, y1)
+# 주판봇은 전신이라 96px에서 다른 캐릭터보다 작게 보여, 무한궤도 아래를 조금 자르고 화면을 키운다 (2026-11-05)
+CROP = {
+    ("robo", 96): (76, 36, 436, 396),
+}
+
+
+def crop_for(cut, who, size, source_size):
+    box = CROP.get((who, size))
+    if not box:
+        return cut
+    sx, sy = cut.size[0] / 512.0, cut.size[1] / 512.0
+    return cut.crop((round(box[0] * sx), round(box[1] * sy), round(box[2] * sx), round(box[3] * sy)))
+
+
 def square(img, size):
     from PIL import Image
     w, h = img.size
@@ -193,8 +208,10 @@ def build(repo, out, sizes, quality):
                 d = os.path.join(out, "webp", str(s), who)
                 os.makedirs(d, exist_ok=True)
                 p = os.path.join(d, "%s.webp" % k)
-                square(cut, s).save(p, "WEBP", quality=quality, method=6)
+                square(crop_for(cut, who, s, img.size), s).save(p, "WEBP", quality=quality, method=6)
                 rec["files"][str(s)] = {"path": os.path.relpath(p, out), "bytes": os.path.getsize(p)}
+                if (who, s) in CROP:
+                    rec["files"][str(s)]["crop"] = list(CROP[(who, s)])
                 js[s][k] = b64(p)
             # 확인용 투명 PNG (원본 크기)
             d = os.path.join(out, "png", who)
