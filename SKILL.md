@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.9 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.10 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념 사다리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -282,6 +282,7 @@ O5. 영역 온톨로지 완성 파이프라인 → 온톨로지 보강 팩
 - HTML의 구조·주 앵커·대결 결과에서 필요한 그림을 18-6 규칙으로 뽑고, 부록 D 틀로 명세서와 매니페스트를 쓴다.
 - 새로 그릴 그림마다 복사해서 바로 쓰는 영어 프롬프트를 완성한다.
 - 목차·챕터 첫 페이지면 **글 표지 지시문** `COVER_{N}_{slug}.md`를 18-14-4 틀로 쓴다. HTML에는 표지 자리(18-14-5)와 대체 표지를 넣는다. 사용자가 그림을 돌려주면 18-15 절차로 반영한다.
+- **표지 목록 파일** `cover_manifest.json`을 18-16 규격으로 함께 쓴다. 표지·장면 그림, 온톨로지 위치, 번역 언어가 들어간다. GitHub 저장소로 올리는 시리즈는 저장소 맨 위 폴더에 둔다(현황판이 매일 모은다).
 
 ### 9단계. 페르소나 평가 (14장, 사용자가 원할 때)
 
@@ -1007,6 +1008,8 @@ Duel({
 - [ ] 이미지 명세서가 18-13 점검을 통과
 - [ ] 목차·챕터 첫 페이지에 표지 자리와 대체 표지가 있고, 표지 지시문이 18-15-1 점검을 통과
 
+- [ ] `cover_manifest.json`을 18-16 규격으로 썼음 (그림·온톨로지·언어)
+
 ### 13-6. 지식 색인·꾸러미 (제2부)
 
 - [ ] 아웃트로 다음 지식 색인 섹션, O1-10 점검 통과
@@ -1576,6 +1579,24 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 ---
 
 ---
+
+### 18-16. 표지 목록 파일 `cover_manifest.json` (현황판 연결)
+
+모든 해설 저장소의 표지·장면 그림, 온톨로지, 번역 언어는 관리용 현황판 **「ahnboat lab 이미지 표지 현황」**(저장소 `ahnboat_lab_cover_status`, https://adminmrobo.github.io/ahnboat_lab_cover_status/)이 매일 오전 6시에 모은다. 현황판이 정확히 읽도록, 페이지를 만들 때마다 `cover_manifest.json`을 함께 쓴다.
+
+| 언제 | 할 일 |
+|---|---|
+| 새 시리즈·새 저장소 | 저장소 맨 위 폴더에 `cover_manifest.json`을 만든다 |
+| 같은 저장소에 페이지 추가 | `items`, `ontology.pages`, `i18n`을 고치고 `updated`를 바꾼다 |
+| 그림을 다시 받음 (18-15) | 해당 항목의 `status`를 `received` → 반영 후 `ok`, `robot`을 실제 판으로 |
+| 번역판 추가 (언어 팩) | `i18n.langs`·`i18n.pages`를 고친다 |
+
+- 규격과 예시: 저장소 `docs/cover_manifest_schema.md`, `docs/cover_manifest.example.json`
+- `items`에는 8단계 명세서의 그림 중 **페이지에 실제로 들어간 것**만 적는다. 크기별 사본(og, thumb)은 `source_of`로 원본에 묶는다.
+- `characters`는 `doc`·`asst`·`fly`·`jupanbot`, `robot`은 `jupanbot-v2`(현재)로 적는다. 옛 하얀 로봇(`money-robo`)이 남은 그림은 `status: "redraw"`.
+- `ontology.pages`에는 제2부 지식 색인(`id="kg"`)과 꾸러미(`id="export"`)가 있는 페이지를 적는다.
+- GitHub 밖으로만 전달하는 시리즈(zip, 웹 결과물 페이지)는 현황판 저장소의 `data/external.json`에 한 줄을 더하라고 사용자에게 알린다.
+- **저장소에 올릴 때:** 커밋 작성자·커미터는 저자 계정 하나로만 하고, AI 도구를 공동 작성자로 적는 줄(`Co-Authored-By` 등)이나 세션 링크 줄을 넣지 않는다.
 
 ## 19. 분야 팩 구조와 분야별 차이
 
