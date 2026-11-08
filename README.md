@@ -6,7 +6,7 @@
 
 ![네 캐릭터 표정 미리보기](docs/preview_all_96.png)
 
-동작 팩 fight 1.0 (전신 동작 20시트 · 156프레임, 움직이는 갤러리: [fruitfly-lab-expressions/motions.html](https://adminmrobo.github.io/fruitfly-lab-expressions/motions.html))
+동작 팩 fight 1.1 (전신 동작 25시트 · 196프레임, 움직이는 갤러리: [fruitfly-lab-expressions/motions.html](https://adminmrobo.github.io/fruitfly-lab-expressions/motions.html))
 
 ![동작 팩 미리보기](docs/preview_motion_fight.png)
 
@@ -32,14 +32,14 @@ AI에게 줄 때는 위 파일과 자료를 함께 주고 `SKILL.md` 15장의 �
 
 ```
 ahnboat_lab_explainer/
-├─ SKILL.md                         본 스킬 v1.11 (인공지능 규칙 내장)
+├─ SKILL.md                         본 스킬 v1.12 (인공지능 규칙 내장)
 ├─ manifest.json                    팩 목록 · 판 번호 · 필요한 본 스킬 판(core_min)
 ├─ CHANGELOG.md   LICENSE.md
 ├─ packs/
 │  ├─ character/                    캐릭터 팩 (모든 페이지에 필수)
 │  │  ├─ CHAR_lab4.md               이름 · 성격 · 형식별 역할 · 외형 · 표정 사전 · 추가 팩 규격
 │  │  ├─ character_pack/            표정 24종 × 4명 (WebP 96·192, sprites JS, 키 대응표, 빌드 도구)
-│  │  ├─ motion_pack/               전신 동작 시트 20장 · 프레임 156장 (스트립 WebP, motion_map.json, 재생 도구)
+│  │  ├─ motion_pack/               전신 동작 시트 25장 · 프레임 196장 (스트립 WebP, motion_map.json, 재생 도구)
 │  │  └─ setting_shots/             설정샷 k01~k12 (외형의 기준 그림)
 │  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)

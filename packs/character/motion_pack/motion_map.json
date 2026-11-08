@@ -1,6 +1,6 @@
 {
  "pack": "fight",
- "version": "1.0",
+ "version": "1.1",
  "note": "가로 스트립 한 장 = 시트 한 장. 프레임 i는 x=i*fw. 발 기준선 y=base. 기준 프레임(똑바로 선 자세) 키 = fh*fill 로 맞춤",
  "sheets": {
   "D1": {
@@ -40,7 +40,7 @@
    "who": "doc",
    "key": "doc_fight_d2",
    "title": "기본 B · 점프·돌진",
-   "facing": "left",
+   "facing": "right",
    "n": 8,
    "seg": {
     "jump": [
@@ -55,20 +55,19 @@
    "strips": {
     "192": {
      "file": "webp/doc_fight_d2_192.webp",
-     "fw": 111,
+     "fw": 151,
      "fh": 192,
      "base": 188,
-     "bytes": 41286
+     "bytes": 40070
     },
     "128": {
      "file": "webp/doc_fight_d2_128.webp",
-     "fw": 74,
+     "fw": 101,
      "fh": 128,
      "base": 124,
-     "bytes": 23652
+     "bytes": 23192
     }
-   },
-   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+   }
   },
   "D3": {
    "who": "doc",
@@ -144,7 +143,7 @@
    "who": "doc",
    "key": "doc_fight_d5",
    "title": "필살기 · 특이값 분해 참",
-   "facing": "left",
+   "facing": "right",
    "n": 8,
    "seg": {
     "svd_chop": [
@@ -155,26 +154,25 @@
    "strips": {
     "192": {
      "file": "webp/doc_fight_d5_192.webp",
-     "fw": 109,
+     "fw": 150,
      "fh": 192,
      "base": 188,
-     "bytes": 45654
+     "bytes": 48034
     },
     "128": {
      "file": "webp/doc_fight_d5_128.webp",
-     "fw": 73,
+     "fw": 100,
      "fh": 128,
      "base": 124,
-     "bytes": 25962
+     "bytes": 28050
     }
-   },
-   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+   }
   },
   "D6": {
    "who": "doc",
    "key": "doc_fight_d6",
    "title": "필살기 · 브로드캐스트 웨이브",
-   "facing": "left",
+   "facing": "right",
    "n": 8,
    "seg": {
     "broadcast_wave": [
@@ -185,20 +183,19 @@
    "strips": {
     "192": {
      "file": "webp/doc_fight_d6_192.webp",
-     "fw": 108,
+     "fw": 143,
      "fh": 192,
      "base": 188,
-     "bytes": 44314
+     "bytes": 47000
     },
     "128": {
      "file": "webp/doc_fight_d6_128.webp",
-     "fw": 72,
+     "fw": 95,
      "fh": 128,
      "base": 124,
-     "bytes": 25132
+     "bytes": 27590
     }
-   },
-   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+   }
   },
   "D7": {
    "who": "doc",
@@ -275,6 +272,72 @@
      "fh": 128,
      "base": 124,
      "bytes": 16672
+    }
+   }
+  },
+  "D9": {
+   "who": "doc",
+   "key": "doc_fight_d9",
+   "title": "전투복 · 돌진·필살기",
+   "facing": "right",
+   "n": 8,
+   "seg": {
+    "dash": [
+     1,
+     4
+    ],
+    "svd_chop": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d9_192.webp",
+     "fw": 139,
+     "fh": 192,
+     "base": 188,
+     "bytes": 43818
+    },
+    "128": {
+     "file": "webp/doc_fight_d9_128.webp",
+     "fw": 93,
+     "fh": 128,
+     "base": 124,
+     "bytes": 25464
+    }
+   }
+  },
+  "D10": {
+   "who": "doc",
+   "key": "doc_fight_d10",
+   "title": "사이버 · 돌진·필살기",
+   "facing": "right",
+   "n": 8,
+   "seg": {
+    "dash": [
+     1,
+     4
+    ],
+    "svd_chop": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d10_192.webp",
+     "fw": 146,
+     "fh": 192,
+     "base": 188,
+     "bytes": 51160
+    },
+    "128": {
+     "file": "webp/doc_fight_d10_128.webp",
+     "fw": 97,
+     "fh": 128,
+     "base": 124,
+     "bytes": 29018
     }
    }
   },
@@ -521,6 +584,101 @@
     }
    }
   },
+  "A8": {
+   "who": "asst",
+   "key": "asst_fight_a8",
+   "title": "전투복 · 돌진·필살기",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "dash": [
+     1,
+     4
+    ],
+    "onehot_barrage": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a8_192.webp",
+     "fw": 161,
+     "fh": 192,
+     "base": 188,
+     "bytes": 52114
+    },
+    "128": {
+     "file": "webp/asst_fight_a8_128.webp",
+     "fw": 107,
+     "fh": 128,
+     "base": 124,
+     "bytes": 29702
+    }
+   }
+  },
+  "A9": {
+   "who": "asst",
+   "key": "asst_fight_a9",
+   "title": "사이버 · 돌진·필살기",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "dash": [
+     1,
+     4
+    ],
+    "onehot_barrage": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a9_192.webp",
+     "fw": 133,
+     "fh": 192,
+     "base": 188,
+     "bytes": 52940
+    },
+    "128": {
+     "file": "webp/asst_fight_a9_128.webp",
+     "fw": 89,
+     "fh": 128,
+     "base": 124,
+     "bytes": 29188
+    }
+   }
+  },
+  "A10": {
+   "who": "asst",
+   "key": "asst_fight_a10",
+   "title": "필살기 · 역전파 카운터",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "backprop_counter": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a10_192.webp",
+     "fw": 157,
+     "fh": 192,
+     "base": 188,
+     "bytes": 56678
+    },
+    "128": {
+     "file": "webp/asst_fight_a10_128.webp",
+     "fw": 105,
+     "fh": 128,
+     "base": 124,
+     "bytes": 32444
+    }
+   }
+  },
   "F1": {
    "who": "fly",
    "key": "fly_fight_f1",
@@ -688,7 +846,7 @@
   }
  },
  "source": "https://github.com/adminmrobo/fruitfly-lab-expressions",
- "commit": "5174c84",
+ "commit": "1e875dd",
  "date": "2026-11-08",
  "mirror": {
   "doc": false,
