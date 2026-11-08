@@ -1,0 +1,700 @@
+{
+ "pack": "fight",
+ "version": "1.0",
+ "note": "가로 스트립 한 장 = 시트 한 장. 프레임 i는 x=i*fw. 발 기준선 y=base. 기준 프레임(똑바로 선 자세) 키 = fh*fill 로 맞춤",
+ "sheets": {
+  "D1": {
+   "who": "doc",
+   "key": "doc_fight_d1",
+   "title": "기본 A · 서기·걷기",
+   "facing": "right",
+   "n": 8,
+   "seg": {
+    "idle": [
+     1,
+     4
+    ],
+    "walk": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d1_192.webp",
+     "fw": 85,
+     "fh": 192,
+     "base": 188,
+     "bytes": 43424
+    },
+    "128": {
+     "file": "webp/doc_fight_d1_128.webp",
+     "fw": 57,
+     "fh": 128,
+     "base": 124,
+     "bytes": 24558
+    }
+   }
+  },
+  "D2": {
+   "who": "doc",
+   "key": "doc_fight_d2",
+   "title": "기본 B · 점프·돌진",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "jump": [
+     1,
+     4
+    ],
+    "dash": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d2_192.webp",
+     "fw": 111,
+     "fh": 192,
+     "base": 188,
+     "bytes": 41286
+    },
+    "128": {
+     "file": "webp/doc_fight_d2_128.webp",
+     "fw": 74,
+     "fh": 128,
+     "base": 124,
+     "bytes": 23652
+    }
+   },
+   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+  },
+  "D3": {
+   "who": "doc",
+   "key": "doc_fight_d3",
+   "title": "기본 C · 잽·가드·피격",
+   "facing": "right",
+   "n": 8,
+   "seg": {
+    "jab": [
+     1,
+     4
+    ],
+    "guard": [
+     5,
+     6
+    ],
+    "hit": [
+     7,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d3_192.webp",
+     "fw": 120,
+     "fh": 192,
+     "base": 188,
+     "bytes": 42254
+    },
+    "128": {
+     "file": "webp/doc_fight_d3_128.webp",
+     "fw": 80,
+     "fh": 128,
+     "base": 124,
+     "bytes": 24298
+    }
+   }
+  },
+  "D4": {
+   "who": "doc",
+   "key": "doc_fight_d4",
+   "title": "기본 D · 승리·KO",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "win": [
+     1,
+     4
+    ],
+    "ko": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d4_192.webp",
+     "fw": 118,
+     "fh": 192,
+     "base": 188,
+     "bytes": 38620
+    },
+    "128": {
+     "file": "webp/doc_fight_d4_128.webp",
+     "fw": 79,
+     "fh": 128,
+     "base": 124,
+     "bytes": 22118
+    }
+   }
+  },
+  "D5": {
+   "who": "doc",
+   "key": "doc_fight_d5",
+   "title": "필살기 · 특이값 분해 참",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "svd_chop": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d5_192.webp",
+     "fw": 109,
+     "fh": 192,
+     "base": 188,
+     "bytes": 45654
+    },
+    "128": {
+     "file": "webp/doc_fight_d5_128.webp",
+     "fw": 73,
+     "fh": 128,
+     "base": 124,
+     "bytes": 25962
+    }
+   },
+   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+  },
+  "D6": {
+   "who": "doc",
+   "key": "doc_fight_d6",
+   "title": "필살기 · 브로드캐스트 웨이브",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "broadcast_wave": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d6_192.webp",
+     "fw": 108,
+     "fh": 192,
+     "base": 188,
+     "bytes": 44314
+    },
+    "128": {
+     "file": "webp/doc_fight_d6_128.webp",
+     "fw": 72,
+     "fh": 128,
+     "base": 124,
+     "bytes": 25132
+    }
+   },
+   "regen": "박사가 왼쪽을 봄 (기준: 오른쪽)"
+  },
+  "D7": {
+   "who": "doc",
+   "key": "doc_fight_d7",
+   "title": "필살기 · 역전파 카운터",
+   "facing": "right",
+   "n": 8,
+   "seg": {
+    "backprop_counter": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d7_192.webp",
+     "fw": 128,
+     "fh": 192,
+     "base": 188,
+     "bytes": 46622
+    },
+    "128": {
+     "file": "webp/doc_fight_d7_128.webp",
+     "fw": 85,
+     "fh": 128,
+     "base": 124,
+     "bytes": 26964
+    }
+   }
+  },
+  "D8": {
+   "who": "doc",
+   "key": "doc_fight_d8",
+   "title": "의상 3종 · 연구복·전투복·사이버",
+   "facing": "front",
+   "n": 6,
+   "seg": {
+    "idle_lab": [
+     1,
+     1
+    ],
+    "idle_battle": [
+     2,
+     2
+    ],
+    "idle_cyber": [
+     3,
+     3
+    ],
+    "jump_lab": [
+     4,
+     4
+    ],
+    "jump_battle": [
+     5,
+     5
+    ],
+    "jump_cyber": [
+     6,
+     6
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/doc_fight_d8_192.webp",
+     "fw": 78,
+     "fh": 192,
+     "base": 188,
+     "bytes": 28822
+    },
+    "128": {
+     "file": "webp/doc_fight_d8_128.webp",
+     "fw": 52,
+     "fh": 128,
+     "base": 124,
+     "bytes": 16672
+    }
+   }
+  },
+  "A1": {
+   "who": "asst",
+   "key": "asst_fight_a1",
+   "title": "기본 A · 서기·걷기",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "idle": [
+     1,
+     4
+    ],
+    "walk": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a1_192.webp",
+     "fw": 96,
+     "fh": 192,
+     "base": 188,
+     "bytes": 48268
+    },
+    "128": {
+     "file": "webp/asst_fight_a1_128.webp",
+     "fw": 64,
+     "fh": 128,
+     "base": 124,
+     "bytes": 27132
+    }
+   }
+  },
+  "A2": {
+   "who": "asst",
+   "key": "asst_fight_a2",
+   "title": "기본 B · 점프·돌진",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "jump": [
+     1,
+     4
+    ],
+    "dash": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a2_192.webp",
+     "fw": 155,
+     "fh": 192,
+     "base": 188,
+     "bytes": 51688
+    },
+    "128": {
+     "file": "webp/asst_fight_a2_128.webp",
+     "fw": 104,
+     "fh": 128,
+     "base": 124,
+     "bytes": 29272
+    }
+   }
+  },
+  "A3": {
+   "who": "asst",
+   "key": "asst_fight_a3",
+   "title": "기본 C · 잽·가드·피격",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "jab": [
+     1,
+     4
+    ],
+    "guard": [
+     5,
+     6
+    ],
+    "hit": [
+     7,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a3_192.webp",
+     "fw": 118,
+     "fh": 192,
+     "base": 188,
+     "bytes": 49410
+    },
+    "128": {
+     "file": "webp/asst_fight_a3_128.webp",
+     "fw": 79,
+     "fh": 128,
+     "base": 124,
+     "bytes": 27822
+    }
+   }
+  },
+  "A4": {
+   "who": "asst",
+   "key": "asst_fight_a4",
+   "title": "기본 D · 승리·KO",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "win": [
+     1,
+     4
+    ],
+    "ko": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a4_192.webp",
+     "fw": 119,
+     "fh": 192,
+     "base": 188,
+     "bytes": 40740
+    },
+    "128": {
+     "file": "webp/asst_fight_a4_128.webp",
+     "fw": 79,
+     "fh": 128,
+     "base": 124,
+     "bytes": 22794
+    }
+   }
+  },
+  "A5": {
+   "who": "asst",
+   "key": "asst_fight_a5",
+   "title": "필살기 · 원-핫 연타",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "onehot_barrage": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a5_192.webp",
+     "fw": 110,
+     "fh": 192,
+     "base": 188,
+     "bytes": 46218
+    },
+    "128": {
+     "file": "webp/asst_fight_a5_128.webp",
+     "fw": 74,
+     "fh": 128,
+     "base": 124,
+     "bytes": 26316
+    }
+   }
+  },
+  "A6": {
+   "who": "asst",
+   "key": "asst_fight_a6",
+   "title": "필살기 · 경사하강 킥",
+   "facing": "left",
+   "n": 8,
+   "seg": {
+    "gd_kick": [
+     1,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a6_192.webp",
+     "fw": 143,
+     "fh": 192,
+     "base": 188,
+     "bytes": 46278
+    },
+    "128": {
+     "file": "webp/asst_fight_a6_128.webp",
+     "fw": 95,
+     "fh": 128,
+     "base": 124,
+     "bytes": 25924
+    }
+   }
+  },
+  "A7": {
+   "who": "asst",
+   "key": "asst_fight_a7",
+   "title": "의상 3종 · 연구복·전투복·사이버",
+   "facing": "front",
+   "n": 6,
+   "seg": {
+    "idle_lab": [
+     1,
+     1
+    ],
+    "idle_battle": [
+     2,
+     2
+    ],
+    "idle_cyber": [
+     3,
+     3
+    ],
+    "jump_lab": [
+     4,
+     4
+    ],
+    "jump_battle": [
+     5,
+     5
+    ],
+    "jump_cyber": [
+     6,
+     6
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/asst_fight_a7_192.webp",
+     "fw": 94,
+     "fh": 192,
+     "base": 188,
+     "bytes": 34484
+    },
+    "128": {
+     "file": "webp/asst_fight_a7_128.webp",
+     "fw": 63,
+     "fh": 128,
+     "base": 124,
+     "bytes": 19054
+    }
+   }
+  },
+  "F1": {
+   "who": "fly",
+   "key": "fly_fight_f1",
+   "title": "심판 A · 대기·시작 신호",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "idle": [
+     1,
+     4
+    ],
+    "start": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/fly_fight_f1_192.webp",
+     "fw": 166,
+     "fh": 192,
+     "base": 188,
+     "bytes": 66124
+    },
+    "128": {
+     "file": "webp/fly_fight_f1_128.webp",
+     "fw": 111,
+     "fh": 128,
+     "base": 124,
+     "bytes": 36702
+    }
+   }
+  },
+  "F2": {
+   "who": "fly",
+   "key": "fly_fight_f2",
+   "title": "심판 B · 판정",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "point_left": [
+     1,
+     4
+    ],
+    "point_right": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/fly_fight_f2_192.webp",
+     "fw": 171,
+     "fh": 192,
+     "base": 188,
+     "bytes": 68440
+    },
+    "128": {
+     "file": "webp/fly_fight_f2_128.webp",
+     "fw": 114,
+     "fh": 128,
+     "base": 124,
+     "bytes": 38398
+    }
+   }
+  },
+  "F3": {
+   "who": "fly",
+   "key": "fly_fight_f3",
+   "title": "심판 C · 무승부·의심",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "draw": [
+     1,
+     4
+    ],
+    "suspect": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/fly_fight_f3_192.webp",
+     "fw": 154,
+     "fh": 192,
+     "base": 188,
+     "bytes": 62030
+    },
+    "128": {
+     "file": "webp/fly_fight_f3_128.webp",
+     "fw": 103,
+     "fh": 128,
+     "base": 124,
+     "bytes": 34616
+    }
+   }
+  },
+  "R1": {
+   "who": "robo",
+   "key": "robo_fight_r1",
+   "title": "점수판 A · 대기·주판 계산",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "idle": [
+     1,
+     4
+    ],
+    "count": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/robo_fight_r1_192.webp",
+     "fw": 122,
+     "fh": 192,
+     "base": 188,
+     "bytes": 31370
+    },
+    "128": {
+     "file": "webp/robo_fight_r1_128.webp",
+     "fw": 82,
+     "fh": 128,
+     "base": 124,
+     "bytes": 18018
+    }
+   }
+  },
+  "R2": {
+   "who": "robo",
+   "key": "robo_fight_r2",
+   "title": "점수판 B · 환호·실망",
+   "facing": "front",
+   "n": 8,
+   "seg": {
+    "cheer": [
+     1,
+     4
+    ],
+    "sad": [
+     5,
+     8
+    ]
+   },
+   "strips": {
+    "192": {
+     "file": "webp/robo_fight_r2_192.webp",
+     "fw": 120,
+     "fh": 192,
+     "base": 188,
+     "bytes": 44088
+    },
+    "128": {
+     "file": "webp/robo_fight_r2_128.webp",
+     "fw": 80,
+     "fh": 128,
+     "base": 124,
+     "bytes": 25256
+    }
+   }
+  }
+ },
+ "source": "https://github.com/adminmrobo/fruitfly-lab-expressions",
+ "commit": "5174c84",
+ "date": "2026-11-08",
+ "mirror": {
+  "doc": false,
+  "asst": false,
+  "fly": true,
+  "robo": true
+ },
+ "fill": 0.72
+}

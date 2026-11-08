@@ -6,6 +6,10 @@
 
 ![네 캐릭터 표정 미리보기](docs/preview_all_96.png)
 
+동작 팩 fight 1.0 (전신 동작 20시트 · 156프레임, 움직이는 갤러리: [fruitfly-lab-expressions/motions.html](https://adminmrobo.github.io/fruitfly-lab-expressions/motions.html))
+
+![동작 팩 미리보기](docs/preview_motion_fight.png)
+
 ---
 
 ## 하려는 일 → 필요한 파일
@@ -19,6 +23,7 @@
 | 번역된 시리즈에 언어 하나만 추가 (예: 베트남어) | `packs/task/TASK_add_lang.md` + `packs/lang/` |
 | 완성된 페이지에 지식 색인·꾸러미만 붙이기 | `packs/task/onto-retrofit/` + `data/` |
 | 시리즈가 분야를 어디까지 다뤘나 재기 (커버리지) | `packs/task/onto-retrofit/O5_pipeline.md` + `data/` |
+| 캐릭터가 움직이는 장면 (대결 연출·격투형 특별편) | 위 + `packs/character/motion_pack/` (C8, 본 스킬 12-6) |
 | 만든 페이지 검수 | `packs/task/TASK_review.md` + `SKILL.md` + `packs/character/CHAR_lab4.md` + 해당 분야 팩 |
 
 AI에게 줄 때는 위 파일과 자료를 함께 주고 `SKILL.md` 15장의 프롬프트를 쓴다. 첫 질문으로 **분야**(1 인공지능 · 2 통계학 · 3 경제학 · 4 회계학 · 5 경영학 · 6 직접 입력)를 묻는다.
@@ -27,13 +32,14 @@ AI에게 줄 때는 위 파일과 자료를 함께 주고 `SKILL.md` 15장의 �
 
 ```
 ahnboat_lab_explainer/
-├─ SKILL.md                         본 스킬 v1.9 (인공지능 규칙 내장)
+├─ SKILL.md                         본 스킬 v1.11 (인공지능 규칙 내장)
 ├─ manifest.json                    팩 목록 · 판 번호 · 필요한 본 스킬 판(core_min)
 ├─ CHANGELOG.md   LICENSE.md
 ├─ packs/
 │  ├─ character/                    캐릭터 팩 (모든 페이지에 필수)
 │  │  ├─ CHAR_lab4.md               이름 · 성격 · 형식별 역할 · 외형 · 표정 사전 · 추가 팩 규격
 │  │  ├─ character_pack/            표정 24종 × 4명 (WebP 96·192, sprites JS, 키 대응표, 빌드 도구)
+│  │  ├─ motion_pack/               전신 동작 시트 20장 · 프레임 156장 (스트립 WebP, motion_map.json, 재생 도구)
 │  │  └─ setting_shots/             설정샷 k01~k12 (외형의 기준 그림)
 │  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)

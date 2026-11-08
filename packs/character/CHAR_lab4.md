@@ -2,9 +2,9 @@
 pack: character
 id: lab4
 label: 연구실 네 식구 (박사 · 조수 하루 · 초파리 연구원 · 주판봇)
-version: 1.0
+version: 1.2
 core_min: 1.9
-images: character_pack/ 1.3 (adminmrobo/fruitfly-lab-expressions @ 5269662), setting_shots/ (k01~k12)
+images: character_pack/ 1.3 (adminmrobo/fruitfly-lab-expressions @ 5269662), motion_pack/ fight 1.0 (같은 저장소 @ 5174c84), setting_shots/ (k01~k12)
 license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 없음 (C7)
 ---
 
@@ -22,6 +22,7 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | `character_pack/expression_map.json` | 뜻 이름 키(18-5) → 표정 번호 대응, `exact`/`near`/`deprecated` 표시 |
 | `character_pack/character_pack.json` | 팩 전체 목록(원본 경로, 크기, 바라보는 쪽, 배경 제거율) |
 | `character_pack/build_character_pack.py` | 팩 다시 만들기 `--repo`/`--clone`, 페이지에 쓸 키만 고르기 `--pick`, 받은 그림 넣기 `--ingest` |
+| `motion_pack/` | **동작 팩 fight 1.0** (C8): 전신 동작 시트 20장 = 프레임 156장. `webp/{key}_{192·128}.webp` 가로 스트립, `motion_map.json`, `build_motion_pack.py`, 생성 프롬프트 `PROMPTS_fight.md` |
 | `setting_shots/k01~k12` | 설정샷 12장 (단체, 3면도 4, 표정 9종 4, 라이벌 VS, 주판봇 포즈, 키 비교). 외형의 **기준 그림** |
 | `../../docs/preview_all_96.png` | 96px 전체 미리보기 |
 
@@ -97,9 +98,44 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 우선순위 | 페이지가 고른 추가 팩 → 기본 팩 → 기본 표정 → 픽셀 지도 |
 | 다시 나눌 그림 | 저울(`doc_scale`), 장부(`asst_ledger`), 점수판(`asst_board`)을 그리면 그 키를 `exact`로 되돌린다 |
 
+## C8. 동작 팩 (`motion_pack/`, fight 1.0)
+
+표정 그림(C4)은 얼굴 위주의 한 장이라, 점프·돌진·필살기처럼 **몸이 움직여야 하는 장면**을 그것만으로는 보여 줄 수 없다(흔들기·색 바꾸기로 흉내 내면 "버튼을 눌러도 안 움직인다"는 평을 받는다). 그런 장면에는 동작 팩의 전신 프레임을 쓴다. 원본은 `fruitfly-lab-expressions`의 `motions.html`·`specs/motions/`.
+
+| 시트 | 캐릭터 | 구간(seg) | 보는 쪽 |
+|---|---|---|---|
+| D1 | 박사 | idle 1–4 · walk 5–8 | 오른쪽 |
+| D2 | 박사 | jump 1–4 · dash 5–8 | 왼쪽 ※ |
+| D3 | 박사 | jab 1–4 · guard 5–6 · hit 7–8 | 오른쪽 |
+| D4 | 박사 | win 1–4 · ko 5–8 | 정면 |
+| D5 | 박사 | svd_chop 1–8 (필살기 특이값 분해 참) | 왼쪽 ※ |
+| D6 | 박사 | broadcast_wave 1–8 (필살기 브로드캐스트 웨이브) | 왼쪽 ※ |
+| D7 | 박사 | backprop_counter 1–8 (필살기 역전파 카운터) | 오른쪽 |
+| D8 | 박사 | idle_lab · idle_battle · idle_cyber · jump_lab · jump_battle · jump_cyber (의상 3종) | 정면 |
+| A1~A4 | 조수 | D1~D4와 같은 구간 | 왼쪽(A4 정면) |
+| A5 | 조수 | onehot_barrage 1–8 (필살기 원-핫 연타) | 왼쪽 |
+| A6 | 조수 | gd_kick 1–8 (필살기 경사하강 킥) | 왼쪽 |
+| A7 | 조수 | 의상 3종 (D8과 같은 구간) | 정면 |
+| F1~F3 | 초파리 | idle · start / point_left · point_right / draw · suspect (심판) | 정면 |
+| R1~R2 | 주판봇 | idle · count / cheer · sad (점수판) | 정면 |
+
+※ 기준 방향(박사 오른쪽, 조수 왼쪽 — 둘이 마주 봄)과 다르다. **다시 그리기 대상**이다.
+
+**쓰는 법**
+
+1. `python3 build_motion_pack.py --pick D1,D5,A1,A5 --size 128`로 쓰는 시트만 골라 `var MOTION={...}`와 재생 함수 `drawMotion()`을 페이지 스크립트에 붙인다(본 스킬 12-6). 전체를 넣지 않는다.
+2. 크기: 캔버스에서 캐릭터 키 100px 안팎이면 128 스트립, 그보다 크면 192. 동작 그림은 표정 그림과 **따로** 페이지당 450 KB 이하.
+3. 키 맞추기: 스트립은 시트마다 "똑바로 선 기준 프레임"의 키가 칸 높이의 72%가 되게 맞춰 두었다. 캐릭터 사이 키 비율(C3: 박사 1.00 · 조수 0.90 · 주판봇 0.72 · 초파리 0.41)은 그리는 쪽에서 `h`로 맞춘다.
+4. 발 기준선: `drawMotion`의 `cx, cy`는 발 가운데. 점프 높이와 돌진 거리는 프레임 안에 이미 들어 있으니 위치를 따로 흔들지 않는다.
+5. **좌우 반전:** 초파리·주판봇은 허용(`mirror: true`). 박사·조수는 C5대로 금지라서 `drawMotion`이 반전하지 않는다. ※ 시트를 꼭 써야 하면 `opt.forceMirror`로 임시 반전하고, 그 페이지의 바닥글과 검수 기록에 "임시 반전, 다시 그리기 예정"을 적는다.
+6. 동작 그림이 없거나 로드 전이면 `drawMotion`이 `false`를 돌려준다. 그때는 표정 그림(C4)으로 대신한다(오류 없음).
+7. 효과(원-핫 칸, 등고선, 특이값 막대, 속도선)는 그림에 넣지 않았다. 페이지 코드가 그 위에 그려 **개념과 연결**한다. 박사 손의 보랏빛 불꽃만 그림에 있다.
+
+**새 시트 만들기:** `PROMPTS_fight.md`의 형식(16:9, 4열×2행, 회색 단색 배경, 글자·효과선 없음, 보는 쪽 지정)으로 프롬프트를 쓰고, 표정 기본 그림·설정샷·같은 캐릭터의 기존 시트를 참고 그림으로 함께 넣는다. 받은 시트는 `fruitfly-lab-expressions`에 먼저 넣고(원본·프레임·`motions.json`), 이 폴더의 스트립을 다시 만든다. 새 동작 팩 이름은 C6 규칙(`{who}_{팩 이름}_…`)을 따른다.
+
 ## C7. 라이선스
 
-캐릭터 이름·설정·그림(이 폴더 전체)은 저작권자 안상선(개인)에게 있으며 허락 없이 쓸 수 없다. 저작권 등록 준비 중이다. 저장소의 다른 폴더(규칙 문서·도구)와 라이선스가 다르다(저장소 `LICENSE.md`).
+캐릭터 이름·설정·그림(이 폴더 전체, `motion_pack/` 포함)은 저작권자 안상선(개인)에게 있으며 허락 없이 쓸 수 없다. 저작권 등록 준비 중이다. 저장소의 다른 폴더(규칙 문서·도구)와 라이선스가 다르다(저장소 `LICENSE.md`).
 
 ---
 
