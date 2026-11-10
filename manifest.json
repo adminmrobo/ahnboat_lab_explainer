@@ -1,7 +1,7 @@
 {
   "repo": "ahnboat_lab_explainer",
   "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
-  "updated": "2026-11-08",
+  "updated": "2026-11-11",
   "core": {
     "id": "ai-lab-explainer",
     "path": "SKILL.md",
@@ -13,26 +13,37 @@
       "id": "character/lab4",
       "kind": "character",
       "path": "packs/character/CHAR_lab4.md",
-      "version": "1.3",
+      "version": "1.4",
       "core_min": "1.9",
       "required": true,
       "assets": {
         "path": "packs/character/character_pack/",
-        "version": "1.3",
+        "version": "1.4",
         "source": "https://github.com/adminmrobo/fruitfly-lab-expressions",
-        "commit": "5269662"
+        "commit": "86d04ac"
       },
       "reference_images": "packs/character/setting_shots/",
       "license": "all-rights-reserved",
       "motion": {
         "path": "packs/character/motion_pack/",
         "pack": "fight",
-        "version": "1.1",
-        "sheets": 25,
-        "frames": 196,
+        "version": "1.2",
+        "sheets": 59,
+        "frames": 464,
         "source": "https://github.com/adminmrobo/fruitfly-lab-expressions",
-        "commit": "1e875dd",
+        "commit": "86d04ac",
         "core_min": "1.11"
+      },
+      "members": {
+        "doc": "No.001",
+        "asst": "No.002",
+        "fly": "No.003",
+        "robo": "No.004",
+        "sia": "No.005",
+        "moa": "No.006",
+        "x1": "No.007 (hidden)",
+        "x2": "No.008 (hidden)",
+        "x3": "No.009 (hidden)"
       }
     },
     {

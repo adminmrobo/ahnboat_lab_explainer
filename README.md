@@ -38,8 +38,8 @@ ahnboat_lab_explainer/
 ├─ packs/
 │  ├─ character/                    캐릭터 팩 (모든 페이지에 필수)
 │  │  ├─ CHAR_lab4.md               이름 · 성격 · 형식별 역할 · 외형 · 표정 사전 · 추가 팩 규격
-│  │  ├─ character_pack/            표정 24종 × 4명 (WebP 96·192, sprites JS, 키 대응표, 빌드 도구)
-│  │  ├─ motion_pack/               전신 동작 시트 25장 · 프레임 196장 (스트립 WebP, motion_map.json, 재생 도구)
+│  │  ├─ character_pack/            표정 24종 × 6명 + 미공개 3명 × 9종 (WebP 96·192, sprites JS, 키 대응표, 빌드 도구)
+│  │  ├─ motion_pack/               전신 동작 시트 59장 · 프레임 464장 (스트립 WebP, motion_map.json, 재생·스트립 빌드 도구)
 │  │  └─ setting_shots/             설정샷 k01~k12 (외형의 기준 그림)
 │  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)
@@ -70,7 +70,7 @@ ahnboat_lab_explainer/
 | 팩 | 파일 | 판 | 필요한 본 스킬 |
 |---|---|---|---|
 | 본 스킬 | `SKILL.md` | 1.9 | — |
-| 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.1) | 1.0 | 1.9 |
+| 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.4 | 1.9 |
 | 분야 · 통계 / 경제 / 회계 / 경영 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
 | 번역 | `packs/lang/` (지시서 + langpack) | 1.0 / langpack 1.3 | 1.9 |
 | 작업 · 언어 추가 | `packs/task/TASK_add_lang.md` | 1.0 | 1.9 |

@@ -1,14 +1,16 @@
 ---
 pack: character
 id: lab4
-label: 연구실 네 식구 (박사 · 조수 하루 · 초파리 연구원 · 주판봇)
-version: 1.3
+label: 연구실 식구 (박사 · 조수 하루 · 초파리 연구원 · 주판봇 + 인턴 시아 · 인턴 모아 + 미공개 X1~X3)
+version: 1.4
 core_min: 1.9
-images: character_pack/ 1.3 (adminmrobo/fruitfly-lab-expressions @ 5269662), motion_pack/ fight 1.1 (같은 저장소 @ 1e875dd), setting_shots/ (k01~k12)
+images: character_pack/ 1.4 (adminmrobo/fruitfly-lab-expressions @ 86d04ac), motion_pack/ fight 1.2 (같은 저장소 @ 86d04ac), setting_shots/ (k01~k12)
 license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 없음 (C7)
 ---
 
-# 캐릭터 팩 · 연구실 네 식구 (`CHAR_lab4`)
+# 캐릭터 팩 · 연구실 식구 (`CHAR_lab4`)
+
+> 팩 이름 `lab4`는 처음 네 식구 시절의 이름을 호환을 위해 그대로 둔 것이다. 1.4(2026-11-11)부터 인턴 시아(No.005)·모아(No.006)와 미공개 슬롯 X1~X3(No.007~009)이 함께 들어 있다.
 
 모든 페이지가 읽는 **필수 팩**이다. 본 스킬(`SKILL.md`(저장소 맨 위))의 5장, 18-3·18-4·18-5, 부록 A를 이 파일로 옮겼다. **절 번호는 그대로**이므로 본 스킬과 다른 팩이 "5-8", "18-4"라고 하면 이 파일의 같은 절이다. 앞의 C0~C7은 v1.9에서 새로 정한 것이다.
 
@@ -17,12 +19,12 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 경로 | 내용 |
 |---|---|
 | `CHAR_lab4.md` | 이 문서: 이름, 성격, 형식별 역할, 고정 외형, 표정 사전, 픽셀 지도 |
-| `character_pack/webp/96`, `webp/192` | 네 캐릭터 × 표정 24종(E01 기쁨 ~ E24 충격) WebP |
-| `character_pack/sprites_96.js`, `sprites_192.js` | 위 그림을 base64로 담은 한 파일 (`var LAB_PACK={size, commit, alias, img}`) |
+| `character_pack/webp/96`, `webp/192` | 여섯 캐릭터 × 표정 24종(E01 기쁨 ~ E24 충격) + 미공개 X1~X3 × 9종 WebP (171장) |
+| `character_pack/sprites_96.js`, `sprites_192.js` | 위 그림을 base64로 담은 한 파일 (`var LAB_PACK={size, commit, hidden, alias, facing, img}`) |
 | `character_pack/expression_map.json` | 뜻 이름 키(18-5) → 표정 번호 대응, `exact`/`near`/`deprecated` 표시 |
 | `character_pack/character_pack.json` | 팩 전체 목록(원본 경로, 크기, 바라보는 쪽, 배경 제거율) |
 | `character_pack/build_character_pack.py` | 팩 다시 만들기 `--repo`/`--clone`, 페이지에 쓸 키만 고르기 `--pick`, 받은 그림 넣기 `--ingest` |
-| `motion_pack/` | **동작 팩 fight 1.1** (C8): 전신 동작 시트 25장 = 프레임 196장. `webp/{key}_{192·128}.webp` 가로 스트립, `motion_map.json`, `build_motion_pack.py`, 생성 프롬프트 `PROMPTS_fight.md`·`PROMPTS_fight_v1.1.md` |
+| `motion_pack/` | **동작 팩 fight 1.2** (C8): 전신 동작 시트 59장 = 프레임 464장 (새 식구 34장 포함). `webp/{key}_{192·128}.webp` 가로 스트립, `motion_map.json`, `build_motion_pack.py`, 생성 프롬프트 `PROMPTS_fight.md`·`PROMPTS_fight_v1.1.md` |
 | `setting_shots/k01~k12` | 설정샷 12장 (단체, 3면도 4, 표정 9종 4, 라이벌 VS, 주판봇 포즈, 키 비교). 외형의 **기준 그림** |
 | `../../docs/preview_all_96.png` | 96px 전체 미리보기 |
 
@@ -34,6 +36,9 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | `asst` | 조수 **하루** (예명 세나) | 미션형 시리즈에서 이름으로 부른다. 대결형에서는 "조수"로 써도 된다 |
 | `fly` | 초파리 연구원 | |
 | `robo` | 주판봇 | 한국어 주판봇. 외국어판은 en·uz·vi **AbaBot**, ja **アバボット**, zh **算盘宝**, ru **АбаБот** (번역 팩 용어표 `00_series.json`과 같게) |
+| `sia` | 인턴 **시아** (No.005) | 외국어판 **Sia** (ja シア, zh 西娅, ru Сия). 이름 뜻: 시야(지켜보는 눈) |
+| `moa` | 인턴 **모아** (No.006) | 외국어판 **Moa** (ja モア, zh 茉雅, ru Моа). 이름 뜻: 기록을 '모아' 두는 사람 |
+| `x1`·`x2`·`x3` | 미공개 (No.007~009) | 정체를 밝히지 않은 실루엣 슬롯. 이름 대신 "미공개"(en Secret)로만 부른다 (C9) |
 
 외국어 고정 이름은 번역 팩 `packs/lang/LANG_series_build_instructions.md` 14-8 표를 따른다.
 
@@ -47,8 +52,11 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 조수 하루 | 꼼꼼하고 실제로 일을 다 한다. 초보의 눈높이로 묻는다 | 실험 진행 · **숫자 발표** · 점수판 | 초보 독자의 질문·감탄 (독자 대변) |
 | 초파리 연구원 | 작지만 날카롭다. 크고 복잡한 것을 일단 의심하고 짚는다 | 라이벌 A · **의심하는 쪽** | 남은 한계를 짚고 **다음 단계 제시** |
 | 주판봇 | 크고, 많고, 높은 숫자를 좋아한다. 확신에 차 있지만 악역이 아니다 | 라이벌 B · **확신하는 쪽** | **준비물·숫자 보고** |
+| 인턴 시아 | 조용하고 꼼꼼하다. 정리를 잘하지만 집중이 끊기면 하품하다 졸아 버린다 | (선택) **진행 신호 심판** · 방청객 | (선택) 순서 정리·안내 |
+| 인턴 모아 | 상냥하고 잘 웃는다. 화분과 차를 챙기고, 응원할 때 목소리가 제일 크다 | (선택) **방청객** 응원 · 진행 신호 심판 | (선택) 기록 모으기·응원 |
 
 - 한 페이지 안에서 숫자를 발표하는 캐릭터는 한 명이다(대결형은 조수, 미션형은 주판봇).
+- **인턴은 선택 출연**이다. 넣지 않아도 페이지가 완성된다. 넣으면 섹션당 최대 1명, 숫자 발표·승패 판정은 하지 않는다(판정은 박사, 숫자는 조수·주판봇 그대로). 인턴 심판은 격투·게임형 장면에서 **시작·포인트·무승부 신호(깃발)**만 든다(동작 S11~S13·M11~M13).
 - 미션형에는 승패 판정이 없다. 대결 장치를 미션형에 넣으면 그 섹션만 대결형 자리를 따른다.
 - 5-5의 주판봇 금지 사항(실제 종목·수익률·투자 권유, 대사에 실제 기업·지수 이름)은 두 형식 모두에 적용한다.
 
@@ -63,12 +71,13 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 조수 하의 | 청바지 | 청바지가 기준 (k03). k01·장면 그림의 반바지·치마는 기준이 아니다 |
 | 초파리 옷 | 흰 가운 | 흰 가운 안에 검은 조끼, 검은 장갑 (k04, k09) |
 | 키 순서 (본 스킬 18-8) | 박사 = 조수 ≈ 초파리 × 1.3 | **박사 ≥ 조수 > 주판봇 > 초파리**, 키 비율은 박사 1.00 · 조수 0.90 · 주판봇 0.72 · 초파리 0.41 (2026-11 gpt2 단체 사진 기준) |
+| 새 식구 키 (1.4) | — | 시아 0.88 · 모아 0.84 · 미공개 X1 0.85 · X2 0.95 · X3 0.60 (여섯 식구 단체 사진 `fruitfly-lab-expressions/images/_sheets/lab6_lineup.png`) |
 
 ## C4. 그림 쓰는 법
 
 1. **페이지에 넣기:** 단일 파일 페이지는 `build_character_pack.py --pack character_pack --pick fly_point,robo_coin,...`으로 그 페이지에 쓰는 키만 뽑아 `SPRITE` 객체(본 스킬 12-4)에 넣는다. 전체 `sprites_96.js`를 통째로 넣지 않는다(약 630 KB).
 2. **키:** 본문은 뜻 이름 키(`fly_point`)를 쓴다. 표정 번호 키(`fly_e08`)를 직접 써도 된다.
-3. **없는 그림:** 추가 팩 → 기본 팩 → 같은 캐릭터 기본 표정(`doc_front`, `asst_smile`, `fly_clip`, `robo_smile`) → 부록 A 픽셀 지도 순서로 대신한다. 오류를 내지 않는다.
+3. **없는 그림:** 추가 팩 → 기본 팩 → 같은 캐릭터 기본 표정(`doc_front`, `asst_smile`, `fly_clip`, `robo_smile`, `sia_smile`, `moa_smile`, `x1_hint`~`x3_hint`) → 부록 A 픽셀 지도 순서로 대신한다. 오류를 내지 않는다. 시아·모아·미공개는 픽셀 지도가 없으므로 기본 표정(E13)이 마지막이다.
 4. **크기:** 말풍선 64px에는 96 그림, 히어로·대결 머리에는 192 그림.
 5. 그림 안에 글자를 넣지 않는다(본 스킬 18-2).
 
@@ -80,6 +89,9 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 조수 하루 | **금지** | 남색 브릿지가 정해진 쪽에 있다 |
 | 초파리 연구원 | 허용 | 전선 위치만 바뀌고, VS 화면(k10)과도 어긋나지 않는다 |
 | 주판봇 | 허용 | 좌우 대칭 |
+| 인턴 시아 | **금지** | 옆으로 흘린 앞머리 방향이 정해져 있다 |
+| 인턴 모아 | **금지** | 귀 위 흰 리본·체크 리본 위치가 정해져 있다 |
+| 미공개 X1~X3 | 허용 | 실루엣이라 좌우 차이가 거의 없다 |
 
 - 대결 머리: 초파리는 왼쪽에서 오른쪽을, 주판봇은 오른쪽에서 왼쪽을 본다(본 스킬 6-2). 그림의 바라보는 쪽은 `character_pack.json`의 `facing`, 맞지 않으면 CSS `transform:scaleX(-1)`로 뒤집는다(허용 캐릭터만).
 - 박사·조수는 정면 그림을 쓴다.
@@ -98,7 +110,7 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 우선순위 | 페이지가 고른 추가 팩 → 기본 팩 → 기본 표정 → 픽셀 지도 |
 | 다시 나눌 그림 | 저울(`doc_scale`), 장부(`asst_ledger`), 점수판(`asst_board`)을 그리면 그 키를 `exact`로 되돌린다 |
 
-## C8. 동작 팩 (`motion_pack/`, fight 1.1)
+## C8. 동작 팩 (`motion_pack/`, fight 1.2)
 
 표정 그림(C4)은 얼굴 위주의 한 장이라, 점프·돌진·필살기처럼 **몸이 움직여야 하는 장면**을 그것만으로는 보여 줄 수 없다(흔들기·색 바꾸기로 흉내 내면 "버튼을 눌러도 안 움직인다"는 평을 받는다). 그런 장면에는 동작 팩의 전신 프레임을 쓴다. 원본은 `fruitfly-lab-expressions`의 `motions.html`·`specs/motions/`.
 
@@ -121,8 +133,17 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | A10 | 조수 | backprop_counter 1–8 (역전파 카운터) | 왼쪽 |
 | F1~F3 | 초파리 | idle · start / point_left · point_right / draw · suspect (심판) | 정면 |
 | R1~R2 | 주판봇 | idle · count / cheer · sad (점수판) | 정면 |
+| S1~S4 | 인턴 시아 | D1~D4와 같은 구간 (S4 ko = 엎드려 잠듦) | 오른쪽(S4 정면) |
+| S5 · S6 · S7 | 인턴 시아 | missing_value_mop (결측치 걸레질) · normalize_tray (정규화 쟁반 돌리기) · backprop_counter | 오른쪽 |
+| S8 | 인턴 시아 | 의상 3종 idle_maid · idle_battle · idle_cyber · jump_maid · jump_battle · jump_cyber | 정면 |
+| S9 · S10 | 인턴 시아 | 전투복 · 사이버: dash 1–4 · missing_value_mop 5–8 | 오른쪽 |
+| S11~S13 | 인턴 시아 | 심판 (F1~F3과 같은 구간: idle·start / point_left·point_right / draw·suspect) | 정면 |
+| S14 · S15 | 인턴 시아 | 방청객 idle·clap / cheer·sad | 정면 |
+| M1~M15 | 인턴 모아 | S1~S15와 같은 배열. 필살기 M5 outlier_duster (이상치 먼지털이) · M6 batch_serving (배치 서빙) | 왼쪽(M4·M8·M11~M15 정면) |
+| M16 | 인턴 모아 | 정장: idle_suit 1–2 · walk_suit 3–6 · check 7–8 | 왼쪽 |
+| X1A~X3A | 미공개 X1~X3 | 방청객 idle 1–4 · cheer 5–8 (`hidden`) | 정면 |
 
-기준 방향은 **박사 오른쪽, 조수 왼쪽**(둘이 마주 봄)이다. fight 1.1에서 왼쪽을 보던 박사 D2·D5·D6을 다시 그려, 지금은 반전이 필요한 시트가 없다.
+기준 방향은 **박사 오른쪽, 조수 왼쪽**(둘이 마주 봄)이다. 인턴도 같다: **시아 오른쪽(박사 자리), 모아 왼쪽(조수 자리)**. 인턴끼리 대결하는 특별편이면 둘이 마주 본다. fight 1.1에서 왼쪽을 보던 박사 D2·D5·D6을 다시 그려, 지금은 반전이 필요한 시트가 없다.
 
 **의상 축 고르기**
 
@@ -144,6 +165,21 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 7. 효과(원-핫 칸, 등고선, 특이값 막대, 속도선)는 그림에 넣지 않았다. 페이지 코드가 그 위에 그려 **개념과 연결**한다. 박사 손의 보랏빛 불꽃만 그림에 있다.
 
 **새 시트 만들기:** `PROMPTS_fight_v1.1.md`의 형식(16:9, 4열×2행, 회색 단색 배경, 글자·효과선 없음, **보는 쪽을 첫 문장 바로 뒤에 `IMPORTANT: … faces RIGHT/LEFT`로 못 박음**)으로 프롬프트를 쓴다. 참고 그림은 표정 기본 그림·설정샷과 **보는 쪽이 맞는** 기존 시트만 넣는다(방향이 다른 시트를 넣으면 생성기가 방향까지 따라 한다). 받은 시트는 `fruitfly-lab-expressions`에 먼저 넣고(원본·프레임·`motions.json`), 이 폴더의 스트립을 다시 만든다. 새 동작 팩 이름은 C6 규칙(`{who}_{팩 이름}_…`)을 따른다.
+
+## C9. 새 식구와 미공개 슬롯 (1.4)
+
+| 항목 | 규칙 |
+|---|---|
+| 인턴 등장 | 선택. 격투·게임형 장면의 **진행 신호 심판**(깃발), 대결 화면 뒤 **방청객**, 정리·안내 한마디. 박사·조수·초파리·주판봇의 자리(C2)를 빼앗지 않는다 |
+| 인턴 대사 | 시아는 짧은 해요체("확인했습니다.", "순서대로 말씀드릴게요."), 모아는 부드러운 해요체("차 한 잔 하실래요?", "힘내세요!") |
+| 모아 정장 | 발표·보고·면접 장면에서만. 표정 그림은 메이드 차림뿐이므로 정장은 동작 M16으로만 쓴다 |
+| 미공개 X1~X3 | 실루엣(남흑색 + 흰 점 눈 + 포인트 색 소품 하나). 예고, 관중석 머릿수, 해설 속 이름 없는 '누군가'(익명 사용자·외부 평가자 등)로만 쓴다. 대사는 소리만("(…)", "(반짝)") |
+| 미공개 표시 | `LAB_PACK.hidden`/`character_pack.json`의 `hidden`, 동작 `motion_map.json`의 `hidden`. 갤러리·식구 명부처럼 **버튼을 눌러야 보이는 자리**에 둔다. 본문에 그냥 늘어놓지 않는다 |
+| 미공개 그림 | 표정 9종(E13·E01·E03·E02·E04·E09·E16·E15·E24)만 있다. 다른 번호는 `x?_e13`으로 대신한다 |
+| 어두운 화면 | 미공개 실루엣은 남흑색이라 밤 연구실 배경(18-3)에 묻힌다. 밝은 말풍선·카드 위에 올리거나 보라 림라이트가 보이는 크기(96 이상)로 쓴다 |
+| 공개할 때 | 실루엣 외곽선을 새 캐릭터 디자인의 기준선으로 쓰고, 키를 새 이름으로 바꾼 뒤 C1·5장·18-4·18-5에 한 줄씩 더한다 |
+
+원본 명세: `fruitfly-lab-expressions/specs/sia/`, `specs/moa/`, `specs/spares/README.md`, 동작 프롬프트 `specs/motions/PROMPTS_interns.md`.
 
 ## C7. 라이선스
 
@@ -263,6 +299,18 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 
 실존 제품·브랜드를 닮지 않게, 범죄자처럼 그리지 않게 한다.
 
+### 5-10. 인턴 시아 · 인턴 모아 (1.4)
+
+- **시아 · 바꾸면 안 되는 겉모습:** 허리까지 오는 새까만 생머리, 옆으로 흘린 앞머리, **머리 장식 없음**, 회색 눈, 작은 은색 드롭 귀걸이, 긴소매 차콜 검정 메이드 원피스 + 큰 회색 리본 + 발목까지 오는 흰 프릴 앞치마.
+- **모아 · 바꾸면 안 되는 겉모습:** 애쉬 베이지 장발(끝 웨이브), **흰 프릴 메이드 머리띠** + 왼쪽 귀 위 흰 리본, 호박색 눈, 흰 셔츠 + 빨강·남색 체크 리본 타이, 카멜 니트 카디건, 흰 프릴 앞치마, 검은 치마. 정장 의상(로우 포니테일 + 분홍 곱창 머리끈, 검은 재킷)은 동작 M16에서만.
+- **성격:** 시아는 조용히 끝까지 지켜보다 졸아 버리는 반전, 모아는 다정한 응원 담당. 둘 다 악역·놀림감이 아니다.
+- **하지 않는 일:** 승패 판정, 숫자 발표, 라이벌 편들기.
+- **인턴 필살기**(동작 팩)는 메이드의 청소와 데이터 정제(cleaning)를 엮었다: 결측치 걸레질, 정규화 쟁반, 이상치 먼지털이, 배치 서빙. 개념 설명에 쓸 때는 효과(빈칸이 채워짐, 값이 0~1로 모임, 튀는 점이 빠짐)를 페이지 코드가 그린다.
+
+### 5-11. 미공개 슬롯 X1~X3 (1.4)
+
+C9를 따른다. 정체를 짐작하게 하는 설명(성별, 나이, 실존 인물 닮음)을 붙이지 않는다.
+
 ---
 
 ### 18-3. 그림체 고정 (스타일 바이블)
@@ -288,7 +336,11 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 초파리 연구원 | 검은 몸, 빨간 겹눈, 금줄 있는 파란 헬멧, 헬멧 뒤 분홍·파랑 전선, 흰 가운 안에 검은 조끼, 검은 장갑, 투명한 날개, 여섯 다리 | *anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings* |
 | 주판봇 | 베이지색 상자형 CRT 몸체, 짙은 초록 화면에 민트 픽셀 눈·입, 끝에 주판알이 달린 짧은 안테나, 회색 마디형 팔, 무한궤도 두 개, 소품은 나무 주판·상승 그래프 | *boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus* |
 
-주판봇 디자인이 새로 확정되면 이 표의 한 줄과 5-5절, 부록 A-3만 고친다.
+| 인턴 시아 | 흑발 생머리, 머리 장식 없음, 회색 눈, 은색 귀걸이, 검은 메이드 원피스 + 회색 리본 + 흰 프릴 앞치마 | *calm girl maid intern, long straight jet-black hair with side-swept bangs, no headdress, gray eyes, small silver drop earrings, charcoal-black long-sleeved maid dress, large gray bow, long white frilled apron* |
+| 인턴 모아 | 애쉬 베이지 장발, 흰 프릴 머리띠 + 귀 위 리본, 호박색 눈, 체크 리본 타이, 카멜 카디건, 흰 프릴 앞치마 | *gentle girl maid intern, long ash-beige wavy hair, white frilled maid headband with a ribbon over the left ear, amber-brown eyes, red and navy plaid bow tie, camel knit cardigan, white frilled apron, black skirt* |
+| 미공개 X1~X3 | 남흑색 실루엣, 흰 점 눈, 분홍 볼, 포인트 소품 하나(X1 분홍 리본 · X2 청록 안경 반사 · X3 노란 방울) | *cute solid dark navy-black silhouette with a thin purple rim light, two round white dot eyes, pink blush pixels, one colored accessory only, not scary* |
+
+주판봇 디자인이 새로 확정되면 이 표의 한 줄과 5-5절, 부록 A-3만 고친다. 인턴·미공개의 상세 명세는 `fruitfly-lab-expressions/specs/{sia,moa,spares}`가 기준이다.
 
 ### 18-5. 표정 사전
 
@@ -326,6 +378,29 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | `robo_wow` | D | 동그란 눈, 작은 "오" 입 | 몸을 뒤로 | 뜻밖의 결과 |
 | `robo_blush` | D | 처진 눈, 볼에 분홍 빗금 | 머리를 긁음 | 민망함, 실격 |
 | `robo_calc` | D | 집중한 눈 | 계산기를 두드림 | 지표 계산 |
+| `sia_smile` | A | 차분한 미소 | 앞치마 앞에 두 손 | 기본 |
+| `sia_signal` | A | 윙크 | 엄지를 세움 | 심판 확인·시작 신호 |
+| `sia_explain` | A | 진지한 눈 | 검지를 세움 | 순서 정리 |
+| `sia_guide` | A | 부드러운 미소 | 손바닥을 펴서 옆을 안내 | 안내 |
+| `sia_think` | A | 위를 보는 눈 | 턱에 손가락 | 다시 확인 |
+| `sia_firm` | A | 단단한 눈빛 | 주먹 | 끝까지 지켜봄 |
+| `sia_proud` | A | 흐뭇한 미소 | 그대로 | 정리 완료 |
+| `sia_doze` | A | 반쯤 감긴 눈, 하품 | 손으로 입을 가림 | 지루함·졸음 개그 |
+| `sia_stop` | A | 찡그린 눈 | 손바닥을 앞으로 | 반칙 멈춤 |
+| `sia_angry` | A | > < 눈, 부푼 볼 | 주먹 | 책상 어지럽힘 |
+| `sia_shock` | A | 질린 눈, 땀 | 그대로 | 뜻밖의 결과 |
+| `moa_smile` | A | 부드러운 미소 | 두 손을 모음 | 기본 |
+| `moa_tea` | A | 눈 감고 웃음 | 분홍 찻잔을 두 손으로 | 쉬어 가기·환영 |
+| `moa_cheer` | A | 반짝이는 눈 | 주먹 쥐고 응원 | 방청객 응원 |
+| `moa_plant` | A | 감은 눈, 뿌듯 | 화분을 듦 | 성장·결실 비유 |
+| `moa_report` | A | 밝은 눈 | 검지를 세움 | 모아 둔 기록 소개 |
+| `moa_guide` | A | 미소 | 손바닥으로 자리 안내 | 안내 |
+| `moa_think` | A | 위를 보는 눈 | 턱에 손가락 | 기억 더듬기 |
+| `moa_ok` | A | 윙크 | 엄지 | 기록 완료 |
+| `moa_sparkle` | A | 반짝 눈, 반짝이 | 두 손을 가슴 앞에 | 감탄 |
+| `moa_cry` | A | 폭포 눈물 | 그대로 | 응원한 쪽이 짐 |
+| `moa_shock` | A | 질린 눈, 땀 | 그대로 | 뜻밖의 결과 |
+| `x1_hint` · `x2_hint` · `x3_hint` | A | 흰 점 눈 | 실루엣 | 예고 (C9, 버튼 뒤) |
 
 > **v1.9:** 그림이 없던 `doc_scale`(저울)·`asst_ledger`(장부)·`asst_board`(점수판)는 각각 `doc_think`·`asst_report`·`asst_proud`로 바꿨다. 옛 키는 같은 그림을 가리키는 별칭(`expression_map.json`의 `deprecated`)으로 남아 옛 페이지도 그대로 보인다. 저울·장부·점수판 그림을 추가 팩에서 그리면 그때 다시 나눈다(C6).
 > 사전의 키는 **뜻 이름**이고, 실제 그림은 기본 팩의 표정 번호(`{who}_e01`~`e24`)다. 대응은 `character_pack/expression_map.json`.

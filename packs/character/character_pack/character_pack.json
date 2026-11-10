@@ -1,9 +1,9 @@
 {
  "package": "fruitfly-lab-character-pack",
- "version": "1.3",
+ "version": "1.4",
  "source": {
   "repo": "https://github.com/adminmrobo/fruitfly-lab-expressions",
-  "commit": "52696626d402d9abd37fbfdd350a9d09d406be03"
+  "commit": "86d04ac59405951632d856ca88148ca6aa33b322"
  },
  "who": {
   "doc": {
@@ -17,14 +17,39 @@
   },
   "robo": {
    "repo_folder": "jupanbot"
+  },
+  "sia": {
+   "repo_folder": "sia"
+  },
+  "moa": {
+   "repo_folder": "moa"
+  },
+  "x1": {
+   "repo_folder": "x1"
+  },
+  "x2": {
+   "repo_folder": "x2"
+  },
+  "x3": {
+   "repo_folder": "x3"
   }
  },
  "names": {
   "doc": "박사",
   "asst": "조수(하루)",
   "fly": "초파리 연구원",
-  "robo": "주판봇"
+  "robo": "주판봇",
+  "sia": "인턴 시아",
+  "moa": "인턴 모아",
+  "x1": "미공개 X1",
+  "x2": "미공개 X2",
+  "x3": "미공개 X3"
  },
+ "hidden": [
+  "x1",
+  "x2",
+  "x3"
+ ],
  "key_format": "{who}_e{NN}  예: fly_e08 = 초파리 E08 안내",
  "sizes": [
   96,
@@ -317,6 +342,131 @@
    "key": "robo_e09",
    "match": "exact",
    "note": "주판알을 튕기며 계산"
+  },
+  "sia_smile": {
+   "key": "sia_e13",
+   "match": "exact",
+   "note": "차분한 기본 미소"
+  },
+  "sia_signal": {
+   "key": "sia_e10",
+   "match": "exact",
+   "note": "윙크 + 엄지 (심판 확인·시작 신호)"
+  },
+  "sia_explain": {
+   "key": "sia_e07",
+   "match": "exact",
+   "note": "검지를 세워 순서대로 설명"
+  },
+  "sia_guide": {
+   "key": "sia_e08",
+   "match": "exact",
+   "note": "손바닥을 펴서 옆을 안내"
+  },
+  "sia_think": {
+   "key": "sia_e09",
+   "match": "exact",
+   "note": "턱에 손가락, 다시 확인"
+  },
+  "sia_firm": {
+   "key": "sia_e12",
+   "match": "exact",
+   "note": "주먹 쥔 결의 (끝까지 지켜봄)"
+  },
+  "sia_proud": {
+   "key": "sia_e16",
+   "match": "exact",
+   "note": "흐뭇한 미소 (정리 완료)"
+  },
+  "sia_doze": {
+   "key": "sia_e17",
+   "match": "exact",
+   "note": "손으로 입 가리고 하품"
+  },
+  "sia_stop": {
+   "key": "sia_e06",
+   "match": "exact",
+   "note": "손바닥을 앞으로 (반칙 멈춤)"
+  },
+  "sia_angry": {
+   "key": "sia_e22",
+   "match": "exact",
+   "note": "볼 부풀림 + 화남 표시 (책상 어지르지 마세요)"
+  },
+  "sia_shock": {
+   "key": "sia_e24",
+   "match": "exact",
+   "note": "질린 얼굴 + 땀"
+  },
+  "moa_smile": {
+   "key": "moa_e13",
+   "match": "exact",
+   "note": "부드러운 기본 미소"
+  },
+  "moa_tea": {
+   "key": "moa_e01",
+   "match": "exact",
+   "note": "분홍 찻잔을 두 손으로 들고 웃음"
+  },
+  "moa_cheer": {
+   "key": "moa_e12",
+   "match": "exact",
+   "note": "주먹 쥐고 응원"
+  },
+  "moa_plant": {
+   "key": "moa_e16",
+   "match": "exact",
+   "note": "화분을 들고 뿌듯함"
+  },
+  "moa_report": {
+   "key": "moa_e07",
+   "match": "exact",
+   "note": "검지를 세워 모아 둔 기록 발표"
+  },
+  "moa_guide": {
+   "key": "moa_e08",
+   "match": "exact",
+   "note": "손바닥을 펴서 자리 안내"
+  },
+  "moa_think": {
+   "key": "moa_e09",
+   "match": "exact",
+   "note": "턱에 손가락, 기억 더듬기"
+  },
+  "moa_ok": {
+   "key": "moa_e10",
+   "match": "exact",
+   "note": "윙크 + 엄지 (기록 완료)"
+  },
+  "moa_sparkle": {
+   "key": "moa_e19",
+   "match": "exact",
+   "note": "반짝이는 눈 (감탄)"
+  },
+  "moa_cry": {
+   "key": "moa_e21",
+   "match": "exact",
+   "note": "폭포 눈물 (응원한 쪽이 짐)"
+  },
+  "moa_shock": {
+   "key": "moa_e24",
+   "match": "exact",
+   "note": "질린 얼굴 + 땀"
+  },
+  "x1_hint": {
+   "key": "x1_e13",
+   "match": "exact",
+   "note": "실루엣 + 분홍 리본 (예고)"
+  },
+  "x2_hint": {
+   "key": "x2_e13",
+   "match": "exact",
+   "note": "실루엣 + 청록 안경 반사 (예고)"
+  },
+  "x3_hint": {
+   "key": "x3_e13",
+   "match": "exact",
+   "note": "실루엣 + 노란 방울 (예고)"
   }
  },
  "images": [
@@ -2767,6 +2917,1806 @@
     "192": {
      "path": "webp/192/robo/robo_e24.webp",
      "bytes": 10306
+    }
+   }
+  },
+  {
+   "key": "sia_e01",
+   "who": "sia",
+   "id": "E01",
+   "slug": "joy",
+   "ko": "기쁨",
+   "source": "images/sia/E01_joy.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.485,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e01.webp",
+     "bytes": 3302
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e01.webp",
+     "bytes": 7912
+    }
+   }
+  },
+  {
+   "key": "sia_e02",
+   "who": "sia",
+   "id": "E02",
+   "slug": "sadness",
+   "ko": "슬픔",
+   "source": "images/sia/E02_sadness.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.492,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e02.webp",
+     "bytes": 3234
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e02.webp",
+     "bytes": 7830
+    }
+   }
+  },
+  {
+   "key": "sia_e03",
+   "who": "sia",
+   "id": "E03",
+   "slug": "anger",
+   "ko": "분노",
+   "source": "images/sia/E03_anger.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.501,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e03.webp",
+     "bytes": 3200
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e03.webp",
+     "bytes": 7882
+    }
+   }
+  },
+  {
+   "key": "sia_e04",
+   "who": "sia",
+   "id": "E04",
+   "slug": "surprise",
+   "ko": "놀람",
+   "source": "images/sia/E04_surprise.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.495,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e04.webp",
+     "bytes": 3190
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e04.webp",
+     "bytes": 7650
+    }
+   }
+  },
+  {
+   "key": "sia_e05",
+   "who": "sia",
+   "id": "E05",
+   "slug": "fear",
+   "ko": "두려움",
+   "source": "images/sia/E05_fear.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.482,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e05.webp",
+     "bytes": 3634
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e05.webp",
+     "bytes": 8926
+    }
+   }
+  },
+  {
+   "key": "sia_e06",
+   "who": "sia",
+   "id": "E06",
+   "slug": "disgust",
+   "ko": "혐오",
+   "source": "images/sia/E06_disgust.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.483,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e06.webp",
+     "bytes": 3590
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e06.webp",
+     "bytes": 8466
+    }
+   }
+  },
+  {
+   "key": "sia_e07",
+   "who": "sia",
+   "id": "E07",
+   "slug": "explaining",
+   "ko": "설명",
+   "source": "images/sia/E07_explaining.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.583,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e07.webp",
+     "bytes": 3206
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e07.webp",
+     "bytes": 7306
+    }
+   }
+  },
+  {
+   "key": "sia_e08",
+   "who": "sia",
+   "id": "E08",
+   "slug": "guiding",
+   "ko": "안내",
+   "source": "images/sia/E08_guiding.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.548,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e08.webp",
+     "bytes": 3474
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e08.webp",
+     "bytes": 8104
+    }
+   }
+  },
+  {
+   "key": "sia_e09",
+   "who": "sia",
+   "id": "E09",
+   "slug": "thinking",
+   "ko": "생각",
+   "source": "images/sia/E09_thinking.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.564,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e09.webp",
+     "bytes": 3032
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e09.webp",
+     "bytes": 6932
+    }
+   }
+  },
+  {
+   "key": "sia_e10",
+   "who": "sia",
+   "id": "E10",
+   "slug": "confirming",
+   "ko": "확인",
+   "source": "images/sia/E10_confirming.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.534,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e10.webp",
+     "bytes": 3492
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e10.webp",
+     "bytes": 8234
+    }
+   }
+  },
+  {
+   "key": "sia_e11",
+   "who": "sia",
+   "id": "E11",
+   "slug": "apologizing",
+   "ko": "사과",
+   "source": "images/sia/E11_apologizing.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.542,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e11.webp",
+     "bytes": 3136
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e11.webp",
+     "bytes": 7454
+    }
+   }
+  },
+  {
+   "key": "sia_e12",
+   "who": "sia",
+   "id": "E12",
+   "slug": "cheering",
+   "ko": "응원",
+   "source": "images/sia/E12_cheering.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.521,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e12.webp",
+     "bytes": 3324
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e12.webp",
+     "bytes": 7788
+    }
+   }
+  },
+  {
+   "key": "sia_e13",
+   "who": "sia",
+   "id": "E13",
+   "slug": "neutral",
+   "ko": "기본",
+   "source": "images/sia/E13_neutral.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.475,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e13.webp",
+     "bytes": 3400
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e13.webp",
+     "bytes": 7942
+    }
+   }
+  },
+  {
+   "key": "sia_e14",
+   "who": "sia",
+   "id": "E14",
+   "slug": "sheepish",
+   "ko": "머쓱함",
+   "source": "images/sia/E14_sheepish.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.453,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e14.webp",
+     "bytes": 3598
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e14.webp",
+     "bytes": 8722
+    }
+   }
+  },
+  {
+   "key": "sia_e15",
+   "who": "sia",
+   "id": "E15",
+   "slug": "flustered",
+   "ko": "당황",
+   "source": "images/sia/E15_flustered.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.409,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e15.webp",
+     "bytes": 4204
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e15.webp",
+     "bytes": 10288
+    }
+   }
+  },
+  {
+   "key": "sia_e16",
+   "who": "sia",
+   "id": "E16",
+   "slug": "proud",
+   "ko": "뿌듯함",
+   "source": "images/sia/E16_proud.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.455,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e16.webp",
+     "bytes": 3438
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e16.webp",
+     "bytes": 8038
+    }
+   }
+  },
+  {
+   "key": "sia_e17",
+   "who": "sia",
+   "id": "E17",
+   "slug": "sleepy",
+   "ko": "졸림",
+   "source": "images/sia/E17_sleepy.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.329,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e17.webp",
+     "bytes": 4254
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e17.webp",
+     "bytes": 10386
+    }
+   }
+  },
+  {
+   "key": "sia_e18",
+   "who": "sia",
+   "id": "E18",
+   "slug": "sulking",
+   "ko": "삐짐",
+   "source": "images/sia/E18_sulking.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.358,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e18.webp",
+     "bytes": 3574
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e18.webp",
+     "bytes": 8864
+    }
+   }
+  },
+  {
+   "key": "sia_e19",
+   "who": "sia",
+   "id": "E19",
+   "slug": "sparkle_eyes",
+   "ko": "반짝눈",
+   "source": "images/sia/E19_sparkle_eyes.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.326,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e19.webp",
+     "bytes": 5652
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e19.webp",
+     "bytes": 13592
+    }
+   }
+  },
+  {
+   "key": "sia_e20",
+   "who": "sia",
+   "id": "E20",
+   "slug": "sweat_drop",
+   "ko": "식은땀",
+   "source": "images/sia/E20_sweat_drop.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.365,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e20.webp",
+     "bytes": 4184
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e20.webp",
+     "bytes": 9980
+    }
+   }
+  },
+  {
+   "key": "sia_e21",
+   "who": "sia",
+   "id": "E21",
+   "slug": "waterfall_tears",
+   "ko": "폭포 눈물",
+   "source": "images/sia/E21_waterfall_tears.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.345,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e21.webp",
+     "bytes": 4744
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e21.webp",
+     "bytes": 11710
+    }
+   }
+  },
+  {
+   "key": "sia_e22",
+   "who": "sia",
+   "id": "E22",
+   "slug": "puffed_angry",
+   "ko": "뿔남",
+   "source": "images/sia/E22_puffed_angry.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.295,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e22.webp",
+     "bytes": 4780
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e22.webp",
+     "bytes": 11288
+    }
+   }
+  },
+  {
+   "key": "sia_e23",
+   "who": "sia",
+   "id": "E23",
+   "slug": "blank_dot_eyes",
+   "ko": "멍",
+   "source": "images/sia/E23_blank_dot_eyes.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.326,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e23.webp",
+     "bytes": 4186
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e23.webp",
+     "bytes": 10018
+    }
+   }
+  },
+  {
+   "key": "sia_e24",
+   "who": "sia",
+   "id": "E24",
+   "slug": "shock",
+   "ko": "충격",
+   "source": "images/sia/E24_shock.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.354,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/sia/sia_e24.webp",
+     "bytes": 4082
+    },
+    "192": {
+     "path": "webp/192/sia/sia_e24.webp",
+     "bytes": 9710
+    }
+   }
+  },
+  {
+   "key": "moa_e01",
+   "who": "moa",
+   "id": "E01",
+   "slug": "joy",
+   "ko": "기쁨",
+   "source": "images/moa/E01_joy.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.478,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e01.webp",
+     "bytes": 4484
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e01.webp",
+     "bytes": 11120
+    }
+   }
+  },
+  {
+   "key": "moa_e02",
+   "who": "moa",
+   "id": "E02",
+   "slug": "sadness",
+   "ko": "슬픔",
+   "source": "images/moa/E02_sadness.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.462,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e02.webp",
+     "bytes": 4876
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e02.webp",
+     "bytes": 12104
+    }
+   }
+  },
+  {
+   "key": "moa_e03",
+   "who": "moa",
+   "id": "E03",
+   "slug": "anger",
+   "ko": "분노",
+   "source": "images/moa/E03_anger.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.454,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e03.webp",
+     "bytes": 4410
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e03.webp",
+     "bytes": 11034
+    }
+   }
+  },
+  {
+   "key": "moa_e04",
+   "who": "moa",
+   "id": "E04",
+   "slug": "surprise",
+   "ko": "놀람",
+   "source": "images/moa/E04_surprise.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.488,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e04.webp",
+     "bytes": 4974
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e04.webp",
+     "bytes": 12488
+    }
+   }
+  },
+  {
+   "key": "moa_e05",
+   "who": "moa",
+   "id": "E05",
+   "slug": "fear",
+   "ko": "두려움",
+   "source": "images/moa/E05_fear.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.462,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e05.webp",
+     "bytes": 4576
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e05.webp",
+     "bytes": 11428
+    }
+   }
+  },
+  {
+   "key": "moa_e06",
+   "who": "moa",
+   "id": "E06",
+   "slug": "disgust",
+   "ko": "혐오",
+   "source": "images/moa/E06_disgust.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.471,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e06.webp",
+     "bytes": 5096
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e06.webp",
+     "bytes": 13124
+    }
+   }
+  },
+  {
+   "key": "moa_e07",
+   "who": "moa",
+   "id": "E07",
+   "slug": "explaining",
+   "ko": "설명",
+   "source": "images/moa/E07_explaining.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.497,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e07.webp",
+     "bytes": 4768
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e07.webp",
+     "bytes": 11876
+    }
+   }
+  },
+  {
+   "key": "moa_e08",
+   "who": "moa",
+   "id": "E08",
+   "slug": "guiding",
+   "ko": "안내",
+   "source": "images/moa/E08_guiding.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.481,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e08.webp",
+     "bytes": 4842
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e08.webp",
+     "bytes": 11976
+    }
+   }
+  },
+  {
+   "key": "moa_e09",
+   "who": "moa",
+   "id": "E09",
+   "slug": "thinking",
+   "ko": "생각",
+   "source": "images/moa/E09_thinking.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.488,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e09.webp",
+     "bytes": 4658
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e09.webp",
+     "bytes": 11682
+    }
+   }
+  },
+  {
+   "key": "moa_e10",
+   "who": "moa",
+   "id": "E10",
+   "slug": "confirming",
+   "ko": "확인",
+   "source": "images/moa/E10_confirming.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.482,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e10.webp",
+     "bytes": 4952
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e10.webp",
+     "bytes": 11968
+    }
+   }
+  },
+  {
+   "key": "moa_e11",
+   "who": "moa",
+   "id": "E11",
+   "slug": "apologizing",
+   "ko": "사과",
+   "source": "images/moa/E11_apologizing.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.481,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e11.webp",
+     "bytes": 4606
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e11.webp",
+     "bytes": 11570
+    }
+   }
+  },
+  {
+   "key": "moa_e12",
+   "who": "moa",
+   "id": "E12",
+   "slug": "cheering",
+   "ko": "응원",
+   "source": "images/moa/E12_cheering.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.476,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e12.webp",
+     "bytes": 4770
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e12.webp",
+     "bytes": 11854
+    }
+   }
+  },
+  {
+   "key": "moa_e13",
+   "who": "moa",
+   "id": "E13",
+   "slug": "neutral",
+   "ko": "기본",
+   "source": "images/moa/E13_neutral.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.423,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e13.webp",
+     "bytes": 5636
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e13.webp",
+     "bytes": 14894
+    }
+   }
+  },
+  {
+   "key": "moa_e14",
+   "who": "moa",
+   "id": "E14",
+   "slug": "sheepish",
+   "ko": "머쓱함",
+   "source": "images/moa/E14_sheepish.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.404,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e14.webp",
+     "bytes": 5358
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e14.webp",
+     "bytes": 14142
+    }
+   }
+  },
+  {
+   "key": "moa_e15",
+   "who": "moa",
+   "id": "E15",
+   "slug": "flustered",
+   "ko": "당황",
+   "source": "images/moa/E15_flustered.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.403,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e15.webp",
+     "bytes": 5542
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e15.webp",
+     "bytes": 14678
+    }
+   }
+  },
+  {
+   "key": "moa_e16",
+   "who": "moa",
+   "id": "E16",
+   "slug": "proud",
+   "ko": "뿌듯함",
+   "source": "images/moa/E16_proud.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.429,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e16.webp",
+     "bytes": 4854
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e16.webp",
+     "bytes": 12568
+    }
+   }
+  },
+  {
+   "key": "moa_e17",
+   "who": "moa",
+   "id": "E17",
+   "slug": "sleepy",
+   "ko": "졸림",
+   "source": "images/moa/E17_sleepy.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.341,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e17.webp",
+     "bytes": 6738
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e17.webp",
+     "bytes": 17704
+    }
+   }
+  },
+  {
+   "key": "moa_e18",
+   "who": "moa",
+   "id": "E18",
+   "slug": "sulking",
+   "ko": "삐짐",
+   "source": "images/moa/E18_sulking.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.289,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e18.webp",
+     "bytes": 5496
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e18.webp",
+     "bytes": 14428
+    }
+   }
+  },
+  {
+   "key": "moa_e19",
+   "who": "moa",
+   "id": "E19",
+   "slug": "sparkle_eyes",
+   "ko": "반짝눈",
+   "source": "images/moa/E19_sparkle_eyes.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.272,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e19.webp",
+     "bytes": 6378
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e19.webp",
+     "bytes": 16966
+    }
+   }
+  },
+  {
+   "key": "moa_e20",
+   "who": "moa",
+   "id": "E20",
+   "slug": "sweat_drop",
+   "ko": "식은땀",
+   "source": "images/moa/E20_sweat_drop.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.329,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e20.webp",
+     "bytes": 6100
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e20.webp",
+     "bytes": 15830
+    }
+   }
+  },
+  {
+   "key": "moa_e21",
+   "who": "moa",
+   "id": "E21",
+   "slug": "waterfall_tears",
+   "ko": "폭포 눈물",
+   "source": "images/moa/E21_waterfall_tears.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.33,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e21.webp",
+     "bytes": 6122
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e21.webp",
+     "bytes": 16282
+    }
+   }
+  },
+  {
+   "key": "moa_e22",
+   "who": "moa",
+   "id": "E22",
+   "slug": "puffed_angry",
+   "ko": "뿔남",
+   "source": "images/moa/E22_puffed_angry.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.282,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e22.webp",
+     "bytes": 6664
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e22.webp",
+     "bytes": 17664
+    }
+   }
+  },
+  {
+   "key": "moa_e23",
+   "who": "moa",
+   "id": "E23",
+   "slug": "blank_dot_eyes",
+   "ko": "멍",
+   "source": "images/moa/E23_blank_dot_eyes.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.317,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e23.webp",
+     "bytes": 6002
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e23.webp",
+     "bytes": 15576
+    }
+   }
+  },
+  {
+   "key": "moa_e24",
+   "who": "moa",
+   "id": "E24",
+   "slug": "shock",
+   "ko": "충격",
+   "source": "images/moa/E24_shock.png",
+   "source_size": [
+    512,
+    512
+   ],
+   "bg_removed": 0.339,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/moa/moa_e24.webp",
+     "bytes": 6316
+    },
+    "192": {
+     "path": "webp/192/moa/moa_e24.webp",
+     "bytes": 16686
+    }
+   }
+  },
+  {
+   "key": "x1_e01",
+   "who": "x1",
+   "id": "E01",
+   "slug": "joy",
+   "ko": "기쁨",
+   "source": "images/x1/E01_joy.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.419,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e01.webp",
+     "bytes": 3436
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e01.webp",
+     "bytes": 7608
+    }
+   }
+  },
+  {
+   "key": "x1_e02",
+   "who": "x1",
+   "id": "E02",
+   "slug": "sadness",
+   "ko": "슬픔",
+   "source": "images/x1/E02_sadness.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.416,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e02.webp",
+     "bytes": 3548
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e02.webp",
+     "bytes": 7764
+    }
+   }
+  },
+  {
+   "key": "x1_e03",
+   "who": "x1",
+   "id": "E03",
+   "slug": "anger",
+   "ko": "분노",
+   "source": "images/x1/E03_anger.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.429,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e03.webp",
+     "bytes": 3178
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e03.webp",
+     "bytes": 6838
+    }
+   }
+  },
+  {
+   "key": "x1_e04",
+   "who": "x1",
+   "id": "E04",
+   "slug": "surprise",
+   "ko": "놀람",
+   "source": "images/x1/E04_surprise.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.414,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e04.webp",
+     "bytes": 3514
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e04.webp",
+     "bytes": 7730
+    }
+   }
+  },
+  {
+   "key": "x1_e09",
+   "who": "x1",
+   "id": "E09",
+   "slug": "thinking",
+   "ko": "생각",
+   "source": "images/x1/E09_thinking.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.425,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e09.webp",
+     "bytes": 3282
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e09.webp",
+     "bytes": 6998
+    }
+   }
+  },
+  {
+   "key": "x1_e13",
+   "who": "x1",
+   "id": "E13",
+   "slug": "neutral",
+   "ko": "기본",
+   "source": "images/x1/E13_neutral.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.417,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e13.webp",
+     "bytes": 3372
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e13.webp",
+     "bytes": 7454
+    }
+   }
+  },
+  {
+   "key": "x1_e15",
+   "who": "x1",
+   "id": "E15",
+   "slug": "flustered",
+   "ko": "당황",
+   "source": "images/x1/E15_flustered.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.414,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e15.webp",
+     "bytes": 3628
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e15.webp",
+     "bytes": 7878
+    }
+   }
+  },
+  {
+   "key": "x1_e16",
+   "who": "x1",
+   "id": "E16",
+   "slug": "proud",
+   "ko": "뿌듯함",
+   "source": "images/x1/E16_proud.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.413,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e16.webp",
+     "bytes": 3572
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e16.webp",
+     "bytes": 7692
+    }
+   }
+  },
+  {
+   "key": "x1_e24",
+   "who": "x1",
+   "id": "E24",
+   "slug": "shock",
+   "ko": "충격",
+   "source": "images/x1/E24_shock.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.418,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x1/x1_e24.webp",
+     "bytes": 3402
+    },
+    "192": {
+     "path": "webp/192/x1/x1_e24.webp",
+     "bytes": 7378
+    }
+   }
+  },
+  {
+   "key": "x2_e01",
+   "who": "x2",
+   "id": "E01",
+   "slug": "joy",
+   "ko": "기쁨",
+   "source": "images/x2/E01_joy.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.485,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e01.webp",
+     "bytes": 2816
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e01.webp",
+     "bytes": 6108
+    }
+   }
+  },
+  {
+   "key": "x2_e02",
+   "who": "x2",
+   "id": "E02",
+   "slug": "sadness",
+   "ko": "슬픔",
+   "source": "images/x2/E02_sadness.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.477,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e02.webp",
+     "bytes": 2730
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e02.webp",
+     "bytes": 6058
+    }
+   }
+  },
+  {
+   "key": "x2_e03",
+   "who": "x2",
+   "id": "E03",
+   "slug": "anger",
+   "ko": "분노",
+   "source": "images/x2/E03_anger.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.484,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e03.webp",
+     "bytes": 2676
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e03.webp",
+     "bytes": 5954
+    }
+   }
+  },
+  {
+   "key": "x2_e04",
+   "who": "x2",
+   "id": "E04",
+   "slug": "surprise",
+   "ko": "놀람",
+   "source": "images/x2/E04_surprise.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.479,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e04.webp",
+     "bytes": 2876
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e04.webp",
+     "bytes": 6290
+    }
+   }
+  },
+  {
+   "key": "x2_e09",
+   "who": "x2",
+   "id": "E09",
+   "slug": "thinking",
+   "ko": "생각",
+   "source": "images/x2/E09_thinking.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.477,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e09.webp",
+     "bytes": 2876
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e09.webp",
+     "bytes": 6308
+    }
+   }
+  },
+  {
+   "key": "x2_e13",
+   "who": "x2",
+   "id": "E13",
+   "slug": "neutral",
+   "ko": "기본",
+   "source": "images/x2/E13_neutral.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.484,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e13.webp",
+     "bytes": 2668
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e13.webp",
+     "bytes": 5962
+    }
+   }
+  },
+  {
+   "key": "x2_e15",
+   "who": "x2",
+   "id": "E15",
+   "slug": "flustered",
+   "ko": "당황",
+   "source": "images/x2/E15_flustered.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.48,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e15.webp",
+     "bytes": 2884
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e15.webp",
+     "bytes": 6666
+    }
+   }
+  },
+  {
+   "key": "x2_e16",
+   "who": "x2",
+   "id": "E16",
+   "slug": "proud",
+   "ko": "뿌듯함",
+   "source": "images/x2/E16_proud.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.478,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e16.webp",
+     "bytes": 2710
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e16.webp",
+     "bytes": 6120
+    }
+   }
+  },
+  {
+   "key": "x2_e24",
+   "who": "x2",
+   "id": "E24",
+   "slug": "shock",
+   "ko": "충격",
+   "source": "images/x2/E24_shock.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.478,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x2/x2_e24.webp",
+     "bytes": 2744
+    },
+    "192": {
+     "path": "webp/192/x2/x2_e24.webp",
+     "bytes": 6432
+    }
+   }
+  },
+  {
+   "key": "x3_e01",
+   "who": "x3",
+   "id": "E01",
+   "slug": "joy",
+   "ko": "기쁨",
+   "source": "images/x3/E01_joy.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.483,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e01.webp",
+     "bytes": 2598
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e01.webp",
+     "bytes": 5214
+    }
+   }
+  },
+  {
+   "key": "x3_e02",
+   "who": "x3",
+   "id": "E02",
+   "slug": "sadness",
+   "ko": "슬픔",
+   "source": "images/x3/E02_sadness.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.483,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e02.webp",
+     "bytes": 2466
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e02.webp",
+     "bytes": 4960
+    }
+   }
+  },
+  {
+   "key": "x3_e03",
+   "who": "x3",
+   "id": "E03",
+   "slug": "anger",
+   "ko": "분노",
+   "source": "images/x3/E03_anger.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.487,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e03.webp",
+     "bytes": 2470
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e03.webp",
+     "bytes": 5050
+    }
+   }
+  },
+  {
+   "key": "x3_e04",
+   "who": "x3",
+   "id": "E04",
+   "slug": "surprise",
+   "ko": "놀람",
+   "source": "images/x3/E04_surprise.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.483,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e04.webp",
+     "bytes": 2472
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e04.webp",
+     "bytes": 4956
+    }
+   }
+  },
+  {
+   "key": "x3_e09",
+   "who": "x3",
+   "id": "E09",
+   "slug": "thinking",
+   "ko": "생각",
+   "source": "images/x3/E09_thinking.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.485,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e09.webp",
+     "bytes": 2564
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e09.webp",
+     "bytes": 4922
+    }
+   }
+  },
+  {
+   "key": "x3_e13",
+   "who": "x3",
+   "id": "E13",
+   "slug": "neutral",
+   "ko": "기본",
+   "source": "images/x3/E13_neutral.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.479,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e13.webp",
+     "bytes": 2508
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e13.webp",
+     "bytes": 4952
+    }
+   }
+  },
+  {
+   "key": "x3_e15",
+   "who": "x3",
+   "id": "E15",
+   "slug": "flustered",
+   "ko": "당황",
+   "source": "images/x3/E15_flustered.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.483,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e15.webp",
+     "bytes": 2654
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e15.webp",
+     "bytes": 5704
+    }
+   }
+  },
+  {
+   "key": "x3_e16",
+   "who": "x3",
+   "id": "E16",
+   "slug": "proud",
+   "ko": "뿌듯함",
+   "source": "images/x3/E16_proud.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.48,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e16.webp",
+     "bytes": 2516
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e16.webp",
+     "bytes": 5030
+    }
+   }
+  },
+  {
+   "key": "x3_e24",
+   "who": "x3",
+   "id": "E24",
+   "slug": "shock",
+   "ko": "충격",
+   "source": "images/x3/E24_shock.png",
+   "source_size": [
+    340,
+    340
+   ],
+   "bg_removed": 0.485,
+   "facing": "front",
+   "files": {
+    "96": {
+     "path": "webp/96/x3/x3_e24.webp",
+     "bytes": 2650
+    },
+    "192": {
+     "path": "webp/192/x3/x3_e24.webp",
+     "bytes": 5460
     }
    }
   }

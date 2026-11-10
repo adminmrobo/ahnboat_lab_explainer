@@ -4,6 +4,7 @@
 
 원본: https://github.com/adminmrobo/fruitfly-lab-expressions
   images/{doctor,haru,fruitfly,jupanbot}/E01_joy.png ... E24_shock.png (불투명 단색·그라데이션 배경)
+  images/{sia,moa}/E01~E24, images/{x1,x2,x3}/ 9종 (이미 투명 배경 → PRECUT, 배경 제거를 건너뜀)
 
 하는 일
   1) 배경 제거: 테두리에서 시작해 이웃 픽셀과 색이 비슷한 영역만 투명하게 만든다
@@ -27,7 +28,16 @@ REPO_URL = "https://github.com/adminmrobo/fruitfly-lab-expressions"
 
 # 스킬의 캐릭터 이름(who) ↔ 저장소 폴더
 # robo = 주판봇(AbaBot). 2026-11 Money-Robo((주)M-Robo 회사 캐릭터)를 대신함. 키 이름 robo는 호환을 위해 그대로 둠
-WHO = {"doc": "doctor", "asst": "haru", "fly": "fruitfly", "robo": "jupanbot"}
+WHO = {"doc": "doctor", "asst": "haru", "fly": "fruitfly", "robo": "jupanbot",
+       # 2026-11-11 새 식구: 인턴 시아(No.005)·모아(No.006), 미공개 슬롯 X1~X3(No.007~009)
+       "sia": "sia", "moa": "moa", "x1": "x1", "x2": "x2", "x3": "x3"}
+
+# 원본이 이미 투명 배경으로 정리된 캐릭터 (fruitfly-lab-expressions에서 배경을 지워 올림) → 알파를 그대로 쓴다
+PRECUT = {"sia", "moa", "x1", "x2", "x3"}
+# 미공개 슬롯: 페이지·갤러리에서 버튼을 눌러야 보이게 쓰는 캐릭터 (CHAR_lab4 C9)
+HIDDEN = ["x1", "x2", "x3"]
+NAMES = {"doc": "박사", "asst": "조수(하루)", "fly": "초파리 연구원", "robo": "주판봇",
+         "sia": "인턴 시아", "moa": "인턴 모아", "x1": "미공개 X1", "x2": "미공개 X2", "x3": "미공개 X3"}
 
 EXPRESSIONS = [
     ("E01", "joy", "기쁨"), ("E02", "sadness", "슬픔"), ("E03", "anger", "분노"),
@@ -78,6 +88,34 @@ ALIASES = {
     "robo_wow":    ("E04", "exact", "동그란 눈 + o 입"),
     "robo_blush":  ("E14", "exact", "분홍 픽셀 볼"),
     "robo_calc":   ("E09", "exact", "주판알을 튕기며 계산"),
+    # 인턴 시아 (흑발 메이드, 머리 장식 없음) — 심판·방청객·정리 담당. 그림을 눈으로 보고 정함 (2026-11-11)
+    "sia_smile":   ("E13", "exact", "차분한 기본 미소"),
+    "sia_signal":  ("E10", "exact", "윙크 + 엄지 (심판 확인·시작 신호)"),
+    "sia_explain": ("E07", "exact", "검지를 세워 순서대로 설명"),
+    "sia_guide":   ("E08", "exact", "손바닥을 펴서 옆을 안내"),
+    "sia_think":   ("E09", "exact", "턱에 손가락, 다시 확인"),
+    "sia_firm":    ("E12", "exact", "주먹 쥔 결의 (끝까지 지켜봄)"),
+    "sia_proud":   ("E16", "exact", "흐뭇한 미소 (정리 완료)"),
+    "sia_doze":    ("E17", "exact", "손으로 입 가리고 하품"),
+    "sia_stop":    ("E06", "exact", "손바닥을 앞으로 (반칙 멈춤)"),
+    "sia_angry":   ("E22", "exact", "볼 부풀림 + 화남 표시 (책상 어지르지 마세요)"),
+    "sia_shock":   ("E24", "exact", "질린 얼굴 + 땀"),
+    # 인턴 모아 (애쉬 베이지 장발, 흰 프릴 머리띠) — 방청객·기록·응원 담당
+    "moa_smile":   ("E13", "exact", "부드러운 기본 미소"),
+    "moa_tea":     ("E01", "exact", "분홍 찻잔을 두 손으로 들고 웃음"),
+    "moa_cheer":   ("E12", "exact", "주먹 쥐고 응원"),
+    "moa_plant":   ("E16", "exact", "화분을 들고 뿌듯함"),
+    "moa_report":  ("E07", "exact", "검지를 세워 모아 둔 기록 발표"),
+    "moa_guide":   ("E08", "exact", "손바닥을 펴서 자리 안내"),
+    "moa_think":   ("E09", "exact", "턱에 손가락, 기억 더듬기"),
+    "moa_ok":      ("E10", "exact", "윙크 + 엄지 (기록 완료)"),
+    "moa_sparkle": ("E19", "exact", "반짝이는 눈 (감탄)"),
+    "moa_cry":     ("E21", "exact", "폭포 눈물 (응원한 쪽이 짐)"),
+    "moa_shock":   ("E24", "exact", "질린 얼굴 + 땀"),
+    # 미공개 슬롯 — 실루엣. 그림은 9종(E13·E01·E03·E02·E04·E09·E16·E15·E24)만 있음
+    "x1_hint":     ("E13", "exact", "실루엣 + 분홍 리본 (예고)"),
+    "x2_hint":     ("E13", "exact", "실루엣 + 청록 안경 반사 (예고)"),
+    "x3_hint":     ("E13", "exact", "실루엣 + 노란 방울 (예고)"),
 }
 
 # 그림이 바라보는 쪽 (눈으로 판정, 대결 화면 좌우 뒤집기에 씀). 적지 않은 것은 front.
@@ -196,7 +234,11 @@ def build(repo, out, sizes, quality):
                 print("없음:", src, file=sys.stderr)
                 continue
             img = Image.open(src)
-            cut, bg_ratio = remove_background(img, **BG_OPTIONS.get(who, {}))
+            if who in PRECUT and img.mode == "RGBA":
+                cut = img
+                bg_ratio = float((__import__("numpy").asarray(img)[..., 3] == 0).mean())
+            else:
+                cut, bg_ratio = remove_background(img, **BG_OPTIONS.get(who, {}))
             k = key(who, eid)
             rec = {"key": k, "who": who, "id": eid, "slug": slug, "ko": ko,
                    "source": "images/%s/%s_%s.png" % (folder, eid, slug),
@@ -221,10 +263,10 @@ def build(repo, out, sizes, quality):
             print("ok", k, "배경 %.0f%%" % (bg_ratio * 100))
     aliases = {a: {"key": key(a.split("_")[0], e), "match": m, "note": n} for a, (e, m, n) in ALIASES.items()}
     manifest = {
-        "package": "fruitfly-lab-character-pack", "version": "1.0",
+        "package": "fruitfly-lab-character-pack", "version": "1.4",
         "source": {"repo": REPO_URL, "commit": commit},
         "who": {w: {"repo_folder": f} for w, f in WHO.items()},
-        "names": {"doc": "박사", "asst": "조수(하루)", "fly": "초파리 연구원", "robo": "주판봇"},
+        "names": NAMES, "hidden": HIDDEN,
         "key_format": "{who}_e{NN}  예: fly_e08 = 초파리 E08 안내",
         "sizes": sizes, "expressions": [{"id": e, "slug": s, "ko": k} for e, s, k in EXPRESSIONS],
         "aliases": aliases, "images": items,
@@ -238,8 +280,8 @@ def build(repo, out, sizes, quality):
         face_js = {r["key"]: r["facing"] for r in items if r["facing"] != "front"}
         with open(os.path.join(out, "sprites_%d.js" % s), "w", encoding="utf-8") as f:
             f.write("/* 초파리 연구실 캐릭터 팩 %dpx — %s @ %s */\n" % (s, REPO_URL, commit[:7]))
-            f.write("var LAB_PACK={size:%d,commit:%s,alias:%s,facing:%s,img:%s};\n" % (
-                s, json.dumps(commit[:7]), json.dumps(alias_js), json.dumps(face_js),
+            f.write("var LAB_PACK={size:%d,commit:%s,hidden:%s,alias:%s,facing:%s,img:%s};\n" % (
+                s, json.dumps(commit[:7]), json.dumps(HIDDEN), json.dumps(alias_js), json.dumps(face_js),
                 json.dumps(js[s], separators=(",", ":"))))
     print("완료:", out)
 

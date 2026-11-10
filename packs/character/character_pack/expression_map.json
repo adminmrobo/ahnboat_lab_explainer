@@ -163,5 +163,130 @@
   "key": "robo_e09",
   "match": "exact",
   "note": "주판알을 튕기며 계산"
+ },
+ "sia_smile": {
+  "key": "sia_e13",
+  "match": "exact",
+  "note": "차분한 기본 미소"
+ },
+ "sia_signal": {
+  "key": "sia_e10",
+  "match": "exact",
+  "note": "윙크 + 엄지 (심판 확인·시작 신호)"
+ },
+ "sia_explain": {
+  "key": "sia_e07",
+  "match": "exact",
+  "note": "검지를 세워 순서대로 설명"
+ },
+ "sia_guide": {
+  "key": "sia_e08",
+  "match": "exact",
+  "note": "손바닥을 펴서 옆을 안내"
+ },
+ "sia_think": {
+  "key": "sia_e09",
+  "match": "exact",
+  "note": "턱에 손가락, 다시 확인"
+ },
+ "sia_firm": {
+  "key": "sia_e12",
+  "match": "exact",
+  "note": "주먹 쥔 결의 (끝까지 지켜봄)"
+ },
+ "sia_proud": {
+  "key": "sia_e16",
+  "match": "exact",
+  "note": "흐뭇한 미소 (정리 완료)"
+ },
+ "sia_doze": {
+  "key": "sia_e17",
+  "match": "exact",
+  "note": "손으로 입 가리고 하품"
+ },
+ "sia_stop": {
+  "key": "sia_e06",
+  "match": "exact",
+  "note": "손바닥을 앞으로 (반칙 멈춤)"
+ },
+ "sia_angry": {
+  "key": "sia_e22",
+  "match": "exact",
+  "note": "볼 부풀림 + 화남 표시 (책상 어지르지 마세요)"
+ },
+ "sia_shock": {
+  "key": "sia_e24",
+  "match": "exact",
+  "note": "질린 얼굴 + 땀"
+ },
+ "moa_smile": {
+  "key": "moa_e13",
+  "match": "exact",
+  "note": "부드러운 기본 미소"
+ },
+ "moa_tea": {
+  "key": "moa_e01",
+  "match": "exact",
+  "note": "분홍 찻잔을 두 손으로 들고 웃음"
+ },
+ "moa_cheer": {
+  "key": "moa_e12",
+  "match": "exact",
+  "note": "주먹 쥐고 응원"
+ },
+ "moa_plant": {
+  "key": "moa_e16",
+  "match": "exact",
+  "note": "화분을 들고 뿌듯함"
+ },
+ "moa_report": {
+  "key": "moa_e07",
+  "match": "exact",
+  "note": "검지를 세워 모아 둔 기록 발표"
+ },
+ "moa_guide": {
+  "key": "moa_e08",
+  "match": "exact",
+  "note": "손바닥을 펴서 자리 안내"
+ },
+ "moa_think": {
+  "key": "moa_e09",
+  "match": "exact",
+  "note": "턱에 손가락, 기억 더듬기"
+ },
+ "moa_ok": {
+  "key": "moa_e10",
+  "match": "exact",
+  "note": "윙크 + 엄지 (기록 완료)"
+ },
+ "moa_sparkle": {
+  "key": "moa_e19",
+  "match": "exact",
+  "note": "반짝이는 눈 (감탄)"
+ },
+ "moa_cry": {
+  "key": "moa_e21",
+  "match": "exact",
+  "note": "폭포 눈물 (응원한 쪽이 짐)"
+ },
+ "moa_shock": {
+  "key": "moa_e24",
+  "match": "exact",
+  "note": "질린 얼굴 + 땀"
+ },
+ "x1_hint": {
+  "key": "x1_e13",
+  "match": "exact",
+  "note": "실루엣 + 분홍 리본 (예고)"
+ },
+ "x2_hint": {
+  "key": "x2_e13",
+  "match": "exact",
+  "note": "실루엣 + 청록 안경 반사 (예고)"
+ },
+ "x3_hint": {
+  "key": "x3_e13",
+  "match": "exact",
+  "note": "실루엣 + 노란 방울 (예고)"
  }
 }
