@@ -40,7 +40,10 @@ ahnboat_lab_explainer/
 │  │  ├─ CHAR_lab4.md               이름 · 성격 · 형식별 역할 · 외형 · 표정 사전 · 추가 팩 규격
 │  │  ├─ character_pack/            표정 24종 × 6명 + 미공개 3명 × 9종 (WebP 96·192, sprites JS, 키 대응표, 빌드 도구)
 │  │  ├─ motion_pack/               전신 동작 시트 59장 · 프레임 464장 (스트립 WebP, motion_map.json, 재생·스트립 빌드 도구)
-│  │  └─ setting_shots/             설정샷 k01~k12 (외형의 기준 그림)
+│  │  ├─ setting_shots/             설정샷 (박사·조수·초파리. 주판봇 샷은 생성 대기)
+│  │  ├─ jupanbot_vector/           주판봇 v1 벡터 원본 (참고용)
+│  │  ├─ jupanbot_genspark/         주판봇 설정샷 Genspark 프롬프트
+│  │  └─ archive/money_robo/        옛 Money-Robo 그림 보관 (쓰지 않음)
 │  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)
 │  └─ task/                         작업 팩
@@ -59,7 +62,7 @@ ahnboat_lab_explainer/
 
 | 가벼운 설치 (새 페이지 만들기) | 빼도 되는 것 |
 |---|---|
-| `SKILL.md`, `manifest.json`, `packs/character/CHAR_lab4.md`, `packs/character/character_pack/` (`webp/192`는 빼도 됨), `packs/domain/`, `data/` | `packs/character/setting_shots/` (약 17 MB, 그림 그릴 때만), `docs/`, `packs/lang/langpack/tm_seed/` (번역할 때만) |
+| `SKILL.md`, `manifest.json`, `packs/character/CHAR_lab4.md`, `packs/character/character_pack/` (`webp/192`는 빼도 됨), `packs/domain/`, `data/` | `packs/character/setting_shots/`·`archive/`·`jupanbot_genspark/ref/` (약 18 MB, 그림 그릴 때만), `docs/`, `packs/lang/langpack/tm_seed/` (번역할 때만) |
 
 온톨로지 보강만 따로 쓸 때는 `packs/task/onto-retrofit/`을 별도 스킬(`ai-lab-retrofit`)로 넣고 `data/`의 두 파일을 함께 둔다.
 

@@ -1,5 +1,13 @@
 # 변경 기록
 
+## 2026-11-11 · 주판봇 교체 정리
+
+- **캐릭터 팩** (`CHAR_lab4.md`): 아카이브로 옮긴 옛 설정샷(k01·k05·k06·k10·k11·k12)을 기준 그림으로 가리키던 머리말·C0·C3·C5를 고침. 주판봇 외형 기준은 그림 팩의 v2 기본 표정 9종(gpt2판). C0 표에 `jupanbot_vector/`·`jupanbot_genspark/`·`archive/money_robo/` 행 추가.
+- **본 스킬** 18-8 크기 일관성: 옛 값(초파리 약 1/3, 주판봇 약 1/2, "캐릭터 팩 k12")을 캐릭터 팩 C3의 키 비율(박사 1.00 · 조수 0.90 · 주판봇 0.72 · 초파리 0.41)로 맞춤.
+- **번역 팩**: 저장소 맨 위의 `SPEC_langpack_patch_VER1.0.md`를 `packs/lang/langpack/`으로 옮기고, 언어팩 README가 가리키던 옛 한글 파일 이름을 고침.
+- 올라가 있던 `__pycache__`를 지우고 `.gitignore`를 더함.
+- README 폴더 그림에 `jupanbot_vector/`·`jupanbot_genspark/`·`archive/`를 더함.
+
 ## 2026-11-11 · 지식 색인 '퀴즈' 색 대비 수정
 
 - **onto-retrofit `kgx.js`·`assembler.html`:** 지식 색인의 '퀴즈'(QuizItem) 종류 색 `#6f6d8c` → `#9a90c4`. 퀴즈 칩을 켜거나 퀴즈 배지가 보일 때 어두운 글자(#13141f) 대비가 3.70:1로 4.5:1에 못 미쳤다 → 약 6.3:1. 다른 종류 색과 구분되는 보라 계열 유지
