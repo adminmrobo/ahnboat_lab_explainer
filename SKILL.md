@@ -332,8 +332,8 @@ O5. 영역 온톨로지 완성 파이프라인 → 온톨로지 보강 팩
 
 ### 4-3. 사다리 칸(또는 결과 섹션) 블록 구성 — 이 순서, 빠짐없이
 
-1. **육각형 번호 배지 + 제목 + 태그 두 개** (`모델: …`, 그리고 앵커에 따라 `초파리: …` / `연구실: …` / `장부: …` / `일상: …` 또는 `논문: 그림 3`)
-2. **짝 카드 `.pair`**: 왼쪽은 앵커 제목("초파리에서는" / "연구실에서는" / "장부로 보면" / "일상으로 치면"), 오른쪽 "신경망에서는"(또는 "모델에서는"). 7장 참고. 다른 분야는 분야 팩 P2의 오른쪽 이름(예: 통계 "통계로는", 경제 "모형에서는", 회계 "회계 처리로는", 경영 "경영 이론으로는")
+1. **육각형 번호 배지 + 제목 + 태그 두 개** (`모델: …`, 그리고 앵커에 따라 `초파리: …` / `연구실: …` / `매출 기록: …` / `일상: …` 또는 `논문: 그림 3`)
+2. **짝 카드 `.pair`**: 왼쪽은 앵커 제목("초파리에서는" / "연구실에서는" / "매출 기록으로 보면" / "일상으로 치면"), 오른쪽 "신경망에서는"(또는 "모델에서는"). 7장 참고. 다른 분야는 분야 팩 P2의 오른쪽 이름(예: 통계 "통계로는", 경제 "모형에서는", 회계 "회계 처리로는", 경영 "경영 이론으로는")
 3. **인터랙티브 패널 `.panel`**: 캔버스 + 조작(`.ctrl`) + 숫자 요약(`.kpis`) + 수식 줄(`.eq`) + 상황별 설명(`.insight`)
 4. **행동으로 보기**: 그 모델대로 움직이는 캐릭터/데이터 캔버스
 5. **풀이 상자 `.explain`**: 초보자용 단계 설명 + 이 칸의 한계
@@ -440,12 +440,13 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 |---|---|---|---|---|
 | **A. 생물 앵커** | 초파리의 감각·신경·뇌·행동 | "초파리에서는" | 큰 초파리 | 신경망 기초, 시각(CNN), 희소 표현, 무작위 특징, 보상 신호, 커넥톰 |
 | **B. 연구실 앵커** | 박사 연구실의 실험·측정·기록 일상 (시약, 실험 노트, 시험관 줄, 실험 반복, 봉인된 시험지) | "연구실에서는" | 밤의 연구실 + 네 캐릭터 | 평가·검증, 데이터 분할·누수, 하이퍼파라미터 탐색, 재현성, MLOps |
-| **C. 장부 앵커** | 주판봇의 장부·주판·투자 판단 (비용, 수익, 위험, 분산) | "장부로 보면" | 주판봇과 주판 | 앙상블(분산 투자), 비용 민감 학습, 불균형 분류의 손익, 추천 시스템, 최적화의 비용 함수 |
+| **C. 매출 기록 앵커** | 주판봇의 매출 기록·주판·투자 판단 (비용, 수익, 위험, 분산) | "매출 기록으로 보면" | 주판봇과 주판 | 앙상블(분산 투자), 비용 민감 학습, 불균형 분류의 손익, 추천 시스템, 최적화의 비용 함수 |
 | **D. 생활·현장 앵커** | 누구나 아는 일상이나 업무 (도서관 사서, 길 찾기, 요리 레시피, 공장 검사 라인) | "일상으로 치면" 또는 "현장에서는" | 연구실 장면 + 주제 소품 | RAG(사서), 강화학습(길 찾기), 생성 모델(레시피), 품질검사, 에이전트(업무 분담) |
 
+- **용어 (2026-11-11):** C 앵커는 **매출 기록 앵커**다. 비유 앵커 이름·태그·짝 카드·본문·그림 지시문에 '장부'(ledger)라는 말을 쓰지 않고 '매출 기록'(sales record)으로 쓴다. 회계 분야 본문의 전문 용어(장부금액 등)만 예외다.
 - **페이지당 주 앵커 하나**를 고른다. 보조 앵커는 섹션 단위로 하나까지 섞을 수 있다.
 - 짝 카드 `.pair`의 오른쪽은 늘 "신경망에서는"(또는 "모델에서는"), 왼쪽 제목은 앵커에 따라 바꾼다.
-- 태그도 바꾼다: `초파리: …` → `연구실: …` / `장부: …` / `일상: …`.
+- 태그도 바꾼다: `초파리: …` → `연구실: …` / `매출 기록: …` / `일상: …`.
 - 색 의미(빨강 = 왼쪽 비유 쪽, 분홍 = 모델 쪽)는 그대로 둔다.
 
 ### 7-2. 앵커 고르는 순서 (결정 트리)
@@ -458,7 +459,7 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
    └ 예 → B. 연구실 앵커
    └ 아니오 ↓
 3. 핵심이 "비용·이득·위험·분산·자원 배분"인가?
-   └ 예 → C. 장부 앵커 (실제 종목·수익률·투자 권유 금지)
+   └ 예 → C. 매출 기록 앵커 (실제 종목·수익률·투자 권유 금지)
    └ 아니오 ↓
 4. D. 생활·현장 앵커 — 독자가 이미 아는 장면 하나를 고른다
 ```
@@ -467,7 +468,7 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 1. 비유의 각 부분이 개념의 각 부분과 **하나씩** 짝지어지는가?
 2. 비유로 추론한 결론이 **실제 모델에서도 맞는가?** (비유 때문에 틀린 예측을 하게 되지 않는가)
 3. 그 분야 전문가가 읽어도 **"틀렸다"가 아니라 "닮았다"**고 할 수 있는가?
-4. 비유가 **주제와 다른 영역**에서 왔는가? 회계 페이지의 장부 앵커, 경제 페이지의 시장 비유처럼 비유 대상이 곧 주제면 비유가 아니라 본론의 반복이다. 다른 앵커를 고른다.
+4. 비유가 **주제와 다른 영역**에서 왔는가? 회계 페이지의 매출 기록 앵커, 경제 페이지의 시장 비유처럼 비유 대상이 곧 주제면 비유가 아니라 본론의 반복이다. 다른 앵커를 고른다.
 
 ### 7-3. 분야별 기본 앵커 (인공지능 팩)
 
@@ -482,10 +483,10 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 | 음성 | A 생물 또는 D | 약~중 | 존스턴 기관(더듬이 떨림)까지만, 그 뒤는 D | 진행 |
 | 선형·로지스틱 회귀 | D 생활 | 없음 | 집값 어림, 합격선 긋기 | 의심하는 쪽 |
 | 결정 트리 | D 생활 | 없음 | 스무고개, 의사의 문진 | 의심하는 쪽 |
-| 앙상블 (배깅·부스팅) | C 장부 | 없음 | 분산 투자, 오답 노트로 다음 투자 보완 | 의심하는 쪽 |
+| 앙상블 (배깅·부스팅) | C 매출 기록 | 없음 | 분산 투자, 오답 노트로 다음 투자 보완 | 의심하는 쪽 |
 | 군집·차원 축소 | D 생활 | 없음 | 서랍 정리, 지도 접기 | 의심하는 쪽 |
-| 추천 시스템 | C 장부 + D | 없음 | 단골 장부, 손님 취향 카드 | 의심하는 쪽 |
-| 시계열 | C 장부 | 없음 | 매출 장부의 계절 패턴 (실제 종목 금지) | 의심하는 쪽 |
+| 추천 시스템 | C 매출 기록 + D | 없음 | 단골 손님 기록, 손님 취향 카드 | 의심하는 쪽 |
+| 시계열 | C 매출 기록 | 없음 | 매출 기록의 계절 패턴 (실제 종목 금지) | 의심하는 쪽 |
 | 강화학습 | D 생활 + A 보조 | 중 (보상 신호만) | 길 찾기·미로(쓱싹이), 보상 신호는 "도파민과 닮았다, 예측 오차 여부는 연구 중" | 진행 + 보조 비유 |
 | RNN·시퀀스 | D 생활 | 약 | 전화번호 외우기, 긴 이야기 듣기 | 의심하는 쪽 |
 | 어텐션·트랜스포머 | D 생활 | 없음 | 교과서에 형광펜 긋기, 회의에서 필요한 사람에게 묻기 | 의심하는 쪽 |
@@ -537,10 +538,10 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 
 ### 7-6. 앵커별 시각 요소 바꾸기
 
-| 요소 | A 생물 | B 연구실 | C 장부 | D 생활·현장 |
+| 요소 | A 생물 | B 연구실 | C 매출 기록 | D 생활·현장 |
 |---|---|---|---|---|
 | 히어로 픽셀아트 | 큰 초파리 | 네 캐릭터가 있는 밤의 연구실 | 주판봇 + 큰 주판 | 연구실 + 주제 소품(책장, 미로, 검사 라인) |
-| 행동으로 보기의 주인공 | 초파리 | 조수·시험관·데이터 카드(나르미) | 주판봇의 주판·장부 | 쓱싹이, 손님들, 사서 NPC 등 |
+| 행동으로 보기의 주인공 | 초파리 | 조수·시험관·데이터 카드(나르미) | 주판봇의 주판·매출 기록 | 쓱싹이, 손님들, 사서 NPC 등 |
 | 3D·해부 그림 | 쓴다 ("개략 모형" 도장) | 쓰지 않는다 | 쓰지 않는다 | 쓰지 않는다 |
 | 숫자 요약 줄 | 생물 수치(각주) | 실험 조건 수치 | 비용·이득 수치(예시값) | 주제 데이터 수치 |
 | 벌집 배경 무늬 | 유지 | 유지 (시리즈 표식) | 유지 | 유지 |
@@ -1108,7 +1109,7 @@ python3 packs/character/motion_pack/build_motion_pack.py --pick D1,D3,D5,A1,A3,A
 작업 순서:
 0) 분야를 확인한다 (SKILL 2-0, 2-0-1). 분야 팩이 7·9·10-5·11-5·14장과 온톨로지 확장을 바꾼다(19장).
 1) 사실 카드를 만든다 (종류: 문헌 사실/논문 수치/해석/미확인/공식 통계/기준·법령). 통계·경제·회계·경영이면 기준일·관할·단위 필드를 채운다. 화면에 보여 주지 말고 내부적으로 쓴다.
-2) 핵심 질문 한 문장과 개념 사다리(또는 논문 순서)를 표로 정한다. 7-2 결정 트리로 주 앵커(A 생물 / B 연구실 / C 장부 / D 생활·현장)를 고르고 이유를 한 줄 적는다. 초파리 생물학 대응이 없으면 생물 앵커를 쓰지 않는다.
+2) 핵심 질문 한 문장과 개념 사다리(또는 논문 순서)를 표로 정한다. 7-2 결정 트리로 주 앵커(A 생물 / B 연구실 / C 매출 기록 / D 생활·현장)를 고르고 이유를 한 줄 적는다. 초파리 생물학 대응이 없으면 생물 앵커를 쓰지 않는다.
 3) 대결 질문을 정하고(6-4로 종류 확인), 페이지에서 실제로 계산할 방법과 예상 결과(F/R/D/X/C)를 정한다.
 4) 시뮬레이션마다 수식·파라미터·시드·기대 결과를 표로 정한다.
 5) 4장 구조, 8장 디자인, 12장 코드 규격대로 단일 HTML을 만든다.
@@ -1283,7 +1284,7 @@ P7 금지 단정은 그 분야 입문자가 실제로 자주 틀리는 것으로
 | 그림 | 무기·담배·술·피, 저작권 캐릭터, 그림 속 글자(글자는 HTML로), 결과 전 승패 암시 그림, 생물 앵커가 아닌 페이지의 초파리 해부·현미경 소품 |
 | 구성 | 본문 섹션당 말풍선 2개 이상, 캐릭터가 개념 설명을 대신하기 |
 | 표현 | 근거 없는 칭찬, 과장("혁명적", "완벽한"), 비유만 있고 한계 없음 |
-| 비유 | 대응 없는 분야에 초파리 생물학 끼워 넣기(예: "어텐션은 초파리의 주의 집중"), 억지 비유 시험을 통과하지 못한 앵커, 주제와 같은 영역의 비유(회계 페이지의 장부 비유) |
+| 비유 | 대응 없는 분야에 초파리 생물학 끼워 넣기(예: "어텐션은 초파리의 주의 집중"), 억지 비유 시험을 통과하지 못한 앵커, 주제와 같은 영역의 비유(회계 페이지의 매출 기록 비유) |
 | 분야 | 논쟁 중인 정책·학파 질문에 승패 판정, 기준일·관할 없는 회계·세법 문장, 단위(명목/실질) 없는 경제 수치, 주판봇 대사에 실제 기업·지수 이름, 장난감 모형의 결과를 현실 정책 결론처럼 쓰기, 실시간 데이터 요청 |
 
 ---
@@ -1325,7 +1326,7 @@ HTML은 그림이 없어도 완성된다(부록 A 픽셀 지도로 대신 그린
 - **2배·4배 정수배**는 받는다. 생성 도구가 1024×1024만 내면, 캐릭터를 가운데 두고 배경을 **투명 또는 단색**(초록 `#00ff00`)으로 받아 잘라 쓴다. F·G·J판은 비율만 지키면 된다.
 - **A~D판 배치:** 상하좌우 여백 6px(2배면 12px), 눈 높이 위에서 25~40%, 같은 캐릭터는 표정이 달라도 머리 크기·위치 동일, 바닥 타원 그림자는 D판만, C·D판은 발끝(그림자)이 아래 여백선에 닿게.
 - **E·F·G·J판 배치:** 가장자리 60px 안쪽에 얼굴. F판은 왼쪽 45%에 제목 글자가 얹히므로 복잡한 것을 오른쪽에. E판을 히어로 대화창 뒤에 쓰면 중요한 것은 위쪽 62% 안에.
-- **글자 금지:** 그림 안에 글자·숫자·로고를 넣지 않는다. 칠판·장부·화면·간판은 줄무늬나 빈칸으로. 글자는 HTML로 얹는다.
+- **글자 금지:** 그림 안에 글자·숫자·로고를 넣지 않는다. 칠판·기록지·화면·간판은 줄무늬나 빈칸으로. 글자는 HTML로 얹는다.
 - **형식:** A~D·H판은 알파 채널 PNG, E·F·G·I·J·K판은 PNG 또는 JPG, sRGB. 이름은 키 그대로 영어 소문자와 밑줄.
 
 ### 18-3 ~ 18-5. 그림체 · 캐릭터 고정 외형 · 표정 사전 → 캐릭터 팩
@@ -1368,7 +1369,7 @@ HTML은 그림이 없어도 완성된다(부록 A 픽셀 지도로 대신 그린
 |---|---|---|---|---|
 | A 생물 | 밤의 연구실 안 형광 현미경 실험대 | 현미경, 페트리 접시, 초파리 사육병, 형광 모니터의 뇌 점구름 | 분홍·초록 형광, 남보라 어둠 | *night laboratory bench with a fluorescence microscope, petri dishes and fly vials, a monitor glowing with a magenta and green neuron point cloud* |
 | B 연구실 | 밤의 연구실 전경 | 시험관 선반, 봉인된 봉투 상자, 실험 노트 더미, 칠판(글자 없음), 서버 랙 | 보라 조명, 모니터 청록 | *wide night laboratory with test tube racks, a box of sealed envelopes, stacks of lab notebooks, a blank chalkboard, a small server rack* |
-| C 장부 | 연구실 옆 회계실·금고실 | 큰 나무 주판, 가죽 장부, 큰 원형 금고 문, 저울 | 따뜻한 금빛 램프 | *cozy accounting room beside the lab, a giant wooden abacus, leather ledgers with blank striped pages, a round vault door, a brass scale* |
+| C 매출 기록 | 연구실 옆 회계실·금고실 | 큰 나무 주판, 두꺼운 매출 기록철, 큰 원형 금고 문, 저울 | 따뜻한 금빛 램프 | *cozy accounting room beside the lab, a giant wooden abacus, thick sales record books with blank striped pages, a round vault door, a brass scale* |
 | D 생활·현장 | 주제 장면 (도서관, 미로, 부엌, 공장 검사 라인, 회의실 등) | 주제 소품 (책장, 형광펜, 미로 벽, 레시피 카드, 컨베이어) | 연구실 보라 조명을 한쪽에 남겨 시리즈 표식 유지 | *{장소} rendered as part of the same night lab world, purple lab light spilling in from one side* |
 
 D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도서관 서고와 사서 NPC, 어텐션 → 형광펜이 놓인 독서대, 강화학습 → 바닥 격자 미로와 쓱싹이. 통계·경제·회계·경영은 분야 팩 P11의 장소 표를 쓴다.
@@ -1816,10 +1817,10 @@ function stamp(ctx,W,txt){ctx.save(); ctx.font='700 11px "IBM Plex Sans KR",syst
   <div class="lvhead">
     <div class="hexno">2<small>간단</small></div>
     <h2>{제목}</h2>
-    <p class="sub"><span class="lvtag g">모델: {식}</span><span class="lvtag">{초파리|연구실|장부|일상}: {앵커 대응}</span></p>
+    <p class="sub"><span class="lvtag g">모델: {식}</span><span class="lvtag">{초파리|연구실|매출 기록|일상}: {앵커 대응}</span></p>
   </div>
   <div class="pair">
-    <div><div class="tag fly">{초파리에서는|연구실에서는|장부로 보면|일상으로 치면}</div><p>…</p></div>
+    <div><div class="tag fly">{초파리에서는|연구실에서는|매출 기록으로 보면|일상으로 치면}</div><p>…</p></div>
     <div><div class="tag nn">신경망에서는</div><p>…</p></div>
   </div>
   <section class="panel">
@@ -1880,7 +1881,7 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 칸이다. 예시 �
 | 항목 | 내용 |
 |---|---|
 | 페이지 | {N}_{slug}.html |
-| 모드 / 주 앵커 | {교과서 | 논문} / {A 생물 | B 연구실 | C 장부 | D 생활·현장: 장소} |
+| 모드 / 주 앵커 | {교과서 | 논문} / {A 생물 | B 연구실 | C 매출 기록 | D 생활·현장: 장소} |
 | 시즌 | {기본 | 시즌 이름과 의상 구절} |
 | 대결 | {질문} → 결과 {F|R|D|X}, 차이 {값} |
 | 새로 그릴 그림 | P1 {n}장 · P2 {n}장 · P3 {n}장 |
@@ -1940,7 +1941,7 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 칸이다. 예시 �
 
 (예) `sc_07_hero`
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped ledger at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped sales record sheet at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
 ```
 
 ## 4. 일관성 지침
@@ -2676,6 +2677,8 @@ function buildPackage(scope){
 *v1.6 (2026-10-31): 18-14 글 표지 이미지(목차·챕터마다 네 캐릭터, 16:9 L판, Genspark 지시문 틀)와 18-15 받은 표지 반영 절차를 더했다. 4장 구조에 0-1 글 표지, 15-12·15-13 프롬프트, 그림 용량 기준(표지 포함 600 KB)을 고쳤다.*
 
 *v1.7 (2026-10-31): 12-5 번역 대비 규칙(글로벌 번역 통합본 v2와 연결)을 더했다.*
+
+*v1.13 (2026-11-11): C 앵커 이름을 '장부'에서 '매출 기록'으로 바꿨다(7장·18-7·부록 틀·분야 팩·번역 용어표). 그림 지시문의 ledger도 sales record로 바꿨다.*
 
 *v1.9 (2026-11-02): 저장소 `ahnboat_lab_explainer`로 나눴다. 5장·18-3~18-5·부록 A를 캐릭터 팩으로, 14장 절차를 검수 팩으로, O5장을 온톨로지 보강 팩으로 옮기고 참조를 남겼다. 캐릭터 성격은 하나로, 자리는 대결형·미션형별로 정했다(캐릭터 팩 C2). 설정샷 기준으로 외형과 키 순서를 고쳤고(18-8), 그림이 없던 표정 키 3개를 있는 그림 키로 바꿨다. 4-4 미션형 형식, 2-1 형식 입력, 12-2 저장소 예외(언어 기억·완료 표시), 19-6 팩 지도를 더했다.*
 

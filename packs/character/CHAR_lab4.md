@@ -111,7 +111,7 @@ license: 캐릭터 설정·그림은 저작권자 허락 없이 사용할 수 �
 | 목록 | `pack.json`: `pack`, `version`, `base`(기본 팩 판과 커밋), `who`, `season`(있으면 18-3 시즌 구절), `license` |
 | 고정 외형 | 18-4는 바꾸지 않는다. 의상만 더한다(18-3 "시즌 의상 층") |
 | 우선순위 | 페이지가 고른 추가 팩 → 기본 팩 → 기본 표정 → 픽셀 지도 |
-| 다시 나눌 그림 | 저울(`doc_scale`), 장부(`asst_ledger`), 점수판(`asst_board`)을 그리면 그 키를 `exact`로 되돌린다 |
+| 다시 나눌 그림 | 저울(`doc_scale`), 기록(`asst_ledger`), 점수판(`asst_board`)을 그리면 그 키를 `exact`로 되돌린다 |
 
 ## C8. 동작 팩 (`motion_pack/`, fight 1.2)
 
@@ -405,7 +405,7 @@ C9를 따른다. 정체를 짐작하게 하는 설명(성별, 나이, 실존 인
 | `moa_shock` | A | 질린 눈, 땀 | 그대로 | 뜻밖의 결과 |
 | `x1_hint` · `x2_hint` · `x3_hint` | A | 흰 점 눈 | 실루엣 | 예고 (C9, 버튼 뒤) |
 
-> **v1.9:** 그림이 없던 `doc_scale`(저울)·`asst_ledger`(장부)·`asst_board`(점수판)는 각각 `doc_think`·`asst_report`·`asst_proud`로 바꿨다. 옛 키는 같은 그림을 가리키는 별칭(`expression_map.json`의 `deprecated`)으로 남아 옛 페이지도 그대로 보인다. 저울·장부·점수판 그림을 추가 팩에서 그리면 그때 다시 나눈다(C6).
+> **v1.9:** 그림이 없던 `doc_scale`(저울)·`asst_ledger`(기록)·`asst_board`(점수판)는 각각 `doc_think`·`asst_report`·`asst_proud`로 바꿨다. 옛 키는 같은 그림을 가리키는 별칭(`expression_map.json`의 `deprecated`)으로 남아 옛 페이지도 그대로 보인다. 저울·기록·점수판 그림을 추가 팩에서 그리면 그때 다시 나눈다(C6).
 > 사전의 키는 **뜻 이름**이고, 실제 그림은 기본 팩의 표정 번호(`{who}_e01`~`e24`)다. 대응은 `character_pack/expression_map.json`.
 
 ---

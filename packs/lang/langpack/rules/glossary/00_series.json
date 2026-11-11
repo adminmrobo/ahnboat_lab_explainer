@@ -159,13 +159,13 @@
 "uz": "Laboratoriyada",
 "vi": "Trong phòng thí nghiệm"
 },
-"장부로 보면": {
-"en": "In the ledger",
-"zh": "从账本来看",
-"ja": "帳簿で見ると",
-"ru": "По бухгалтерской книге",
-"uz": "Daftar boʻyicha",
-"vi": "Nhìn theo sổ sách"
+"매출 기록으로 보면": {
+"en": "In the sales records",
+"zh": "从销售记录来看",
+"ja": "売上記録で見ると",
+"ru": "По записям о продажах",
+"uz": "Savdo yozuvlari boʻyicha",
+"vi": "Nhìn theo ghi chép doanh thu"
 },
 "현장에서는": {
 "en": "On the shop floor",

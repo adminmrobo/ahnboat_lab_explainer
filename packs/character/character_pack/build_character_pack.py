@@ -63,7 +63,7 @@ ALIASES = {
     "doc_think":   ("E09", "exact", "턱에 손 + 물음표"),
     "asst_smile":  ("E13", "exact", "기본 미소"),
     "asst_firm":   ("E12", "exact", "주먹 쥔 결의"),
-    "asst_ledger": ("E07", "deprecated", "v1.9: asst_report로 바꿈 (장부 그림 없음). 옛 페이지용 별칭"),
+    "asst_ledger": ("E07", "deprecated", "v1.9: asst_report로 바꿈 (기록 그림 없음). 옛 페이지용 별칭"),
     "asst_report": ("E07", "exact", "검지를 세워 발표 (숫자 발표)"),
     "asst_spark":  ("E01", "exact", "입 벌려 웃음 + 반짝이"),
     "asst_shock":  ("E24", "exact", "질린 얼굴 + 땀"),

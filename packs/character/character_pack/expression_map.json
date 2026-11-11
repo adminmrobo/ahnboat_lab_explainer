@@ -47,7 +47,7 @@
  "asst_ledger": {
   "key": "asst_e07",
   "match": "deprecated",
-  "note": "v1.9: asst_report로 바꿈 (장부 그림 없음). 옛 페이지용 별칭"
+  "note": "v1.9: asst_report로 바꿈 (기록 그림 없음). 옛 페이지용 별칭"
  },
  "asst_report": {
   "key": "asst_e07",
