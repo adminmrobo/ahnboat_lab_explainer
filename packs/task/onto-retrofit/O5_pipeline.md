@@ -338,7 +338,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 
 페이지마다 아래 네 가지를 정한다. 같은 시리즈 표지끼리 장소·포즈·소품이 겹치지 않게 한다.
 
-1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 밤의 연구실 / 매출 기록(돈·금융) → 큰 주판과 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실 보라 조명을 한쪽에 남긴다)
+1. **장소:** 페이지 주제에 맞는 곳. 생물 → 형광 현미경 실험대 / 연구실 → 낮의 연구실 / 매출 기록(돈·금융) → 큰 주판과 금고가 있는 회계실 / 생활 → 도서관·서재·공장 등 (연구실의 연보라 소품을 한쪽에 남긴다)
 2. **주제 은유:** 페이지 핵심 개념을 글자 없는 장면 하나로 (예: 어텐션 → 질문 카드에서 책들로 뻗는 빛줄기)
 3. **네 캐릭터 포즈:** 초파리는 왼쪽에서 오른쪽을, 주판봇은 오른쪽에서 왼쪽을 본다. 박사는 가운데 뒤, 조수는 한쪽 옆
 4. **대체 글:** 한국어 한 문장
@@ -355,7 +355,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 
 Website top cover illustration, wide 16:9.
 Match the art style, proportions and colors of the attached reference images exactly (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2-3 tone shading, small highlights).
-Cozy night laboratory mood, deep purple and navy darkness, soft magenta and green fluorescent accents, teal monitor glow.
+Bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents.
 Scene: {장소 영어}.
 All four characters together:
 the chibi scientist (thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie) at the back center, {포즈};
@@ -363,7 +363,7 @@ the girl researcher (long pink hair with two round buns and a navy streak, blue 
 the anthropomorphic fruit fly researcher (black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings), on the left facing right, {포즈};
 the boxy beige retro CRT-monitor robot 주판봇 (dark green screen face with mint pixel eyes, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus), on the right facing left, {포즈}.
 Visual metaphor of the topic: {주제 은유 영어, 글자 없이}.
-Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner dark and simple; the light falls on {핵심 소품}.
+Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner plain, bright and simple; the light falls on {핵심 소품}.
 Mood: curious, friendly rivalry, the moment before the result.
 No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
 ```
@@ -383,7 +383,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 ```html
 <!-- lab-cover -->
-<style>.cover{position:relative;margin:0;background:linear-gradient(160deg,#1b1533,#13141f);aspect-ratio:16/9;max-height:72vh;overflow:hidden}.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(19,20,31,.72);color:#eceaf3;font-size:13px}@media (max-width:600px){.cover{max-height:none}}</style>
+<style>.cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid #d5dbe2;color:#16212b;font-size:13px}@media (max-width:600px){.cover{max-height:none}}</style>
 <header class="cover" id="cover" data-img="cover_{N}">
   <picture>
     <source type="image/webp" srcset="assets/img/cover_{N}_960.webp 960w, assets/img/cover_{N}.webp 1600w" sizes="100vw">

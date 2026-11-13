@@ -163,11 +163,11 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 논쟁 �
 
 | 장소 | 소품 | 영어 묘사 |
 |---|---|---|
-| 연구실 앞 축제 노점 거리 | 붕어빵 노점, 줄 선 작은 손님들, 빈 가격표 | *a small night street festival just outside the lab, food stalls with blank price boards, a line of tiny faceless customers, purple lab light from an open door* |
+| 연구실 앞 축제 노점 거리 | 붕어빵 노점, 줄 선 작은 손님들, 빈 가격표 | *a small daytime street festival just outside the lab, food stalls with blank price boards, a line of tiny faceless customers, the lab door left open with a lavender sign* |
 | 공동 냉장고가 있는 휴게실 (외부효과) | 냉장고, 흘린 컵, 청소 당번표(글자 없음) | *a shared lab break room with an overstuffed fridge, a spilled cup, a blank chore chart* |
 | 욕조와 밸브 (통화정책) | 큰 밸브, 수위 눈금(숫자 없음) | *a big bathtub-shaped tank in the lab with a large valve, water level marks without numbers* |
 | 두 연구실의 교환 창구 (무역) | 상자 컨베이어, 두 방의 다른 색 빛 | *two neighboring labs exchanging boxes through a small window with a conveyor, different colored light in each room* |
 
 ## P12. 강조색
 
-`#d9a066` (구리색) — 수요·공급 곡선과 잉여 넓이 테두리에만. 잉여 넓이 채움은 코어 색(초록 = 소비자 쪽, 분홍 = 생산자 쪽)을 쓴다.
+`#9a5f1c` (구리색) — 수요·공급 곡선과 잉여 넓이 테두리에만. 잉여 넓이 채움은 코어 색(초록 = 소비자 쪽, 분홍 = 생산자 쪽)을 쓴다.

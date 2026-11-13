@@ -77,17 +77,17 @@ README.md                        한국어 → English → 中文 → 日本語 
 ### 3-1. 색과 글꼴 (각 편)
 ```css
 :root{
-  --bg:#13141f; --panel:#1c1e2d; --panel2:#25283a; --rule:#363a52;
-  --text:#eceaf3; --muted:#9d9bb8;
-  --stain:#d672d6; --gfp:#5ee39c; --eye:#f0604d; --amber:#f1b646; --info:#82b8ff;
+  --bg:#ffffff; --panel:#f6f8fa; --panel2:#eef2f6; --rule:#d5dbe2;
+  --text:#16212b; --muted:#5b6874;
+  --stain:#9b3fb5; --gfp:#13733a; --eye:#c9302c; --amber:#a35c00; --info:#1e55c8;
   --font:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
-  color-scheme:dark;
+  color-scheme:light;
 }
 ```
-- 어두운 배경 한 가지(다크) 테마. 강조색 의미를 고정한다: 초록 `--gfp` = 좋음·통과, 빨강 `--eye` = 나쁨·경보, 앰버 `--amber` = 주의·포커스·용어 밑줄, 보라 `--stain` = 숫자·잠재값, 파랑 `--info` = 정보.
+- 흰 배경 한 가지 테마("낮의 연구실", 본 스킬 8장). 다크 테마는 만들지 않는다. 강조색 의미를 고정한다: 초록 `--gfp` = 좋음·통과, 빨강 `--eye` = 나쁨·경보, 앰버 `--amber` = 주의·포커스·용어 밑줄, 보라 `--stain` = 숫자·잠재값, 파랑 `--info` = 정보.
 - 본문 16px, 줄 간격 1.7, 문단 최대 72ch. `h1` clamp(32px,5vw,56px), `h2` clamp(24px,3vw,34px), `h3` 19px. 한국어는 `word-break:keep-all`.
 - 내용 폭 `.wrap{max-width:1180px; padding:0 clamp(14px,3vw,32px)}`.
-- 첫 화면(index)은 같은 계열의 **픽셀 아트 톤**: 보라 배경(#13141f/#261e45), 격자 무늬 배경, 픽셀 상자(굵은 테두리 + 그림자), 픽셀 글꼴 Galmuri11(`--px`)과 본문 IBM Plex Sans KR(`--sans`).
+- 첫 화면(index)은 같은 계열의 **픽셀 아트 톤**: 흰 배경(#ffffff, 연한 격자 무늬 `rgba(22,33,43,.05)`), 픽셀 상자(굵은 잉크색 테두리 + 옅은 그림자), 픽셀 글꼴 Galmuri11(`--px`)과 본문 IBM Plex Sans KR(`--sans`).
 - 그림은 저자가 만든 픽셀/일러스트 이미지를 `<img src="data:…">`로 넣고, 모든 그림에 내용을 설명하는 `alt`를 단다.
 
 ### 3-2. 접근성·모바일

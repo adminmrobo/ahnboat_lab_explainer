@@ -188,43 +188,43 @@ function buildPackage(scope){
 }
 
 /* ── 공통 화면 조각 ─────────────────────────────────── */
-var CSS='.kgx-sec{background:var(--bg,#13141f);color:var(--text,#eceaf3);padding:48px 0;font-family:inherit}.kgx-sec .kgx-wrap{max-width:1080px;margin:0 auto;padding:0 16px}.kgx-sec h2{margin:0 0 6px;font-size:24px}.kgx-sec .kgx-sub{color:var(--muted,#9d9bb8);margin:0 0 18px}\
+var CSS='.kgx-sec{background:var(--bg,#ffffff);color:var(--text,#16212b);padding:48px 0;font-family:inherit}.kgx-sec .kgx-wrap{max-width:1080px;margin:0 auto;padding:0 16px}.kgx-sec h2{margin:0 0 6px;font-size:24px}.kgx-sec .kgx-sub{color:var(--muted,#5b6874);margin:0 0 18px}\
 \
 .kgx .tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}\
-.kgx input[type=search]{flex:1 1 220px;min-width:0;background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);color:var(--text,#eceaf3);border-radius:8px;padding:8px 12px;font:inherit;font-size:15px}\
-.kgx .tchip{font-size:12.5px;border-radius:999px;padding:3px 10px;border:1px solid var(--rule,#363a52);background:var(--panel2,#25283a);color:var(--muted,#9d9bb8);cursor:pointer}\
+.kgx input[type=search]{flex:1 1 220px;min-width:0;background:var(--panel2,#eef2f6);border:1px solid var(--rule,#d5dbe2);color:var(--text,#16212b);border-radius:8px;padding:8px 12px;font:inherit;font-size:15px}\
+.kgx .tchip{font-size:12.5px;border-radius:999px;padding:3px 10px;border:1px solid var(--rule,#d5dbe2);background:var(--panel2,#eef2f6);color:var(--muted,#5b6874);cursor:pointer}\
 .kgx .tchip[aria-pressed=true]{color:#13141f;font-weight:700}\
 .kgx .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px}\
 @media (max-width:860px){.kgx .grid2{grid-template-columns:1fr}}\
-.kgx .list{max-height:520px;overflow:auto;border:1px solid var(--rule,#363a52);border-radius:10px;background:var(--panel,#1c1e2d)}\
-.kgx .it{padding:10px 14px;border-bottom:1px solid var(--rule,#363a52);cursor:pointer}\
-.kgx .it:last-child{border-bottom:0}.kgx .it:hover{background:var(--panel2,#25283a)}\
-.kgx .it.sel{background:var(--panel2,#25283a);box-shadow:inset 3px 0 0 var(--gfp,#5ee39c)}\
+.kgx .list{max-height:520px;overflow:auto;border:1px solid var(--rule,#d5dbe2);border-radius:10px;background:var(--panel,#f6f8fa)}\
+.kgx .it{padding:10px 14px;border-bottom:1px solid var(--rule,#d5dbe2);cursor:pointer}\
+.kgx .it:last-child{border-bottom:0}.kgx .it:hover{background:var(--panel2,#eef2f6)}\
+.kgx .it.sel{background:var(--panel2,#eef2f6);box-shadow:inset 3px 0 0 var(--gfp,#13733a)}\
 .kgx .it .h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}\
-.kgx .it .nm{font-weight:700}.kgx .it .en{color:var(--muted,#9d9bb8);font-size:13px}\
+.kgx .it .nm{font-weight:700}.kgx .it .en{color:var(--muted,#5b6874);font-size:13px}\
 .kgx .ty{font-size:11.5px;border-radius:5px;padding:0 6px;color:#13141f;font-weight:700;white-space:nowrap}\
 .kgx .it .df{color:#d7d4e6;font-size:14px;margin:3px 0 0}\
-.kgx .it .more{display:none;margin-top:6px;font-size:13.5px;color:var(--muted,#9d9bb8)}.kgx .it.sel .more{display:block}\
-.kgx .it a{color:var(--gfp,#5ee39c)}\
-.kgx .rel{display:inline-block;margin:2px 6px 2px 0;padding:1px 8px;border-radius:6px;background:var(--bg,#13141f);border:1px solid var(--rule,#363a52);font-size:12.5px;cursor:pointer;color:var(--text,#eceaf3)}\
-.kgx .gbox{position:relative;border:1px solid var(--rule,#363a52);border-radius:10px;background:#101119;overflow:hidden}\
+.kgx .it .more{display:none;margin-top:6px;font-size:13.5px;color:var(--muted,#5b6874)}.kgx .it.sel .more{display:block}\
+.kgx .it a{color:var(--gfp,#13733a)}\
+.kgx .rel{display:inline-block;margin:2px 6px 2px 0;padding:1px 8px;border-radius:6px;background:var(--bg,#ffffff);border:1px solid var(--rule,#d5dbe2);font-size:12.5px;cursor:pointer;color:var(--text,#16212b)}\
+.kgx .gbox{position:relative;border:1px solid var(--rule,#d5dbe2);border-radius:10px;background:#101119;overflow:hidden}\
 .kgx .gbox canvas{display:block;width:100%;height:420px}\
-.kgx .legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted,#9d9bb8);margin-top:8px}\
+.kgx .legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--muted,#5b6874);margin-top:8px}\
 .kgx .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}\
 .kgx .path{display:flex;flex-wrap:wrap;gap:6px;align-items:center}\
-.kgx .path span.s{background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);border-radius:8px;padding:4px 10px;font-size:14px}\
-.kgx .path span.a{color:var(--muted,#9d9bb8)}.kgx .path span.lim{border-color:#ff9a7a;color:#ffbda8}\
+.kgx .path span.s{background:var(--panel2,#eef2f6);border:1px solid var(--rule,#d5dbe2);border-radius:8px;padding:4px 10px;font-size:14px}\
+.kgx .path span.a{color:var(--muted,#5b6874)}.kgx .path span.lim{border-color:var(--eye,#c9302c);color:var(--eye,#c9302c)}\
 .kgx .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}\
-.kgx .stats div{background:var(--panel,#1c1e2d);border:1px solid var(--rule,#363a52);border-radius:10px;padding:10px 12px}\
-.kgx .stats b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.kgx .stats span{color:var(--muted,#9d9bb8);font-size:13px}\
+.kgx .stats div{background:var(--panel,#f6f8fa);border:1px solid var(--rule,#d5dbe2);border-radius:10px;padding:10px 12px}\
+.kgx .stats b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.kgx .stats span{color:var(--muted,#5b6874);font-size:13px}\
 .kgx .say{display:flex;gap:12px;align-items:flex-start;margin:6px 0 14px}\
 .kgx .say .who{flex:none;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:13px;color:#13141f}\
-.kgx .say p{margin:0;background:var(--panel2,#25283a);border:1px solid var(--rule,#363a52);border-radius:12px;padding:10px 14px;font-size:15px}\
-.kgx .refs .r{padding:12px 14px;border-bottom:1px solid var(--rule,#363a52)}.kgx .refs .r:last-child{border-bottom:0}\
+.kgx .say p{margin:0;background:var(--panel2,#eef2f6);border:1px solid var(--rule,#d5dbe2);border-radius:12px;padding:10px 14px;font-size:15px}\
+.kgx .refs .r{padding:12px 14px;border-bottom:1px solid var(--rule,#d5dbe2)}.kgx .refs .r:last-child{border-bottom:0}\
 .kgx .badge{display:inline-block;font-size:11.5px;border-radius:5px;padding:0 6px;margin-left:6px;font-weight:700}\
-.kgx .badge.ok{background:var(--gfp,#5ee39c);color:#0d2419}.kgx .badge.no{background:transparent;border:1px solid var(--amber,#f1b646);color:var(--amber,#f1b646)}\
-.kgx .badge.role{background:var(--panel2,#25283a);color:var(--muted,#9d9bb8);border:1px solid var(--rule,#363a52)}\
-.kgx pre.cite{white-space:pre-wrap;word-break:break-word;background:#101119;border:1px solid var(--rule,#363a52);border-radius:8px;padding:10px 12px;font-size:13px;margin:8px 0;max-height:220px;overflow:auto}\
+.kgx .badge.ok{background:var(--gfp,#13733a);color:var(--bg,#ffffff)}.kgx .badge.no{background:transparent;border:1px solid var(--amber,#a35c00);color:var(--amber,#a35c00)}\
+.kgx .badge.role{background:var(--panel2,#eef2f6);color:var(--muted,#5b6874);border:1px solid var(--rule,#d5dbe2)}\
+.kgx pre.cite{white-space:pre-wrap;word-break:break-word;background:var(--panel2,#eef2f6);border:1px solid var(--rule,#d5dbe2);border-radius:8px;padding:10px 12px;font-size:13px;margin:8px 0;max-height:220px;overflow:auto}\
 .kgx .files{display:flex;flex-wrap:wrap;gap:6px}\
 .kgx .todo li{margin:4px 0;color:#d7d4e6}\
 .kgx h3{font-size:17px;margin:20px 0 8px}\
@@ -346,7 +346,7 @@ function mountIndex(root){
   lad.innerHTML=html.length?html.join(''):'<span class="note">이 페이지에는 사다리 사슬이 없다.</span>';
   lad.addEventListener('click',function(ev){var s=ev.target.closest('[data-go]'); if(s)pick(s.dataset.go,true);});
   var qs=root.querySelector('.qs'); KG.nodes.filter(function(n){return n.type==='Question';}).forEach(function(n){
-    var li=el('li',null,'<b>'+esc(lab(n))+'</b>'+(n.definition?' — '+esc(n.definition.ko):'')+(n.confidence==='low'?' <span class="badge no">확인 필요</span>':'')+(n.anchor?' <a href="'+n.anchor+'" style="color:var(--gfp,#5ee39c)">본문</a>':''));
+    var li=el('li',null,'<b>'+esc(lab(n))+'</b>'+(n.definition?' — '+esc(n.definition.ko):'')+(n.confidence==='low'?' <span class="badge no">확인 필요</span>':'')+(n.anchor?' <a href="'+n.anchor+'" style="color:var(--gfp,#13733a)">본문</a>':''));
     qs.appendChild(li);});
   render();
 }
@@ -367,16 +367,16 @@ function mountExport(root){
     '<div class="stats"><div><b>'+KG.nodes.length+'</b><span>노드</span></div><div><b>'+KG.edges.length+'</b><span>관계</span></div><div><b>'+REF.length+'</b><span>문헌</span></div>'+
     '<div><b>'+Math.round(100*vb/Math.max(1,REF.length))+'%</b><span>서지 전부 확인된 문헌</span></div>'+
     '<div><b>'+Math.round(100*claims.filter(function(n){return (n.source||[]).length;}).length/Math.max(1,claims.length))+'%</b><span>출처 있는 주장</span></div></div>'+
-    '<h3>이 페이지 인용하기</h3><div class="tools"><button class="tchip cf" data-f="text" aria-pressed="true" style="background:var(--gfp,#5ee39c);border-color:var(--gfp,#5ee39c)">일반 문장</button><button class="tchip cf" data-f="bib" aria-pressed="false">BibTeX</button><button class="tchip cf" data-f="ris" aria-pressed="false">RIS</button><button class="bt cp" type="button">복사</button></div><pre class="cite pc"></pre>'+
+    '<h3>이 페이지 인용하기</h3><div class="tools"><button class="tchip cf" data-f="text" aria-pressed="true" style="background:var(--gfp,#13733a);border-color:var(--gfp,#13733a);color:var(--bg,#ffffff)">일반 문장</button><button class="tchip cf" data-f="bib" aria-pressed="false">BibTeX</button><button class="tchip cf" data-f="ris" aria-pressed="false">RIS</button><button class="bt cp" type="button">복사</button></div><pre class="cite pc"></pre>'+
     '<h3>참고문헌 — 확인 배지와 뒷받침하는 개념</h3><div class="refs list"></div>'+
     '<h3>범위와 형식 고르기</h3><div class="tools sc" role="group" aria-label="범위"></div><div class="tools"><button class="bt primary zip" type="button">꾸러미 ZIP 내려받기</button><span class="note zc"></span></div>'+
     '<div class="files"></div><p class="note">claude.ai 화면에서 개별 파일을 받으면 .bib·.ris·.ttl·.jsonld 이름 끝에 .txt가 붙는다(끝의 .txt만 지우면 원래 형식). ZIP 안의 파일은 원래 이름 그대로다.</p>'+
-    (META.seeAlso?'<p class="note">여러 페이지의 꾸러미를 합쳐 영역 지도와 맞대어 보려면 → <a style="color:var(--gfp,#5ee39c)" href="'+esc(META.seeAlso)+'"'+(/^https?:/.test(META.seeAlso)?' target="_blank" rel="noopener"':'')+'>영역 지도 합치기 (KG_00)</a></p>':'')+
+    (META.seeAlso?'<p class="note">여러 페이지의 꾸러미를 합쳐 영역 지도와 맞대어 보려면 → <a style="color:var(--gfp,#13733a)" href="'+esc(META.seeAlso)+'"'+(/^https?:/.test(META.seeAlso)?' target="_blank" rel="noopener"':'')+'>영역 지도 합치기 (KG_00)</a></p>':'')+
     '<h3>사람이 확인할 항목</h3><ul class="todo">'+todo.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul>'+
     '<p class="note">꾸러미 버전 1.0 · 만든 날 '+esc(META.date)+' · 등록부 '+esc(META.registry||'KG_00_registry (시제품)')+' · lab: 접두어 '+NS+' (임시) · 뼈대 주제(lab:topic/*)는 작성자 초안</p>';
   var fmt='text', pc=root.querySelector('.pc');
   function cite(){pc.textContent=fmt==='bib'?pageBib(META):fmt==='ris'?pageRis(META):pageText(META);}
-  [].forEach.call(root.querySelectorAll('.cf'),function(b){b.onclick=function(){fmt=b.dataset.f; [].forEach.call(root.querySelectorAll('.cf'),function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#5ee39c)':''; x.style.borderColor=o?'var(--gfp,#5ee39c)':'';}); cite();};});
+  [].forEach.call(root.querySelectorAll('.cf'),function(b){b.onclick=function(){fmt=b.dataset.f; [].forEach.call(root.querySelectorAll('.cf'),function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#13733a)':''; x.style.borderColor=o?'var(--gfp,#13733a)':'';}); cite();};});
   root.querySelector('.cp').onclick=function(){copy(pc.textContent,this);}; cite();
   var RL=root.querySelector('.refs');
   REF.forEach(function(r){var v=r.lab&&r.lab.verified||{}; var bad=Object.keys(v).filter(function(k){return !v[k];});
@@ -386,8 +386,8 @@ function mountExport(root){
     RL.appendChild(d);});
   var scope='all', SC=root.querySelector('.sc'), zc=root.querySelector('.zc');
   [['all','전체'],['terms','개념·방법만'],['claims','주장 + 출처만'],['prereq','선수 관계만']].forEach(function(s,i){
-    var b=el('button','tchip',s[1]); b.type='button'; b.setAttribute('aria-pressed',i===0); if(i===0)b.style.background='var(--gfp,#5ee39c)',b.style.borderColor='var(--gfp,#5ee39c)';
-    b.onclick=function(){scope=s[0]; [].forEach.call(SC.children,function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#5ee39c)':''; x.style.borderColor=o?'var(--gfp,#5ee39c)':'';}); info();};
+    var b=el('button','tchip',s[1]); b.type='button'; b.setAttribute('aria-pressed',i===0); if(i===0)b.style.background='var(--gfp,#13733a)',b.style.borderColor='var(--gfp,#13733a)';
+    b.onclick=function(){scope=s[0]; [].forEach.call(SC.children,function(x){var o=x===b; x.setAttribute('aria-pressed',o); x.style.background=o?'var(--gfp,#13733a)':''; x.style.borderColor=o?'var(--gfp,#13733a)':'';}); info();};
     SC.appendChild(b);});
   var FL=root.querySelector('.files');
   function info(){var f=buildPackage(scope), m=JSON.parse(f[0].text); zc.textContent='노드 '+m.counts.nodes+' · 관계 '+m.counts.edges+' · 문헌 '+m.counts.refs+' · 파일 '+f.length+'개';

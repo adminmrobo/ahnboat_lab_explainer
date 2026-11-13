@@ -159,11 +159,11 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 데이터
 
 | 장소 | 소품 | 영어 묘사 |
 |---|---|---|
-| 연구실 옆 측정실 | 줄자, 저울, 눈금 실린더, 점 찍힌 모눈 칠판(글자 없음) | *a measuring room beside the night lab, a long tape measure, a balance scale, graduated cylinders, a blank grid board covered with dots* |
-| 여론조사 콜센터 | 헤드셋, 응답 카드 상자, 지도 핀 | *a small survey call room in the same night lab world, headsets, boxes of blank response cards, a wall map with colored pins* |
+| 연구실 옆 측정실 | 줄자, 저울, 눈금 실린더, 점 찍힌 모눈 칠판(글자 없음) | *a sunlit measuring room beside the lab, a long tape measure, a balance scale, graduated cylinders, a blank grid board covered with dots* |
+| 여론조사 콜센터 | 헤드셋, 응답 카드 상자, 지도 핀 | *a small survey call room in the same bright daytime lab world, headsets, boxes of blank response cards, a wall map with colored pins* |
 | 고리 던지기 놀이판 (신뢰구간) | 말뚝 하나, 여러 고리 | *a ring toss game on the lab floor, one wooden peg, many glowing rings, some around the peg and some missing* |
 | 재판정 (가설검정) | 저울, 봉인된 증거 상자, 부엉이 판사(봉인관) | *a tiny courtroom inside the lab, a brass scale, sealed evidence boxes, an owl judge with glasses* |
 
 ## P12. 강조색
 
-`#9ab0d0` (슬레이트 파랑) — 분포 곡선과 모의실험 히스토그램 테두리에만.
+`#4a6a96` (슬레이트 파랑) — 분포 곡선과 모의실험 히스토그램 테두리에만.

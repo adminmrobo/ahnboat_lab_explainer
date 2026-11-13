@@ -160,11 +160,11 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 경영학
 
 | 장소 | 소품 | 영어 묘사 |
 |---|---|---|
-| 연구실 회의실 | 화이트보드(글자 없이 네 칸), 포스트잇 더미, 커피잔 | *a small meeting room in the night lab, a whiteboard divided into four empty boxes, piles of blank sticky notes, coffee cups* |
+| 연구실 회의실 | 화이트보드(글자 없이 네 칸), 포스트잇 더미, 커피잔 | *a small sunlit meeting room in the lab, a whiteboard divided into four empty boxes, piles of blank sticky notes, coffee cups* |
 | 연구실 식당 배식 줄 | 배식대, 줄 선 작은 손님들, 시계(숫자 없음) | *a lab cafeteria serving counter with a line of tiny faceless customers, a wall clock without numbers* |
 | 연구실 1층 카페 (창업) | 개업 준비 상자, 빈 메뉴판 | *a small cafe being set up on the ground floor of the lab building, unopened boxes, a blank menu board* |
 | 창고와 배송대 (공급망) | 선반, 상자, 작은 운반 로봇 | *a storage room with shelves of boxes and a loading dock, small carts, purple lab light spilling in* |
 
 ## P12. 강조색
 
-`#d98c6a` (테라코타) — 현금흐름 막대와 결정 나무 가지에만.
+`#a4532f` (테라코타) — 현금흐름 막대와 결정 나무 가지에만.

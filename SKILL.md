@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.12 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.14 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념 사다리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -439,7 +439,7 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 | 앵커 | 무엇으로 비유하나 | 짝 카드 왼쪽 제목 | 히어로 픽셀아트 | 어울리는 분야 |
 |---|---|---|---|---|
 | **A. 생물 앵커** | 초파리의 감각·신경·뇌·행동 | "초파리에서는" | 큰 초파리 | 신경망 기초, 시각(CNN), 희소 표현, 무작위 특징, 보상 신호, 커넥톰 |
-| **B. 연구실 앵커** | 박사 연구실의 실험·측정·기록 일상 (시약, 실험 노트, 시험관 줄, 실험 반복, 봉인된 시험지) | "연구실에서는" | 밤의 연구실 + 네 캐릭터 | 평가·검증, 데이터 분할·누수, 하이퍼파라미터 탐색, 재현성, MLOps |
+| **B. 연구실 앵커** | 박사 연구실의 실험·측정·기록 일상 (시약, 실험 노트, 시험관 줄, 실험 반복, 봉인된 시험지) | "연구실에서는" | 낮의 연구실 + 네 캐릭터 | 평가·검증, 데이터 분할·누수, 하이퍼파라미터 탐색, 재현성, MLOps |
 | **C. 매출 기록 앵커** | 주판봇의 매출 기록·주판·투자 판단 (비용, 수익, 위험, 분산) | "매출 기록으로 보면" | 주판봇과 주판 | 앙상블(분산 투자), 비용 민감 학습, 불균형 분류의 손익, 추천 시스템, 최적화의 비용 함수 |
 | **D. 생활·현장 앵커** | 누구나 아는 일상이나 업무 (도서관 사서, 길 찾기, 요리 레시피, 공장 검사 라인) | "일상으로 치면" 또는 "현장에서는" | 연구실 장면 + 주제 소품 | RAG(사서), 강화학습(길 찾기), 생성 모델(레시피), 품질검사, 에이전트(업무 분담) |
 
@@ -540,7 +540,7 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 
 | 요소 | A 생물 | B 연구실 | C 매출 기록 | D 생활·현장 |
 |---|---|---|---|---|
-| 히어로 픽셀아트 | 큰 초파리 | 네 캐릭터가 있는 밤의 연구실 | 주판봇 + 큰 주판 | 연구실 + 주제 소품(책장, 미로, 검사 라인) |
+| 히어로 픽셀아트 | 큰 초파리 | 네 캐릭터가 있는 낮의 연구실 | 주판봇 + 큰 주판 | 연구실 + 주제 소품(책장, 미로, 검사 라인) |
 | 행동으로 보기의 주인공 | 초파리 | 조수·시험관·데이터 카드(나르미) | 주판봇의 주판·매출 기록 | 쓱싹이, 손님들, 사서 NPC 등 |
 | 3D·해부 그림 | 쓴다 ("개략 모형" 도장) | 쓰지 않는다 | 쓰지 않는다 | 쓰지 않는다 |
 | 숫자 요약 줄 | 생물 수치(각주) | 실험 조건 수치 | 비용·이득 수치(예시값) | 주제 데이터 수치 |
@@ -550,23 +550,30 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 
 ### 8-1. 콘셉트
 
-**"밤의 연구실 + 형광 현미경."** 어두운 대시보드(패널, 숫자 요약 줄, 재생·속도 조작, 차례로 켜지는 단계 표시) 위에 형광 염색 색과 픽셀아트 캐릭터. 주제가 생물이 아닐 때도 같은 틀을 쓰고, **강조색 하나만 주제에 맞게** 바꾼다(8-3절).
+**"낮의 연구실."** 햇빛이 드는 하얀 연구실. **배경은 흰색(`#ffffff`)으로 고정**하고, 그 위에 옅은 회색 패널, 진한 잉크색 도식, 픽셀아트 캐릭터를 올린다(숫자 요약 줄, 재생·속도 조작, 차례로 켜지는 단계 표시는 그대로). 주제가 생물이 아닐 때도 같은 틀을 쓰고, **강조색 하나만 주제에 맞게** 바꾼다(8-3절).
 
-### 8-2. 색 토큰 (그대로)
+- v1.14부터 "밤의 연구실"(어두운 배경 `#13141f`)은 폐기한다. 다크 테마, 다크/라이트 전환 단추를 만들지 않는다.
+- 이미 어두운 배경으로 만든 페이지를 고칠 때도 8-2 토큰으로 바꾼다. 밤 분위기로 그려 둔 표지·장면 그림은 다시 그리기 전까지 그대로 쓴다(18-14-5의 표지 틀은 어느 그림이든 받친다).
+
+### 8-2. 색 토큰 (그대로, 흰 배경)
 
 ```css
 :root{
-  --bg:#13141f; --panel:#1c1e2d; --panel2:#25283a; --rule:#363a52;
-  --text:#eceaf3; --muted:#9d9bb8;
-  /* 내용 색 (도식용) */
-  --stain:#d672d6;  /* 은닉층·신경망 쪽·처리 */
-  --gfp:#5ee39c;    /* 신호·켜짐·정답·성공·선택된 버튼 */
-  --eye:#f0604d;    /* 입력·감각·경고·실패·현장 상자 */
-  --amber:#f1b646;  /* 풀이 상자·도장·용어 밑줄·보상/처벌 */
-  --info:#82b8ff;   /* 캔버스 제목·퀴즈·생성 AI 상자 */
+  --bg:#ffffff; --panel:#f6f8fa; --panel2:#eef2f6; --rule:#d5dbe2;
+  --text:#16212b; --muted:#5b6874;
+  /* 내용 색 (도식용, 흰 바탕에서 글자로 써도 4.5:1 이상) */
+  --stain:#9b3fb5;  /* 은닉층·신경망 쪽·처리 */
+  --gfp:#13733a;    /* 신호·켜짐·정답·성공·선택된 버튼 */
+  --eye:#c9302c;    /* 입력·감각·경고·실패·현장 상자 */
+  --amber:#a35c00;  /* 풀이 상자·도장·용어 밑줄·보상/처벌 */
+  --info:#1e55c8;   /* 캔버스 제목·퀴즈·생성 AI 상자 */
+  /* 옅은 바탕 (상자·칩 채움. 그 위 글자는 같은 계열 진한 색) */
+  --stain-soft:#f6ecfa; --gfp-soft:#e7f5ec; --eye-soft:#fcebea;
+  --amber-soft:#fdf3e1; --info-soft:#e6eefb;
   /* 캐릭터 색 (말풍선·이름표·점수판 전용) */
-  --c-doc:#b07cff; --c-asst:#ff86b8; --c-fly:#ef5b5b; --c-robo:#57d0dc;
-  color-scheme:dark;
+  --c-doc:#7a3fd6; --c-asst:#c42a6e; --c-fly:#c93030; --c-robo:#0b7a86;
+  --c-sia:#5a5a6e; --c-moa:#93651a;  /* 인턴 (등장할 때만) */
+  color-scheme:light;
 }
 ```
 
@@ -578,16 +585,21 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 | 노랑 | 초보자 풀이, 도식 도장, 각주, 보상·처벌 |
 | 파랑 | 캔버스 제목, 퀴즈, "생성 AI로 치면" |
 
+- **채움과 글자를 나눈다:** 노란 풀이 상자는 `--amber-soft` 바탕 + `--amber` 왼쪽 띠·제목, 짝 카드 태그도 `-soft` 바탕 + 진한 글자. 진한 색을 넓은 면에 칠하지 않는다.
+- **단추:** 기본 단추는 흰 바탕 + `--rule` 테두리, `.bt.primary`와 선택된 단추는 `--gfp` 바탕 + 흰 글자.
+- **그림자:** 패널은 테두리 1px로 구분하고, 그림자는 `0 1px 2px rgba(22,33,43,.06)` 이하로만 쓴다.
+- **대비 점검:** 글자색은 `--bg`·`--panel`·`--panel2` 모두에서 4.5:1 이상, 도식 선·점은 3:1 이상. 위 토큰은 모두 맞춰 두었다. 새 색을 더하면 직접 잰다.
+
 ### 8-3. 주제별 강조색 (선택, 하나만)
 
 | 주제 묶음 | 강조색 | 쓰는 곳 |
 |---|---|---|
 | 지도학습·분류 | 기본(초록) | — |
-| 비지도·군집 | `#7fd1a8` | 군집 색 첫 번째 |
-| 강화학습 | `#f1c84a` | 보상 막대 |
-| 시퀀스·언어 | `#9ab8ff` | 토큰 칩 |
-| 생성 모델 | `#e48cff` | 생성 샘플 테두리 |
-| 앙상블 | `#c48a5a` | 트리 아이콘 |
+| 비지도·군집 | `#1f7a52` | 군집 색 첫 번째 |
+| 강화학습 | `#8a6a00` | 보상 막대 |
+| 시퀀스·언어 | `#3b63d6` | 토큰 칩 |
+| 생성 모델 | `#a43cc4` | 생성 샘플 테두리 |
+| 앙상블 | `#8f5a2e` | 트리 아이콘 |
 | 통계·경제·회계·경영 | 분야 팩 P12 | — |
 
 ### 8-4. 글꼴
@@ -603,13 +615,13 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 - **벌집(겹눈) 무늬:** 히어로 배경, 오른쪽 위에만 보이게 방사형 마스크.
 - **육각형 번호 배지:** `clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)`.
 - **픽셀아트:** 캐릭터·히어로 배경·행동 시뮬레이션. `image-rendering:pixelated`, 확대 시 `imageSmoothingEnabled=false`.
-- **캔버스 격자:** 24px, `rgba(157,155,184,.06)`.
+- **캔버스 격자:** 24px, `rgba(22,33,43,.05)`. 캔버스 바탕은 흰색.
 
 ### 8-6. 구성 요소 (클래스 이름 고정)
 
 | 클래스 | 용도 |
 |---|---|
-| `nav.top` | 고정 상단 목차 (54px, 반투명 + blur) |
+| `nav.top` | 고정 상단 목차 (54px, `rgba(255,255,255,.92)` + blur, 아래 테두리 `--rule`) |
 | `header.hero`, `.hero-text`, `.pixelart` | 첫 화면 |
 | `.kpis > .kpi.(g|m|r|a)` | 숫자 요약 |
 | `.steps` | 3칸 카드 |
@@ -1367,10 +1379,10 @@ HTML은 그림이 없어도 완성된다(부록 A 픽셀 지도로 대신 그린
 
 | 앵커 | 장소 | 소품 | 빛·분위기 | 영어 장소 묘사 |
 |---|---|---|---|---|
-| A 생물 | 밤의 연구실 안 형광 현미경 실험대 | 현미경, 페트리 접시, 초파리 사육병, 형광 모니터의 뇌 점구름 | 분홍·초록 형광, 남보라 어둠 | *night laboratory bench with a fluorescence microscope, petri dishes and fly vials, a monitor glowing with a magenta and green neuron point cloud* |
-| B 연구실 | 밤의 연구실 전경 | 시험관 선반, 봉인된 봉투 상자, 실험 노트 더미, 칠판(글자 없음), 서버 랙 | 보라 조명, 모니터 청록 | *wide night laboratory with test tube racks, a box of sealed envelopes, stacks of lab notebooks, a blank chalkboard, a small server rack* |
-| C 매출 기록 | 연구실 옆 회계실·금고실 | 큰 나무 주판, 두꺼운 매출 기록철, 큰 원형 금고 문, 저울 | 따뜻한 금빛 램프 | *cozy accounting room beside the lab, a giant wooden abacus, thick sales record books with blank striped pages, a round vault door, a brass scale* |
-| D 생활·현장 | 주제 장면 (도서관, 미로, 부엌, 공장 검사 라인, 회의실 등) | 주제 소품 (책장, 형광펜, 미로 벽, 레시피 카드, 컨베이어) | 연구실 보라 조명을 한쪽에 남겨 시리즈 표식 유지 | *{장소} rendered as part of the same night lab world, purple lab light spilling in from one side* |
+| A 생물 | 낮의 연구실 창가 현미경 실험대 | 현미경, 페트리 접시, 초파리 사육병, 모니터의 뇌 점구름 | 창으로 드는 햇빛, 모니터의 분홍·초록 점 | *sunlit laboratory bench by a window with a microscope, petri dishes and fly vials, a monitor showing a magenta and green neuron point cloud* |
+| B 연구실 | 낮의 연구실 전경 | 시험관 선반, 봉인된 봉투 상자, 실험 노트 더미, 화이트보드(글자 없음), 서버 랙 | 큰 창의 햇빛, 흰 벽, 연보라 소품 | *wide bright daytime laboratory with large windows, test tube racks, a box of sealed envelopes, stacks of lab notebooks, a blank whiteboard, a small server rack* |
+| C 매출 기록 | 연구실 옆 회계실·금고실 | 큰 나무 주판, 두꺼운 매출 기록철, 큰 원형 금고 문, 저울 | 창으로 드는 햇빛, 따뜻한 나무색 | *sunny accounting room beside the lab, a giant wooden abacus, thick sales record books with blank striped pages, a round vault door, a brass scale* |
+| D 생활·현장 | 주제 장면 (도서관, 미로, 부엌, 공장 검사 라인, 회의실 등) | 주제 소품 (책장, 형광펜, 미로 벽, 레시피 카드, 컨베이어) | 연구실의 연보라 소품(시험관 받침·문패)을 한쪽에 남겨 시리즈 표식 유지 | *{장소} rendered as part of the same bright daytime lab world, a few lavender lab items on one side* |
 
 D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도서관 서고와 사서 NPC, 어텐션 → 형광펜이 놓인 독서대, 강화학습 → 바닥 격자 미로와 쓱싹이. 통계·경제·회계·경영은 분야 팩 P11의 장소 표를 쓴다.
 
@@ -1398,7 +1410,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 | 조각 | 문장 |
 |---|---|
 | 공통 스타일 | *16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images* |
-| 시즌 구절 | 기본: *cozy night laboratory mood, purple light, soft magenta and green fluorescent accents* / 시즌이 있으면 그 구절 |
+| 시즌 구절 | 기본: *bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents* / 시즌이 있으면 그 구절 (밤 장면 금지: *night, dark room, neon glow* 같은 말을 넣지 않는다) |
 | 판 구절 | A~D: *single character, transparent background, centered with a small margin, {facing right / facing left / facing front}, {bust / full body}* · E: *3:2 landscape scene, medium brightness* · F: *wide 8:3 background, left side simple and calm for title text, details on the right* · G: *16:9 illustration panel* · H: *simple icon, transparent background, readable at 16 pixels* · J: *16:9 series cover, all four characters together* · L: *website top cover illustration, wide 16:9, all four characters together* (전체 조립은 18-14-4) |
 | 캐릭터·장소 | 18-4 영어 묘사, 18-7 장소 묘사 |
 | 내용 | 표정 사전의 얼굴·몸짓, 또는 장면 설명을 영어로 |
@@ -1426,7 +1438,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 
 | 키 | 판 | 내용 | 우선 |
 |---|---|---|---|
-| `cover_series` = `cover_index` | J / L | 목차 맨 위 표지(18-14). 밤의 연구실 전경. 넷이 함께: 박사가 가운데에서 벽의 큰 개념 지도(글자 없이 동그라미와 선)를 가리키고, 초파리와 주판봇이 양쪽에서 올려다보고, 조수가 점수판을 든다 | P1 |
+| `cover_series` = `cover_index` | J / L | 목차 맨 위 표지(18-14). 낮의 연구실 전경. 넷이 함께: 박사가 가운데에서 벽의 큰 개념 지도(글자 없이 동그라미와 선)를 가리키고, 초파리와 주판봇이 양쪽에서 올려다보고, 조수가 점수판을 든다 | P1 |
 | `bg_index` | F | 연구실 복도. 문이 여러 개 줄지어 있고 문마다 다른 색 빛이 샌다(각 페이지 = 방) | P1 |
 | `lineup` | G | 넷이 나란히 선 소개 컷, 이름표 자리는 비움 | P1 |
 | `thumb_{N}` | I | 페이지마다 대표 배경을 3:2로 자른 것 (페이지 명세서에서 가져옴) | P2 |
@@ -1551,7 +1563,7 @@ All four characters together:
   {주판봇 18-4 묘사}, on the right facing left, {포즈}.
 Visual metaphor of the topic: {주제 은유, 글자 없이}.
 Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom);
-  keep the bottom-left corner dark and simple; the light falls on {핵심 소품}.
+  keep the bottom-left corner plain, bright and simple; the light falls on {핵심 소품}.
 Mood: curious, friendly rivalry, the moment before the result.
 No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
 ```
@@ -1569,9 +1581,9 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 ```
 
 ```css
-.cover{position:relative;margin:0;background:linear-gradient(160deg,#1b1533,#13141f);aspect-ratio:16/9;max-height:72vh;overflow:hidden}
+.cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}
 .cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(19,20,31,.72);color:var(--text);font-size:13px}
+.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid var(--rule);color:var(--text);font-size:13px}
 @media (max-width:600px){.cover{max-height:none}}
 ```
 
@@ -1804,9 +1816,9 @@ function evalSet(pred,T){var ok=0,loss=0; T.X.forEach(function(x,i){var p=pred(x
 ```js
 function stamp(ctx,W,txt){ctx.save(); ctx.font='700 11px "IBM Plex Sans KR",system-ui,sans-serif';
   var tw=ctx.measureText(txt).width+16, x=W-tw-8, y=8;
-  ctx.fillStyle='rgba(241,182,70,.14)'; ctx.strokeStyle='rgba(241,182,70,.7)';
+  ctx.fillStyle='rgba(163,92,0,.08)'; ctx.strokeStyle='rgba(163,92,0,.7)';
   ctx.beginPath(); ctx.roundRect?ctx.roundRect(x,y,tw,20,10):ctx.rect(x,y,tw,20); ctx.fill(); ctx.stroke();
-  ctx.fillStyle='#f1b646'; ctx.textAlign='left'; ctx.fillText(txt,x+8,y+14); ctx.restore();}
+  ctx.fillStyle='#a35c00'; ctx.textAlign='left'; ctx.fillText(txt,x+8,y+14); ctx.restore();}
 ```
 
 ### B-8. 사다리 칸 HTML 틀
@@ -1936,12 +1948,12 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 칸이다. 예시 �
 
 (예) `bg_07`
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, wide 8:3 background, left side simple and calm for title text, details on the right, a quiet reading desk inside the same night lab world with an open book of blank striped pages and several highlighter pens in different colors, purple lab light spilling in from the left, no characters, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, wide 8:3 background, left side simple and calm for title text, details on the right, a quiet reading desk inside the same bright daytime lab world with an open book of blank striped pages and several highlighter pens in different colors, sunlight coming in from the left, no characters, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
 ```
 
 (예) `sc_07_hero`
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, cozy night laboratory mood, purple light, soft magenta and green fluorescent accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped sales record sheet at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped sales record sheet at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
 ```
 
 ## 4. 일관성 지침
@@ -1968,8 +1980,8 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 칸이다. 예시 �
   "season": "default",
   "duel": {"result": "R", "gap": 0.50},
   "images": [
-    {"key":"cover_07","plate":"L","size":[1920,1080],"status":"new","priority":"P1","slot":"cover","fallback":"css-pixel-four","alt":"네 캐릭터가 형광펜 빛줄기가 뻗은 문장 카드를 둘러싼 밤의 연구실 표지"},
-    {"key":"bg_07","plate":"F","size":[1920,720],"status":"new","priority":"P3","slot":"hero-bg","fallback":"cover_07","alt":"형광펜이 놓인 밤의 연구실 독서대"},
+    {"key":"cover_07","plate":"L","size":[1920,1080],"status":"new","priority":"P1","slot":"cover","fallback":"css-pixel-four","alt":"네 캐릭터가 형광펜 빛줄기가 뻗은 문장 카드를 둘러싼 낮의 연구실 표지"},
+    {"key":"bg_07","plate":"F","size":[1920,720],"status":"new","priority":"P3","slot":"hero-bg","fallback":"cover_07","alt":"형광펜이 놓인 낮의 연구실 독서대"},
     {"key":"sc_07_hero","plate":"E","size":[1200,800],"status":"new","priority":"P1","slot":"hero-stage","fallback":"sc_lab","alt":"네 캐릭터가 빛나는 단어 카드 줄을 바라보는 연구실 장면"},
     {"key":"doc_think","plate":"A","size":[192,192],"status":"shared-needed","priority":"P1","slot":"hero-dialog","fallback":"doc_front","alt":""},
     {"key":"fly_cry","plate":"C","size":[220,220],"status":"reuse","slot":"duel-after","fallback":"fly_coffee","alt":""}

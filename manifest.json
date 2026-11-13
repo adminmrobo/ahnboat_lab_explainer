@@ -1,11 +1,11 @@
 {
   "repo": "ahnboat_lab_explainer",
   "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
-  "updated": "2026-11-11",
+  "updated": "2026-11-14",
   "core": {
     "id": "ai-lab-explainer",
     "path": "SKILL.md",
-    "version": "1.12",
+    "version": "1.14",
     "builtin_domain": "ai"
   },
   "packs": [

@@ -162,7 +162,7 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 기준서
 
 | 장소 | 소품 | 영어 묘사 |
 |---|---|---|
-| 연구실 1층의 작은 빵집 | 진열대, 외상 손님 카드, 빈 금전등록기 | *a tiny bakery on the ground floor of the night lab building, display shelves of bread, a small pile of blank IOU cards, an empty cash register* |
+| 연구실 1층의 작은 빵집 | 진열대, 외상 손님 카드, 빈 금전등록기 | *a tiny bakery on the ground floor of the bright daytime lab building, display shelves of bread, a small pile of blank IOU cards, an empty cash register* |
 | 물탱크 방 (이익 vs 현금) | 들어오는 관, 나가는 관, 수위 눈금(숫자 없음) | *a water tank room with an inflow pipe and an outflow pipe, water level marks without numbers, purple lab light* |
 | 이사 중인 연구실 (복식부기) | 두 방 사이로 옮겨지는 상자, 큰 시소 | *a lab in the middle of moving, boxes carried between two rooms, a large balanced seesaw in the hallway* |
 | 우유 냉장고 (재고) | 줄지어 선 우유병, 섞인 통 | *a glass-door fridge with rows of milk bottles, front bottles glowing, and a mixing tub beside it* |
@@ -171,4 +171,4 @@ T계정·분개장은 그림이 아니라 HTML 도식으로 그린다(글자가 
 
 ## P12. 강조색
 
-`#b8a27a` (놋쇠색) — T계정 테두리와 시소 받침에만. 차변·대변을 색으로만 구분하지 않고 "차변/대변" 글자를 함께 쓴다(코어 8-9).
+`#7d6a3f` (놋쇠색) — T계정 테두리와 시소 받침에만. 차변·대변을 색으로만 구분하지 않고 "차변/대변" 글자를 함께 쓴다(코어 8-9).
