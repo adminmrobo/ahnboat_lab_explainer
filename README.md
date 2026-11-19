@@ -32,7 +32,7 @@ AI에게 줄 때는 위 파일과 자료를 함께 주고 `SKILL.md` 15장의 �
 
 ```
 ahnboat_lab_explainer/
-├─ SKILL.md                         본 스킬 v1.12 (인공지능 규칙 내장)
+├─ SKILL.md                         본 스킬 v1.15 (인공지능 규칙·교수법 내장)
 ├─ manifest.json                    팩 목록 · 판 번호 · 필요한 본 스킬 판(core_min)
 ├─ CHANGELOG.md   LICENSE.md
 ├─ packs/
@@ -72,8 +72,8 @@ ahnboat_lab_explainer/
 
 | 팩 | 파일 | 판 | 필요한 본 스킬 |
 |---|---|---|---|
-| 본 스킬 | `SKILL.md` | 1.9 | — |
-| 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.4 | 1.9 |
+| 본 스킬 | `SKILL.md` | 1.15 | — |
+| 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.5 | 1.15 |
 | 분야 · 통계 / 경제 / 회계 / 경영 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
 | 번역 | `packs/lang/` (지시서 + langpack) | 1.0 / langpack 1.3 | 1.9 |
 | 작업 · 언어 추가 | `packs/task/TASK_add_lang.md` | 1.0 | 1.9 |
