@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.14 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.15 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념 사다리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -1409,7 +1409,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 
 | 조각 | 문장 |
 |---|---|
-| 공통 스타일 | *16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images* |
+| 공통 스타일 | *16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images; no smooth gradients, no painterly, vector, watercolor or 3D look* — **모든 그림에 조건 없이 넣는다.** "참고 이미지가 없을 때만" 같은 조건을 달지 않는다 (참고 이미지가 있어도 도구가 매끈한 그림으로 바꾸는 일이 잦다) |
 | 시즌 구절 | 기본: *bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents* / 시즌이 있으면 그 구절 (밤 장면 금지: *night, dark room, neon glow* 같은 말을 넣지 않는다) |
 | 판 구절 | A~D: *single character, transparent background, centered with a small margin, {facing right / facing left / facing front}, {bust / full body}* · E: *3:2 landscape scene, medium brightness* · F: *wide 8:3 background, left side simple and calm for title text, details on the right* · G: *16:9 illustration panel* · H: *simple icon, transparent background, readable at 16 pixels* · J: *16:9 series cover, all four characters together* · L: *website top cover illustration, wide 16:9, all four characters together* (전체 조립은 18-14-4) |
 | 캐릭터·장소 | 18-4 영어 묘사, 18-7 장소 묘사 |
@@ -1467,6 +1467,8 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 - [ ] 판별 크기·바라보는 쪽·투명 배경이 18-2 표와 일치
 - [ ] 모든 프롬프트에 18-4 고정 외형 영어 묘사와 금지 구절이 들어감
 - [ ] 장소가 주 앵커(18-7)와 일치. 생물 앵커가 아닌 페이지에 초파리 해부·현미경 소품을 넣지 않음
+- [ ] **모든 프롬프트에 픽셀아트 공통 스타일(18-9)이 조건 없이 들어감.** 표지 지시문의 한국어 지시에도 "그림체는 반드시 16비트 RPG풍 픽셀아트" 줄이 있음
+- [ ] 대체 표지가 픽셀 소품 + 픽셀 캐릭터 넷이고, 벡터 일러스트가 아님 (18-14-5)
 - [ ] 그림 안 글자 없음, 실존 브랜드·인물 없음, 주판봇 실제 서비스 로고 없음
 - [ ] 장면·배경·컷마다 대체 글이 있음
 - [ ] P1 개수가 페이지당 6장 이하, 표지 제외 (넘으면 재사용이나 픽셀 대체로 줄임)
@@ -1497,7 +1499,8 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 | 빌드 크기 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나만 넣는다 |
 | 캐릭터 | **넷 모두** (전신 또는 무릎 위). 18-4 고정 외형 그대로 |
 | 안전 영역 | 얼굴·손·핵심 소품은 **좌우 12%, 위 10%, 아래 18% 안쪽**에. 화면 높이 제한이나 모바일에서 잘릴 수 있는 자리다 |
-| 이름표 자리 | 왼쪽 아래 30% × 20%는 어둡고 단순하게 (시리즈 이름·번호 칩이 얹힌다) |
+| 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 18-3. 매끈한 일러스트·벡터·수채화·3D로 받으면 다시 받는다 (18-15) |
+| 이름표 자리 | 왼쪽 아래 30% × 20%는 밝고 단순하게 (시리즈 이름·번호 칩이 얹힌다) |
 | 글자 | 그림 안에 글자·숫자·로고 금지. 제목은 HTML로 바로 아래 히어로에 쓴다 |
 | 형식 | PNG 또는 JPG로 받아 WebP로 바꾼다. sRGB |
 
@@ -1525,6 +1528,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 | 항목 | 내용 |
 |---|---|
 | 키 · 판 | cover_{N} · L (16:9, 1920 이상) |
+| 그림체 | 16비트 RPG풍 픽셀아트 (필수, 고정) |
 | 장소 (앵커) | {18-7} |
 | 주제 은유 | {한 줄} |
 | 네 캐릭터 포즈 | 박사 {…} / 조수 {…} / 초파리 {…} / 주판봇 {…} |
@@ -1537,23 +1541,25 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 그림체·같은 외형으로, 넷 모두 등장
+- 그림체는 반드시 16비트 RPG풍 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 외형으로, 넷 모두 픽셀아트로 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
-- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 어둡고 단순하게
+- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게
 아래 영어 프롬프트를 그대로 써 줘.
 
 {영어 프롬프트}
 ```
 
-**고칠 때 (같은 대화에서):** `Same four characters, same art style and composition. Change only: {고칠 점}. Still no text.`
+**고칠 때 (같은 대화에서):** `Same four characters, same 16-bit pixel-art style and composition. Change only: {고칠 점}. Still pixel art, still no text.`
 ````
 
 **영어 프롬프트 조립 순서** (18-9의 조각을 표지용으로):
 
 ```
 Website top cover illustration, wide 16:9.
-Match the art style, proportions and colors of the attached reference images exactly
-  (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights).
+Art style (required, always): 16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline,
+  2–3 tone shading, small highlights; no smooth gradients, no painterly, vector, watercolor or 3D look.
+Match the characters' proportions and colors of the attached reference images exactly, drawn in this same pixel-art style.
 {시즌 구절}.
 Scene: {18-7 장소 영어 묘사}.
 All four characters together:
@@ -1587,7 +1593,12 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 @media (max-width:600px){.cover{max-height:none}}
 ```
 
-- **그림이 아직 없을 때:** `<img>` 없이 CSS 그라데이션 + 벌집 무늬 + 픽셀 캐릭터 넷을 한 줄로 세운 대체 표지를 그린다(부록 A). 높이는 `max-height:48vh`. 페이지는 그림 없이도 완성 상태다.
+- **그림이 아직 없을 때 (픽셀 대체 표지):** `<img>` 없이 그라데이션 + 벌집 무늬 위에 **픽셀 소품**과 **픽셀 캐릭터 넷**을 올린 대체 표지를 그린다(부록 A). 높이는 `max-height:48vh`. 페이지는 그림 없이도 완성 상태다.
+  - 픽셀 소품: 그 챕터의 주제 은유(18-14-3)를 16~24칸 격자 지도로 그린 것. SVG `<rect>`를 칸마다 놓고 `shape-rendering="crispEdges"`. 창문·바닥 타일도 네모 칸으로
+  - 픽셀 캐릭터 넷: 캐릭터 팩 그림(`img[data-who]`)을 한 줄로 세우고 `image-rendering:pixelated`. 그림 파일이 없으면 부록 A 픽셀 지도
+  - **금지:** 매끈한 벡터 도형(원·곡선·그라데이션 채움)으로 그린 일러스트를 대체 표지로 쓰지 않는다
+  - 표지 그림이 들어오면 대체 표지(소품·캐릭터 모두)를 숨긴다
+- **캐릭터 그림 렌더링:** 페이지의 모든 `img[data-who]`에 `image-rendering:pixelated`를 건다.
 - **단일 파일 페이지:** `src`에 base64 WebP(1600, 220 KB 이하) 하나만 넣고 `<source>`는 뺀다.
 - **챕터 띠 재사용 (`cover_ch{n}`):** 같은 챕터의 다른 페이지에서는 `class="cover cover-strip"`로 `aspect-ratio:16/5`, `object-position:50% 45%`. 같은 파일을 쓴다.
 
@@ -1597,7 +1608,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 | 단계 | 할 일 | 기준 |
 |---|---|---|
-| 1 확인 | 비율, 크기, 글자, 캐릭터 | 16:9(±3%) 아니면 가운데 기준 자르기 안을 보여 주고 묻는다. 가로 1600 미만이면 다시 받기를 권한다. 그림 안 글자가 있으면 잘라낼 수 있는지 보고, 안 되면 다시 생성을 권한다. 넷 중 빠진 캐릭터나 18-4와 다른 외형이 있으면 **무엇이 다른지 적고** 쓸지 묻는다 |
+| 1 확인 | 비율, 크기, 글자, 캐릭터, 그림체 | **그림체가 16비트 픽셀아트가 아니면(매끈한 일러스트·벡터·3D) 쓰지 않고 다시 생성을 권한다.** 16:9(±3%) 아니면 가운데 기준 자르기 안을 보여 주고 묻는다. 가로 1600 미만이면 다시 받기를 권한다. 그림 안 글자가 있으면 잘라낼 수 있는지 보고, 안 되면 다시 생성을 권한다. 넷 중 빠진 캐릭터나 18-4와 다른 외형이 있으면 **무엇이 다른지 적고** 쓸지 묻는다 |
 | 2 안전 영역 | 얼굴·손이 18-14-2 안전 영역 안인지 | 밖이면 `object-position`을 조정하고, 그래도 잘리면 알린다 |
 | 3 변환 | WebP 1600×900, 960×540 | 품질 82에서 시작해 용량 기준(220 KB / 110 KB)까지 낮춘다. 원본은 `assets/img/src/`에 보관(저장소일 때) |
 | 4 넣기 | `data-img="cover_{N}"` 자리를 채운다 | 대체 글은 지시문의 alt. 썸네일 `thumb_{N}`(3:2 자르기)과 공유 미리보기 `og_{N}`(1200×630 자르기)도 함께 만들어 쓸지 묻는다 |

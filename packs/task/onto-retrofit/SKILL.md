@@ -5,7 +5,7 @@ description: 완성된 해설 HTML의 본문은 그대로 두고 지식 색인(#
 
 # 완성된 HTML 꼬리표 달기 스킬 (ai-lab-retrofit)
 
-> **스킬 정보:** version: 1.3 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
+> **스킬 정보:** version: 1.4 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
 >
 > **자세한 설명:** 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
 
@@ -491,7 +491,8 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 | 빌드 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나를 base64로 |
 | 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, 주판봇 |
 | 안전 영역 | 얼굴·손·핵심 소품은 좌우 12%, 위 10%, 아래 18% 안쪽 |
-| 왼쪽 아래 | 30% × 20%는 어둡고 단순하게 (시리즈 칩 자리) |
+| 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 매끈한 일러스트·벡터·3D로 받으면 다시 받는다 |
+| 왼쪽 아래 | 30% × 20%는 밝고 단순하게 (시리즈 칩 자리) |
 | 금지 | 그림 안 글자·숫자·로고, 승패 암시(표지는 대결 전 장면), 생물 앵커가 아닌 편의 현미경·해부 소품, 실존 브랜드 |
 
 ### 13-3. 지시문 만들기 (AI가 페이지를 읽고 채운다)
@@ -508,13 +509,14 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 그림체·같은 외형으로, 넷 모두 등장
+- 그림체는 반드시 16비트 RPG풍 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 외형으로, 넷 모두 픽셀아트로 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
-- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 어둡고 단순하게
+- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게
 아래 영어 프롬프트를 그대로 써 줘.
 
 Website top cover illustration, wide 16:9.
-Match the art style, proportions and colors of the attached reference images exactly (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2-3 tone shading, small highlights).
+Art style (required, always): 16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline, 2-3 tone shading, small highlights; no smooth gradients, no painterly, vector, watercolor or 3D look. Match the characters' proportions and colors of the attached reference images exactly, drawn in this same pixel-art style.
 Bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents.
 Scene: {장소 영어}.
 All four characters together:
@@ -528,7 +530,7 @@ Mood: curious, friendly rivalry, the moment before the result.
 No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
 ```
 
-고칠 때(같은 대화에서): `Same four characters, same art style and composition. Change only: {고칠 점}. Still no text.`
+고칠 때(같은 대화에서): `Same four characters, same 16-bit pixel-art style and composition. Change only: {고칠 점}. Still pixel art, still no text.`
 
 시리즈 전체를 한 번에 만들면 한 파일 `COVER_PROMPTS_{시리즈}.md`에 모은다: 쓰는 법 → 한눈에 보기 표(키·페이지·장소·은유) → 표지마다 표(키, 페이지, 장소, 은유, 대체 글) + 붙여 넣기 칸 → 돌려줄 파일 이름 표(`{키}.png`).
 
