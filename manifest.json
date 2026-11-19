@@ -1,11 +1,11 @@
 {
   "repo": "ahnboat_lab_explainer",
   "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
-  "updated": "2026-11-14",
+  "updated": "2026-11-20",
   "core": {
     "id": "ai-lab-explainer",
     "path": "SKILL.md",
-    "version": "1.14",
+    "version": "1.15",
     "builtin_domain": "ai"
   },
   "packs": [
@@ -13,8 +13,8 @@
       "id": "character/lab4",
       "kind": "character",
       "path": "packs/character/CHAR_lab4.md",
-      "version": "1.4",
-      "core_min": "1.9",
+      "version": "1.5",
+      "core_min": "1.15",
       "required": true,
       "assets": {
         "path": "packs/character/character_pack/",
