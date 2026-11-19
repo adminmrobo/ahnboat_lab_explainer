@@ -32,7 +32,7 @@ AI에게 줄 때는 위 파일과 자료를 함께 주고 `SKILL.md` 15장의 �
 
 ```
 ahnboat_lab_explainer/
-├─ SKILL.md                         본 스킬 v1.12 (인공지능 규칙 내장)
+├─ SKILL.md                         본 스킬 v1.15 (인공지능 규칙 내장)
 ├─ manifest.json                    팩 목록 · 판 번호 · 필요한 본 스킬 판(core_min)
 ├─ CHANGELOG.md   LICENSE.md
 ├─ packs/
