@@ -98,9 +98,9 @@ ai-lab-retrofit/
 | 뼈대 `data/backbone_{분야}.json` | 필수 (저장소 `data/`) | 인공지능은 `backbone_ai.json`. 다른 분야는 분야 팩 P10으로 만든다 |
 | `data/KG_00_registry.json` | 권장 (저장소 `data/`) | 분야와 상관없이 하나. 새 ID를 더해 함께 낸다 |
 | 분야 | 권장 | 14-1. 옛 페이지는 대개 `ai` |
-| 저자 이름·라이선스·공개 주소 | 선택 | 페이지에 적혀 있으면 그것을, 아니면 **빈칸**. 지어내지 않는다 |
+| 저자 이름·라이선스·공개 주소 | 선택 | 페이지에 적혀 있으면 그것을, 아니면 **공란**. 지어내지 않는다 |
 | 시리즈 이름, 페이지 번호 | 선택 | 페이지 제목·파일 이름에서 읽는다. 애매하면 묻는다 |
-| KG_00 지도 주소 | 선택 | `meta.seeAlso`를 빈칸으로 |
+| KG_00 지도 주소 | 선택 | `meta.seeAlso`를 공란으로 |
 
 ### 3-2. 출력 (페이지 하나마다)
 
@@ -211,7 +211,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 |---|---|
 | N1 | **본문 차이 0.** 표시(`lab-kg`) 밖은 한 글자도 바꾸지 않는다. 예외는 사용자가 요청해 넣은 글 표지 블록(`<!-- lab-cover -->`, ai-lab-explainer 18-15)뿐이며, 점검 도구는 이 표시도 덧붙인 부분으로 보고 비교에서 뺀다. 조립 도구는 표지 블록을 지우지 않는다. 목차에 "지식 색인" 링크를 더하고 싶어도 하지 않고 `retrofit_log.md`의 "사람이 할 일"에 적는다 |
 | N2 | **참고문헌은 페이지에 적힌 것만.** 제목·저자·연도·학술지를 페이지 표기 그대로 옮긴다. 페이지에 없는 DOI·쪽수·권호는 넣지 않고 `verified`에 `false`로 둔다. 외부에서 확인해 채울 때는 `checkedBy`에 확인한 곳과 날짜를 적는다 |
-| N3 | **저자·라이선스·주소는 페이지에 적혀 있거나 사용자가 준 값만.** 없으면 빈칸 |
+| N3 | **저자·라이선스·주소는 페이지에 적혀 있거나 사용자가 준 값만.** 없으면 공란 |
 | N4 | **근거 없는 Claim을 만들지 않는다.** 페이지에서 그 문장을 뒷받침하는 참고문헌을 찾지 못하면 Claim 대신 `Concept`의 정의로만 남긴다 |
 | N5 | **금지 표현:** "아무도 손대지 않은", "미개척", "세계 최초". 시리즈 기준이면 "이 시리즈가 아직 다루지 않은"이라고 쓴다 |
 | N6 | **외부 라이브러리·브라우저 저장소를 쓰지 않는다.** `kgx.js`만 쓴다. localStorage·sessionStorage·IndexedDB 금지 |
@@ -406,7 +406,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 3. python3 tools/ai-lab-retrofit/tools/check.py로 오류 0을 확인한다. 오류가 있으면 JSON을 고친다. HTML은 손으로 고치지 않는다.
 4. 브랜치 kg/retrofit-{번호}에 커밋하고 PR을 연다. PR 설명에 점검 요약과 "사람이 할 일"을 적는다.
 [금지] 본문 수정, 페이지에 없는 DOI·쪽수·저자, 외부 라이브러리, 브라우저 저장소.
-[모르면] 저자·라이선스는 빈칸. 시리즈 이름·번호가 애매하면 묻는다.
+[모르면] 저자·라이선스는 공란. 시리즈 이름·번호가 애매하면 묻는다.
 ```
 
 ### 10-2. Claude 대화 (ZIP 또는 HTML 첨부)
@@ -416,7 +416,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 - tools/의 retrofit.py로 조립하고 check.py로 오류 0을 확인한다.
 - 여러 파일 사이트면 폴더 구조를 그대로 둔 ZIP으로 돌려준다.
 - 결과: 꼬리표 단 HTML(또는 ZIP), kg.json·refs.json·meta.json, check_report.md, retrofit_log.md, 등록부 갱신분.
-저자: {이름 또는 "빈칸"} · 라이선스: {값 또는 "빈칸"} · KG_00 주소: {주소 또는 "빈칸"}
+저자: {이름 또는 "공란"} · 라이선스: {값 또는 "공란"} · KG_00 주소: {주소 또는 "공란"}
 ```
 
 ### 10-3. 코드 실행이 없는 채팅 AI (JSON만)
@@ -444,7 +444,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 - [ ] 개념·방법 노드마다 뼈대 주제 1~2개, 없으면 retrofit_log에 사유
 - [ ] Claim마다 `source`가 있고, 그 문헌이 `refs.json`에 있음
 - [ ] 페이지에 없는 DOI·쪽수·저자를 넣지 않음 (넣었다면 `checkedBy`에 확인처와 날짜)
-- [ ] 저자·라이선스는 페이지 표기나 사용자 값, 없으면 빈칸
+- [ ] 저자·라이선스는 페이지 표기나 사용자 값, 없으면 공란
 - [ ] 금지 표현 없음 (N5)
 - [ ] 브라우저에서 지식 색인·꾸러미가 보이고 ZIP이 내려받아짐
 - [ ] 폭 390px에서 가로 넘침 없음, 콘솔 오류 0
@@ -532,7 +532,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 고칠 때(같은 대화에서): `Same four characters, same 16-bit pixel-art style and composition. Change only: {고칠 점}. Still pixel art, still no text.`
 
-시리즈 전체를 한 번에 만들면 한 파일 `COVER_PROMPTS_{시리즈}.md`에 모은다: 쓰는 법 → 한눈에 보기 표(키·페이지·장소·은유) → 표지마다 표(키, 페이지, 장소, 은유, 대체 글) + 붙여 넣기 칸 → 돌려줄 파일 이름 표(`{키}.png`).
+시리즈 전체를 한 번에 만들면 한 파일 `COVER_PROMPTS_{시리즈}.md`에 모은다: 쓰는 법 → 한눈에 보기 표(키·페이지·장소·은유) → 표지마다 표(키, 페이지, 장소, 은유, 대체 글) + 붙여 넣기 상자 → 돌려줄 파일 이름 표(`{키}.png`).
 
 ### 13-4. 받은 그림 반영
 
@@ -563,7 +563,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 **표지 지시문만 받기**
 ```
 첨부한 기존 페이지들(목차 포함)을 읽고, SKILL 13-1~13-3 규칙으로 표지 지시문을 만들어 줘.
-한 파일 COVER_PROMPTS_{시리즈}.md에 모으고, 표지마다 "Genspark에 붙여 넣기" 칸(한국어 지시 + 영어 프롬프트)과 대체 글을 넣어 줘.
+한 파일 COVER_PROMPTS_{시리즈}.md에 모으고, 표지마다 "Genspark에 붙여 넣기" 상자(한국어 지시 + 영어 프롬프트)과 대체 글을 넣어 줘.
 표지끼리 장소·포즈·소품이 겹치지 않게.
 ```
 

@@ -16,7 +16,7 @@
 출력하는 재생 함수 (본 스킬 12-6)
   drawMotion(ctx, sheet, seg, t, cx, cy, h, opt) → true(그림) / false(아직 로드 전 또는 없음 → 표정 그림으로 대신)
     sheet  'D5' 같은 시트 번호     seg  구간 이름('idle', 'svd_chop') 또는 null(전체)
-    t      초(누적)                 cx,cy 발 기준점(가운데 아래)   h  그릴 높이(px, 프레임 칸 높이)
+    t      초(누적)                 cx,cy 발 기준점(가운데 아래)   h  그릴 높이(px, 프레임 프레임 높이)
     opt.face   'left'|'right' 원하는 방향. 그림의 facing과 다르면 좌우 반전
                (박사·조수는 반전 금지 → opt.forceMirror 없으면 반전하지 않고 그대로 그림)
     opt.fps    기본 10        opt.once  true면 마지막 프레임에서 멈춤      opt.frame  특정 프레임 고정(0부터)

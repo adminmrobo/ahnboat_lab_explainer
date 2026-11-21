@@ -11,7 +11,7 @@
  "educationalLevel": "입문",
  "creator": [
   {
-   "name": "{페이지에 적힌 저자 또는 사용자가 준 이름, 없으면 빈칸}",
+   "name": "{페이지에 적힌 저자 또는 사용자가 준 이름, 없으면 공란}",
    "role": "author"
   }
  ],
@@ -30,6 +30,6 @@
  "url": "",
  "registry": "KG_00_registry 0.2",
  "learningResourceType": "interactive explainer",
- "seeAlso": "{KG_00 커버리지 지도 주소, 없으면 빈칸}",
+ "seeAlso": "{KG_00 커버리지 지도 주소, 없으면 공란}",
  "suggestedCitation": "{저자} ({연도}). {제목}. {시리즈} {번호}, v{판}."
 }

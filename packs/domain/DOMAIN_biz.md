@@ -45,7 +45,7 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 경영학
 | 창업·비즈니스 모델 | D 생활 | 연구실 1층 카페를 열기까지 | 의심하는 쪽 ("손님이 정말 와?") |
 | 기업윤리·지배구조 | D 현장 + B | 심사위원 이해충돌, 회의록 공개 | 의심하는 쪽, 박사가 균형 |
 
-**경영 분석 틀(5 Forces, SWOT, BCG 매트릭스 등)은 계산 모형이 아니다.** 틀을 시뮬레이션처럼 숫자를 넣어 결과를 "예측"하게 만들지 않는다. 틀은 "생각을 정리하는 칸"으로 보여 주고(카드 분류 모듈), 장점과 한계를 함께 적는다.
+**경영 분석 틀(5 Forces, SWOT, BCG 매트릭스 등)은 계산 모형이 아니다.** 틀을 시뮬레이션처럼 숫자를 넣어 결과를 "예측"하게 만들지 않는다. 틀은 "생각을 정리하는 자리"으로 보여 주고(카드 분류 모듈), 장점과 한계를 함께 적는다.
 
 생물 앵커(A)는 쓰지 않는다.
 
@@ -76,7 +76,7 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 경영학
 | 생존 편향 | 망한 회사 보이기 켜기·끄기 | 성공 회사만 vs 전체 회사 점 | 사라지는 가게 카드 | 성공 사례만 보면 특정 특징이 성공 원인처럼 보인다 |
 | A/B 테스트 | 표본 크기, 효과 | 두 전환율과 구간 | 두 축제 부스 | 표본이 작으면 차이가 우연일 수 있다 (통계 팩 모듈 재사용) |
 | 결정 나무 | 확률, 보상 | 나무 그림 + 기대값 | 장비 구매 결정 | 기대값과 위험 선호가 결정을 바꾼다 |
-| 분석 틀 카드 분류 | 사례 카드 끌어 넣기 | SWOT 네 칸 등 | 연구실 회의 | 같은 사실이 보는 사람에 따라 강점이 되기도 위협이 되기도 한다 (틀의 한계) |
+| 분석 틀 카드 분류 | 사례 카드 끌어 넣기 | SWOT 네 항목 등 | 연구실 회의 | 같은 사실이 보는 사람에 따라 강점이 되기도 위협이 되기도 한다 (틀의 한계) |
 
 ## P6. 대결 질문 예
 
@@ -160,7 +160,7 @@ note: ai-lab-explainer v1.8 이상의 분야 팩. 코어 19장 형식. 경영학
 
 | 장소 | 소품 | 영어 묘사 |
 |---|---|---|
-| 연구실 회의실 | 화이트보드(글자 없이 네 칸), 포스트잇 더미, 커피잔 | *a small sunlit meeting room in the lab, a whiteboard divided into four empty boxes, piles of blank sticky notes, coffee cups* |
+| 연구실 회의실 | 화이트보드(글자 없이 네 구역), 포스트잇 더미, 커피잔 | *a small sunlit meeting room in the lab, a whiteboard divided into four empty boxes, piles of blank sticky notes, coffee cups* |
 | 연구실 식당 배식 줄 | 배식대, 줄 선 작은 손님들, 시계(숫자 없음) | *a lab cafeteria serving counter with a line of tiny faceless customers, a wall clock without numbers* |
 | 연구실 1층 카페 (창업) | 개업 준비 상자, 빈 메뉴판 | *a small cafe being set up on the ground floor of the lab building, unopened boxes, a blank menu board* |
 | 창고와 배송대 (공급망) | 선반, 상자, 작은 운반 로봇 | *a storage room with shelves of boxes and a loading dock, small carts, purple lab light spilling in* |

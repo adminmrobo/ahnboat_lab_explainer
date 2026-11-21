@@ -50,6 +50,12 @@ ahnboat_lab_explainer/
 │     ├─ TASK_add_lang.md           언어 하나 추가 (기본값 vi)
 │     ├─ TASK_review.md             검수 (범용 평가 프롬프트 + 해설 대시보드 연결)
 │     └─ onto-retrofit/             온톨로지 보강 (ai-lab-retrofit v1.3 + O5 파이프라인)
+├─ skills/                          연구실 스킬 4종 백업 (계정에 설치된 판과 같게 유지)
+│  ├─ ai-lab-explainer-plain/       v1.2 · 비전공자판 새로 만들기 (교수법 9장 내장)
+│  ├─ ai-lab-extend/                v1.2 · 기존 페이지 업데이트·교안 검토 (교수법 8장 내장)
+│  ├─ ai-lab-report-news/           v1.2 · 리포트 동향편 (교수법 11장 내장)
+│  └─ ai-lab-report-finding/        v1.2 · 리포트 발견편 (교수법 10장 내장)
+├─ old_skill/                       폐기·구형 스킬 보관 (불러와 쓰지 않음)
 ├─ data/                            시리즈 데이터 (한 벌만)
 │  ├─ KG_00_registry.json           개념·문헌 ID 등록부 (모든 분야 공용)
 │  └─ backbone_ai.json              인공지능 영역 뼈대 초안 v0.1
@@ -67,6 +73,10 @@ ahnboat_lab_explainer/
 온톨로지 보강만 따로 쓸 때는 `packs/task/onto-retrofit/`을 별도 스킬(`ai-lab-retrofit`)로 넣고 `data/`의 두 파일을 함께 둔다.
 
 **ChatGPT · Gemini · Genspark** — 위 표의 파일을 지식 파일(또는 대화 첨부)로 올린다. 그림 폴더는 올리지 않아도 된다(페이지는 그림 없이도 픽셀 지도로 완성된다).
+
+## 계정 스킬과 동기화
+
+Claude 계정에 설치한 본 스킬(맨 위 `SKILL.md` + `packs/`)과 `skills/`의 4종은 이 저장소와 같은 판으로 유지한다. 스킬을 고칠 때마다 이 저장소도 같은 내용으로 함께 커밋한다. 바뀌기 전 판은 `old_skill/<날짜>/`에 옮겨 둔다.
 
 ## 팩과 판
 

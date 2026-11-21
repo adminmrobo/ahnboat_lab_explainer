@@ -69,7 +69,7 @@ global-i18n v2.0 + 언어팩 패치 VER1.0(`SPEC_langpack_patch_VER1.0.md`)을 �
 ## 번역 AI에게 주는 법 (패치 1)
 
 **코딩 에이전트의 하위 에이전트로 돌릴 때 (v1.2부터 기본: 읽기 1회 → 쓰기 1회)** — 언어마다 하나씩, 동시에.
-`inlineRules: true`(기본)이면 규칙이 묶음 파일 맨 앞 `"rules"` 칸에 들어 있어 규칙 파일을 따로 읽지 않습니다.
+`inlineRules: true`(기본)이면 규칙이 묶음 파일 맨 앞 `"rules"` 항목에 들어 있어 규칙 파일을 따로 읽지 않습니다.
 조각이 없으면 파일 하나, 조각이 있으면 `p1, p2 …`를 모두 적습니다.
 ```
 You are a translator. Do exactly these steps and nothing else:
@@ -157,7 +157,7 @@ glossary의 번역을 그대로 쓰고, 태그·자리표시·엔티티·숫자�
    - `` `검증 정확도는 ${acc}%예요.` `` ○
    - `'검증 정확도는 '+acc+'%예요.'` ✕ (조각으로 쪼개져 어순을 못 바꿉니다)
 2. **같은 한국어, 다른 뜻**이면 문자열 바로 앞에 꼬리표를 답니다. 예: `/*i18n:verdict*/'합격'`. 화면은 그대로이고, 번역 메모리에서 따로 관리됩니다.
-3. **번역하면 안 되는 칸**
+3. **번역하면 안 되는 항목**
    - 요소: `data-i18n-skip` 속성을 답니다.
    - 스크립트 블록: `<script data-i18n-skip>`.
    - 결과 조회 문자열: 설정 `skipCallArgs`(함수 이름)와 `skipVars`(변수 이름)에 넣습니다.
@@ -177,10 +177,10 @@ glossary의 번역을 그대로 쓰고, 태그·자리표시·엔티티·숫자�
 | `bundleChars` | runner가 agent면 30000, api면 12000 | 묶음 하나의 원문 글자 수. 에이전트는 호출마다 고정비가 커서 묶음을 크게(언어당 1개), API는 고정비가 작아 작게 나눔. 예시 설정에는 30000이 적혀 있으니 API로 바꾸면 이 키를 지우거나 12000으로 |
 | `bundleMaxTokens` | 20000 | 에이전트 실행에서 묶음 **파일** 하나의 토큰 상한(어림). 넘으면 같은 묶음을 조각 파일로 나눔. Read 도구 한도(25,000토큰) 아래로 두기 위함 |
 | `tokensPerChar` | 0.9 | 파일 글자 수 → 토큰 어림 비율. 실측: 묶음 JSON 62,555자가 53,973토큰(0.86) |
-| `inlineRules` | true | 규칙 두 파일을 묶음 파일 맨 앞 `"rules"` 칸에 넣음(에이전트 실행만). 읽기 3회 → 1회 |
-| `apiModels` / `apiMaxTokens` / `apiBatch` | 빈칸 / 32000 / true | api_translate.py: 등급(haiku·sonnet·opus)별 실제 모델 문자열, 출력 한도, Batches 사용 |
+| `inlineRules` | true | 규칙 두 파일을 묶음 파일 맨 앞 `"rules"` 항목에 넣음(에이전트 실행만). 읽기 3회 → 1회 |
+| `apiModels` / `apiMaxTokens` / `apiBatch` | 공란 / 32000 / true | api_translate.py: 등급(haiku·sonnet·opus)별 실제 모델 문자열, 출력 한도, Batches 사용 |
 | `hintMaxLen` / `hintChars` | 20 / 30 | 이 길이보다 짧은 단위에만 앞뒤 문맥 30자 |
-| `metaFields` | title, series, suggestedCitation, todo | page-meta에서 번역할 칸 |
+| `metaFields` | title, series, suggestedCitation, todo | page-meta에서 번역할 항목 |
 | `skipStrings` / `skipCallArgs` / `skipVars` | `["한국어"]` / [] / [] | 번역하지 않을 문자열·함수 인자·변수 |
 | `allowVisibleHangul` | [] | 검사에서 허용할 한글 (정규식) |
 | `switcher` / `autoRedirect` / `hreflang` | true | 언어 전환·자동 이동·대체 링크 넣기 |
@@ -252,7 +252,7 @@ glossary의 번역을 그대로 쓰고, 태그·자리표시·엔티티·숫자�
 - Colab 코드 블록(`<script type="text/plain">`): 한글이 든 줄 단위로 번역, 코드 골격·f-string 식 검사, `rules/code.md`, `codecheck [--run]`(원본에서 되는 블록만 모든 언어에서 compile·실행). 이전에는 파이썬 주석이 뽑히지 않았음.
 - 언어 전환: `<head>`에 넣는 스크립트로 바꿈. 🌐 선택 상자(`switcherHosts`) + 오른쪽 아래 🌐 배너, 고른 언어 기억, `HEAD` 확인 404 방지(2.5초 안전장치), 번역판 주소는 자동 전환 안 함, hreflang `zh-CN`·`x-default`, `<html lang="zh-CN">`.
 - 언어별 처리: CC deed, `fontVars`, `cssVarFallback`(vi `--px`), `postReplaceRegex`, 중·일 줄바꿈을 `*` 전체로.
-- README 7개 언어 조립: 줄·표 칸 단위 번역(`rules/readme.md`, 링크·코드 조각 검사), 「언어」 절 자동 생성, 시리즈 링크·CC deed 언어별 변환.
+- README 7개 언어 조립: 줄·표 항목 단위 번역(`rules/readme.md`, 링크·코드 조각 검사), 「언어」 절 자동 생성, 시리즈 링크·CC deed 언어별 변환.
 - browser_check: 로컬 http 서버, 버튼 모두 누른 뒤 한글 검사, `alt`·`aria-label`·`title`·`placeholder` 한글 검사, 🌐 상자·배너 보임, 전환 시나리오 11가지(선택 상자·#섹션, 기억, 배너·Esc, 브라우저 언어 6개 + de, `?lang=`, 번역판 주소, 404), `--shots`.
 - 캐릭터 표기 정리: 박사 · 조수(하루, 예명 세나) · 초파리 연구원 · 주판봇. 규칙 파일 7개를 "조수(하루)"로 바꾸고, 용어표에 `조수(하루)`·`세나`를 더함(기존 용어는 그대로). 우즈베크어 초파리 연구원은 공개판과 같은 Meva pashshasi tadqiqotchisi.
 - JS 문자열 속 이스케이프(`\n` 등)가 조립 때 두 겹(`\\n`)이 되던 결함을 바로잡음(v1.1부터 있던 것, 트랜스포머 페이지에는 그런 문자열이 없어 드러나지 않았음). `check`가 이스케이프가 그대로인지도 봄. 코드 블록을 HTML 이스케이프(`&lt;`)해 넣은 페이지도 `codecheck`가 풀어서 검사.

@@ -10,7 +10,7 @@
 
 하는 일
   - 시스템 프롬프트 = rules/common.md + rules/lang/<L>.md (규칙 블록에 프롬프트 캐시 지정, 패치 5)
-  - 사용자 메시지 = 묶음 JSON (rules 칸은 빼고 보냄)
+  - 사용자 메시지 = 묶음 JSON (rules 항목은 빼고 보냄)
   - 결과 → work/<L>_00n.out.json, 그다음 langpack.py check를 자동으로 부름
   - usage(입력·출력·캐시 토큰) → work/cost.csv
 

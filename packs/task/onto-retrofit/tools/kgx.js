@@ -254,9 +254,9 @@ function mountIndex(root){
     '<div class="grid2"><div class="list" role="listbox" aria-label="검색 결과"></div>'+
     '<div><div class="gbox"><canvas aria-label="선택한 항목과 이웃 관계 그래프"></canvas></div><div class="legend"></div>'+
     '<p class="note gnote">항목을 고르면 그 항목과 바로 이어진 이웃만 보여 준다. 그래프의 점을 눌러도 된다.</p></div></div>'+
-    '<h3>사다리 경로 — 먼저 알아야 할 것과 한계의 사슬</h3><div class="path ladder"></div>'+
+    '<h3>개념정리 경로 — 먼저 알아야 할 것과 한계의 사슬</h3><div class="path ladder"></div>'+
     '<h3>열린 질문 · 확인 필요</h3><ul class="todo qs"></ul>';
-  // 칸 수 계산 오류 방지: 개념+방법 합
+  // 항목 수 계산 오류 방지: 개념+방법 합
   root.querySelector('.stats div:nth-child(3) b').textContent=(count.Concept||0)+(count.Method||0);
   var inp=root.querySelector('input'), chips=root.querySelector('.chips'), list=root.querySelector('.list'), cv=root.querySelector('canvas');
   types.forEach(function(t){var b=el('button','tchip',tl(t)+' '+count[t]); b.type='button'; b.setAttribute('aria-pressed',on[t]);
@@ -334,7 +334,7 @@ function mountIndex(root){
   cv.addEventListener('click',function(ev){var r=cv.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top,best=null,bd=400;
     G.pts.forEach(function(p){var d=(p.X-x)*(p.X-x)+(p.Y-y)*(p.Y-y); if(d<bd){bd=d;best=p;}}); if(best)pick(best.id,true);});
   var rt; window.addEventListener('resize',function(){clearTimeout(rt); rt=setTimeout(draw,150);});
-  // 사다리 경로
+  // 개념정리 경로
   var lad=root.querySelector('.ladder'), chainE=KG.edges.filter(function(e){return (e.p==='lab:prerequisiteOf'&&N[e.s].type==='Method'&&N[e.o]&&N[e.o].type==='Method');});
   var nexts={},has={}; chainE.forEach(function(e){nexts[e.s]=e.o;has[e.o]=1;});
   var start=Object.keys(nexts).filter(function(k){return !has[k];})[0], seen={};
@@ -343,7 +343,7 @@ function mountIndex(root){
     var lim=OUT[cur].filter(function(e){return e.p==='lab:hasLimitation';})[0];
     if(lim)html.push('<span class="a">→ 한계</span><span class="s lim" data-go="'+lim.o+'">'+esc(lab(N[lim.o]))+'</span>');
     if(nexts[cur])html.push('<span class="a">→ 해결</span>');}
-  lad.innerHTML=html.length?html.join(''):'<span class="note">이 페이지에는 사다리 사슬이 없다.</span>';
+  lad.innerHTML=html.length?html.join(''):'<span class="note">이 페이지에는 개념정리 사슬이 없다.</span>';
   lad.addEventListener('click',function(ev){var s=ev.target.closest('[data-go]'); if(s)pick(s.dataset.go,true);});
   var qs=root.querySelector('.qs'); KG.nodes.filter(function(n){return n.type==='Question';}).forEach(function(n){
     var li=el('li',null,'<b>'+esc(lab(n))+'</b>'+(n.definition?' — '+esc(n.definition.ko):'')+(n.confidence==='low'?' <span class="badge no">확인 필요</span>':'')+(n.anchor?' <a href="'+n.anchor+'" style="color:var(--gfp,#13733a)">본문</a>':''));
@@ -357,8 +357,8 @@ function mountExport(root){
   var verifiedAll=function(r){var v=r.lab&&r.lab.verified; return v&&Object.keys(v).every(function(k){return v[k];});};
   var vb=REF.filter(verifiedAll).length;
   var claims=KG.nodes.filter(function(n){return n.type==='Claim';});
-  var todo=[]; REF.forEach(function(r){var v=r.lab&&r.lab.verified||{}; Object.keys(v).forEach(function(k){if(!v[k])todo.push(r.id+' — '+k+' 미확인 (빈칸으로 둠)');});});
-  todo.push('주장 '+claims.length+'개의 원문 위치(쪽·그림 번호) — provenance.csv의 loc 칸이 비어 있음');
+  var todo=[]; REF.forEach(function(r){var v=r.lab&&r.lab.verified||{}; Object.keys(v).forEach(function(k){if(!v[k])todo.push(r.id+' — '+k+' 미확인 (공란으로 둠)');});});
+  todo.push('주장 '+claims.length+'개의 원문 위치(쪽·그림 번호) — provenance.csv의 loc 항목이 비어 있음');
   todo.push('페이지 저자 이름·라이선스·공개 주소 — page_meta.json에서 비워 둠');
   var sup={}; KG.edges.forEach(function(e){ if(e.p==='lab:assertedIn'){var k=e.o.replace('lab:work/',''); (sup[k]=sup[k]||[]).push(e.s);} });
   KG.nodes.forEach(function(n){(n.source||[]).forEach(function(s){(sup[s.ref]=sup[s.ref]||[]); if(sup[s.ref].indexOf(n.id)<0)sup[s.ref].push(n.id);});});
