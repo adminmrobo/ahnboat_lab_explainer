@@ -14,7 +14,7 @@
 - **18-9 공통 스타일**: *clearly visible square pixels, limited palette … no smooth gradients, no painterly, vector, watercolor or 3D look*을 더하고, **모든 그림에 조건 없이** 넣도록 명시
 - **18-14-2 판 L 표**에 "그림체: 16비트 RPG풍 픽셀아트 (필수, 고정)" 행 추가
 - **18-14-4 지시문 틀**: 표에 그림체 행, 한국어 지시에 "그림체는 반드시 16비트 RPG풍 픽셀아트" 줄, 영어 조립 순서의 조건부 문장을 `Art style (required, always): …`로 교체, 고칠 때 문구에 "Still pixel art" 추가
-- **18-14-5 대체 표지**: 그라데이션 + 벌집 무늬 + **픽셀 소품**(주제 은유를 16~24칸 격자로, `shape-rendering="crispEdges"`) + **픽셀 캐릭터 넷**(`image-rendering:pixelated`). 벡터 일러스트 대체 표지 금지. 모든 `img[data-who]`에 `image-rendering:pixelated`
+- **18-14-5 대체 표지**: 그라데이션 + 벌집 무늬 + **픽셀 소품**(주제 은유를 16~24개 격자로, `shape-rendering="crispEdges"`) + **픽셀 캐릭터 넷**(`image-rendering:pixelated`). 벡터 일러스트 대체 표지 금지. 모든 `img[data-who]`에 `image-rendering:pixelated`
 - **18-13 점검표**에 픽셀아트 항목 두 줄, **18-15 받은 표지 반영**에 "픽셀아트가 아니면 다시 생성" 추가
 - v1.14 낮 전환 때 남은 "왼쪽 아래 구석은 어둡고 단순하게"를 "밝고 단순하게"로 정리 (18-14-2·18-14-4)
 - **온톨로지 보강 팩 v1.4** (`SKILL.md`, `O5_pipeline.md`): 표지 규격·Genspark 틀에 같은 픽셀아트 필수 규칙과 "밝고 단순하게" 반영
@@ -80,8 +80,8 @@
 - 주판봇 표정 24종을 새 그림으로 교체 (원본: fruitfly-lab-expressions @ 5269662)
   - 기준은 단체 사진과 **기본 9종(gpt2, 공식)**: E13·E01·E03·E02·E04·E09·E16·E15·E24
   - 나머지 15종은 Genspark 픽셀 그림 v2(임시). gpt2판이 나오면 같은 키로 교체
-  - 화면 색(초록·빨강·파랑·호박색)과 픽셀 효과로 감정이 작은 칸에서도 읽히게 함
-- 96px 주판봇은 화면을 당겨 자름 (`build_character_pack.py`의 `CROP`, 원본 512px 기준 76,36–436,396). 전신이라 말풍선 칸에서 다른 캐릭터보다 작게 보이던 문제 해결. 192px(대결)은 전신 그대로
+  - 화면 색(초록·빨강·파랑·호박색)과 픽셀 효과로 감정이 작은 자리에서도 읽히게 함
+- 96px 주판봇은 화면을 당겨 자름 (`build_character_pack.py`의 `CROP`, 원본 512px 기준 76,36–436,396). 전신이라 말풍선 자리에서 다른 캐릭터보다 작게 보이던 문제 해결. 192px(대결)은 전신 그대로
 - 박사·조수·초파리 그림은 바뀌지 않음 (다시 빌드해 같은 파일임을 확인)
 - `CHAR_lab4.md` 키 비율을 단체 사진 기준(박사 1.00 · 조수 0.90 · 주판봇 0.72 · 초파리 0.41)으로 고침
 
@@ -95,7 +95,7 @@
 
 - **이유:** Money-Robo는 (주)M-Robo의 회사 캐릭터(상표·로고)다. 개인 연구실 콘텐츠와 회사를 분리하기 위해 연구실 로봇을 저작자 개인의 새 캐릭터 **주판봇**으로 바꾼다. 성격·라이벌 구도·말버릇은 그대로, 외형과 소품(금화 → 주판알)만 바꾼다.
 - **캐릭터 팩 1.1** (`packs/character/CHAR_lab4.md`): 5-1·5-5절, 외형 표, 키 표, 부록 A-1 팔레트(E·D·M·A·Q·H 추가), A-3 픽셀 지도를 주판봇으로. 저작권 표기를 저작자 개인(안상선)으로.
-- **그림 팩 1.2** (`character_pack/`): `robo` 폴더를 `jupanbot`으로 잇고 표정 24칸을 **벡터 그림 v1**(원본 SVG `packs/character/jupanbot_vector/`)으로 바꿈. 키 이름 `robo_*`는 호환을 위해 그대로. 별칭 설명·좌우 방향표를 새로 적음. `docs/preview_all_96.png`의 로봇 줄도 교체.
+- **그림 팩 1.2** (`character_pack/`): `robo` 폴더를 `jupanbot`으로 잇고 표정 24장을 **벡터 그림 v1**(원본 SVG `packs/character/jupanbot_vector/`)으로 바꿈. 키 이름 `robo_*`는 호환을 위해 그대로. 별칭 설명·좌우 방향표를 새로 적음. `docs/preview_all_96.png`의 로봇 줄도 교체.
 - **Genspark 프롬프트 팩** (`packs/character/jupanbot_genspark/`): 설정 샷 6종과 표정 24종 프롬프트, 공통 네거티브, 회사 캐릭터 혼입 검수 기준, 참조 그림.
 - **보관** (`packs/character/archive/money_robo/`): 옛 설정 샷 6장(k01·k05·k06·k10·k11·k12)과 옛 webp. 새 페이지에서는 쓰지 않는다.
 - **이름 표기:** 한국어 주판봇, 외국어판은 en·uz·vi AbaBot · ja アバボット · zh 算盘宝 · ru АбаБот. 번역 팩 용어표·씨앗 메모리·언어 규칙, 분야 팩, 작업 팩, 온톨로지 보강 팩의 이름과 그림 프롬프트를 함께 고침.
