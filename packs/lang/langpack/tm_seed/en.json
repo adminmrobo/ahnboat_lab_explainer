@@ -265,7 +265,7 @@
 "개념, 영어 이름, 별명으로 찾기 (예: softmax, 물결)": "Search by concept, English name, or nickname (e.g., softmax, wave)",
 "종류 고르기": "Pick a type",
 "이 페이지 개념들의 관계 그래프. 노드를 누르면 목록에서 펼쳐진다": "Relationship graph of the concepts on this page. Press a node to expand it in the list",
-"사다리 경로": "Ladder path",
+"개념정리 경로": "Concept-building path",
 "열린 질문": "Open questions",
 "kg.json 내려받기": "Download kg.json",
 "Mermaid 내려받기": "Download Mermaid",

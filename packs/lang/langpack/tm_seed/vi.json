@@ -265,7 +265,7 @@
 "개념, 영어 이름, 별명으로 찾기 (예: softmax, 물결)": "Tìm theo khái niệm, tên tiếng Anh, biệt danh (ví dụ: softmax, sóng)",
 "종류 고르기": "Chọn loại",
 "이 페이지 개념들의 관계 그래프. 노드를 누르면 목록에서 펼쳐진다": "Đồ thị quan hệ giữa các khái niệm của trang này. Bấm vào nút để mở rộng trong danh sách",
-"사다리 경로": "Đường bậc thang",
+"개념정리 경로": "Lộ trình khái niệm",
 "열린 질문": "Câu hỏi mở",
 "kg.json 내려받기": "Tải kg.json",
 "Mermaid 내려받기": "Tải Mermaid",
