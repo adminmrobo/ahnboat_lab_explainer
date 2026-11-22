@@ -217,9 +217,10 @@ var CSS='.kgx-sec{background:var(--bg,#ffffff);color:var(--text,#16212b);padding
 .kgx .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}\
 .kgx .stats div{background:var(--panel,#f6f8fa);border:1px solid var(--rule,#d5dbe2);border-radius:10px;padding:10px 12px}\
 .kgx .stats b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.kgx .stats span{color:var(--muted,#5b6874);font-size:13px}\
-.kgx .say{display:flex;gap:12px;align-items:flex-start;margin:6px 0 14px}\
-.kgx .say .who{flex:none;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-weight:700;font-size:13px;color:#13141f}\
-.kgx .say p{margin:0;background:var(--panel2,#eef2f6);border:1px solid var(--rule,#d5dbe2);border-radius:12px;padding:10px 14px;font-size:15px}\
+.kgx .say{display:flex;gap:12px;align-items:flex-start;margin:6px 0 14px;background:var(--panel,#f6f8fa);border:1px solid var(--rule,#d5dbe2);border-left:4px solid var(--who,var(--c-asst,#c42a6e));border-radius:14px;padding:10px 14px}\
+.kgx .say img{flex:none;width:64px;height:64px;border-radius:10px;background:#fff;object-fit:contain;image-rendering:pixelated}\
+.kgx .say .name{display:block;color:var(--who,var(--c-asst,#c42a6e));font-size:14px}\
+.kgx .say p{margin:.15em 0 0;font-size:15px}\
 .kgx .refs .r{padding:12px 14px;border-bottom:1px solid var(--rule,#d5dbe2)}.kgx .refs .r:last-child{border-bottom:0}\
 .kgx .badge{display:inline-block;font-size:11.5px;border-radius:5px;padding:0 6px;margin-left:6px;font-weight:700}\
 .kgx .badge.ok{background:var(--gfp,#13733a);color:var(--bg,#ffffff)}.kgx .badge.no{background:transparent;border:1px solid var(--amber,#a35c00);color:var(--amber,#a35c00)}\
@@ -352,6 +353,12 @@ function mountIndex(root){
 }
 
 /* ── 꾸러미 ─────────────────────────────────────────── */
+/* 조수 말풍선 그림: 페이지의 캐릭터 그림(Cast 또는 SPRITE)을 쓴다. 글자 상자로 대신하지 않는다. */
+function asstSrc(){var s='';try{
+  if(window.Cast&&Cast.src)s=Cast.src('asst','e13')||Cast.src('asst','smile')||'';
+  if(!s&&window.SPRITE){var A=window.SPRITE_ALIAS||{};var S=window.SPRITE;s=S[A.asst_e13||'asst_e13']||S[A.asst_smile||'asst_smile']||'';}
+  if(!s&&window.LAB_PACK&&LAB_PACK.img){var I=LAB_PACK.img,L=LAB_PACK.alias||{};s=I.asst_e13||I[L.asst_smile||'asst_smile']||'';}
+}catch(e){} return s;}
 function mountExport(root){
   var KG=J('kg-raw'),REF=J('refs-csl'),META=J('page-meta'); root.classList.add('kgx');
   var verifiedAll=function(r){var v=r.lab&&r.lab.verified; return v&&Object.keys(v).every(function(k){return v[k];});};
@@ -363,7 +370,8 @@ function mountExport(root){
   var sup={}; KG.edges.forEach(function(e){ if(e.p==='lab:assertedIn'){var k=e.o.replace('lab:work/',''); (sup[k]=sup[k]||[]).push(e.s);} });
   KG.nodes.forEach(function(n){(n.source||[]).forEach(function(s){(sup[s.ref]=sup[s.ref]||[]); if(sup[s.ref].indexOf(n.id)<0)sup[s.ref].push(n.id);});});
   var N={}; KG.nodes.forEach(function(n){N[n.id]=n;});
-  root.innerHTML='<div class="say"><div class="who" style="background:var(--c-asst,#ff86b8)">조수</div><p>출처 없는 주장은 꾸러미에 넣지 않았어요. 사람이 확인할 항목 '+todo.length+'개는 아래에 있어요.</p></div>'+
+  var asrc=asstSrc();
+  root.innerHTML='<div class="say" data-who="asst"><img data-who="asst" data-mood="e13" alt="" aria-hidden="true"'+(asrc?' src="'+asrc+'"':'')+'><div><b class="name">조수(하루)</b><p>출처 없는 주장은 꾸러미에 넣지 않았어요. 사람이 확인할 항목 '+todo.length+'개는 아래에 있어요.</p></div></div>'+
     '<div class="stats"><div><b>'+KG.nodes.length+'</b><span>노드</span></div><div><b>'+KG.edges.length+'</b><span>관계</span></div><div><b>'+REF.length+'</b><span>문헌</span></div>'+
     '<div><b>'+Math.round(100*vb/Math.max(1,REF.length))+'%</b><span>서지 전부 확인된 문헌</span></div>'+
     '<div><b>'+Math.round(100*claims.filter(function(n){return (n.source||[]).length;}).length/Math.max(1,claims.length))+'%</b><span>출처 있는 주장</span></div></div>'+
@@ -395,7 +403,9 @@ function mountExport(root){
   root.querySelector('.zip').onclick=function(){download(makeZip(buildPackage(scope)),'kg_'+META.number+'_'+scope+'.zip');};
   info();
 }
-function init(){addCss(); var a=$id('kg-mount'),b=$id('export-mount'); if(a)mountIndex(a); if(b)mountExport(b);}
+function init(){addCss(); var a=$id('kg-mount'),b=$id('export-mount'); if(a)mountIndex(a); if(b)mountExport(b);
+  if(window.Cast&&Cast.fill)Cast.fill();
+  setTimeout(function(){var im=b&&b.querySelector('.say img[data-who]'); if(im&&!im.getAttribute('src'))im.remove();},0);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
 return {download:download,buildPackage:buildPackage,makeZip:makeZip,toJsonLd:toJsonLd,toTurtle:toTurtle,toBib:toBib,toRis:toRis};
 })();

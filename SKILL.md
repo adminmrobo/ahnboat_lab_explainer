@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.15 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.16 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념정리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -1496,7 +1496,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 | 항목 | 값 |
 |---|---|
 | 생성 크기 | **16:9, 가로 1920 이상** (도구에서 16:9를 고른다. 2배인 3840×2160도 좋다) |
-| 빌드 크기 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나만 넣는다 |
+| 빌드 크기 | **픽셀아트는 18-15-2 규칙**: 그림의 원래 픽셀 격자를 찾아 **정수배로만** 키운 **무손실 WebP**(가로 1600 이상이 되는 가장 작은 정수배, 예 480×270 → ×4 = 1920×1080, 300 KB 이하). 단일 파일 페이지는 원래 픽셀 크기(예 480×270) 무손실 WebP 하나를 넣고 CSS로 키운다. 1600×900처럼 정수배가 아닌 크기로 줄이거나 손실 압축하지 않는다 |
 | 캐릭터 | **넷 모두** (전신 또는 무릎 위). 18-4 고정 외형 그대로 |
 | 안전 영역 | 얼굴·손·핵심 소품은 **좌우 12%, 위 10%, 아래 18% 안쪽**에. 화면 높이 제한이나 모바일에서 잘릴 수 있는 자리다 |
 | 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 18-3. 매끈한 일러스트·벡터·수채화·3D로 받으면 다시 받는다 (18-15) |
@@ -1579,8 +1579,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 ```html
 <header class="cover" id="cover" data-img="cover_{N}">
   <picture>
-    <source type="image/webp" srcset="assets/img/cover_{N}_960.webp 960w, assets/img/cover_{N}.webp 1600w" sizes="100vw">
-    <img src="assets/img/cover_{N}.webp" width="1600" height="900" alt="{대체 글}" fetchpriority="high" decoding="async">
+    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async">
   </picture>
   <span class="cover-chip">{시리즈 이름} · {N}</span>
 </header>
@@ -1588,7 +1587,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 ```css
 .cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}
-.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;image-rendering:pixelated}
 .cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid var(--rule);color:var(--text);font-size:13px}
 @media (max-width:600px){.cover{max-height:none}}
 ```
@@ -1598,8 +1597,9 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
   - 픽셀 캐릭터 넷: 캐릭터 팩 그림(`img[data-who]`)을 한 줄로 세우고 `image-rendering:pixelated`. 그림 파일이 없으면 부록 A 픽셀 지도
   - **금지:** 매끈한 벡터 도형(원·곡선·그라데이션 채움)으로 그린 일러스트를 대체 표지로 쓰지 않는다
   - 표지 그림이 들어오면 대체 표지(소품·캐릭터 모두)를 숨긴다
-- **캐릭터 그림 렌더링:** 페이지의 모든 `img[data-who]`에 `image-rendering:pixelated`를 건다.
-- **단일 파일 페이지:** `src`에 base64 WebP(1600, 220 KB 이하) 하나만 넣고 `<source>`는 뺀다.
+- **캐릭터 그림 렌더링:** 페이지의 모든 `img[data-who]`와 **표지 그림 `.cover img`**에 `image-rendering:pixelated`를 건다. 표지에 빠지면 브라우저가 크기를 맞추며 픽셀 경계를 뭉갠다.
+- **작은 크기 사본(960 등)을 `srcset`으로 따로 만들지 않는다.** 픽셀아트는 한 장을 CSS로 키우고 줄이는 편이 더 선명하다.
+- **단일 파일 페이지:** `src`에 원래 픽셀 크기 무손실 WebP(base64) 하나만 넣는다(18-15-2).
 - **챕터 띠 재사용 (`cover_ch{n}`):** 같은 챕터의 다른 페이지에서는 `class="cover cover-strip"`로 `aspect-ratio:16/5`, `object-position:50% 45%`. 같은 파일을 쓴다.
 
 ### 18-15. 받은 표지 반영 절차
@@ -1610,8 +1610,8 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 |---|---|---|
 | 1 확인 | 비율, 크기, 글자, 캐릭터, 그림체 | **그림체가 16비트 픽셀아트가 아니면(매끈한 일러스트·벡터·3D) 쓰지 않고 다시 생성을 권한다.** 16:9(±3%) 아니면 가운데 기준 자르기 안을 보여 주고 묻는다. 가로 1600 미만이면 다시 받기를 권한다. 그림 안 글자가 있으면 잘라낼 수 있는지 보고, 안 되면 다시 생성을 권한다. 넷 중 빠진 캐릭터나 18-4와 다른 외형이 있으면 **무엇이 다른지 적고** 쓸지 묻는다 |
 | 2 안전 영역 | 얼굴·손이 18-14-2 안전 영역 안인지 | 밖이면 `object-position`을 조정하고, 그래도 잘리면 알린다 |
-| 3 변환 | WebP 1600×900, 960×540 | 품질 82에서 시작해 용량 기준(220 KB / 110 KB)까지 낮춘다. 원본은 `assets/img/src/`에 보관(저장소일 때) |
-| 4 넣기 | `data-img="cover_{N}"` 자리를 채운다 | 대체 글은 지시문의 alt. 썸네일 `thumb_{N}`(3:2 자르기)과 공유 미리보기 `og_{N}`(1200×630 자르기)도 함께 만들어 쓸지 묻는다 |
+| 3 변환 | 18-15-2 픽셀아트 변환 | 원래 픽셀 격자를 찾아 정수배 무손실 WebP로. **손실 압축·정수배 아닌 크기 줄이기 금지.** 원본은 `assets/img/src/`에 보관(저장소일 때) |
+| 4 넣기 | `data-img="cover_{N}"` 자리를 채운다 | 대체 글은 지시문의 alt. 썸네일 `thumb_{N}`(3:2)과 공유 미리보기 `og_{N}`(1200×630)도 **원래 픽셀 그림에서 잘라 정수배로** 만든다(18-15-2) |
 | 5 점검 | 폭 390·768·1280에서 화면 확인 | 얼굴 잘림 없음, 칩이 얼굴을 가리지 않음, 콘솔 오류 0, 가로 넘침 0, 페이지 그림 합계 **표지 포함 600 KB 이하** |
 | 6 기록 | 이미지 매니페스트 갱신 | `cover_{N}`의 `status`를 `done`으로, 파일 크기와 받은 날 |
 
@@ -1624,10 +1624,36 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 - [ ] 결과 암시 없음, 생물 앵커가 아닌 챕터에 현미경·해부 소품 없음
 - [ ] 같은 시리즈의 표지끼리 포즈·장소·소품이 겹치지 않음
 - [ ] 반영 후 390·768·1280 폭에서 얼굴이 잘리지 않음
-- [ ] 표지 1600 WebP 220 KB 이하, 페이지 그림 합계 600 KB 이하
+- [ ] 표지가 원래 픽셀 격자의 정수배 무손실 WebP이고(18-15-2) `.cover img`에 `image-rendering:pixelated`가 걸림. 2배 이상 확대해 봐도 픽셀 경계가 번지지 않음
+- [ ] 표지 파일 300 KB 이하(단일 파일은 원래 크기), 페이지 그림 합계 600 KB 이하
 - [ ] `<img>`에 `width`·`height`·`alt`·`fetchpriority="high"`
 
----
+#### 18-15-2. 픽셀아트 표지 변환 (흐려짐 방지)
+
+생성 도구가 주는 픽셀아트 PNG는 보통 **작은 원래 그림(예 480×270)을 4배쯤 키운 것**이다. 이것을 1600×900처럼 **정수배가 아닌 크기로 줄이고 손실 압축**하면 픽셀 경계가 번져 흐릿해 보인다(2026-11 vector_db_lab에서 세 번 지적됨). 그래서 이렇게 변환한다.
+
+1. **격자 찾기:** 원본을 k×k 덩어리로 나눴을 때 덩어리 안 색이 모두 같은 가장 큰 k를 찾는다(보통 4, 가끔 3·5·6·8). 덩어리 안 표준편차가 1 미만이면 그 k가 맞다. 맞는 k가 없으면(생성 도구가 매끈하게 키운 그림) 픽셀아트로 다시 받기를 먼저 권한다.
+2. **원래 그림 뽑기:** 덩어리마다 한 점만 뽑아 원래 크기(가로 W, 세로 H) 그림을 만든다.
+3. **표지:** 원래 그림을 `NEAREST`로 **정수배 m**만큼 키운다. m은 가로가 1600 이상이 되는 가장 작은 정수(480 → 4, 640 → 3). **무손실 WebP**(`lossless=True`)로 저장한다.
+4. **썸네일·공유 미리보기:** 원래 그림에서 3:2(썸네일), 1200:630 비율(공유) 영역을 잘라 정수배로 키운 뒤, 필요하면 가장자리 몇 픽셀만 잘라 1200×800·1200×630에 맞춘다. 이것도 무손실.
+5. **화면:** `.cover img`에 `image-rendering:pixelated`.
+6. **점검:** 결과 표지의 한 부분을 4배로 확대해 픽셀 경계가 계단처럼 또렷한지 눈으로 본다.
+
+```python
+from PIL import Image; import numpy as np
+a = np.asarray(Image.open(src).convert('RGB'))
+for k in (8, 6, 5, 4, 3, 2):
+    H, W = a.shape[0]//k, a.shape[1]//k
+    blk = a[:H*k, :W*k].reshape(H, k, W, k, 3)
+    if blk.std(axis=(1, 3)).max() < 1: break
+else:
+    raise SystemExit('픽셀 격자가 없음 → 픽셀아트로 다시 받기')
+nat = Image.fromarray(blk[:, 0, :, 0, :])                 # 원래 그림 W×H
+m = -(-1600 // nat.width)                                  # 가로 1600 이상이 되는 정수배
+nat.resize((nat.width*m, nat.height*m), Image.NEAREST).save(out, 'WEBP', lossless=True, method=6)
+```
+
+**그림 자체의 세밀함이 부족할 때:** 원래 그림이 480×270이면 아무리 잘 변환해도 그 이상 세밀해지지 않는다. 더 세밀한 표지가 필요하면 지시문에 *higher pixel density, about 640×360 native pixel grid, each pixel crisp, no blur*를 더해 다시 받는다.
 
 ---
 
@@ -2440,7 +2466,7 @@ v1.8에서 더한 클래스(Theory~Framework)는 모든 분야가 함께 쓴다.
 | 확인 필요 목록 | `verified`가 false인 항목 (DOI, 쪽수, 외부 ID) — 사람이 채울 일 |
 | 버전 정보 | 꾸러미 버전, 만든 날, 등록부 버전 |
 
-- 캐릭터: 조수 말풍선 하나만. "출처 없는 주장은 꾸러미에 넣지 않았어요. 확인할 항목 {n}개는 아래에 있어요."
+- 캐릭터: 조수 말풍선 하나만. "출처 없는 주장은 꾸러미에 넣지 않았어요. 확인할 항목 {n}개는 아래에 있어요." **말풍선에는 본문과 같은 조수(하루) 그림(`img[data-who="asst"]`, 캐릭터 팩 그림)과 이름 "조수(하루)"를 넣는다. 그림 자리를 "조수" 글자 상자로 대신하지 않는다.** (`kgx.js` v1.5부터 페이지의 `Cast`·`SPRITE`·`LAB_PACK`에서 그림을 찾아 넣는다)
 - 이 섹션에는 용어 말풍선을 걸지 않는다.
 - 복사는 `navigator.clipboard`, 실패하면 텍스트를 선택해 보여 준다.
 
@@ -2694,6 +2720,8 @@ function buildPackage(scope){
 ---
 
 *이 스킬은 "초파리 뇌로 배우는 딥러닝" 1·2번 페이지와 "인공지능 알고리즘 패밀리" 시리즈의 캐릭터 설정을 바탕으로 만들었다. 캐릭터 설정이 바뀌면 5장과 부록 A만 고친다.*
+
+*v1.16 (2026-11-23): 18-15-2 픽셀아트 표지 변환을 새로 두었다 — 원래 픽셀 격자를 찾아 정수배·무손실로만 키우고, `.cover img`에 `image-rendering:pixelated`. 1600×900 손실 WebP 규칙(흐려짐의 원인)과 960 사본을 뺐다. 꾸러미의 조수 말풍선은 글자 상자가 아니라 캐릭터 그림으로(O-섹션 캐릭터 규칙, `kgx.js` v1.5).*
 
 *v1.5 (2026-10-25): 제2부에 O5장(영역 온톨로지 완성 파이프라인)을 더했다. 기본값은 1회차 실측(꾸러미 2개, 뼈대 v0.1)을 보고 정했다.*
 

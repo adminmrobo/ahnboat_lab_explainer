@@ -328,7 +328,7 @@ M5를 넘으면 "뼈대 v{판} 기준 완성"이라고 부른다. 그 뒤에는 
 | 항목 | 값 |
 |---|---|
 | 생성 | 16:9, 가로 1920 이상 |
-| 빌드 | WebP 1600×900 (220 KB 이하) + 960×540 (110 KB 이하). 단일 파일 페이지는 1600 하나를 base64로 |
+| 빌드 | 픽셀아트 원래 격자의 **정수배 무손실 WebP**(가로 1600 이상이 되는 가장 작은 정수배, 예 480×270 → 1920×1080, 300 KB 이하). 단일 파일 페이지는 원래 픽셀 크기 무손실 WebP 하나를 base64로. 정수배 아닌 크기 줄이기·손실 압축 금지 (본편 18-15-2) |
 | 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, 주판봇 |
 | 안전 영역 | 얼굴·손·핵심 소품은 좌우 12%, 위 10%, 아래 18% 안쪽 |
 | 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 매끈한 일러스트·벡터·3D로 받으면 다시 받는다 |
@@ -379,7 +379,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 | 단계 | 할 일 |
 |---|---|
 | 1 확인 | 16:9(±3%), 가로 1600 이상, 그림 안 글자 없음, 네 캐릭터가 모두 있고 외형이 같은지. 다르면 무엇이 다른지 적고 쓸지 묻는다 |
-| 2 변환 | WebP 1600×900·960×540, 용량 기준까지 품질을 낮춘다 |
+| 2 변환 | 본편 18-15-2: 원래 픽셀 격자를 찾아 `NEAREST` 정수배로 키우고 무손실 WebP. 썸네일·공유 미리보기도 원래 그림에서 잘라 정수배로. 4배 확대해 픽셀 경계가 또렷한지 본다 |
 | 3 넣기 | 아래 블록을 상단 내비 바로 아래에, `<!-- lab-cover -->`로 시작해 `<!-- /lab-cover -->`와 줄바꿈 하나로 끝나게 넣는다(앞에 줄바꿈을 더하지 않음). **블록 밖 본문은 바꾸지 않는다** |
 | 4 점검 | 폭 390·768·1280에서 얼굴 잘림 없음, 콘솔 오류 0, 가로 넘침 0, 페이지 그림 합계 600 KB 이하 |
 
@@ -388,15 +388,14 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 <style>.cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid #d5dbe2;color:#16212b;font-size:13px}@media (max-width:600px){.cover{max-height:none}}</style>
 <header class="cover" id="cover" data-img="cover_{N}">
   <picture>
-    <source type="image/webp" srcset="assets/img/cover_{N}_960.webp 960w, assets/img/cover_{N}.webp 1600w" sizes="100vw">
-    <img src="assets/img/cover_{N}.webp" width="1600" height="900" alt="{대체 글}" fetchpriority="high" decoding="async">
+    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async" style="image-rendering:pixelated">
   </picture>
   <span class="cover-chip">{시리즈 이름} · {N}</span>
 </header>
 <!-- /lab-cover -->
 ```
 
-`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다.
+`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다. 표지 CSS의 `.cover img`에는 반드시 `image-rendering:pixelated`를 건다(없으면 브라우저가 픽셀 경계를 뭉갠다).
 
 ### C-5. 프롬프트
 

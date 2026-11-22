@@ -1,11 +1,11 @@
 {
   "repo": "ahnboat_lab_explainer",
   "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
-  "updated": "2026-11-20",
+  "updated": "2026-11-23",
   "core": {
     "id": "ai-lab-explainer",
     "path": "SKILL.md",
-    "version": "1.15",
+    "version": "1.16",
     "builtin_domain": "ai"
   },
   "packs": [
@@ -127,7 +127,7 @@
       "id": "task/onto-retrofit",
       "kind": "task",
       "path": "packs/task/onto-retrofit/SKILL.md",
-      "version": "1.4",
+      "version": "1.5",
       "core_min": "1.9",
       "includes": [
         "packs/task/onto-retrofit/O5_pipeline.md",
