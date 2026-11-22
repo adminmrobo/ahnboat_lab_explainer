@@ -1,0 +1,1079 @@
+{
+ "version": "0.1",
+ "name": "AI 범죄학 영역 뼈대 (초안)",
+ "domain": "crime",
+ "note": "『AI 범죄와 자기 방어』(안상선, 2025)의 분석 틀(범죄경제학·게임이론·AI 분석)과 장 구성을 바탕으로 만든 작성자 초안. 공식 분류 체계가 아니며, 다른 분류와의 대응은 추후 확인 필요.",
+ "nodes": [
+  {
+   "id": "lab:area/ai-crime-basics",
+   "type": "Area",
+   "label": {
+    "ko": "AI 범죄의 기초",
+    "en": "Foundations of AI crime"
+   },
+   "level": 1,
+   "family": "ai-crime-basics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/tech-neutrality-crime",
+   "type": "Topic",
+   "label": {
+    "ko": "기술 중립과 범죄의 세 조건",
+    "en": "Technology neutrality and conditions for crime"
+   },
+   "level": 1,
+   "family": "ai-crime-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ai-crime-features",
+   "type": "Topic",
+   "label": {
+    "ko": "AI 범죄의 특징",
+    "en": "Distinctive features of AI crime"
+   },
+   "level": 1,
+   "family": "ai-crime-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/crime-as-a-service",
+   "type": "Topic",
+   "label": {
+    "ko": "범죄의 사업화·서비스화",
+    "en": "Crime as a service"
+   },
+   "level": 1,
+   "family": "ai-crime-basics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/crime-economics",
+   "type": "Area",
+   "label": {
+    "ko": "범죄경제학",
+    "en": "Economics of crime"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/expected-utility-crime",
+   "type": "Topic",
+   "label": {
+    "ko": "범죄의 기대효용(베커 모형)",
+    "en": "Expected utility of crime (Becker model)"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/crime-cost-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "범죄의 비용 구조",
+    "en": "Cost structure of crime"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/crime-opportunity-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "기회비용과 범죄 참여",
+    "en": "Opportunity cost and participation"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/breakeven-arrest-probability",
+   "type": "Topic",
+   "label": {
+    "ko": "손익분기 검거 확률",
+    "en": "Break-even probability of apprehension"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/deterrence-certainty",
+   "type": "Topic",
+   "label": {
+    "ko": "처벌의 확실성과 억제",
+    "en": "Certainty of punishment and deterrence"
+   },
+   "level": 1,
+   "family": "crime-economics",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/crime-games",
+   "type": "Area",
+   "label": {
+    "ko": "게임이론으로 본 범죄",
+    "en": "Game theory of crime"
+   },
+   "level": 2,
+   "family": "crime-games",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/signaling-game-crime",
+   "type": "Topic",
+   "label": {
+    "ko": "신호 게임과 속임",
+    "en": "Signaling games and deception"
+   },
+   "level": 2,
+   "family": "crime-games",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inspection-game",
+   "type": "Topic",
+   "label": {
+    "ko": "검사 게임",
+    "en": "Inspection game"
+   },
+   "level": 2,
+   "family": "crime-games",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ransom-bargaining",
+   "type": "Topic",
+   "label": {
+    "ko": "몸값 협상",
+    "en": "Ransom bargaining"
+   },
+   "level": 2,
+   "family": "crime-games",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/security-cooperation-dilemma",
+   "type": "Topic",
+   "label": {
+    "ko": "보안 협력의 딜레마",
+    "en": "Cooperation dilemma in security"
+   },
+   "level": 2,
+   "family": "crime-games",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/synthetic-media",
+   "type": "Area",
+   "label": {
+    "ko": "합성 미디어와 신원 위조",
+    "en": "Synthetic media and identity forgery"
+   },
+   "level": 2,
+   "family": "synthetic-media",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/deepfake-crime",
+   "type": "Topic",
+   "label": {
+    "ko": "딥페이크 범죄",
+    "en": "Deepfake crime"
+   },
+   "level": 2,
+   "family": "synthetic-media",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/voice-cloning-scam",
+   "type": "Topic",
+   "label": {
+    "ko": "음성 복제 사기",
+    "en": "Voice-cloning scams"
+   },
+   "level": 2,
+   "family": "synthetic-media",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/synthetic-identity",
+   "type": "Topic",
+   "label": {
+    "ko": "합성 신원",
+    "en": "Synthetic identity"
+   },
+   "level": 2,
+   "family": "synthetic-media",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/liars-dividend",
+   "type": "Topic",
+   "label": {
+    "ko": "거짓말쟁이의 배당",
+    "en": "Liar's dividend"
+   },
+   "level": 2,
+   "family": "synthetic-media",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/social-engineering",
+   "type": "Area",
+   "label": {
+    "ko": "피싱과 사회공학",
+    "en": "Phishing and social engineering"
+   },
+   "level": 2,
+   "family": "social-engineering",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/phishing",
+   "type": "Topic",
+   "label": {
+    "ko": "피싱",
+    "en": "Phishing"
+   },
+   "level": 2,
+   "family": "social-engineering",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/scam-funnel",
+   "type": "Topic",
+   "label": {
+    "ko": "사기 퍼널",
+    "en": "Scam funnel"
+   },
+   "level": 2,
+   "family": "social-engineering",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/impersonation",
+   "type": "Topic",
+   "label": {
+    "ko": "사칭",
+    "en": "Impersonation"
+   },
+   "level": 2,
+   "family": "social-engineering",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/automated-attacks",
+   "type": "Area",
+   "label": {
+    "ko": "자동화 공격",
+    "en": "Automated attacks"
+   },
+   "level": 2,
+   "family": "automated-attacks",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/attack-automation",
+   "type": "Topic",
+   "label": {
+    "ko": "공격 자동화",
+    "en": "Attack automation"
+   },
+   "level": 2,
+   "family": "automated-attacks",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/adaptive-evasion",
+   "type": "Topic",
+   "label": {
+    "ko": "적응형 탐지 회피",
+    "en": "Adaptive evasion"
+   },
+   "level": 2,
+   "family": "automated-attacks",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/autonomous-attack-agent",
+   "type": "Topic",
+   "label": {
+    "ko": "자율 공격 에이전트",
+    "en": "Autonomous attack agents"
+   },
+   "level": 2,
+   "family": "automated-attacks",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bot-traffic",
+   "type": "Topic",
+   "label": {
+    "ko": "봇과 에이전트 트래픽",
+    "en": "Bot and agent traffic"
+   },
+   "level": 2,
+   "family": "automated-attacks",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/financial-crime",
+   "type": "Area",
+   "label": {
+    "ko": "금융 범죄와 세탁",
+    "en": "Financial crime and laundering"
+   },
+   "level": 2,
+   "family": "financial-crime",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/crypto-theft",
+   "type": "Topic",
+   "label": {
+    "ko": "암호화폐 탈취",
+    "en": "Crypto asset theft"
+   },
+   "level": 2,
+   "family": "financial-crime",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ransomware-economy",
+   "type": "Topic",
+   "label": {
+    "ko": "랜섬웨어 산업",
+    "en": "Ransomware economy"
+   },
+   "level": 2,
+   "family": "financial-crime",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/money-laundering",
+   "type": "Topic",
+   "label": {
+    "ko": "자금 세탁",
+    "en": "Money laundering"
+   },
+   "level": 2,
+   "family": "financial-crime",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/first-party-fraud",
+   "type": "Topic",
+   "label": {
+    "ko": "제1자 사기",
+    "en": "First-party fraud"
+   },
+   "level": 2,
+   "family": "financial-crime",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/surveillance-privacy",
+   "type": "Area",
+   "label": {
+    "ko": "감시와 프라이버시",
+    "en": "Surveillance and privacy"
+   },
+   "level": 2,
+   "family": "surveillance-privacy",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/personal-data-raw-material",
+   "type": "Topic",
+   "label": {
+    "ko": "원재료로서의 개인정보",
+    "en": "Personal data as raw material"
+   },
+   "level": 2,
+   "family": "surveillance-privacy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reidentification",
+   "type": "Topic",
+   "label": {
+    "ko": "재식별",
+    "en": "Re-identification"
+   },
+   "level": 2,
+   "family": "surveillance-privacy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ai-surveillance",
+   "type": "Topic",
+   "label": {
+    "ko": "AI 감시",
+    "en": "AI surveillance"
+   },
+   "level": 2,
+   "family": "surveillance-privacy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/detection-response",
+   "type": "Area",
+   "label": {
+    "ko": "탐지와 대응",
+    "en": "Detection and response"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/crime-anomaly-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "범죄 이상 탐지",
+    "en": "Anomaly detection for crime"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/behavioral-detection",
+   "type": "Topic",
+   "label": {
+    "ko": "행위 기반 탐지",
+    "en": "Behavior-based detection"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/identity-verification",
+   "type": "Topic",
+   "label": {
+    "ko": "신원 확인(시점·생애주기)",
+    "en": "Identity verification (point-in-time and lifecycle)"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/defense-orchestration",
+   "type": "Topic",
+   "label": {
+    "ko": "방어 오케스트레이션",
+    "en": "Defense orchestration"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/threat-intel-sharing",
+   "type": "Topic",
+   "label": {
+    "ko": "위협 정보 공유",
+    "en": "Threat intelligence sharing"
+   },
+   "level": 3,
+   "family": "detection-response",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/institutions-policy",
+   "type": "Area",
+   "label": {
+    "ko": "제도와 정책",
+    "en": "Institutions and policy"
+   },
+   "level": 3,
+   "family": "institutions-policy",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/ai-crime-regulation",
+   "type": "Topic",
+   "label": {
+    "ko": "AI 범죄 규제",
+    "en": "Regulation of AI crime"
+   },
+   "level": 3,
+   "family": "institutions-policy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/incentive-design",
+   "type": "Topic",
+   "label": {
+    "ko": "인센티브·디스인센티브 설계",
+    "en": "Incentive design"
+   },
+   "level": 3,
+   "family": "institutions-policy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/enforcement-cooperation",
+   "type": "Topic",
+   "label": {
+    "ko": "집행과 국제 공조",
+    "en": "Enforcement and international cooperation"
+   },
+   "level": 3,
+   "family": "institutions-policy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-protection-law",
+   "type": "Topic",
+   "label": {
+    "ko": "개인정보 보호 법제",
+    "en": "Data protection law"
+   },
+   "level": 3,
+   "family": "institutions-policy",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/personal-defense",
+   "type": "Area",
+   "label": {
+    "ko": "개인 방어와 회복력",
+    "en": "Personal defense and resilience"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/layered-defense",
+   "type": "Topic",
+   "label": {
+    "ko": "다층 방어",
+    "en": "Layered defense"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/identity-lock",
+   "type": "Topic",
+   "label": {
+    "ko": "명의 잠금",
+    "en": "Identity locks"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/verification-procedure",
+   "type": "Topic",
+   "label": {
+    "ko": "확인 절차(콜백·확인 질문)",
+    "en": "Verification procedures"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/resilience",
+   "type": "Topic",
+   "label": {
+    "ko": "회복력",
+    "en": "Resilience"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/incident-response",
+   "type": "Topic",
+   "label": {
+    "ko": "사고 대응",
+    "en": "Incident response"
+   },
+   "level": 1,
+   "family": "personal-defense",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/future-threats",
+   "type": "Area",
+   "label": {
+    "ko": "미래 위협",
+    "en": "Future threats"
+   },
+   "level": 4,
+   "family": "future-threats",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/post-quantum-risk",
+   "type": "Topic",
+   "label": {
+    "ko": "양자 컴퓨팅과 암호",
+    "en": "Quantum computing and cryptography"
+   },
+   "level": 4,
+   "family": "future-threats",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/xr-iot-threats",
+   "type": "Topic",
+   "label": {
+    "ko": "XR·IoT 위협",
+    "en": "XR and IoT threats"
+   },
+   "level": 4,
+   "family": "future-threats",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/agentic-crime",
+   "type": "Topic",
+   "label": {
+    "ko": "에이전트형 범죄",
+    "en": "Agentic crime"
+   },
+   "level": 4,
+   "family": "future-threats",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/field-verification",
+   "type": "Area",
+   "label": {
+    "ko": "현장 검증",
+    "en": "Field verification"
+   },
+   "level": 4,
+   "family": "field-verification",
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/industry-report-reading",
+   "type": "Topic",
+   "label": {
+    "ko": "업계 보고서 읽기",
+    "en": "Reading industry reports"
+   },
+   "level": 4,
+   "family": "field-verification",
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/crime-statistics-literacy",
+   "type": "Topic",
+   "label": {
+    "ko": "범죄 통계 읽기(분모·분류)",
+    "en": "Crime statistics literacy"
+   },
+   "level": 4,
+   "family": "field-verification",
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/tech-neutrality-crime",
+   "p": "lab:broader",
+   "o": "lab:area/ai-crime-basics"
+  },
+  {
+   "s": "lab:topic/ai-crime-features",
+   "p": "lab:broader",
+   "o": "lab:area/ai-crime-basics"
+  },
+  {
+   "s": "lab:topic/crime-as-a-service",
+   "p": "lab:broader",
+   "o": "lab:area/ai-crime-basics"
+  },
+  {
+   "s": "lab:topic/expected-utility-crime",
+   "p": "lab:broader",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:topic/crime-cost-structure",
+   "p": "lab:broader",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:topic/crime-opportunity-cost",
+   "p": "lab:broader",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:topic/breakeven-arrest-probability",
+   "p": "lab:broader",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:topic/deterrence-certainty",
+   "p": "lab:broader",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:topic/signaling-game-crime",
+   "p": "lab:broader",
+   "o": "lab:area/crime-games"
+  },
+  {
+   "s": "lab:topic/inspection-game",
+   "p": "lab:broader",
+   "o": "lab:area/crime-games"
+  },
+  {
+   "s": "lab:topic/ransom-bargaining",
+   "p": "lab:broader",
+   "o": "lab:area/crime-games"
+  },
+  {
+   "s": "lab:topic/security-cooperation-dilemma",
+   "p": "lab:broader",
+   "o": "lab:area/crime-games"
+  },
+  {
+   "s": "lab:topic/deepfake-crime",
+   "p": "lab:broader",
+   "o": "lab:area/synthetic-media"
+  },
+  {
+   "s": "lab:topic/voice-cloning-scam",
+   "p": "lab:broader",
+   "o": "lab:area/synthetic-media"
+  },
+  {
+   "s": "lab:topic/synthetic-identity",
+   "p": "lab:broader",
+   "o": "lab:area/synthetic-media"
+  },
+  {
+   "s": "lab:topic/liars-dividend",
+   "p": "lab:broader",
+   "o": "lab:area/synthetic-media"
+  },
+  {
+   "s": "lab:topic/phishing",
+   "p": "lab:broader",
+   "o": "lab:area/social-engineering"
+  },
+  {
+   "s": "lab:topic/scam-funnel",
+   "p": "lab:broader",
+   "o": "lab:area/social-engineering"
+  },
+  {
+   "s": "lab:topic/impersonation",
+   "p": "lab:broader",
+   "o": "lab:area/social-engineering"
+  },
+  {
+   "s": "lab:topic/attack-automation",
+   "p": "lab:broader",
+   "o": "lab:area/automated-attacks"
+  },
+  {
+   "s": "lab:topic/adaptive-evasion",
+   "p": "lab:broader",
+   "o": "lab:area/automated-attacks"
+  },
+  {
+   "s": "lab:topic/autonomous-attack-agent",
+   "p": "lab:broader",
+   "o": "lab:area/automated-attacks"
+  },
+  {
+   "s": "lab:topic/bot-traffic",
+   "p": "lab:broader",
+   "o": "lab:area/automated-attacks"
+  },
+  {
+   "s": "lab:topic/crypto-theft",
+   "p": "lab:broader",
+   "o": "lab:area/financial-crime"
+  },
+  {
+   "s": "lab:topic/ransomware-economy",
+   "p": "lab:broader",
+   "o": "lab:area/financial-crime"
+  },
+  {
+   "s": "lab:topic/money-laundering",
+   "p": "lab:broader",
+   "o": "lab:area/financial-crime"
+  },
+  {
+   "s": "lab:topic/first-party-fraud",
+   "p": "lab:broader",
+   "o": "lab:area/financial-crime"
+  },
+  {
+   "s": "lab:topic/personal-data-raw-material",
+   "p": "lab:broader",
+   "o": "lab:area/surveillance-privacy"
+  },
+  {
+   "s": "lab:topic/reidentification",
+   "p": "lab:broader",
+   "o": "lab:area/surveillance-privacy"
+  },
+  {
+   "s": "lab:topic/ai-surveillance",
+   "p": "lab:broader",
+   "o": "lab:area/surveillance-privacy"
+  },
+  {
+   "s": "lab:topic/crime-anomaly-detection",
+   "p": "lab:broader",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:topic/behavioral-detection",
+   "p": "lab:broader",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:topic/identity-verification",
+   "p": "lab:broader",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:topic/defense-orchestration",
+   "p": "lab:broader",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:topic/threat-intel-sharing",
+   "p": "lab:broader",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:topic/ai-crime-regulation",
+   "p": "lab:broader",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:topic/incentive-design",
+   "p": "lab:broader",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:topic/enforcement-cooperation",
+   "p": "lab:broader",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:topic/data-protection-law",
+   "p": "lab:broader",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:topic/layered-defense",
+   "p": "lab:broader",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:topic/identity-lock",
+   "p": "lab:broader",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:topic/verification-procedure",
+   "p": "lab:broader",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:topic/resilience",
+   "p": "lab:broader",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:topic/incident-response",
+   "p": "lab:broader",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:topic/post-quantum-risk",
+   "p": "lab:broader",
+   "o": "lab:area/future-threats"
+  },
+  {
+   "s": "lab:topic/xr-iot-threats",
+   "p": "lab:broader",
+   "o": "lab:area/future-threats"
+  },
+  {
+   "s": "lab:topic/agentic-crime",
+   "p": "lab:broader",
+   "o": "lab:area/future-threats"
+  },
+  {
+   "s": "lab:topic/industry-report-reading",
+   "p": "lab:broader",
+   "o": "lab:area/field-verification"
+  },
+  {
+   "s": "lab:topic/crime-statistics-literacy",
+   "p": "lab:broader",
+   "o": "lab:area/field-verification"
+  },
+  {
+   "s": "lab:area/ai-crime-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/crime-economics"
+  },
+  {
+   "s": "lab:area/crime-economics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/crime-games"
+  },
+  {
+   "s": "lab:area/crime-economics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/synthetic-media"
+  },
+  {
+   "s": "lab:area/crime-economics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/social-engineering"
+  },
+  {
+   "s": "lab:area/crime-economics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/automated-attacks"
+  },
+  {
+   "s": "lab:area/crime-economics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/financial-crime"
+  },
+  {
+   "s": "lab:area/ai-crime-basics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/surveillance-privacy"
+  },
+  {
+   "s": "lab:area/synthetic-media",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:area/social-engineering",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:area/surveillance-privacy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/personal-defense"
+  },
+  {
+   "s": "lab:area/automated-attacks",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:area/synthetic-media",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/detection-response"
+  },
+  {
+   "s": "lab:area/crime-games",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:area/detection-response",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/institutions-policy"
+  },
+  {
+   "s": "lab:area/institutions-policy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/future-threats"
+  },
+  {
+   "s": "lab:area/detection-response",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/field-verification"
+  }
+ ]
+}

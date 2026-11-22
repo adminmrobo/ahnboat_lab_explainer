@@ -17,7 +17,7 @@
 | 하려는 일 | 함께 줄 파일 |
 |---|---|
 | 인공지능 자료로 새 페이지 | `SKILL.md` + `packs/character/` |
-| 통계·경제·회계·경영 자료로 새 페이지 | 위 + `packs/domain/DOMAIN_{stats·econ·acct·biz}.md` (두 분야에 걸치면 두 개) |
+| 통계·경제·회계·경영·AI 범죄학 자료로 새 페이지 | 위 + `packs/domain/DOMAIN_{stats·econ·acct·biz·crime}.md` (두 분야에 걸치면 두 개) |
 | 미션형 시리즈로 새 페이지 | 위 + `packs/lang/LANG_series_build_instructions.md` |
 | 한국어 페이지의 외국어판 6개 | `packs/lang/` 전체 (지시서 + `langpack/`) |
 | 번역된 시리즈에 언어 하나만 추가 (예: 베트남어) | `packs/task/TASK_add_lang.md` + `packs/lang/` |
@@ -44,7 +44,7 @@ ahnboat_lab_explainer/
 │  │  ├─ jupanbot_vector/           주판봇 v1 벡터 원본 (참고용)
 │  │  ├─ jupanbot_genspark/         주판봇 설정샷 Genspark 프롬프트
 │  │  └─ archive/money_robo/        옛 Money-Robo 그림 보관 (쓰지 않음)
-│  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz
+│  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz · crime
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)
 │  └─ task/                         작업 팩
 │     ├─ TASK_add_lang.md           언어 하나 추가 (기본값 vi)
@@ -84,7 +84,7 @@ Claude 계정에 설치한 본 스킬(맨 위 `SKILL.md` + `packs/`)과 `skills/
 |---|---|---|---|
 | 본 스킬 | `SKILL.md` | 1.9 | — |
 | 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.4 | 1.9 |
-| 분야 · 통계 / 경제 / 회계 / 경영 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
+| 분야 · 통계 / 경제 / 회계 / 경영 / AI 범죄학 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
 | 번역 | `packs/lang/` (지시서 + langpack) | 1.0 / langpack 1.3 | 1.9 |
 | 작업 · 언어 추가 | `packs/task/TASK_add_lang.md` | 1.0 | 1.9 |
 | 작업 · 검수 | `packs/task/TASK_review.md` | 1.0 | 1.9 |

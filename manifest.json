@@ -83,6 +83,16 @@
       "core_min": "1.8"
     },
     {
+      "id": "domain/crime",
+      "kind": "domain",
+      "code": "crime",
+      "label": "AI 범죄학",
+      "path": "packs/domain/DOMAIN_crime.md",
+      "version": "1.0",
+      "core_min": "1.8",
+      "backbone": "data/backbone_crime.json"
+    },
+    {
       "id": "lang/series-build-i18n",
       "kind": "lang",
       "path": "packs/lang/LANG_series_build_instructions.md",
@@ -136,7 +146,8 @@
       ],
       "needs_data": [
         "data/KG_00_registry.json",
-        "data/backbone_ai.json"
+        "data/backbone_ai.json",
+        "data/backbone_crime.json"
       ]
     }
   ],
