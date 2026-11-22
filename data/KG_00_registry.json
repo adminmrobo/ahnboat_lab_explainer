@@ -1,6 +1,6 @@
 {
  "version": "0.2",
- "updated": "2026-10-25",
+ "updated": "2026-11-23",
  "note": "시리즈 개념·문헌 ID 좌석표. 같은 개념이면 이 ID를 쓴다. 뼈대(Area·Topic)는 작성자 초안.",
  "entries": [
   {
@@ -1628,6 +1628,456 @@
    "label_en": "zheng2018complete",
    "pages": [
     "02"
+   ]
+  },
+  {
+   "id": "lab:concept/synthetic-identity",
+   "type": "Concept",
+   "label_ko": "합성 신원",
+   "label_en": "Synthetic identity",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/true-identity-theft",
+   "type": "Concept",
+   "label_ko": "실제 신원 도용",
+   "label_en": "True identity theft",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/first-party-fraud",
+   "type": "Concept",
+   "label_ko": "제1자 사기",
+   "label_en": "First-party fraud",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/scalable-identity",
+   "type": "Concept",
+   "label_ko": "규모(대량 생산)",
+   "label_en": "Scalable",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/adaptive-identity",
+   "type": "Concept",
+   "label_ko": "적응(심사 통과 학습)",
+   "label_en": "Adaptive",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/patient-identity",
+   "type": "Concept",
+   "label_ko": "인내(숙성 후 현금화)",
+   "label_en": "Patient",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/synthetic-farm",
+   "type": "Concept",
+   "label_ko": "합성 농장·합성 주택",
+   "label_en": "Synthetic farm / synthetic house",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/deepfake",
+   "type": "Concept",
+   "label_ko": "딥페이크",
+   "label_en": "Deepfake",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/injection-replay-attack",
+   "type": "Concept",
+   "label_ko": "주입·재생 공격",
+   "label_en": "Injection and replay attacks",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/proof-of-life",
+   "type": "Concept",
+   "label_ko": "생활 흔적(proof of life)",
+   "label_en": "Proof of life",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:indicator/zero-noise",
+   "type": "Indicator",
+   "label_ko": "잡음 없음 신호",
+   "label_en": "Zero-noise signal",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/denominator",
+   "type": "Concept",
+   "label_ko": "비율의 분모",
+   "label_en": "Denominator of a rate",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:method/point-in-time-verification",
+   "type": "Method",
+   "label_ko": "시점 검증",
+   "label_en": "Point-in-time verification",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:method/lifecycle-trust",
+   "type": "Method",
+   "label_ko": "생애주기 신뢰 모형",
+   "label_en": "Lifecycle identity trust model",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:method/orchestration",
+   "type": "Method",
+   "label_ko": "오케스트레이션",
+   "label_en": "Orchestration",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:method/step-up",
+   "type": "Method",
+   "label_ko": "단계별 추가 확인",
+   "label_en": "Adaptive step-up",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:method/liveness-check",
+   "type": "Method",
+   "label_ko": "라이브니스 검사",
+   "label_en": "Liveness check",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/is-identity-real",
+   "type": "Concept",
+   "label_ko": "질문 1 진짜 신원인가",
+   "label_en": "Is the identity real?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/is-identity-trusted",
+   "type": "Concept",
+   "label_ko": "질문 2 믿을 만한 신원인가",
+   "label_en": "Is the identity trusted?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/risk-now-and-over-time",
+   "type": "Concept",
+   "label_ko": "질문 3 지금·앞으로의 위험",
+   "label_en": "Risk now and over time",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:limitation/onboarding-blind-spot",
+   "type": "Limitation",
+   "label_ko": "가입 순간의 사각지대",
+   "label_en": "Onboarding blind spot",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:limitation/tool-seams",
+   "type": "Limitation",
+   "label_ko": "도구 사이 이음새",
+   "label_en": "Seams between tools",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:limitation/human-deepfake-detection",
+   "type": "Limitation",
+   "label_ko": "사람 눈의 딥페이크 판별 한계",
+   "label_en": "Limits of human deepfake detection",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/expected-utility-crime",
+   "type": "Concept",
+   "label_ko": "범죄의 기대효용 E(U)",
+   "label_en": "Expected utility of crime",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/arrest-probability",
+   "type": "Concept",
+   "label_ko": "검거 확률 p",
+   "label_en": "Probability of apprehension p",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/crime-gain",
+   "type": "Concept",
+   "label_ko": "성공 시 이익 g",
+   "label_en": "Gain from crime g",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/success-probability",
+   "type": "Concept",
+   "label_ko": "성공 확률 π",
+   "label_en": "Success probability π",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:concept/crime-unit-cost",
+   "type": "Concept",
+   "label_ko": "건당 비용 c",
+   "label_en": "Unit cost of crime c",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:analogy/empty-house-nameplate",
+   "type": "Analogy",
+   "label_ko": "빈집의 문패",
+   "label_en": "Nameplate on an empty house",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:indicator/synthetic-share",
+   "type": "Indicator",
+   "label_ko": "합성 신원 사기 비중",
+   "label_en": "Share of synthetic identity fraud",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:indicator/true-identity-share",
+   "type": "Indicator",
+   "label_ko": "실제 신원 도용 비중",
+   "label_en": "Share of true identity theft",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:indicator/first-party-share",
+   "type": "Indicator",
+   "label_ko": "제1자 사기 비중",
+   "label_en": "Share of first-party fraud",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:indicator/new-account-attack-rate",
+   "type": "Indicator",
+   "label_ko": "가입 시도 중 공격 비율",
+   "label_en": "Attack rate at new account creation",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:question/korea-synthetic-scale",
+   "type": "Question",
+   "label_ko": "한국 비대면 계좌의 합성 신원 규모는?",
+   "label_en": "Scale of synthetic identity in Korea?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:question/classification-effect",
+   "type": "Question",
+   "label_ko": "11% 증가 중 분류 변경의 몫은?",
+   "label_en": "How much of the rise is reclassification?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:question/human-detection-conditions",
+   "type": "Question",
+   "label_ko": "사람 판별 20%의 매체·조건은?",
+   "label_en": "Conditions behind the 20% figure?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:question/monitoring-cost",
+   "type": "Question",
+   "label_ko": "지속 감시가 정상 고객에게 주는 비용은?",
+   "label_en": "Cost of continuous monitoring to genuine customers?",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lnrs2026stopping",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions (2026) Stopping Synthetic Identity and Deepfake Fraud",
+   "label_en": "Stopping Synthetic Identity and Deepfake Fraud",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lnrs2026synthetic",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions (2026) The Synthetic Identity Problem Is Getting Harder to Ignore",
+   "label_en": "The Synthetic Identity Problem Is Getting Harder to Ignore",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lexisnexis2026synthetic",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions (2026) Synthetic Identities and Agentic Bots Posing as Human Contribute to 8% Global Rise in F",
+   "label_en": "Synthetic Identities and Agentic Bots Posing as Human Contribute to 8% Global Rise in Fraud Attacks",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/ads2026lexisnexis",
+   "type": "Work",
+   "label_ko": "ADS Group (2026) LexisNexis Risk Solutions releases Cybercrime Report",
+   "label_en": "LexisNexis Risk Solutions releases Cybercrime Report",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lexisnexis2024synthetics",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions UK (2024) UK synthetic identity research press release",
+   "label_en": "UK synthetic identity research press release",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/finextra2024uk",
+   "type": "Work",
+   "label_ko": "Finextra (2024) UK home to 3m 'Frankenstein' identities, posing multi-billion pound threat",
+   "label_en": "UK home to 3m 'Frankenstein' identities, posing multi-billion pound threat",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/yahoo2024three",
+   "type": "Work",
+   "label_ko": "Yahoo Finance (2024) Three million 'Frankenstein' identities pose a multi-billion pound fraud threat",
+   "label_en": "Three million 'Frankenstein' identities pose a multi-billion pound fraud threat",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/dhs2024impact",
+   "type": "Work",
+   "label_ko": "U.S. Department of Homeland Security (2024) Impact of Artificial Intelligence (AI) on Criminal and Illicit Activities",
+   "label_en": "Impact of Artificial Intelligence (AI) on Criminal and Illicit Activities",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/entrust2024deepfake",
+   "type": "Work",
+   "label_ko": "Entrust (2024) Deepfake Attacks Strike Every Five Minutes Amid 244% Surge in Digital Document Forgeries",
+   "label_en": "Deepfake Attacks Strike Every Five Minutes Amid 244% Surge in Digital Document Forgeries",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lexisnexis2026top",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions (2026) 2026 Top Fraud Trends (infographic)",
+   "label_en": "2026 Top Fraud Trends (infographic)",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/lexisnexis2026unmask",
+   "type": "Work",
+   "label_ko": "LexisNexis Risk Solutions (2026) Unmask Deepfakes and Forged Documents with the Power of AI",
+   "label_en": "Unmask Deepfakes and Forged Documents with the Power of AI",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/scmedia2026spain",
+   "type": "Work",
+   "label_ko": "SC Media (2026) Spain's data protection regulator clarifies biometric risk and necessity",
+   "label_en": "Spain's data protection regulator clarifies biometric risk and necessity",
+   "pages": [
+    "ai_crime_lab/R001"
+   ]
+  },
+  {
+   "id": "lab:work/ahn2025aicrime",
+   "type": "Work",
+   "label_ko": "안상선 (2025) AI 범죄와 자기 방어",
+   "label_en": "AI 범죄와 자기 방어",
+   "pages": [
+    "ai_crime_lab/R001"
    ]
   }
  ]
