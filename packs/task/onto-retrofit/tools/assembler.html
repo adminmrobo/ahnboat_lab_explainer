@@ -48,12 +48,14 @@ var TYPE={Concept:['개념','#82b8ff'],Method:['방법','#5ee39c'],BioAnalogue:[
   Dataset:['데이터','#c9c4a4'],Simulation:['시뮬레이션','#8a88a8'],QuizItem:['퀴즈','#9a90c4'],Work:['문헌','#e0d7a8'],
   Area:['영역','#eceaf3'],Topic:['주제','#9d9bb8'],Analogy:['비유','#ff86b8'],Term:['용어','#82b8ff'],
   Theory:['이론·모형','#9ab0d0'],Assumption:['가정','#c9b8ff'],Identity:['항등식','#b8a27a'],Standard:['기준·법령','#d9a066'],
-  Account:['계정과목','#b8a27a'],Indicator:['공식 지표','#7fd1a8'],Distribution:['확률분포','#9ab0d0'],Framework:['분석 틀','#d98c6a']};
+  Account:['계정과목','#b8a27a'],Indicator:['공식 지표','#7fd1a8'],Distribution:['확률분포','#9ab0d0'],Framework:['분석 틀','#d98c6a'],
+  Definition:['정의','#a8c8f0'],Theorem:['정리','#f0a8c8'],Axiom:['공리','#e0c070'],Proof:['증명','#c0a0e0'],Structure:['수학적 대상','#90d0c0'],Estimator:['추정량','#b0d890']};
 var REL={prerequisiteOf:'먼저 알아야 함',hasLimitation:'한계',addressedBy:'해결됨',partOf:'부분',bioAnalogueOf:'생물 대응',
   contrastsWith:'대비',supports:'뒷받침',assertedIn:'출처',evaluatedBy:'지표로 평가',evaluatedOn:'데이터로 평가',
   demonstratedBy:'시뮬레이션',raises:'질문을 낳음',relatedTo:'관련',solves:'해결 과제',analogyOf:'비유',assesses:'퀴즈 확인',
   broader:'상위 주제',explainedIn:'설명 위치',inspiredBy:'착상',assumes:'가정',derivedFrom:'유도됨',governedBy:'기준',
-  supersededBy:'개정으로 대체',measuredBy:'지표로 잼',appliesIn:'적용 관할'};
+  supersededBy:'개정으로 대체',measuredBy:'지표로 잼',appliesIn:'적용 관할',
+  implies:'함의',specialCaseOf:'특수한 경우',equivalentTo:'같음',provedBy:'증명',instanceOf:'예',counterexampleTo:'반례'};
 function tl(t){return (TYPE[t]||[t])[0];} function tc(t){return (TYPE[t]||[0,'#9d9bb8'])[1];}
 function pn(p){return p.replace(/^lab:/,'');}
 function lab(n){return n.label?(n.label.ko||n.label.en):n.id;}
@@ -62,7 +64,7 @@ function lab(n){return n.label?(n.label.ko||n.label.en):n.id;}
 var NS='urn:lab:';
 var CTX={'@vocab':NS,lab:NS,skos:'http://www.w3.org/2004/02/skos/core#',schema:'https://schema.org/',
   dct:'http://purl.org/dc/terms/',prov:'http://www.w3.org/ns/prov#',rdfs:'http://www.w3.org/2000/01/rdf-schema#'};
-var SKOS_T={Concept:1,Method:1,Task:1,Term:1,Limitation:1,BioAnalogue:1,Metric:1,Area:1,Topic:1,Theory:1,Assumption:1,Identity:1,Account:1,Distribution:1,Framework:1};
+var SKOS_T={Concept:1,Method:1,Task:1,Term:1,Limitation:1,BioAnalogue:1,Metric:1,Area:1,Topic:1,Theory:1,Assumption:1,Identity:1,Account:1,Distribution:1,Framework:1,Definition:1,Theorem:1,Axiom:1,Structure:1,Estimator:1};
 var SCH_T={Work:'schema:ScholarlyArticle',Claim:'schema:Claim',Dataset:'schema:Dataset',QuizItem:'schema:Question',Question:'schema:Question',Simulation:'schema:SoftwareApplication',Standard:'schema:Legislation',Indicator:'schema:StatisticalVariable'};
 function lit(o){var a=[]; Object.keys(o||{}).forEach(function(k){ var v=o[k]; (Array.isArray(v)?v:[v]).forEach(function(x){a.push({'@value':x,'@language':k});});}); return a;}
 function toJsonLd(g,meta){
@@ -78,7 +80,9 @@ function toJsonLd(g,meta){
   g.edges.forEach(function(e){ var s=byS[e.s]; if(!s)return; var k=e.p; (s[k]=s[k]||[]).push({'@id':e.o});
     if(e.p==='lab:broader')(s['skos:broader']=s['skos:broader']||[]).push({'@id':e.o});
     if(e.p==='lab:assertedIn')(s['prov:wasDerivedFrom']=s['prov:wasDerivedFrom']||[]).push({'@id':e.o});
-    if(e.p==='lab:relatedTo')(s['skos:related']=s['skos:related']||[]).push({'@id':e.o}); });
+    if(e.p==='lab:relatedTo')(s['skos:related']=s['skos:related']||[]).push({'@id':e.o});
+    if(e.p==='lab:specialCaseOf')(s['skos:broader']=s['skos:broader']||[]).push({'@id':e.o});
+    if(e.p==='lab:equivalentTo')(s['skos:exactMatch']=s['skos:exactMatch']||[]).push({'@id':e.o}); });
   if(meta)graph.unshift({'@id':NS+'page/'+meta.number,'@type':['schema:LearningResource','schema:WebPage'],'schema:name':meta.title,
     'schema:inLanguage':meta.language,'schema:dateCreated':meta.date,'schema:version':meta.version,'dct:isPartOf':meta.series,
     'schema:about':(meta.about||[]).map(function(a){return {'@id':a};}),'schema:educationalLevel':meta.educationalLevel,

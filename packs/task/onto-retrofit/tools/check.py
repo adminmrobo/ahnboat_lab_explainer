@@ -10,12 +10,23 @@ from retrofit import strip_marked
 TYPES = {'Concept', 'Method', 'BioAnalogue', 'Claim', 'Question', 'Limitation', 'Task', 'Metric', 'Dataset', 'Simulation',
          'QuizItem', 'Work', 'Analogy', 'Term', 'Area', 'Topic',
          # v1.3 (ai-lab-explainer v1.8~): 통계·경제·회계·경영 분야 클래스
-         'Theory', 'Assumption', 'Identity', 'Standard', 'Account', 'Indicator', 'Distribution', 'Framework'}
-DOMAINS = {'ai', 'stats', 'econ', 'acct', 'biz'}
+         'Theory', 'Assumption', 'Identity', 'Standard', 'Account', 'Indicator', 'Distribution', 'Framework',
+         # v1.7 (ai-lab-explainer v1.18~): 수학·논리·통계 클래스
+         'Definition', 'Theorem', 'Axiom', 'Proof', 'Structure', 'Estimator'}
+# 분야 코드는 data/domains.json이 원본이다. 파일을 못 읽으면 아래 기본값을 쓴다.
+DOMAINS = {'ai', 'ml', 'dl', 'neuro', 'rl', 'genai', 'llm', 'crime', 'stats', 'data', 'math', 'geom', 'logic',
+           'econ', 'fin', 'biz', 'acct', 'art'}
+try:
+    import os as _os
+    _p = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..', 'data', 'domains.json')
+    DOMAINS = {d['code'] for d in json.load(open(_p, encoding='utf-8'))['domains']}
+except Exception:
+    pass
 PRED = {'prerequisiteOf', 'hasLimitation', 'addressedBy', 'partOf', 'bioAnalogueOf', 'contrastsWith', 'supports', 'assertedIn',
         'evaluatedBy', 'evaluatedOn', 'demonstratedBy', 'raises', 'relatedTo', 'solves', 'analogyOf', 'assesses', 'broader',
         'explainedIn', 'inspiredBy',
-        'assumes', 'derivedFrom', 'governedBy', 'supersededBy', 'measuredBy', 'appliesIn'}
+        'assumes', 'derivedFrom', 'governedBy', 'supersededBy', 'measuredBy', 'appliesIn',
+        'implies', 'specialCaseOf', 'equivalentTo', 'provedBy', 'instanceOf', 'counterexampleTo'}
 
 
 def block(h, i):
@@ -69,6 +80,7 @@ def main():
             else:
                 for d in dm:
                     if d not in DOMAINS and not re.match(r'^[a-z]{2,12}$', d): err.append('domain 값 오류 %s: %s' % (d, n['id']))
+                    elif d not in DOMAINS: warn.append('등록되지 않은 분야 코드 %s (data/domains.json에 뼈대와 함께 등록해야 지도에 걸림): %s' % (d, n['id']))
         if n.get('type') == 'Standard' and not (n.get('asOf') and n.get('jurisdiction')): warn.append('Standard에 asOf·jurisdiction 없음: %s' % n['id'])
         an = (n.get('anchor') or '').lstrip('#')
         if an and an not in ids_in_page and an not in ('kg', 'export'): err.append('본문에 없는 anchor #%s: %s' % (an, n['id']))

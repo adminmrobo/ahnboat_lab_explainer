@@ -1,0 +1,851 @@
+{
+ "version": "0.1",
+ "name": "LLM·추론 엔지니어링 영역 뼈대 (초안)",
+ "domain": "llm",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(ACM CCS, CSO) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/llm-architecture",
+   "type": "Area",
+   "label": {
+    "ko": "LLM 구조",
+    "en": "LLM architecture"
+   },
+   "level": 2,
+   "family": "architecture",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/decoder-only",
+   "type": "Topic",
+   "label": {
+    "ko": "디코더 전용 트랜스포머",
+    "en": "Decoder-only transformers"
+   },
+   "level": 2,
+   "family": "architecture",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/kv-cache",
+   "type": "Topic",
+   "label": {
+    "ko": "KV 캐시",
+    "en": "KV cache"
+   },
+   "level": 2,
+   "family": "architecture",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mixture-of-experts",
+   "type": "Topic",
+   "label": {
+    "ko": "전문가 혼합(MoE)",
+    "en": "Mixture of experts"
+   },
+   "level": 2,
+   "family": "architecture",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/long-context",
+   "type": "Topic",
+   "label": {
+    "ko": "긴 문맥",
+    "en": "Long context"
+   },
+   "level": 2,
+   "family": "architecture",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-training",
+   "type": "Area",
+   "label": {
+    "ko": "사전학습과 정렬",
+    "en": "Pretraining and alignment"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/scaling-laws",
+   "type": "Topic",
+   "label": {
+    "ko": "스케일링 법칙",
+    "en": "Scaling laws"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/instruction-tuning",
+   "type": "Topic",
+   "label": {
+    "ko": "지시 튜닝",
+    "en": "Instruction tuning"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rlhf",
+   "type": "Topic",
+   "label": {
+    "ko": "사람 피드백 강화학습(RLHF)",
+    "en": "RLHF"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/preference-optimization",
+   "type": "Topic",
+   "label": {
+    "ko": "선호 최적화(DPO 등)",
+    "en": "Preference optimization (DPO etc.)"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/distillation",
+   "type": "Topic",
+   "label": {
+    "ko": "지식 증류",
+    "en": "Knowledge distillation"
+   },
+   "level": 3,
+   "family": "training",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-inference",
+   "type": "Area",
+   "label": {
+    "ko": "추론 엔지니어링",
+    "en": "Inference engineering"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/decoding-strategies",
+   "type": "Topic",
+   "label": {
+    "ko": "디코딩 전략",
+    "en": "Decoding strategies"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/speculative-decoding",
+   "type": "Topic",
+   "label": {
+    "ko": "추측 디코딩",
+    "en": "Speculative decoding"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/quantization",
+   "type": "Topic",
+   "label": {
+    "ko": "양자화",
+    "en": "Quantization"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/batching-serving",
+   "type": "Topic",
+   "label": {
+    "ko": "배칭과 서빙",
+    "en": "Batching and serving"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inference-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "추론 비용과 지연",
+    "en": "Inference cost and latency"
+   },
+   "level": 3,
+   "family": "inference",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-reasoning",
+   "type": "Area",
+   "label": {
+    "ko": "추론·사고 연쇄",
+    "en": "Reasoning"
+   },
+   "level": 3,
+   "family": "reasoning",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/chain-of-thought",
+   "type": "Topic",
+   "label": {
+    "ko": "사고 연쇄",
+    "en": "Chain of thought"
+   },
+   "level": 3,
+   "family": "reasoning",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/test-time-compute",
+   "type": "Topic",
+   "label": {
+    "ko": "추론 시간 계산",
+    "en": "Test-time compute"
+   },
+   "level": 3,
+   "family": "reasoning",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/self-consistency",
+   "type": "Topic",
+   "label": {
+    "ko": "자기 일관성",
+    "en": "Self-consistency"
+   },
+   "level": 3,
+   "family": "reasoning",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/reasoning-limits",
+   "type": "Topic",
+   "label": {
+    "ko": "추론의 한계",
+    "en": "Limits of LLM reasoning"
+   },
+   "level": 3,
+   "family": "reasoning",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-prompting",
+   "type": "Area",
+   "label": {
+    "ko": "프롬프트 공학",
+    "en": "Prompt engineering"
+   },
+   "level": 2,
+   "family": "prompting",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/prompt-patterns",
+   "type": "Topic",
+   "label": {
+    "ko": "프롬프트 패턴",
+    "en": "Prompt patterns"
+   },
+   "level": 2,
+   "family": "prompting",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/few-shot",
+   "type": "Topic",
+   "label": {
+    "ko": "퓨샷 예시",
+    "en": "Few-shot examples"
+   },
+   "level": 2,
+   "family": "prompting",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/structured-output",
+   "type": "Topic",
+   "label": {
+    "ko": "구조화 출력",
+    "en": "Structured output"
+   },
+   "level": 2,
+   "family": "prompting",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/system-prompts",
+   "type": "Topic",
+   "label": {
+    "ko": "시스템 지시문",
+    "en": "System prompts"
+   },
+   "level": 2,
+   "family": "prompting",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-retrieval",
+   "type": "Area",
+   "label": {
+    "ko": "검색 증강과 기억",
+    "en": "Retrieval and memory"
+   },
+   "level": 3,
+   "family": "retrieval",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/vector-search",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터 검색",
+    "en": "Vector search"
+   },
+   "level": 3,
+   "family": "retrieval",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/chunking-indexing",
+   "type": "Topic",
+   "label": {
+    "ko": "청크 나누기와 색인",
+    "en": "Chunking and indexing"
+   },
+   "level": 3,
+   "family": "retrieval",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/long-term-memory-llm",
+   "type": "Topic",
+   "label": {
+    "ko": "장기 기억과 대화 압축",
+    "en": "Long-term memory and context compression"
+   },
+   "level": 3,
+   "family": "retrieval",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/graph-rag",
+   "type": "Topic",
+   "label": {
+    "ko": "그래프 RAG",
+    "en": "Graph RAG"
+   },
+   "level": 3,
+   "family": "retrieval",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-agents",
+   "type": "Area",
+   "label": {
+    "ko": "에이전트",
+    "en": "Agents"
+   },
+   "level": 4,
+   "family": "agents",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/tool-use",
+   "type": "Topic",
+   "label": {
+    "ko": "도구 사용",
+    "en": "Tool use"
+   },
+   "level": 4,
+   "family": "agents",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/planning-agents",
+   "type": "Topic",
+   "label": {
+    "ko": "계획과 반복 실행",
+    "en": "Planning and iteration"
+   },
+   "level": 4,
+   "family": "agents",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multi-agent",
+   "type": "Topic",
+   "label": {
+    "ko": "다중 에이전트",
+    "en": "Multi-agent systems"
+   },
+   "level": 4,
+   "family": "agents",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/agent-evaluation",
+   "type": "Topic",
+   "label": {
+    "ko": "에이전트 평가",
+    "en": "Agent evaluation"
+   },
+   "level": 4,
+   "family": "agents",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/llm-evaluation-llm",
+   "type": "Area",
+   "label": {
+    "ko": "LLM 평가와 안전",
+    "en": "LLM evaluation and safety"
+   },
+   "level": 3,
+   "family": "evaluation-llm",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/llm-benchmarks",
+   "type": "Topic",
+   "label": {
+    "ko": "벤치마크",
+    "en": "Benchmarks"
+   },
+   "level": 3,
+   "family": "evaluation-llm",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hallucination",
+   "type": "Topic",
+   "label": {
+    "ko": "환각",
+    "en": "Hallucination"
+   },
+   "level": 3,
+   "family": "evaluation-llm",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/llm-as-judge",
+   "type": "Topic",
+   "label": {
+    "ko": "LLM 심사관",
+    "en": "LLM-as-a-judge"
+   },
+   "level": 3,
+   "family": "evaluation-llm",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/jailbreak-defense",
+   "type": "Topic",
+   "label": {
+    "ko": "탈옥과 방어",
+    "en": "Jailbreaks and defenses"
+   },
+   "level": 3,
+   "family": "evaluation-llm",
+   "domain": [
+    "llm"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/decoder-only",
+   "p": "lab:broader",
+   "o": "lab:area/llm-architecture"
+  },
+  {
+   "s": "lab:topic/kv-cache",
+   "p": "lab:broader",
+   "o": "lab:area/llm-architecture"
+  },
+  {
+   "s": "lab:topic/mixture-of-experts",
+   "p": "lab:broader",
+   "o": "lab:area/llm-architecture"
+  },
+  {
+   "s": "lab:topic/long-context",
+   "p": "lab:broader",
+   "o": "lab:area/llm-architecture"
+  },
+  {
+   "s": "lab:topic/scaling-laws",
+   "p": "lab:broader",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:topic/instruction-tuning",
+   "p": "lab:broader",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:topic/rlhf",
+   "p": "lab:broader",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:topic/preference-optimization",
+   "p": "lab:broader",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:topic/distillation",
+   "p": "lab:broader",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:topic/decoding-strategies",
+   "p": "lab:broader",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:topic/speculative-decoding",
+   "p": "lab:broader",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:topic/quantization",
+   "p": "lab:broader",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:topic/batching-serving",
+   "p": "lab:broader",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:topic/inference-cost",
+   "p": "lab:broader",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:topic/chain-of-thought",
+   "p": "lab:broader",
+   "o": "lab:area/llm-reasoning"
+  },
+  {
+   "s": "lab:topic/test-time-compute",
+   "p": "lab:broader",
+   "o": "lab:area/llm-reasoning"
+  },
+  {
+   "s": "lab:topic/self-consistency",
+   "p": "lab:broader",
+   "o": "lab:area/llm-reasoning"
+  },
+  {
+   "s": "lab:topic/reasoning-limits",
+   "p": "lab:broader",
+   "o": "lab:area/llm-reasoning"
+  },
+  {
+   "s": "lab:topic/prompt-patterns",
+   "p": "lab:broader",
+   "o": "lab:area/llm-prompting"
+  },
+  {
+   "s": "lab:topic/few-shot",
+   "p": "lab:broader",
+   "o": "lab:area/llm-prompting"
+  },
+  {
+   "s": "lab:topic/structured-output",
+   "p": "lab:broader",
+   "o": "lab:area/llm-prompting"
+  },
+  {
+   "s": "lab:topic/system-prompts",
+   "p": "lab:broader",
+   "o": "lab:area/llm-prompting"
+  },
+  {
+   "s": "lab:topic/vector-search",
+   "p": "lab:broader",
+   "o": "lab:area/llm-retrieval"
+  },
+  {
+   "s": "lab:topic/chunking-indexing",
+   "p": "lab:broader",
+   "o": "lab:area/llm-retrieval"
+  },
+  {
+   "s": "lab:topic/long-term-memory-llm",
+   "p": "lab:broader",
+   "o": "lab:area/llm-retrieval"
+  },
+  {
+   "s": "lab:topic/graph-rag",
+   "p": "lab:broader",
+   "o": "lab:area/llm-retrieval"
+  },
+  {
+   "s": "lab:topic/tool-use",
+   "p": "lab:broader",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:topic/planning-agents",
+   "p": "lab:broader",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:topic/multi-agent",
+   "p": "lab:broader",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:topic/agent-evaluation",
+   "p": "lab:broader",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:topic/llm-benchmarks",
+   "p": "lab:broader",
+   "o": "lab:area/llm-evaluation-llm"
+  },
+  {
+   "s": "lab:topic/hallucination",
+   "p": "lab:broader",
+   "o": "lab:area/llm-evaluation-llm"
+  },
+  {
+   "s": "lab:topic/llm-as-judge",
+   "p": "lab:broader",
+   "o": "lab:area/llm-evaluation-llm"
+  },
+  {
+   "s": "lab:topic/jailbreak-defense",
+   "p": "lab:broader",
+   "o": "lab:area/llm-evaluation-llm"
+  },
+  {
+   "s": "lab:area/llm-architecture",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-training"
+  },
+  {
+   "s": "lab:area/llm-architecture",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-inference"
+  },
+  {
+   "s": "lab:area/llm-training",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-reasoning"
+  },
+  {
+   "s": "lab:area/llm-prompting",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-retrieval"
+  },
+  {
+   "s": "lab:area/llm-prompting",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:area/llm-reasoning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:area/llm-retrieval",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-agents"
+  },
+  {
+   "s": "lab:area/llm-architecture",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-evaluation-llm"
+  }
+ ]
+}

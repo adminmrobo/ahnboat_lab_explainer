@@ -1,0 +1,1011 @@
+{
+ "version": "0.1",
+ "name": "기하·위상수학 영역 뼈대 (초안)",
+ "domain": "geom",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(MSC2020 51–58) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/geom-euclidean",
+   "type": "Area",
+   "label": {
+    "ko": "유클리드 기하",
+    "en": "Euclidean geometry"
+   },
+   "level": 1,
+   "family": "euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/euclidean-space",
+   "type": "Topic",
+   "label": {
+    "ko": "유클리드 공간",
+    "en": "Euclidean space"
+   },
+   "level": 1,
+   "family": "euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/distance-angle",
+   "type": "Topic",
+   "label": {
+    "ko": "거리와 각",
+    "en": "Distance and angle"
+   },
+   "level": 1,
+   "family": "euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/coordinates",
+   "type": "Topic",
+   "label": {
+    "ko": "좌표계",
+    "en": "Coordinate systems"
+   },
+   "level": 1,
+   "family": "euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transformations",
+   "type": "Topic",
+   "label": {
+    "ko": "합동·닮음·변환",
+    "en": "Congruence, similarity and transformations"
+   },
+   "level": 1,
+   "family": "euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-analytic-geometry",
+   "type": "Area",
+   "label": {
+    "ko": "좌표·벡터 기하",
+    "en": "Analytic and vector geometry"
+   },
+   "level": 1,
+   "family": "analytic-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/vectors-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터와 내적의 기하",
+    "en": "Vectors and the geometry of inner products"
+   },
+   "level": 1,
+   "family": "analytic-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lines-planes",
+   "type": "Topic",
+   "label": {
+    "ko": "직선과 평면",
+    "en": "Lines and planes"
+   },
+   "level": 1,
+   "family": "analytic-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/projections",
+   "type": "Topic",
+   "label": {
+    "ko": "사영",
+    "en": "Projections"
+   },
+   "level": 1,
+   "family": "analytic-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/high-dim-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "고차원 공간의 기하",
+    "en": "Geometry of high-dimensional space"
+   },
+   "level": 1,
+   "family": "analytic-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-non-euclidean",
+   "type": "Area",
+   "label": {
+    "ko": "비유클리드와 시공간",
+    "en": "Non-Euclidean geometry and spacetime"
+   },
+   "level": 3,
+   "family": "non-euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/non-euclidean-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "비유클리드 기하",
+    "en": "Non-Euclidean geometry"
+   },
+   "level": 3,
+   "family": "non-euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/minkowski-spacetime",
+   "type": "Topic",
+   "label": {
+    "ko": "민코프스키 시공간",
+    "en": "Minkowski spacetime"
+   },
+   "level": 3,
+   "family": "non-euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/metric-signature",
+   "type": "Topic",
+   "label": {
+    "ko": "계량 부호",
+    "en": "Metric signature"
+   },
+   "level": 3,
+   "family": "non-euclidean",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-differential-geometry",
+   "type": "Area",
+   "label": {
+    "ko": "미분기하",
+    "en": "Differential geometry"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/curves-surfaces",
+   "type": "Topic",
+   "label": {
+    "ko": "곡선과 곡면",
+    "en": "Curves and surfaces"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/curvature",
+   "type": "Topic",
+   "label": {
+    "ko": "곡률",
+    "en": "Curvature"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tangent-space",
+   "type": "Topic",
+   "label": {
+    "ko": "접공간",
+    "en": "Tangent space"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/covariant-derivative",
+   "type": "Topic",
+   "label": {
+    "ko": "공변미분과 접속",
+    "en": "Covariant derivative and connection"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/geodesics",
+   "type": "Topic",
+   "label": {
+    "ko": "측지선",
+    "en": "Geodesics"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/riemannian-metric",
+   "type": "Topic",
+   "label": {
+    "ko": "리만 계량",
+    "en": "Riemannian metric"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/parallel-transport",
+   "type": "Topic",
+   "label": {
+    "ko": "평행 이동",
+    "en": "Parallel transport"
+   },
+   "level": 4,
+   "family": "differential-geometry",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-manifolds",
+   "type": "Area",
+   "label": {
+    "ko": "다양체",
+    "en": "Manifolds"
+   },
+   "level": 4,
+   "family": "manifolds",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/manifold",
+   "type": "Topic",
+   "label": {
+    "ko": "다양체",
+    "en": "Manifold"
+   },
+   "level": 4,
+   "family": "manifolds",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/charts-atlas",
+   "type": "Topic",
+   "label": {
+    "ko": "좌표 조각과 아틀라스",
+    "en": "Charts and atlases"
+   },
+   "level": 4,
+   "family": "manifolds",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/manifold-hypothesis",
+   "type": "Topic",
+   "label": {
+    "ko": "다양체 가설",
+    "en": "Manifold hypothesis"
+   },
+   "level": 4,
+   "family": "manifolds",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/information-geometry",
+   "type": "Topic",
+   "label": {
+    "ko": "정보 기하",
+    "en": "Information geometry"
+   },
+   "level": 4,
+   "family": "manifolds",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-tensor-fields",
+   "type": "Area",
+   "label": {
+    "ko": "텐서와 텐서장",
+    "en": "Tensors and tensor fields"
+   },
+   "level": 4,
+   "family": "tensor-fields",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/tensor-transformation",
+   "type": "Topic",
+   "label": {
+    "ko": "텐서의 변환 법칙",
+    "en": "Tensor transformation laws"
+   },
+   "level": 4,
+   "family": "tensor-fields",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/index-notation",
+   "type": "Topic",
+   "label": {
+    "ko": "첨자 표기와 아인슈타인 합",
+    "en": "Index notation and Einstein summation"
+   },
+   "level": 4,
+   "family": "tensor-fields",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/differential-forms",
+   "type": "Topic",
+   "label": {
+    "ko": "미분형식",
+    "en": "Differential forms"
+   },
+   "level": 4,
+   "family": "tensor-fields",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-point-set",
+   "type": "Area",
+   "label": {
+    "ko": "위상공간 기초",
+    "en": "Point-set topology"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/topological-space",
+   "type": "Topic",
+   "label": {
+    "ko": "위상공간",
+    "en": "Topological space"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/open-closed-sets",
+   "type": "Topic",
+   "label": {
+    "ko": "열린집합과 닫힌집합",
+    "en": "Open and closed sets"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/continuity-topology",
+   "type": "Topic",
+   "label": {
+    "ko": "위상적 연속",
+    "en": "Continuity (topological)"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/homeomorphism",
+   "type": "Topic",
+   "label": {
+    "ko": "위상동형",
+    "en": "Homeomorphism"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/metric-space",
+   "type": "Topic",
+   "label": {
+    "ko": "거리공간",
+    "en": "Metric space"
+   },
+   "level": 2,
+   "family": "point-set",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-connectedness",
+   "type": "Area",
+   "label": {
+    "ko": "연결성과 콤팩트성",
+    "en": "Connectedness and compactness"
+   },
+   "level": 2,
+   "family": "connectedness",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/connectedness",
+   "type": "Topic",
+   "label": {
+    "ko": "연결성",
+    "en": "Connectedness"
+   },
+   "level": 2,
+   "family": "connectedness",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/compactness",
+   "type": "Topic",
+   "label": {
+    "ko": "콤팩트성",
+    "en": "Compactness"
+   },
+   "level": 2,
+   "family": "connectedness",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/topological-invariants",
+   "type": "Topic",
+   "label": {
+    "ko": "위상 불변량",
+    "en": "Topological invariants"
+   },
+   "level": 2,
+   "family": "connectedness",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-algebraic-topology",
+   "type": "Area",
+   "label": {
+    "ko": "대수적 위상",
+    "en": "Algebraic topology"
+   },
+   "level": 4,
+   "family": "algebraic-topology",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/fundamental-group",
+   "type": "Topic",
+   "label": {
+    "ko": "기본군",
+    "en": "Fundamental group"
+   },
+   "level": 4,
+   "family": "algebraic-topology",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/homology",
+   "type": "Topic",
+   "label": {
+    "ko": "호몰로지",
+    "en": "Homology"
+   },
+   "level": 4,
+   "family": "algebraic-topology",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/euler-characteristic",
+   "type": "Topic",
+   "label": {
+    "ko": "오일러 표수",
+    "en": "Euler characteristic"
+   },
+   "level": 4,
+   "family": "algebraic-topology",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/knots-surfaces",
+   "type": "Topic",
+   "label": {
+    "ko": "매듭과 곡면 분류",
+    "en": "Knots and classification of surfaces"
+   },
+   "level": 4,
+   "family": "algebraic-topology",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/geom-tda",
+   "type": "Area",
+   "label": {
+    "ko": "위상 데이터 분석",
+    "en": "Topological data analysis"
+   },
+   "level": 4,
+   "family": "tda",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/simplicial-complex",
+   "type": "Topic",
+   "label": {
+    "ko": "단체 복합체",
+    "en": "Simplicial complexes"
+   },
+   "level": 4,
+   "family": "tda",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/persistent-homology",
+   "type": "Topic",
+   "label": {
+    "ko": "지속 호몰로지",
+    "en": "Persistent homology"
+   },
+   "level": 4,
+   "family": "tda",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mapper",
+   "type": "Topic",
+   "label": {
+    "ko": "매퍼 알고리즘",
+    "en": "Mapper algorithm"
+   },
+   "level": 4,
+   "family": "tda",
+   "domain": [
+    "geom"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/euclidean-space",
+   "p": "lab:broader",
+   "o": "lab:area/geom-euclidean"
+  },
+  {
+   "s": "lab:topic/distance-angle",
+   "p": "lab:broader",
+   "o": "lab:area/geom-euclidean"
+  },
+  {
+   "s": "lab:topic/coordinates",
+   "p": "lab:broader",
+   "o": "lab:area/geom-euclidean"
+  },
+  {
+   "s": "lab:topic/transformations",
+   "p": "lab:broader",
+   "o": "lab:area/geom-euclidean"
+  },
+  {
+   "s": "lab:topic/vectors-geometry",
+   "p": "lab:broader",
+   "o": "lab:area/geom-analytic-geometry"
+  },
+  {
+   "s": "lab:topic/lines-planes",
+   "p": "lab:broader",
+   "o": "lab:area/geom-analytic-geometry"
+  },
+  {
+   "s": "lab:topic/projections",
+   "p": "lab:broader",
+   "o": "lab:area/geom-analytic-geometry"
+  },
+  {
+   "s": "lab:topic/high-dim-geometry",
+   "p": "lab:broader",
+   "o": "lab:area/geom-analytic-geometry"
+  },
+  {
+   "s": "lab:topic/non-euclidean-geometry",
+   "p": "lab:broader",
+   "o": "lab:area/geom-non-euclidean"
+  },
+  {
+   "s": "lab:topic/minkowski-spacetime",
+   "p": "lab:broader",
+   "o": "lab:area/geom-non-euclidean"
+  },
+  {
+   "s": "lab:topic/metric-signature",
+   "p": "lab:broader",
+   "o": "lab:area/geom-non-euclidean"
+  },
+  {
+   "s": "lab:topic/curves-surfaces",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/curvature",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/tangent-space",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/covariant-derivative",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/geodesics",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/riemannian-metric",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/parallel-transport",
+   "p": "lab:broader",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:topic/manifold",
+   "p": "lab:broader",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:topic/charts-atlas",
+   "p": "lab:broader",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:topic/manifold-hypothesis",
+   "p": "lab:broader",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:topic/information-geometry",
+   "p": "lab:broader",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:topic/tensor-transformation",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tensor-fields"
+  },
+  {
+   "s": "lab:topic/index-notation",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tensor-fields"
+  },
+  {
+   "s": "lab:topic/differential-forms",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tensor-fields"
+  },
+  {
+   "s": "lab:topic/topological-space",
+   "p": "lab:broader",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:topic/open-closed-sets",
+   "p": "lab:broader",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:topic/continuity-topology",
+   "p": "lab:broader",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:topic/homeomorphism",
+   "p": "lab:broader",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:topic/metric-space",
+   "p": "lab:broader",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:topic/connectedness",
+   "p": "lab:broader",
+   "o": "lab:area/geom-connectedness"
+  },
+  {
+   "s": "lab:topic/compactness",
+   "p": "lab:broader",
+   "o": "lab:area/geom-connectedness"
+  },
+  {
+   "s": "lab:topic/topological-invariants",
+   "p": "lab:broader",
+   "o": "lab:area/geom-connectedness"
+  },
+  {
+   "s": "lab:topic/fundamental-group",
+   "p": "lab:broader",
+   "o": "lab:area/geom-algebraic-topology"
+  },
+  {
+   "s": "lab:topic/homology",
+   "p": "lab:broader",
+   "o": "lab:area/geom-algebraic-topology"
+  },
+  {
+   "s": "lab:topic/euler-characteristic",
+   "p": "lab:broader",
+   "o": "lab:area/geom-algebraic-topology"
+  },
+  {
+   "s": "lab:topic/knots-surfaces",
+   "p": "lab:broader",
+   "o": "lab:area/geom-algebraic-topology"
+  },
+  {
+   "s": "lab:topic/simplicial-complex",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tda"
+  },
+  {
+   "s": "lab:topic/persistent-homology",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tda"
+  },
+  {
+   "s": "lab:topic/mapper",
+   "p": "lab:broader",
+   "o": "lab:area/geom-tda"
+  },
+  {
+   "s": "lab:area/geom-euclidean",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-analytic-geometry"
+  },
+  {
+   "s": "lab:area/geom-euclidean",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-point-set"
+  },
+  {
+   "s": "lab:area/geom-analytic-geometry",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-non-euclidean"
+  },
+  {
+   "s": "lab:area/geom-analytic-geometry",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-differential-geometry"
+  },
+  {
+   "s": "lab:area/geom-differential-geometry",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:area/geom-differential-geometry",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-tensor-fields"
+  },
+  {
+   "s": "lab:area/geom-point-set",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-connectedness"
+  },
+  {
+   "s": "lab:area/geom-point-set",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-manifolds"
+  },
+  {
+   "s": "lab:area/geom-connectedness",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-algebraic-topology"
+  },
+  {
+   "s": "lab:area/geom-algebraic-topology",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/geom-tda"
+  }
+ ]
+}

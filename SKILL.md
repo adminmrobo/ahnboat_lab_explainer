@@ -1,15 +1,15 @@
 ---
 name: ai-lab-explainer
-description: 논문·교과서 한 장을 박사·조수·초파리 연구원·주판봇이 진행하는 단일 HTML 교육 대시보드로 만든다. 인공지능·통계·경제·회계·경영. 먼저 분야를 묻는다. '연구실 HTML로' 같은 요청에 쓴다.
+description: 논문·교과서 한 장을 박사·조수·초파리 연구원·주판봇이 진행하는 단일 HTML 교육 대시보드로 만든다. 인공지능·통계·수학·논리·경제·금융·경영·회계 등 18개 분야. 먼저 분야를 묻는다. '연구실 HTML로' 같은 요청에 쓴다.
 ---
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.17 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.18 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats·econ·acct·biz·crime·math·geom·logic·genai·llm·data·fin·art.md · domain_registry: data/domains.json (18개 분야) · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념정리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
-> 스킬 이름 `ai-lab-explainer`는 기존 페이지·등록부·호출 문구와의 호환을 위해 그대로 둔다. v1.8부터 다루는 분야는 다섯 개이고, 인공지능 규칙은 이 문서 안에 **기본 분야 팩**으로 들어 있다.
+> 스킬 이름 `ai-lab-explainer`는 기존 페이지·등록부·호출 문구와의 호환을 위해 그대로 둔다. v1.18부터 다루는 분야는 18개(`data/domains.json`, 19-4)이고, 인공지능 규칙은 이 문서 안에 **기본 분야 팩**으로 들어 있다.
 >
 > **v1.9부터 이 문서는 저장소 `ahnboat_lab_explainer`의 `SKILL.md`(저장소 맨 위)다.** 캐릭터(5장·18-3~18-5·부록 A)는 캐릭터 팩, 검수 절차(14장)는 검수 팩, 영역 완성 파이프라인(O5)은 온톨로지 보강 팩으로 옮겼고, 이 문서에는 참조만 남겼다(19-6).
 
@@ -1729,14 +1729,33 @@ nat.resize((nat.width*m, nat.height*m), Image.NEAREST).save(out, 'WEBP', lossles
 
 ### 19-4. 분야 코드와 파일
 
-| 번호 | 분야 | 코드 | 팩 |
-|---|---|---|---|
-| 1 | 인공지능 | `ai` | 이 문서 안 |
-| 2 | 통계학 | `stats` | `DOMAIN_stats.md` |
-| 3 | 경제학 | `econ` | `DOMAIN_econ.md` |
-| 4 | 회계학 | `acct` | `DOMAIN_acct.md` |
-| 5 | 경영학 | `biz` | `DOMAIN_biz.md` |
-| 6 | 사용자 정의 | 영문 소문자 (예: `mkt`) | 15-14로 만든 `DOMAIN_{코드}.md`, 없으면 가장 가까운 팩 |
+v1.18부터 분야 목록의 원본은 **`data/domains.json`**(분야 등록부)이다. 노드의 `domain` 값은 이 파일의 `code` 중 하나이고, 분야마다 뼈대 파일(`data/backbone_{code}.json`)이 있다. 이 표는 그 요약이다. ahnboat.xyz의 8개 콘텐츠 분류(서버랙)와는 따로 간다 — 콘텐츠 분류는 주제 묶음, 분야는 지식이 속한 학문이다.
+
+| 묶음 | 분야 | 코드 | 뼈대 | 팩 |
+|---|---|---|---|---|
+| 인공지능 | 인공지능(공통) | `ai` | `backbone_ai.json` 전체 | 이 문서 안 |
+| | 머신러닝 | `ml` | `backbone_ai.json`의 영역 5개 | 이 문서 안 |
+| | 딥러닝 | `dl` | `backbone_ai.json`의 영역 8개 | 이 문서 안 |
+| | 뇌과학 | `neuro` | `backbone_ai.json`의 신경과학 영역 | 이 문서 안 |
+| | 강화학습·로봇 | `rl` | `backbone_ai.json`의 강화 학습 영역 | 이 문서 안 |
+| | 생성형 AI | `genai` | `backbone_genai.json` | `DOMAIN_genai.md` |
+| | LLM·추론 엔지니어링 | `llm` | `backbone_llm.json` | `DOMAIN_llm.md` |
+| | AI 범죄·보안 | `crime` | `backbone_crime.json` | `DOMAIN_crime.md` |
+| 데이터 | 통계학 | `stats` | `backbone_stats.json` | `DOMAIN_stats.md` |
+| | 데이터 공학·DB | `data` | `backbone_data.json` | `DOMAIN_data.md` |
+| 수학 | 수학(해석·대수) | `math` | `backbone_math.json` | `DOMAIN_math.md` |
+| | 기하·위상수학 | `geom` | `backbone_geom.json` | `DOMAIN_geom.md` |
+| | 논리학 | `logic` | `backbone_logic.json` | `DOMAIN_logic.md` |
+| 사회과학 | 경제학 | `econ` | `backbone_econ.json` | `DOMAIN_econ.md` |
+| | 금융·핀테크·블록체인 | `fin` | `backbone_fin.json` | `DOMAIN_fin.md` |
+| | 경영학 | `biz` | `backbone_biz.json` | `DOMAIN_biz.md` |
+| | 회계학 | `acct` | `backbone_acct.json` | `DOMAIN_acct.md` |
+| 그림 | 그림·캐릭터 구조 | `art` | `backbone_art.json` | `DOMAIN_art.md` |
+| 사용자 정의 | 영문 소문자 2~12자 (예: `mkt`) | | 새로 만든다 | 15-14로 만든 `DOMAIN_{코드}.md`, 없으면 가장 가까운 팩 |
+
+- `ml`·`dl`·`neuro`·`rl`은 새 뼈대가 아니라 인공지능 뼈대의 영역을 나눠 보는 **렌즈**다(`domains.json`의 `backbone_areas`). 이 분야 노드에는 `["ai","ml"]`처럼 `ai`를 함께 쓴다.
+- **새 분야를 더하는 법:** ① `backbone_{code}.json`을 O5-3 형식으로 만든다(영역 4~25, 주제마다 `broader` 하나) ② 그 Area·Topic을 등록부에 더한다 ③ `domains.json`에 한 줄(색은 기존과 구분되게) ④ 다른 분야와 잇는 관계는 `backbone_bridge.json`에만 적는다 ⑤ 필요하면 분야 팩. 뼈대 없이 `domain`에 새 코드만 쓰지 않는다 — 지도에서 걸 곳이 없는 섬이 된다.
+- **분야 사이 다리 `backbone_bridge.json`:** 같은 지식이 두 뼈대에 다른 ID로 있으면 `equivalentTo`(ID는 바꾸지 않는다), 분야를 넘는 선수·특수 경우·비유는 `prerequisiteOf`·`specialCaseOf`·`analogyOf`. 페이지에서 쓰는 개념 노드는 다리를 거치지 않고 해당 분야 뼈대 주제에 바로 `broader`로 건다(주 분야 1개 + 보조 분야 1개까지).
 
 **팩 파일 형식:** 맨 위에 머리말(`domain`, `label`, `version`, `core_min: 1.8`), 그 아래 `## P1` ~ `## P12` 절을 이 순서로. 해당 없는 절은 지우지 않고 "없음"이라고 적는다.
 
@@ -2154,7 +2173,7 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 공란이다. 예�
 | `page`, `anchor` | 필수 | 설명이 있는 페이지와 섹션. 앵커는 실제로 존재해야 한다 |
 | `level` | 선택 | 난이도 1(기초)~5(연구 수준). 단계 번호를 기준으로 |
 | `family` | 선택 | 주제 묶음 (인공지능): `basics`, `optimization`, `vision`, `sequence`, `rl`, `generative`, `ensemble`, `evaluation`, `unsupervised`, `systems`, `ethics`, `neuro`. 다른 분야는 분야 팩 P9의 값 |
-| `domain` | 필수 (v1.8~) | 분야 코드 배열: `ai`, `stats`, `econ`, `acct`, `biz` 또는 사용자 정의(19-4). 같은 개념이 여러 분야에 나오면 배열에 더한다 |
+| `domain` | 필수 (v1.8~) | 분야 코드 배열: `data/domains.json`의 코드(19-4) — `ai`, `ml`, `dl`, `neuro`, `rl`, `genai`, `llm`, `crime`, `stats`, `data`, `math`, `geom`, `logic`, `econ`, `fin`, `biz`, `acct`, `art` 또는 등록한 사용자 정의 코드. 같은 개념이 여러 분야에 나오면 배열에 더한다 |
 | `asOf`, `jurisdiction` | 공식 통계·기준·법령 노드에 필수 | 기준일(`2025-12-31`), 관할·기준 체계(`K-IFRS`, `KR-GAAP`, `US-GAAP`, `KR-tax` 등) |
 | `anchorType`, `flyStrength` | 선택 | 7장의 앵커(A/B/C/D)와 생물 대응 강도(strong/mid/weak/none) |
 | `status` | 필수 | `known`(분야에 알려진 지식) 기본. 개인 연구 레이어(O3장)에서 `learned`, `researching`, `planned`, `idea`, `gap`으로 바뀐다 |
@@ -2190,8 +2209,14 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 공란이다. 예�
 | `Indicator` | 공식 지표 (소비자물가지수, 실업률) | 경제·경영 |
 | `Distribution` | 확률분포 (정규, 이항, t) | 통계 |
 | `Framework` | 분석 틀 (5 Forces, SWOT) — 법칙이 아니라 생각을 정리하는 틀 | 경영 |
+| `Definition` | 정의 (연속의 정의, 위상공간의 정의, 불편추정량의 정의) | 수학·논리·통계 |
+| `Theorem` | 정리·보조정리·따름정리 (중심극한정리, 슬러츠키 분해, 오일러-라그랑주 방정식, 불완전성 정리). 증명된 명제 | 수학·통계·경제·논리 |
+| `Axiom` | 공리·공준 (선택 공리, 확률의 공리, 현시선호 공리) | 수학·논리·경제 |
+| `Proof` | 증명·유도 과정 한 편 (귀류법으로 보인 소수의 무한성) | 수학·논리 |
+| `Structure` | 수학적 대상·공간 (군, 벡터공간, 위상공간, 다양체, 힐베르트 공간) | 수학·기하·위상 |
+| `Estimator` | 추정량·검정통계량 (표본평균, OLS 추정량, t통계량) | 통계·계량경제 |
 
-v1.8에서 더한 클래스(Theory~Framework)는 모든 분야가 함께 쓴다. 어떤 클래스를 주로 쓰는지는 분야 팩 P9에 있다.
+v1.8에서 더한 클래스(Theory~Framework)와 v1.18에서 더한 클래스(Definition~Estimator)는 모든 분야가 함께 쓴다. **`Theory`와 `Theorem`의 구분:** `Theory`는 가정 위에 세운 모형·이론 체계(IS-LM, 네트워크재 수요이론), `Theorem`은 증명된 하나의 명제다. 증명 없이 널리 받아들여진 경험 법칙은 `Claim`이다. 어떤 클래스를 주로 쓰는지는 분야 팩 P9에 있다.
 
 ### O1-4. 관계(edge) 형식과 핵심 어휘
 
@@ -2225,9 +2250,17 @@ v1.8에서 더한 클래스(Theory~Framework)는 모든 분야가 함께 쓴다.
 | `lab:supersededBy` | 개정으로 대체됨 | 옛 기준서 → 새 기준서 | 옛 → 새 |
 | `lab:measuredBy` | 공식 지표로 잰다 | 물가 → 소비자물가지수 | 개념 → 지표 |
 | `lab:appliesIn` | 그 관할에서 적용 | 기준·법령 → 관할 | 기준 → 관할 |
+| `lab:implies` | 함의 (A이면 B) | 미분가능 → 연속 | 조건 → 결론 |
+| `lab:specialCaseOf` | 특수한 경우 (B의 조건을 좁힌 것이 A) | 유클리드 공간 → 힐베르트 공간, 선형 회귀 → 일반화선형모형 | 특수 → 일반 |
+| `lab:equivalentTo` | 서로 같다 (동치, 또는 같은 지식의 다른 ID) | 연속 ↔ 열린집합의 역상이 열림 | 양방향 (한 번만 적음) |
+| `lab:provedBy` | 이 증명·방법으로 보인다 | 소수의 무한성 → 귀류법 증명 | 정리 → 증명 |
+| `lab:instanceOf` | 구체적인 예 (개체 → 종류) | ℝⁿ → 벡터공간, 정규분포 → 지수족 | 예 → 종류 |
+| `lab:counterexampleTo` | 반례 | 바이어슈트라스 함수 → "연속이면 미분가능" | 반례 → 거짓 명제 |
 | `lab:relatedTo` | 그 밖의 관련 (마지막 수단) | | 양방향 |
 
 **규칙:** `relatedTo`는 다른 관계로 표현할 수 없을 때만 쓴다(전체 관계의 15% 이하). 관계마다 근거 앵커가 필요하다.
+
+**`broader`와 `specialCaseOf`·`instanceOf`의 구분 (v1.18):** `broader`는 개념을 **뼈대 주제**(분류)에 거는 관계, `specialCaseOf`는 수학적으로 조건을 좁힌 관계, `instanceOf`는 구체적인 예와 그 종류의 관계다. 수학·통계 페이지에서 "A는 B의 한 경우"를 모두 `broader`로 적으면 분류와 수학적 포함이 섞여 지도가 흐려진다.
 
 ### O1-5. 외부 온톨로지 매핑 표
 
@@ -2252,6 +2285,8 @@ v1.8에서 더한 클래스(Theory~Framework)는 모든 분야가 함께 쓴다.
 | `assertedIn` | — | `schema:citation` | — | — | `prov:wasDerivedFrom`, `cito:citesAsEvidence` |
 | `assesses` | — | `schema:educationalAlignment` (근사) | — | — | |
 | `match.rel` | `skos:exactMatch` / `skos:closeMatch` | `schema:sameAs` (exact만) | `owl:sameAs` (exact만) | — | closeMatch를 sameAs로 바꾸지 않는다 |
+
+**v1.18 클래스·관계의 기본 매핑:** `Definition`·`Theorem`·`Axiom`·`Structure`·`Estimator` → `skos:Concept` / `schema:DefinedTerm`, `Proof` → `schema:CreativeWork`(근사). `equivalentTo` → `skos:exactMatch`(같은 분류 체계 안이면 `owl:equivalentClass`, 근사), `specialCaseOf` → `skos:broader`(정보 손실, `lab:` 속성 함께) / Wikidata `P279`, `instanceOf` → `rdf:type`(근사) / Wikidata `P31`, `implies`·`provedBy`·`counterexampleTo`는 `lab:` 속성으로 내보낸다. 수학 외부 분류는 MSC2020, 논리·지식 표현은 MSC2020 03과 ACM CCS.
 
 **v1.8 클래스의 기본 매핑:** `Theory`·`Assumption`·`Identity`·`Account`·`Distribution`·`Framework` → `skos:Concept` / `schema:DefinedTerm`, `Standard` → `schema:Legislation`(근사), `Indicator` → `schema:StatisticalVariable`(근사). `assumes`·`derivedFrom`·`governedBy`·`supersededBy`·`measuredBy`·`appliesIn`은 대상에 없으면 `lab:` 속성으로 함께 내보낸다.
 
@@ -2732,6 +2767,8 @@ function buildPackage(scope){
 ---
 
 *이 스킬은 "초파리 뇌로 배우는 딥러닝" 1·2번 페이지와 "인공지능 알고리즘 패밀리" 시리즈의 캐릭터 설정을 바탕으로 만들었다. 캐릭터 설정이 바뀌면 5장과 부록 A만 고친다.*
+
+*v1.18 (2026-11-24): 분야를 18개로 넓히고 분야 등록부 `data/domains.json`을 원본으로 삼았다(19-4). 뼈대 12개(경제·통계·수학·기하위상·논리·생성형 AI·LLM·데이터·금융·경영·회계·그림, 영역 142·주제 550)와 분야 사이 다리 `backbone_bridge.json`을 더하고, `ml`·`dl`·`neuro`·`rl`을 인공지능 뼈대의 렌즈로 정했다. 수학·논리·통계용 클래스 6개(Definition·Theorem·Axiom·Proof·Structure·Estimator)와 관계 6개(implies·specialCaseOf·equivalentTo·provedBy·instanceOf·counterexampleTo)를 더했다(O1-3·O1-4·O1-5). 계기: 인공지능 용어 중심 온톨로지라 경제·통계·수학·위상·해석·기하·논리 페이지가 걸 곳이 없어 페이지마다 임시 뼈대를 만들던 문제(네트워크재 수요 정리의 `backbone_econ 0.1`).*
 
 *v1.17 (2026-11-23): 18-15-3 픽셀 깨짐 보정 코드(px-fix v1)를 새로 두고 모든 페이지에 넣게 했다. `.cover img`·`img[data-who]`의 `image-rendering:pixelated` 강제를 뺐다 — 딱 떨어지지 않는 배율에서 픽셀이 들쭉날쭉해져 깨져 보이던 원인(저장소 144곳 점검에서 61곳). 정수배 무손실 1920 표지(18-15-2)는 그대로 둔다.*
 

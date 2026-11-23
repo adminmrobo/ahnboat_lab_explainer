@@ -17,7 +17,7 @@
 | 하려는 일 | 함께 줄 파일 |
 |---|---|
 | 인공지능 자료로 새 페이지 | `SKILL.md` + `packs/character/` |
-| 통계·경제·회계·경영·AI 범죄학 자료로 새 페이지 | 위 + `packs/domain/DOMAIN_{stats·econ·acct·biz·crime}.md` (두 분야에 걸치면 두 개) |
+| 인공지능 밖 분야 자료로 새 페이지 | 위 + `packs/domain/DOMAIN_{코드}.md` (두 분야에 걸치면 두 개). 분야 코드 18개는 `data/domains.json` |
 | 미션형 시리즈로 새 페이지 | 위 + `packs/lang/LANG_series_build_instructions.md` |
 | 한국어 페이지의 외국어판 6개 | `packs/lang/` 전체 (지시서 + `langpack/`) |
 | 번역된 시리즈에 언어 하나만 추가 (예: 베트남어) | `packs/task/TASK_add_lang.md` + `packs/lang/` |
@@ -44,12 +44,12 @@ ahnboat_lab_explainer/
 │  │  ├─ jupanbot_vector/           주판봇 v1 벡터 원본 (참고용)
 │  │  ├─ jupanbot_genspark/         주판봇 설정샷 Genspark 프롬프트
 │  │  └─ archive/money_robo/        옛 Money-Robo 그림 보관 (쓰지 않음)
-│  ├─ domain/                       분야 팩: DOMAIN_stats · econ · acct · biz · crime
+│  ├─ domain/                       분야 팩 13개: stats · econ · acct · biz · crime · math · geom · logic · genai · llm · data · fin · art
 │  ├─ lang/                         번역 팩: 제작 지시서 + langpack/ (v1.3)
 │  └─ task/                         작업 팩
 │     ├─ TASK_add_lang.md           언어 하나 추가 (기본값 vi)
 │     ├─ TASK_review.md             검수 (범용 평가 프롬프트 + 해설 대시보드 연결)
-│     └─ onto-retrofit/             온톨로지 보강 (ai-lab-retrofit v1.6 + O5 파이프라인)
+│     └─ onto-retrofit/             온톨로지 보강 (ai-lab-retrofit v1.7 + O5 파이프라인)
 ├─ skills/                          연구실 스킬 4종 백업 (계정에 설치된 판과 같게 유지)
 │  ├─ ai-lab-explainer-plain/       v1.2 · 비전공자판 새로 만들기 (교수법 9장 내장)
 │  ├─ ai-lab-extend/                v1.2 · 기존 페이지 업데이트·교안 검토 (교수법 8장 내장)
@@ -57,8 +57,11 @@ ahnboat_lab_explainer/
 │  └─ ai-lab-report-finding/        v1.2 · 리포트 발견편 (교수법 10장 내장)
 ├─ old_skill/                       폐기·구형 스킬 보관 (불러와 쓰지 않음)
 ├─ data/                            시리즈 데이터 (한 벌만)
-│  ├─ KG_00_registry.json           개념·문헌 ID 등록부 (모든 분야 공용)
-│  └─ backbone_ai.json              인공지능 영역 뼈대 초안 v0.1
+│  ├─ KG_00_registry.json           개념·문헌 ID 등록부 (모든 분야 공용, v0.3)
+│  ├─ domains.json                  분야 등록부 18개 (코드·이름·색·뼈대) — 분야 목록의 원본
+│  ├─ backbone_ai.json              인공지능 영역 뼈대 초안 v0.1 (ml·dl·neuro·rl 렌즈 포함)
+│  ├─ backbone_{코드}.json          분야 뼈대 초안 v0.1 — econ·stats·math·geom·logic·genai·llm·data·fin·biz·acct·art·crime
+│  └─ backbone_bridge.json          분야 사이 다리 (같음·선수·특수 경우·비유)
 └─ docs/preview_all_96.png
 ```
 
@@ -70,7 +73,7 @@ ahnboat_lab_explainer/
 |---|---|
 | `SKILL.md`, `manifest.json`, `packs/character/CHAR_lab4.md`, `packs/character/character_pack/` (`webp/192`는 빼도 됨), `packs/domain/`, `data/` | `packs/character/setting_shots/`·`archive/`·`jupanbot_genspark/ref/` (약 18 MB, 그림 그릴 때만), `docs/`, `packs/lang/langpack/tm_seed/` (번역할 때만) |
 
-온톨로지 보강만 따로 쓸 때는 `packs/task/onto-retrofit/`을 별도 스킬(`ai-lab-retrofit`)로 넣고 `data/`의 두 파일을 함께 둔다.
+온톨로지 보강만 따로 쓸 때는 `packs/task/onto-retrofit/`을 별도 스킬(`ai-lab-retrofit`)로 넣고 `data/`의 등록부·분야 등록부·뼈대 파일을 함께 둔다.
 
 **ChatGPT · Gemini · Genspark** — 위 표의 파일을 지식 파일(또는 대화 첨부)로 올린다. 그림 폴더는 올리지 않아도 된다(페이지는 그림 없이도 픽셀 지도로 완성된다).
 
@@ -82,13 +85,14 @@ Claude 계정에 설치한 본 스킬(맨 위 `SKILL.md` + `packs/`)과 `skills/
 
 | 팩 | 파일 | 판 | 필요한 본 스킬 |
 |---|---|---|---|
-| 본 스킬 | `SKILL.md` | 1.9 | — |
+| 본 스킬 | `SKILL.md` | 1.18 | — |
 | 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.4 | 1.9 |
 | 분야 · 통계 / 경제 / 회계 / 경영 / AI 범죄학 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
+| 분야 · 수학 / 기하·위상 / 논리 / 생성형 AI / LLM / 데이터 / 금융 / 그림 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.18 |
 | 번역 | `packs/lang/` (지시서 + langpack) | 1.0 / langpack 1.3 | 1.9 |
 | 작업 · 언어 추가 | `packs/task/TASK_add_lang.md` | 1.0 | 1.9 |
 | 작업 · 검수 | `packs/task/TASK_review.md` | 1.0 | 1.9 |
-| 작업 · 온톨로지 보강 | `packs/task/onto-retrofit/` | 1.3 | 1.9 |
+| 작업 · 온톨로지 보강 | `packs/task/onto-retrofit/` | 1.7 | 1.18 |
 
 자세한 의존 관계는 `manifest.json`, 바뀐 내용은 `CHANGELOG.md`.
 

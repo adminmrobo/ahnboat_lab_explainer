@@ -1,0 +1,538 @@
+{
+ "version": "0.1",
+ "name": "금융·핀테크·블록체인 영역 뼈대 (초안)",
+ "domain": "fin",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(JEL G, FIBO) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/fin-markets",
+   "type": "Area",
+   "label": {
+    "ko": "금융시장",
+    "en": "Financial markets"
+   },
+   "level": 2,
+   "family": "markets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/stock-market",
+   "type": "Topic",
+   "label": {
+    "ko": "주식시장",
+    "en": "Stock market"
+   },
+   "level": 2,
+   "family": "markets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bond-market",
+   "type": "Topic",
+   "label": {
+    "ko": "채권시장",
+    "en": "Bond market"
+   },
+   "level": 2,
+   "family": "markets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/market-microstructure",
+   "type": "Topic",
+   "label": {
+    "ko": "시장 미시구조",
+    "en": "Market microstructure"
+   },
+   "level": 2,
+   "family": "markets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/fin-asset-pricing",
+   "type": "Area",
+   "label": {
+    "ko": "자산 가격",
+    "en": "Asset pricing"
+   },
+   "level": 3,
+   "family": "asset-pricing",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/risk-return",
+   "type": "Topic",
+   "label": {
+    "ko": "위험과 수익",
+    "en": "Risk and return"
+   },
+   "level": 3,
+   "family": "asset-pricing",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/capm",
+   "type": "Topic",
+   "label": {
+    "ko": "CAPM과 요인 모형",
+    "en": "CAPM and factor models"
+   },
+   "level": 3,
+   "family": "asset-pricing",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/efficient-market-hypothesis",
+   "type": "Topic",
+   "label": {
+    "ko": "효율적 시장 가설(논쟁 표시)",
+    "en": "Efficient market hypothesis (contested)"
+   },
+   "level": 3,
+   "family": "asset-pricing",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/valuation",
+   "type": "Topic",
+   "label": {
+    "ko": "기업가치 평가",
+    "en": "Valuation"
+   },
+   "level": 3,
+   "family": "asset-pricing",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/fin-volatility",
+   "type": "Area",
+   "label": {
+    "ko": "변동성",
+    "en": "Volatility"
+   },
+   "level": 3,
+   "family": "volatility",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/volatility-decomposition",
+   "type": "Topic",
+   "label": {
+    "ko": "변동성 분해",
+    "en": "Volatility decomposition"
+   },
+   "level": 3,
+   "family": "volatility",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/systematic-idiosyncratic",
+   "type": "Topic",
+   "label": {
+    "ko": "체계적·고유 위험",
+    "en": "Systematic and idiosyncratic risk"
+   },
+   "level": 3,
+   "family": "volatility",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/fin-fintech",
+   "type": "Area",
+   "label": {
+    "ko": "핀테크",
+    "en": "Fintech"
+   },
+   "level": 2,
+   "family": "fintech",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/digital-payments",
+   "type": "Topic",
+   "label": {
+    "ko": "디지털 결제",
+    "en": "Digital payments"
+   },
+   "level": 2,
+   "family": "fintech",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/credit-scoring",
+   "type": "Topic",
+   "label": {
+    "ko": "신용평가 모형",
+    "en": "Credit scoring"
+   },
+   "level": 2,
+   "family": "fintech",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/robo-advisor",
+   "type": "Topic",
+   "label": {
+    "ko": "로보어드바이저",
+    "en": "Robo-advisors"
+   },
+   "level": 2,
+   "family": "fintech",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fintech-data",
+   "type": "Topic",
+   "label": {
+    "ko": "금융 데이터 분석",
+    "en": "Financial data analytics"
+   },
+   "level": 2,
+   "family": "fintech",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/fin-blockchain",
+   "type": "Area",
+   "label": {
+    "ko": "블록체인",
+    "en": "Blockchain"
+   },
+   "level": 2,
+   "family": "blockchain",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/ledger-evolution",
+   "type": "Topic",
+   "label": {
+    "ko": "장부의 진화",
+    "en": "Evolution of ledgers"
+   },
+   "level": 2,
+   "family": "blockchain",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/blockchain-consensus",
+   "type": "Topic",
+   "label": {
+    "ko": "합의 알고리즘",
+    "en": "Consensus algorithms"
+   },
+   "level": 2,
+   "family": "blockchain",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bitcoin",
+   "type": "Topic",
+   "label": {
+    "ko": "비트코인",
+    "en": "Bitcoin"
+   },
+   "level": 2,
+   "family": "blockchain",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/smart-contracts",
+   "type": "Topic",
+   "label": {
+    "ko": "스마트 계약",
+    "en": "Smart contracts"
+   },
+   "level": 2,
+   "family": "blockchain",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/fin-crypto-assets",
+   "type": "Area",
+   "label": {
+    "ko": "가상자산",
+    "en": "Crypto assets"
+   },
+   "level": 3,
+   "family": "crypto-assets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/crypto-market-efficiency",
+   "type": "Topic",
+   "label": {
+    "ko": "가상자산 시장 효율성",
+    "en": "Crypto market efficiency"
+   },
+   "level": 3,
+   "family": "crypto-assets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/crypto-forecasting",
+   "type": "Topic",
+   "label": {
+    "ko": "가상자산 예측",
+    "en": "Crypto price forecasting"
+   },
+   "level": 3,
+   "family": "crypto-assets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/defi-risk",
+   "type": "Topic",
+   "label": {
+    "ko": "DeFi 리스크",
+    "en": "DeFi risk"
+   },
+   "level": 3,
+   "family": "crypto-assets",
+   "domain": [
+    "fin"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/stock-market",
+   "p": "lab:broader",
+   "o": "lab:area/fin-markets"
+  },
+  {
+   "s": "lab:topic/bond-market",
+   "p": "lab:broader",
+   "o": "lab:area/fin-markets"
+  },
+  {
+   "s": "lab:topic/market-microstructure",
+   "p": "lab:broader",
+   "o": "lab:area/fin-markets"
+  },
+  {
+   "s": "lab:topic/risk-return",
+   "p": "lab:broader",
+   "o": "lab:area/fin-asset-pricing"
+  },
+  {
+   "s": "lab:topic/capm",
+   "p": "lab:broader",
+   "o": "lab:area/fin-asset-pricing"
+  },
+  {
+   "s": "lab:topic/efficient-market-hypothesis",
+   "p": "lab:broader",
+   "o": "lab:area/fin-asset-pricing"
+  },
+  {
+   "s": "lab:topic/valuation",
+   "p": "lab:broader",
+   "o": "lab:area/fin-asset-pricing"
+  },
+  {
+   "s": "lab:topic/volatility-decomposition",
+   "p": "lab:broader",
+   "o": "lab:area/fin-volatility"
+  },
+  {
+   "s": "lab:topic/systematic-idiosyncratic",
+   "p": "lab:broader",
+   "o": "lab:area/fin-volatility"
+  },
+  {
+   "s": "lab:topic/volatility-models",
+   "p": "lab:partOf",
+   "o": "lab:area/fin-volatility",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/digital-payments",
+   "p": "lab:broader",
+   "o": "lab:area/fin-fintech"
+  },
+  {
+   "s": "lab:topic/credit-scoring",
+   "p": "lab:broader",
+   "o": "lab:area/fin-fintech"
+  },
+  {
+   "s": "lab:topic/robo-advisor",
+   "p": "lab:broader",
+   "o": "lab:area/fin-fintech"
+  },
+  {
+   "s": "lab:topic/fintech-data",
+   "p": "lab:broader",
+   "o": "lab:area/fin-fintech"
+  },
+  {
+   "s": "lab:topic/ledger-evolution",
+   "p": "lab:broader",
+   "o": "lab:area/fin-blockchain"
+  },
+  {
+   "s": "lab:topic/blockchain-consensus",
+   "p": "lab:broader",
+   "o": "lab:area/fin-blockchain"
+  },
+  {
+   "s": "lab:topic/bitcoin",
+   "p": "lab:broader",
+   "o": "lab:area/fin-blockchain"
+  },
+  {
+   "s": "lab:topic/smart-contracts",
+   "p": "lab:broader",
+   "o": "lab:area/fin-blockchain"
+  },
+  {
+   "s": "lab:topic/crypto-market-efficiency",
+   "p": "lab:broader",
+   "o": "lab:area/fin-crypto-assets"
+  },
+  {
+   "s": "lab:topic/crypto-forecasting",
+   "p": "lab:broader",
+   "o": "lab:area/fin-crypto-assets"
+  },
+  {
+   "s": "lab:topic/defi-risk",
+   "p": "lab:broader",
+   "o": "lab:area/fin-crypto-assets"
+  },
+  {
+   "s": "lab:topic/token-economics",
+   "p": "lab:partOf",
+   "o": "lab:area/fin-crypto-assets",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:area/fin-markets",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-asset-pricing"
+  },
+  {
+   "s": "lab:area/fin-markets",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-volatility"
+  },
+  {
+   "s": "lab:area/fin-markets",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-fintech"
+  },
+  {
+   "s": "lab:area/fin-blockchain",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-crypto-assets"
+  },
+  {
+   "s": "lab:area/fin-asset-pricing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-crypto-assets"
+  }
+ ]
+}

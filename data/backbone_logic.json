@@ -1,0 +1,946 @@
+{
+ "version": "0.1",
+ "name": "논리학 영역 뼈대 (초안)",
+ "domain": "logic",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(MSC2020 03) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/logic-propositional",
+   "type": "Area",
+   "label": {
+    "ko": "명제논리",
+    "en": "Propositional logic"
+   },
+   "level": 1,
+   "family": "propositional",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/propositions-connectives",
+   "type": "Topic",
+   "label": {
+    "ko": "명제와 연결사",
+    "en": "Propositions and connectives"
+   },
+   "level": 1,
+   "family": "propositional",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/truth-tables",
+   "type": "Topic",
+   "label": {
+    "ko": "진리표",
+    "en": "Truth tables"
+   },
+   "level": 1,
+   "family": "propositional",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tautology-validity",
+   "type": "Topic",
+   "label": {
+    "ko": "항진명제와 타당성",
+    "en": "Tautology and validity"
+   },
+   "level": 1,
+   "family": "propositional",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/normal-forms",
+   "type": "Topic",
+   "label": {
+    "ko": "정규형(CNF·DNF)",
+    "en": "Normal forms (CNF, DNF)"
+   },
+   "level": 1,
+   "family": "propositional",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-predicate",
+   "type": "Area",
+   "label": {
+    "ko": "술어논리",
+    "en": "Predicate (first-order) logic"
+   },
+   "level": 2,
+   "family": "predicate",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/quantifiers",
+   "type": "Topic",
+   "label": {
+    "ko": "양화사",
+    "en": "Quantifiers"
+   },
+   "level": 2,
+   "family": "predicate",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/first-order-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "1차 논리",
+    "en": "First-order logic"
+   },
+   "level": 2,
+   "family": "predicate",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/unification-resolution",
+   "type": "Topic",
+   "label": {
+    "ko": "단일화와 도출",
+    "en": "Unification and resolution"
+   },
+   "level": 2,
+   "family": "predicate",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-proof",
+   "type": "Area",
+   "label": {
+    "ko": "증명 방법",
+    "en": "Methods of proof"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/direct-proof",
+   "type": "Topic",
+   "label": {
+    "ko": "직접 증명",
+    "en": "Direct proof"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/proof-by-contradiction",
+   "type": "Topic",
+   "label": {
+    "ko": "귀류법",
+    "en": "Proof by contradiction"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mathematical-induction",
+   "type": "Topic",
+   "label": {
+    "ko": "수학적 귀납법",
+    "en": "Mathematical induction"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/counterexample",
+   "type": "Topic",
+   "label": {
+    "ko": "반례",
+    "en": "Counterexamples"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/necessary-sufficient",
+   "type": "Topic",
+   "label": {
+    "ko": "필요조건과 충분조건",
+    "en": "Necessary and sufficient conditions"
+   },
+   "level": 1,
+   "family": "proof",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-set-theory-axioms",
+   "type": "Area",
+   "label": {
+    "ko": "집합론과 공리계",
+    "en": "Set theory and axiomatic systems"
+   },
+   "level": 3,
+   "family": "set-theory-axioms",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/axiomatic-method",
+   "type": "Topic",
+   "label": {
+    "ko": "공리적 방법",
+    "en": "Axiomatic method"
+   },
+   "level": 3,
+   "family": "set-theory-axioms",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/zfc",
+   "type": "Topic",
+   "label": {
+    "ko": "ZFC 공리계",
+    "en": "ZFC axioms"
+   },
+   "level": 3,
+   "family": "set-theory-axioms",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/consistency-completeness",
+   "type": "Topic",
+   "label": {
+    "ko": "무모순성과 완전성",
+    "en": "Consistency and completeness"
+   },
+   "level": 3,
+   "family": "set-theory-axioms",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/incompleteness",
+   "type": "Topic",
+   "label": {
+    "ko": "불완전성 정리",
+    "en": "Incompleteness theorems"
+   },
+   "level": 3,
+   "family": "set-theory-axioms",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-semantics",
+   "type": "Area",
+   "label": {
+    "ko": "모형론과 의미론",
+    "en": "Model theory and semantics"
+   },
+   "level": 3,
+   "family": "semantics",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/models-interpretation",
+   "type": "Topic",
+   "label": {
+    "ko": "모형과 해석",
+    "en": "Models and interpretations"
+   },
+   "level": 3,
+   "family": "semantics",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/soundness-completeness",
+   "type": "Topic",
+   "label": {
+    "ko": "건전성과 완전성 정리",
+    "en": "Soundness and completeness theorems"
+   },
+   "level": 3,
+   "family": "semantics",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-computability",
+   "type": "Area",
+   "label": {
+    "ko": "계산가능성과 복잡도",
+    "en": "Computability and complexity"
+   },
+   "level": 3,
+   "family": "computability",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/turing-machine",
+   "type": "Topic",
+   "label": {
+    "ko": "튜링 기계",
+    "en": "Turing machine"
+   },
+   "level": 3,
+   "family": "computability",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/decidability",
+   "type": "Topic",
+   "label": {
+    "ko": "결정가능성",
+    "en": "Decidability"
+   },
+   "level": 3,
+   "family": "computability",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/complexity-classes",
+   "type": "Topic",
+   "label": {
+    "ko": "복잡도 등급(P·NP)",
+    "en": "Complexity classes (P, NP)"
+   },
+   "level": 3,
+   "family": "computability",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sat-solving",
+   "type": "Topic",
+   "label": {
+    "ko": "SAT 문제와 풀이기",
+    "en": "SAT and solvers"
+   },
+   "level": 3,
+   "family": "computability",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-inductive",
+   "type": "Area",
+   "label": {
+    "ko": "귀납·확률 추론",
+    "en": "Inductive and probabilistic reasoning"
+   },
+   "level": 2,
+   "family": "inductive",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/deduction-induction-abduction",
+   "type": "Topic",
+   "label": {
+    "ko": "연역·귀납·가추",
+    "en": "Deduction, induction and abduction"
+   },
+   "level": 2,
+   "family": "inductive",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/probabilistic-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "확률 논리",
+    "en": "Probabilistic logic"
+   },
+   "level": 2,
+   "family": "inductive",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/causal-reasoning-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "인과 추론의 논리",
+    "en": "Logic of causal reasoning"
+   },
+   "level": 2,
+   "family": "inductive",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-knowledge-representation",
+   "type": "Area",
+   "label": {
+    "ko": "기술 논리와 지식 표현",
+    "en": "Description logic and knowledge representation"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/description-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "기술 논리",
+    "en": "Description logic"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rdf-owl",
+   "type": "Topic",
+   "label": {
+    "ko": "RDF·OWL",
+    "en": "RDF and OWL"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/skos-thesaurus",
+   "type": "Topic",
+   "label": {
+    "ko": "SKOS와 시소러스",
+    "en": "SKOS and thesauri"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ontology-reasoning",
+   "type": "Topic",
+   "label": {
+    "ko": "온톨로지 추론",
+    "en": "Ontology reasoning"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/logic-programming",
+   "type": "Topic",
+   "label": {
+    "ko": "논리 프로그래밍",
+    "en": "Logic programming"
+   },
+   "level": 3,
+   "family": "knowledge-representation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-nonclassical",
+   "type": "Area",
+   "label": {
+    "ko": "비고전 논리",
+    "en": "Non-classical logics"
+   },
+   "level": 4,
+   "family": "nonclassical",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/modal-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "양상 논리",
+    "en": "Modal logic"
+   },
+   "level": 4,
+   "family": "nonclassical",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fuzzy-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "퍼지 논리",
+    "en": "Fuzzy logic"
+   },
+   "level": 4,
+   "family": "nonclassical",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/many-valued-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "다치 논리",
+    "en": "Many-valued logic"
+   },
+   "level": 4,
+   "family": "nonclassical",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/temporal-logic",
+   "type": "Topic",
+   "label": {
+    "ko": "시간 논리",
+    "en": "Temporal logic"
+   },
+   "level": 4,
+   "family": "nonclassical",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/logic-argumentation",
+   "type": "Area",
+   "label": {
+    "ko": "논증과 오류",
+    "en": "Argumentation and fallacies"
+   },
+   "level": 1,
+   "family": "argumentation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/argument-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "논증의 구조",
+    "en": "Structure of arguments"
+   },
+   "level": 1,
+   "family": "argumentation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fallacies",
+   "type": "Topic",
+   "label": {
+    "ko": "논리적 오류",
+    "en": "Logical fallacies"
+   },
+   "level": 1,
+   "family": "argumentation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/debate-reasoning",
+   "type": "Topic",
+   "label": {
+    "ko": "토론과 반론",
+    "en": "Debate and rebuttal"
+   },
+   "level": 1,
+   "family": "argumentation",
+   "domain": [
+    "logic"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/propositions-connectives",
+   "p": "lab:broader",
+   "o": "lab:area/logic-propositional"
+  },
+  {
+   "s": "lab:topic/truth-tables",
+   "p": "lab:broader",
+   "o": "lab:area/logic-propositional"
+  },
+  {
+   "s": "lab:topic/tautology-validity",
+   "p": "lab:broader",
+   "o": "lab:area/logic-propositional"
+  },
+  {
+   "s": "lab:topic/normal-forms",
+   "p": "lab:broader",
+   "o": "lab:area/logic-propositional"
+  },
+  {
+   "s": "lab:topic/quantifiers",
+   "p": "lab:broader",
+   "o": "lab:area/logic-predicate"
+  },
+  {
+   "s": "lab:topic/first-order-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-predicate"
+  },
+  {
+   "s": "lab:topic/unification-resolution",
+   "p": "lab:broader",
+   "o": "lab:area/logic-predicate"
+  },
+  {
+   "s": "lab:topic/direct-proof",
+   "p": "lab:broader",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:topic/proof-by-contradiction",
+   "p": "lab:broader",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:topic/mathematical-induction",
+   "p": "lab:broader",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:topic/counterexample",
+   "p": "lab:broader",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:topic/necessary-sufficient",
+   "p": "lab:broader",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:topic/axiomatic-method",
+   "p": "lab:broader",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:topic/zfc",
+   "p": "lab:broader",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:topic/consistency-completeness",
+   "p": "lab:broader",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:topic/incompleteness",
+   "p": "lab:broader",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:topic/models-interpretation",
+   "p": "lab:broader",
+   "o": "lab:area/logic-semantics"
+  },
+  {
+   "s": "lab:topic/soundness-completeness",
+   "p": "lab:broader",
+   "o": "lab:area/logic-semantics"
+  },
+  {
+   "s": "lab:topic/turing-machine",
+   "p": "lab:broader",
+   "o": "lab:area/logic-computability"
+  },
+  {
+   "s": "lab:topic/decidability",
+   "p": "lab:broader",
+   "o": "lab:area/logic-computability"
+  },
+  {
+   "s": "lab:topic/complexity-classes",
+   "p": "lab:broader",
+   "o": "lab:area/logic-computability"
+  },
+  {
+   "s": "lab:topic/sat-solving",
+   "p": "lab:broader",
+   "o": "lab:area/logic-computability"
+  },
+  {
+   "s": "lab:topic/deduction-induction-abduction",
+   "p": "lab:broader",
+   "o": "lab:area/logic-inductive"
+  },
+  {
+   "s": "lab:topic/probabilistic-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-inductive"
+  },
+  {
+   "s": "lab:topic/causal-reasoning-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-inductive"
+  },
+  {
+   "s": "lab:topic/description-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:topic/rdf-owl",
+   "p": "lab:broader",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:topic/skos-thesaurus",
+   "p": "lab:broader",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:topic/ontology-reasoning",
+   "p": "lab:broader",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:topic/logic-programming",
+   "p": "lab:broader",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:topic/modal-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-nonclassical"
+  },
+  {
+   "s": "lab:topic/fuzzy-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-nonclassical"
+  },
+  {
+   "s": "lab:topic/many-valued-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-nonclassical"
+  },
+  {
+   "s": "lab:topic/temporal-logic",
+   "p": "lab:broader",
+   "o": "lab:area/logic-nonclassical"
+  },
+  {
+   "s": "lab:topic/argument-structure",
+   "p": "lab:broader",
+   "o": "lab:area/logic-argumentation"
+  },
+  {
+   "s": "lab:topic/fallacies",
+   "p": "lab:broader",
+   "o": "lab:area/logic-argumentation"
+  },
+  {
+   "s": "lab:topic/debate-reasoning",
+   "p": "lab:broader",
+   "o": "lab:area/logic-argumentation"
+  },
+  {
+   "s": "lab:area/logic-propositional",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-predicate"
+  },
+  {
+   "s": "lab:area/logic-propositional",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-proof"
+  },
+  {
+   "s": "lab:area/logic-predicate",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-semantics"
+  },
+  {
+   "s": "lab:area/logic-predicate",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:area/logic-predicate",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-knowledge-representation"
+  },
+  {
+   "s": "lab:area/logic-proof",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-set-theory-axioms"
+  },
+  {
+   "s": "lab:area/logic-semantics",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-computability"
+  },
+  {
+   "s": "lab:area/logic-propositional",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-nonclassical"
+  },
+  {
+   "s": "lab:area/logic-argumentation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/logic-inductive"
+  }
+ ]
+}

@@ -1,5 +1,18 @@
 # 변경 기록
 
+## 2026-11-24 · 본 스킬 v1.18 · 온톨로지 보강 팩 v1.7 · 분야 등록부 18개 · 분야 뼈대 12개
+
+- 계기: ahnboat.xyz 온톨로지가 인공지능 용어 중심이라 경제학·통계학·수학·위상수학·해석학·기하학·논리학 노드가 걸 뼈대가 없었음. 네트워크재 수요 정리(2026-11-24)에서 경제 뼈대를 임시 초안(`backbone_econ 0.1`, 주제 5개)으로 만들어야 했던 일이 직접 계기. 경영·회계·생성형 AI·LLM 등 분야도 더 있을 수 있다는 지적에 따라, 분야 목록 자체를 등록부로 만듦
+- **`data/domains.json` 신설 — 분야 등록부 18개**: 인공지능(공통)·머신러닝·딥러닝·뇌과학·강화학습/로봇·생성형 AI·LLM/추론 엔지니어링·AI 범죄/보안·통계학·데이터 공학/DB·수학(해석·대수)·기하/위상수학·논리학·경제학·금융/핀테크/블록체인·경영학·회계학·그림/캐릭터 구조. ahnboat.xyz 콘텐츠 색인(160개 항목)을 보고 정함. `ml`·`dl`·`neuro`·`rl`은 인공지능 뼈대의 영역을 나눠 보는 렌즈. 새 분야를 더하는 절차를 본 스킬 19-4에 적음
+- **분야 뼈대 12개 신설** (`data/backbone_{econ,stats,math,geom,logic,genai,llm,data,fin,biz,acct,art}.json`, 작성자 초안 v0.1): 영역 142 · 주제 550. 경제·통계·경영·회계는 분야 팩 P10 표를 JSON으로 옮기며 네트워크 경제·동학 최적화·보건 통계 등을 더함. 네트워크재 정리의 임시 주제 5개(consumer-choice, demand-theory, externality, market-equilibrium, network-economics)는 같은 ID로 정식 뼈대에 들어감
+- **`data/backbone_bridge.json` 신설 — 분야 사이 다리 64개**: equivalentTo 12(같은 지식, 다른 ID), prerequisiteOf 35, specialCaseOf 4, partOf 3, analogyOf 1, relatedTo 9(14%)
+- **등록부 v0.3**: 위 Area·Topic 692개를 `domain`과 함께 더함 (258 → 950)
+- **본 스킬 v1.18**: 19-4 분야 표를 18개로, O1-2 `domain` 값, O1-3 클래스 6개(Definition·Theorem·Axiom·Proof·Structure·Estimator), O1-4 관계 6개(implies·specialCaseOf·equivalentTo·provedBy·instanceOf·counterexampleTo)와 `broader`·`specialCaseOf`·`instanceOf` 구분, O1-5 매핑
+- **분야 팩 8개 신설**: `DOMAIN_math`·`geom`·`logic`·`genai`·`llm`·`data`·`fin`·`art` v1.0 (P1 신호어·P2 짝 카드·P7 금지 단정·P9 온톨로지·P10 뼈대 요약·P12 색, 나머지는 코어 기본값). 기존 `econ`·`stats`·`biz`·`acct` 팩 P10에 JSON으로 옮기며 더한 주제를 적음
+- **온톨로지 보강 팩 v1.7**: 15장(18개 분야, 이미 꼬리표가 있는 비인공지능 페이지 다시 걸기 절차 — 표지 현황 저장소 `data/crosswalk.json` 후보 활용). `check.py`가 `domains.json`을 읽고 등록되지 않은 분야 코드를 경고, 새 종류·관계 허용. `kgx.js`·`assembler.html`에 새 종류 색·관계 이름, `specialCaseOf → skos:broader`, `equivalentTo → skos:exactMatch` 내보내기
+- 표지 현황 저장소(`ahnboat_lab_cover_status`)의 지식 노드 지도가 이 등록부·뼈대를 읽어 개념마다 학문 분야를 매기고, '학문 분야로 보기'와 분야별 렌즈를 제공
+- **`old_skill/2026-11-24/`**: 바꾸기 전 판 보관 (본 스킬 v1.17, 온톨로지 보강 팩 v1.6)
+
 ## 2026-11-23 · 본 스킬 v1.17 · 온톨로지 보강 팩 v1.6 · 연구실 스킬 3종 v1.4 — 픽셀 깨짐 보정 코드
 
 - 계기: PC에서 표지·장면 그림의 픽셀이 너무 크고 깨져 보인다는 지적. 공개 저장소 144곳, 한국어 페이지 1,376개를 브라우저로 열어(1280px, 윈도 배율 125%) 그림마다 표시 배율을 잰 결과 61곳에서 확인(큰 그림 27곳, 얼굴·작은 그림 34곳). 원인은 `image-rendering:pixelated` 강제 — 딱 떨어지지 않는 배율(1920 표지를 1,000px 안팎으로, 화면 배율 125%·150%)에서 픽셀 크기가 들쭉날쭉해짐. v1.16의 `.cover img` 규칙이 이를 표지에도 넓혔다

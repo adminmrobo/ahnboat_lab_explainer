@@ -1,0 +1,626 @@
+{
+ "version": "0.1",
+ "name": "생성형 AI 영역 뼈대 (초안)",
+ "domain": "genai",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(ACM CCS, CSO) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/genai-foundations",
+   "type": "Area",
+   "label": {
+    "ko": "생성 모델의 원리",
+    "en": "Principles of generative modeling"
+   },
+   "level": 2,
+   "family": "foundations",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/likelihood-generative",
+   "type": "Topic",
+   "label": {
+    "ko": "우도 기반 생성",
+    "en": "Likelihood-based generation"
+   },
+   "level": 2,
+   "family": "foundations",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/latent-variable-models",
+   "type": "Topic",
+   "label": {
+    "ko": "잠재 변수 모형",
+    "en": "Latent variable models"
+   },
+   "level": 2,
+   "family": "foundations",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sampling-generation",
+   "type": "Topic",
+   "label": {
+    "ko": "샘플링과 온도",
+    "en": "Sampling and temperature"
+   },
+   "level": 2,
+   "family": "foundations",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/generative-evaluation",
+   "type": "Topic",
+   "label": {
+    "ko": "생성 품질 평가",
+    "en": "Evaluating generative models"
+   },
+   "level": 2,
+   "family": "foundations",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-image-generation",
+   "type": "Area",
+   "label": {
+    "ko": "이미지 생성",
+    "en": "Image generation"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/text-to-image",
+   "type": "Topic",
+   "label": {
+    "ko": "텍스트→이미지",
+    "en": "Text-to-image"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/latent-diffusion",
+   "type": "Topic",
+   "label": {
+    "ko": "잠재 확산",
+    "en": "Latent diffusion"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/conditioning-guidance",
+   "type": "Topic",
+   "label": {
+    "ko": "조건과 가이던스",
+    "en": "Conditioning and guidance"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/image-editing-inpainting",
+   "type": "Topic",
+   "label": {
+    "ko": "이미지 편집·인페인팅",
+    "en": "Image editing and inpainting"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/style-consistency",
+   "type": "Topic",
+   "label": {
+    "ko": "캐릭터·스타일 일관성",
+    "en": "Character and style consistency"
+   },
+   "level": 3,
+   "family": "image-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-video-audio",
+   "type": "Area",
+   "label": {
+    "ko": "영상·음성 생성",
+    "en": "Video and audio generation"
+   },
+   "level": 4,
+   "family": "video-audio",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/video-generation",
+   "type": "Topic",
+   "label": {
+    "ko": "영상 생성",
+    "en": "Video generation"
+   },
+   "level": 4,
+   "family": "video-audio",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/speech-synthesis",
+   "type": "Topic",
+   "label": {
+    "ko": "음성 합성",
+    "en": "Speech synthesis"
+   },
+   "level": 4,
+   "family": "video-audio",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/music-generation",
+   "type": "Topic",
+   "label": {
+    "ko": "음악 생성",
+    "en": "Music generation"
+   },
+   "level": 4,
+   "family": "video-audio",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-3d-generation",
+   "type": "Area",
+   "label": {
+    "ko": "3D·월드 생성",
+    "en": "3D and world generation"
+   },
+   "level": 4,
+   "family": "3d-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/3d-reconstruction",
+   "type": "Topic",
+   "label": {
+    "ko": "3D 복원",
+    "en": "3D reconstruction"
+   },
+   "level": 4,
+   "family": "3d-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inverse-rendering",
+   "type": "Topic",
+   "label": {
+    "ko": "역렌더링",
+    "en": "Inverse rendering"
+   },
+   "level": 4,
+   "family": "3d-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/world-models",
+   "type": "Topic",
+   "label": {
+    "ko": "월드 모델",
+    "en": "World models"
+   },
+   "level": 4,
+   "family": "3d-generation",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-multimodal",
+   "type": "Area",
+   "label": {
+    "ko": "멀티모달",
+    "en": "Multimodal models"
+   },
+   "level": 3,
+   "family": "multimodal",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/vision-language",
+   "type": "Topic",
+   "label": {
+    "ko": "시각-언어 모델",
+    "en": "Vision-language models"
+   },
+   "level": 3,
+   "family": "multimodal",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/clip-alignment",
+   "type": "Topic",
+   "label": {
+    "ko": "이미지-텍스트 정렬(CLIP)",
+    "en": "Image–text alignment (CLIP)"
+   },
+   "level": 3,
+   "family": "multimodal",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/any-to-any",
+   "type": "Topic",
+   "label": {
+    "ko": "다중 입출력 생성",
+    "en": "Any-to-any generation"
+   },
+   "level": 3,
+   "family": "multimodal",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-creative-workflow",
+   "type": "Area",
+   "label": {
+    "ko": "생성 AI 작업 흐름",
+    "en": "Generative AI workflows"
+   },
+   "level": 2,
+   "family": "creative-workflow",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/prompt-for-images",
+   "type": "Topic",
+   "label": {
+    "ko": "이미지 프롬프트 작성",
+    "en": "Prompting for images"
+   },
+   "level": 2,
+   "family": "creative-workflow",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/human-in-the-loop-creation",
+   "type": "Topic",
+   "label": {
+    "ko": "사람이 고르는 반복 제작",
+    "en": "Human-in-the-loop creation"
+   },
+   "level": 2,
+   "family": "creative-workflow",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/asset-pipeline",
+   "type": "Topic",
+   "label": {
+    "ko": "에셋 파이프라인",
+    "en": "Asset pipelines"
+   },
+   "level": 2,
+   "family": "creative-workflow",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/genai-risks",
+   "type": "Area",
+   "label": {
+    "ko": "생성 AI의 위험과 권리",
+    "en": "Risks and rights in generative AI"
+   },
+   "level": 3,
+   "family": "risks",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/deepfakes",
+   "type": "Topic",
+   "label": {
+    "ko": "딥페이크",
+    "en": "Deepfakes"
+   },
+   "level": 3,
+   "family": "risks",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/copyright-generative",
+   "type": "Topic",
+   "label": {
+    "ko": "저작권과 학습 데이터",
+    "en": "Copyright and training data"
+   },
+   "level": 3,
+   "family": "risks",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/watermark-provenance",
+   "type": "Topic",
+   "label": {
+    "ko": "워터마크·출처 표시",
+    "en": "Watermarking and provenance"
+   },
+   "level": 3,
+   "family": "risks",
+   "domain": [
+    "genai"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/likelihood-generative",
+   "p": "lab:broader",
+   "o": "lab:area/genai-foundations"
+  },
+  {
+   "s": "lab:topic/latent-variable-models",
+   "p": "lab:broader",
+   "o": "lab:area/genai-foundations"
+  },
+  {
+   "s": "lab:topic/sampling-generation",
+   "p": "lab:broader",
+   "o": "lab:area/genai-foundations"
+  },
+  {
+   "s": "lab:topic/generative-evaluation",
+   "p": "lab:broader",
+   "o": "lab:area/genai-foundations"
+  },
+  {
+   "s": "lab:topic/text-to-image",
+   "p": "lab:broader",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:topic/latent-diffusion",
+   "p": "lab:broader",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:topic/conditioning-guidance",
+   "p": "lab:broader",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:topic/image-editing-inpainting",
+   "p": "lab:broader",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:topic/style-consistency",
+   "p": "lab:broader",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:topic/video-generation",
+   "p": "lab:broader",
+   "o": "lab:area/genai-video-audio"
+  },
+  {
+   "s": "lab:topic/speech-synthesis",
+   "p": "lab:broader",
+   "o": "lab:area/genai-video-audio"
+  },
+  {
+   "s": "lab:topic/music-generation",
+   "p": "lab:broader",
+   "o": "lab:area/genai-video-audio"
+  },
+  {
+   "s": "lab:topic/3d-reconstruction",
+   "p": "lab:broader",
+   "o": "lab:area/genai-3d-generation"
+  },
+  {
+   "s": "lab:topic/inverse-rendering",
+   "p": "lab:broader",
+   "o": "lab:area/genai-3d-generation"
+  },
+  {
+   "s": "lab:topic/world-models",
+   "p": "lab:broader",
+   "o": "lab:area/genai-3d-generation"
+  },
+  {
+   "s": "lab:topic/vision-language",
+   "p": "lab:broader",
+   "o": "lab:area/genai-multimodal"
+  },
+  {
+   "s": "lab:topic/clip-alignment",
+   "p": "lab:broader",
+   "o": "lab:area/genai-multimodal"
+  },
+  {
+   "s": "lab:topic/any-to-any",
+   "p": "lab:broader",
+   "o": "lab:area/genai-multimodal"
+  },
+  {
+   "s": "lab:topic/prompt-for-images",
+   "p": "lab:broader",
+   "o": "lab:area/genai-creative-workflow"
+  },
+  {
+   "s": "lab:topic/human-in-the-loop-creation",
+   "p": "lab:broader",
+   "o": "lab:area/genai-creative-workflow"
+  },
+  {
+   "s": "lab:topic/asset-pipeline",
+   "p": "lab:broader",
+   "o": "lab:area/genai-creative-workflow"
+  },
+  {
+   "s": "lab:topic/deepfakes",
+   "p": "lab:broader",
+   "o": "lab:area/genai-risks"
+  },
+  {
+   "s": "lab:topic/copyright-generative",
+   "p": "lab:broader",
+   "o": "lab:area/genai-risks"
+  },
+  {
+   "s": "lab:topic/watermark-provenance",
+   "p": "lab:broader",
+   "o": "lab:area/genai-risks"
+  },
+  {
+   "s": "lab:area/genai-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-image-generation"
+  },
+  {
+   "s": "lab:area/genai-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-video-audio"
+  },
+  {
+   "s": "lab:area/genai-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-3d-generation"
+  },
+  {
+   "s": "lab:area/genai-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-multimodal"
+  },
+  {
+   "s": "lab:area/genai-image-generation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-creative-workflow"
+  },
+  {
+   "s": "lab:area/genai-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/genai-risks"
+  }
+ ]
+}

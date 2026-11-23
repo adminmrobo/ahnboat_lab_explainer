@@ -1,0 +1,1724 @@
+{
+ "version": "0.1",
+ "name": "경영학 영역 뼈대 (초안)",
+ "domain": "biz",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(STW) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/biz-foundations",
+   "type": "Area",
+   "label": {
+    "ko": "경영 기초",
+    "en": "Foundations of management"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/management-functions",
+   "type": "Topic",
+   "label": {
+    "ko": "경영의 기능",
+    "en": "Functions of management"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/business-forms",
+   "type": "Topic",
+   "label": {
+    "ko": "기업 형태",
+    "en": "Forms of business"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stakeholders",
+   "type": "Topic",
+   "label": {
+    "ko": "이해관계자",
+    "en": "Stakeholders"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/business-environment",
+   "type": "Topic",
+   "label": {
+    "ko": "경영 환경",
+    "en": "Business environment"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-organization",
+   "type": "Area",
+   "label": {
+    "ko": "조직",
+    "en": "Organization"
+   },
+   "level": 1,
+   "family": "organization",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/org-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "조직 구조",
+    "en": "Organizational structure"
+   },
+   "level": 1,
+   "family": "organization",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/org-design",
+   "type": "Topic",
+   "label": {
+    "ko": "조직 설계",
+    "en": "Organizational design"
+   },
+   "level": 1,
+   "family": "organization",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/org-culture",
+   "type": "Topic",
+   "label": {
+    "ko": "조직 문화",
+    "en": "Organizational culture"
+   },
+   "level": 1,
+   "family": "organization",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-strategy",
+   "type": "Area",
+   "label": {
+    "ko": "경영 전략",
+    "en": "Business strategy"
+   },
+   "level": 2,
+   "family": "strategy",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/industry-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "산업 분석",
+    "en": "Industry analysis"
+   },
+   "level": 2,
+   "family": "strategy",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/competitive-advantage",
+   "type": "Topic",
+   "label": {
+    "ko": "경쟁 우위",
+    "en": "Competitive advantage"
+   },
+   "level": 2,
+   "family": "strategy",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/resource-based-view",
+   "type": "Topic",
+   "label": {
+    "ko": "자원 기반 관점",
+    "en": "Resource-based view"
+   },
+   "level": 2,
+   "family": "strategy",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/corporate-strategy",
+   "type": "Topic",
+   "label": {
+    "ko": "사업·기업 전략",
+    "en": "Business and corporate strategy"
+   },
+   "level": 2,
+   "family": "strategy",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-marketing",
+   "type": "Area",
+   "label": {
+    "ko": "마케팅",
+    "en": "Marketing"
+   },
+   "level": 1,
+   "family": "marketing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/stp",
+   "type": "Topic",
+   "label": {
+    "ko": "세분화·표적·포지셔닝",
+    "en": "Segmentation, targeting, positioning"
+   },
+   "level": 1,
+   "family": "marketing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/marketing-mix",
+   "type": "Topic",
+   "label": {
+    "ko": "마케팅 믹스",
+    "en": "Marketing mix"
+   },
+   "level": 1,
+   "family": "marketing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/branding",
+   "type": "Topic",
+   "label": {
+    "ko": "브랜드",
+    "en": "Branding"
+   },
+   "level": 1,
+   "family": "marketing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-consumer-behavior",
+   "type": "Area",
+   "label": {
+    "ko": "소비자 행동",
+    "en": "Consumer behavior"
+   },
+   "level": 2,
+   "family": "consumer-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/purchase-decision",
+   "type": "Topic",
+   "label": {
+    "ko": "구매 의사결정",
+    "en": "Purchase decision"
+   },
+   "level": 2,
+   "family": "consumer-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/attitudes",
+   "type": "Topic",
+   "label": {
+    "ko": "태도",
+    "en": "Attitudes"
+   },
+   "level": 2,
+   "family": "consumer-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/behavioral-marketing",
+   "type": "Topic",
+   "label": {
+    "ko": "행동경제학의 적용",
+    "en": "Applied behavioral economics"
+   },
+   "level": 2,
+   "family": "consumer-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/voice-of-customer",
+   "type": "Topic",
+   "label": {
+    "ko": "고객의 목소리·리뷰 분석",
+    "en": "Voice of the customer and review analysis"
+   },
+   "level": 2,
+   "family": "consumer-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-pricing",
+   "type": "Area",
+   "label": {
+    "ko": "가격 책정",
+    "en": "Pricing"
+   },
+   "level": 2,
+   "family": "pricing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/cost-based-pricing",
+   "type": "Topic",
+   "label": {
+    "ko": "원가 기반 가격",
+    "en": "Cost-based pricing"
+   },
+   "level": 2,
+   "family": "pricing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/value-based-pricing",
+   "type": "Topic",
+   "label": {
+    "ko": "가치 기반 가격",
+    "en": "Value-based pricing"
+   },
+   "level": 2,
+   "family": "pricing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bid-pricing",
+   "type": "Topic",
+   "label": {
+    "ko": "입찰 가격 전략",
+    "en": "Bid pricing strategy"
+   },
+   "level": 2,
+   "family": "pricing",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-operations",
+   "type": "Area",
+   "label": {
+    "ko": "운영관리",
+    "en": "Operations management"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/process-design",
+   "type": "Topic",
+   "label": {
+    "ko": "공정 설계",
+    "en": "Process design"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/capacity",
+   "type": "Topic",
+   "label": {
+    "ko": "생산 능력",
+    "en": "Capacity"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/queueing",
+   "type": "Topic",
+   "label": {
+    "ko": "대기행렬",
+    "en": "Queueing"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/scheduling",
+   "type": "Topic",
+   "label": {
+    "ko": "일정 계획",
+    "en": "Scheduling"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/smart-manufacturing",
+   "type": "Topic",
+   "label": {
+    "ko": "스마트 제조",
+    "en": "Smart manufacturing"
+   },
+   "level": 2,
+   "family": "operations",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-supply-chain",
+   "type": "Area",
+   "label": {
+    "ko": "공급망 관리",
+    "en": "Supply chain management"
+   },
+   "level": 2,
+   "family": "supply-chain",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/inventory-models",
+   "type": "Topic",
+   "label": {
+    "ko": "재고 모형",
+    "en": "Inventory models"
+   },
+   "level": 2,
+   "family": "supply-chain",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/demand-forecasting",
+   "type": "Topic",
+   "label": {
+    "ko": "수요 예측",
+    "en": "Demand forecasting"
+   },
+   "level": 2,
+   "family": "supply-chain",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bullwhip-effect",
+   "type": "Topic",
+   "label": {
+    "ko": "채찍 효과",
+    "en": "Bullwhip effect"
+   },
+   "level": 2,
+   "family": "supply-chain",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-quality",
+   "type": "Area",
+   "label": {
+    "ko": "품질관리",
+    "en": "Quality management"
+   },
+   "level": 2,
+   "family": "quality",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/control-charts",
+   "type": "Topic",
+   "label": {
+    "ko": "관리도",
+    "en": "Control charts"
+   },
+   "level": 2,
+   "family": "quality",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/process-capability",
+   "type": "Topic",
+   "label": {
+    "ko": "공정 능력",
+    "en": "Process capability"
+   },
+   "level": 2,
+   "family": "quality",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/continuous-improvement",
+   "type": "Topic",
+   "label": {
+    "ko": "지속적 개선",
+    "en": "Continuous improvement"
+   },
+   "level": 2,
+   "family": "quality",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-corporate-finance",
+   "type": "Area",
+   "label": {
+    "ko": "재무관리",
+    "en": "Corporate finance"
+   },
+   "level": 2,
+   "family": "corporate-finance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/time-value-of-money",
+   "type": "Topic",
+   "label": {
+    "ko": "화폐의 시간가치",
+    "en": "Time value of money"
+   },
+   "level": 2,
+   "family": "corporate-finance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cost-of-capital",
+   "type": "Topic",
+   "label": {
+    "ko": "자본비용",
+    "en": "Cost of capital"
+   },
+   "level": 2,
+   "family": "corporate-finance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/capital-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "자본 구조",
+    "en": "Capital structure"
+   },
+   "level": 2,
+   "family": "corporate-finance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-investment",
+   "type": "Area",
+   "label": {
+    "ko": "투자 결정",
+    "en": "Investment decisions"
+   },
+   "level": 2,
+   "family": "investment",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/npv",
+   "type": "Topic",
+   "label": {
+    "ko": "순현재가치",
+    "en": "Net present value"
+   },
+   "level": 2,
+   "family": "investment",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/irr",
+   "type": "Topic",
+   "label": {
+    "ko": "내부수익률",
+    "en": "Internal rate of return"
+   },
+   "level": 2,
+   "family": "investment",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/payback-period",
+   "type": "Topic",
+   "label": {
+    "ko": "회수기간",
+    "en": "Payback period"
+   },
+   "level": 2,
+   "family": "investment",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/real-options",
+   "type": "Topic",
+   "label": {
+    "ko": "실물옵션",
+    "en": "Real options"
+   },
+   "level": 2,
+   "family": "investment",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-risk-management",
+   "type": "Area",
+   "label": {
+    "ko": "위험 관리",
+    "en": "Risk management"
+   },
+   "level": 3,
+   "family": "risk-management",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/diversification",
+   "type": "Topic",
+   "label": {
+    "ko": "분산",
+    "en": "Diversification"
+   },
+   "level": 3,
+   "family": "risk-management",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/risk-measurement",
+   "type": "Topic",
+   "label": {
+    "ko": "위험 측정",
+    "en": "Risk measurement"
+   },
+   "level": 3,
+   "family": "risk-management",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hedging",
+   "type": "Topic",
+   "label": {
+    "ko": "헤지의 개념",
+    "en": "Hedging"
+   },
+   "level": 3,
+   "family": "risk-management",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-hrm",
+   "type": "Area",
+   "label": {
+    "ko": "인적자원관리",
+    "en": "Human resource management"
+   },
+   "level": 2,
+   "family": "hrm",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/recruitment",
+   "type": "Topic",
+   "label": {
+    "ko": "채용",
+    "en": "Recruitment"
+   },
+   "level": 2,
+   "family": "hrm",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/performance-appraisal",
+   "type": "Topic",
+   "label": {
+    "ko": "평가",
+    "en": "Performance appraisal"
+   },
+   "level": 2,
+   "family": "hrm",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/compensation",
+   "type": "Topic",
+   "label": {
+    "ko": "보상",
+    "en": "Compensation"
+   },
+   "level": 2,
+   "family": "hrm",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/training-development",
+   "type": "Topic",
+   "label": {
+    "ko": "교육",
+    "en": "Training and development"
+   },
+   "level": 2,
+   "family": "hrm",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-org-behavior",
+   "type": "Area",
+   "label": {
+    "ko": "조직행동과 리더십",
+    "en": "Organizational behavior and leadership"
+   },
+   "level": 2,
+   "family": "org-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/motivation-theories",
+   "type": "Topic",
+   "label": {
+    "ko": "동기 이론",
+    "en": "Motivation theories"
+   },
+   "level": 2,
+   "family": "org-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/teams",
+   "type": "Topic",
+   "label": {
+    "ko": "팀",
+    "en": "Teams"
+   },
+   "level": 2,
+   "family": "org-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/leadership-theories",
+   "type": "Topic",
+   "label": {
+    "ko": "리더십 이론",
+    "en": "Leadership theories"
+   },
+   "level": 2,
+   "family": "org-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/change-management",
+   "type": "Topic",
+   "label": {
+    "ko": "변화 관리",
+    "en": "Change management"
+   },
+   "level": 2,
+   "family": "org-behavior",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-decision-science",
+   "type": "Area",
+   "label": {
+    "ko": "의사결정 과학",
+    "en": "Decision science"
+   },
+   "level": 2,
+   "family": "decision-science",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/decision-trees-biz",
+   "type": "Topic",
+   "label": {
+    "ko": "결정 나무(의사결정 분석)",
+    "en": "Decision trees (decision analysis)"
+   },
+   "level": 2,
+   "family": "decision-science",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/expected-value-decision",
+   "type": "Topic",
+   "label": {
+    "ko": "기대값 의사결정",
+    "en": "Expected-value decisions"
+   },
+   "level": 2,
+   "family": "decision-science",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/business-simulation",
+   "type": "Topic",
+   "label": {
+    "ko": "경영 시뮬레이션",
+    "en": "Business simulation"
+   },
+   "level": 2,
+   "family": "decision-science",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-digital",
+   "type": "Area",
+   "label": {
+    "ko": "경영정보와 디지털 전환",
+    "en": "Information systems and digital transformation"
+   },
+   "level": 3,
+   "family": "digital",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/information-systems",
+   "type": "Topic",
+   "label": {
+    "ko": "정보 시스템",
+    "en": "Information systems"
+   },
+   "level": 3,
+   "family": "digital",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-driven-management",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 기반 경영",
+    "en": "Data-driven management"
+   },
+   "level": 3,
+   "family": "digital",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/platforms",
+   "type": "Topic",
+   "label": {
+    "ko": "플랫폼",
+    "en": "Platforms"
+   },
+   "level": 3,
+   "family": "digital",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ai-transformation",
+   "type": "Topic",
+   "label": {
+    "ko": "AI 전환(AX)",
+    "en": "AI transformation (AX)"
+   },
+   "level": 3,
+   "family": "digital",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-entrepreneurship",
+   "type": "Area",
+   "label": {
+    "ko": "창업과 비즈니스 모델",
+    "en": "Entrepreneurship and business models"
+   },
+   "level": 2,
+   "family": "entrepreneurship",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/opportunity-discovery",
+   "type": "Topic",
+   "label": {
+    "ko": "기회 발견",
+    "en": "Opportunity discovery"
+   },
+   "level": 2,
+   "family": "entrepreneurship",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/business-model",
+   "type": "Topic",
+   "label": {
+    "ko": "비즈니스 모델",
+    "en": "Business model"
+   },
+   "level": 2,
+   "family": "entrepreneurship",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/validation-experiments",
+   "type": "Topic",
+   "label": {
+    "ko": "검증 실험",
+    "en": "Validation experiments"
+   },
+   "level": 2,
+   "family": "entrepreneurship",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-governance",
+   "type": "Area",
+   "label": {
+    "ko": "기업윤리와 지배구조",
+    "en": "Business ethics and governance"
+   },
+   "level": 3,
+   "family": "governance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/board",
+   "type": "Topic",
+   "label": {
+    "ko": "이사회",
+    "en": "Board of directors"
+   },
+   "level": 3,
+   "family": "governance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/agency-problem",
+   "type": "Topic",
+   "label": {
+    "ko": "대리인 문제",
+    "en": "Agency problem"
+   },
+   "level": 3,
+   "family": "governance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sustainability-esg",
+   "type": "Topic",
+   "label": {
+    "ko": "지속가능경영",
+    "en": "Sustainability (ESG)"
+   },
+   "level": 3,
+   "family": "governance",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/biz-international-biz",
+   "type": "Area",
+   "label": {
+    "ko": "국제경영",
+    "en": "International business"
+   },
+   "level": 3,
+   "family": "international-biz",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/market-entry",
+   "type": "Topic",
+   "label": {
+    "ko": "해외 진출 방식",
+    "en": "Market entry modes"
+   },
+   "level": 3,
+   "family": "international-biz",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cultural-differences",
+   "type": "Topic",
+   "label": {
+    "ko": "문화 차이",
+    "en": "Cultural differences"
+   },
+   "level": 3,
+   "family": "international-biz",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/global-supply-chain",
+   "type": "Topic",
+   "label": {
+    "ko": "글로벌 공급망",
+    "en": "Global supply chains"
+   },
+   "level": 3,
+   "family": "international-biz",
+   "domain": [
+    "biz"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/management-functions",
+   "p": "lab:broader",
+   "o": "lab:area/biz-foundations"
+  },
+  {
+   "s": "lab:topic/business-forms",
+   "p": "lab:broader",
+   "o": "lab:area/biz-foundations"
+  },
+  {
+   "s": "lab:topic/stakeholders",
+   "p": "lab:broader",
+   "o": "lab:area/biz-foundations"
+  },
+  {
+   "s": "lab:topic/business-environment",
+   "p": "lab:broader",
+   "o": "lab:area/biz-foundations"
+  },
+  {
+   "s": "lab:topic/org-structure",
+   "p": "lab:broader",
+   "o": "lab:area/biz-organization"
+  },
+  {
+   "s": "lab:topic/org-design",
+   "p": "lab:broader",
+   "o": "lab:area/biz-organization"
+  },
+  {
+   "s": "lab:topic/org-culture",
+   "p": "lab:broader",
+   "o": "lab:area/biz-organization"
+  },
+  {
+   "s": "lab:topic/industry-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/biz-strategy"
+  },
+  {
+   "s": "lab:topic/competitive-advantage",
+   "p": "lab:broader",
+   "o": "lab:area/biz-strategy"
+  },
+  {
+   "s": "lab:topic/resource-based-view",
+   "p": "lab:broader",
+   "o": "lab:area/biz-strategy"
+  },
+  {
+   "s": "lab:topic/corporate-strategy",
+   "p": "lab:broader",
+   "o": "lab:area/biz-strategy"
+  },
+  {
+   "s": "lab:topic/stp",
+   "p": "lab:broader",
+   "o": "lab:area/biz-marketing"
+  },
+  {
+   "s": "lab:topic/marketing-mix",
+   "p": "lab:broader",
+   "o": "lab:area/biz-marketing"
+  },
+  {
+   "s": "lab:topic/branding",
+   "p": "lab:broader",
+   "o": "lab:area/biz-marketing"
+  },
+  {
+   "s": "lab:topic/purchase-decision",
+   "p": "lab:broader",
+   "o": "lab:area/biz-consumer-behavior"
+  },
+  {
+   "s": "lab:topic/attitudes",
+   "p": "lab:broader",
+   "o": "lab:area/biz-consumer-behavior"
+  },
+  {
+   "s": "lab:topic/behavioral-marketing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-consumer-behavior"
+  },
+  {
+   "s": "lab:topic/voice-of-customer",
+   "p": "lab:broader",
+   "o": "lab:area/biz-consumer-behavior"
+  },
+  {
+   "s": "lab:topic/cost-based-pricing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-pricing"
+  },
+  {
+   "s": "lab:topic/value-based-pricing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-pricing"
+  },
+  {
+   "s": "lab:topic/bid-pricing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-pricing"
+  },
+  {
+   "s": "lab:topic/price-discrimination",
+   "p": "lab:partOf",
+   "o": "lab:area/biz-pricing",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/elasticity",
+   "p": "lab:partOf",
+   "o": "lab:area/biz-pricing",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/process-design",
+   "p": "lab:broader",
+   "o": "lab:area/biz-operations"
+  },
+  {
+   "s": "lab:topic/capacity",
+   "p": "lab:broader",
+   "o": "lab:area/biz-operations"
+  },
+  {
+   "s": "lab:topic/queueing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-operations"
+  },
+  {
+   "s": "lab:topic/scheduling",
+   "p": "lab:broader",
+   "o": "lab:area/biz-operations"
+  },
+  {
+   "s": "lab:topic/smart-manufacturing",
+   "p": "lab:broader",
+   "o": "lab:area/biz-operations"
+  },
+  {
+   "s": "lab:topic/inventory-models",
+   "p": "lab:broader",
+   "o": "lab:area/biz-supply-chain"
+  },
+  {
+   "s": "lab:topic/demand-forecasting",
+   "p": "lab:broader",
+   "o": "lab:area/biz-supply-chain"
+  },
+  {
+   "s": "lab:topic/bullwhip-effect",
+   "p": "lab:broader",
+   "o": "lab:area/biz-supply-chain"
+  },
+  {
+   "s": "lab:topic/control-charts",
+   "p": "lab:broader",
+   "o": "lab:area/biz-quality"
+  },
+  {
+   "s": "lab:topic/process-capability",
+   "p": "lab:broader",
+   "o": "lab:area/biz-quality"
+  },
+  {
+   "s": "lab:topic/continuous-improvement",
+   "p": "lab:broader",
+   "o": "lab:area/biz-quality"
+  },
+  {
+   "s": "lab:topic/time-value-of-money",
+   "p": "lab:broader",
+   "o": "lab:area/biz-corporate-finance"
+  },
+  {
+   "s": "lab:topic/cost-of-capital",
+   "p": "lab:broader",
+   "o": "lab:area/biz-corporate-finance"
+  },
+  {
+   "s": "lab:topic/capital-structure",
+   "p": "lab:broader",
+   "o": "lab:area/biz-corporate-finance"
+  },
+  {
+   "s": "lab:topic/npv",
+   "p": "lab:broader",
+   "o": "lab:area/biz-investment"
+  },
+  {
+   "s": "lab:topic/irr",
+   "p": "lab:broader",
+   "o": "lab:area/biz-investment"
+  },
+  {
+   "s": "lab:topic/payback-period",
+   "p": "lab:broader",
+   "o": "lab:area/biz-investment"
+  },
+  {
+   "s": "lab:topic/real-options",
+   "p": "lab:broader",
+   "o": "lab:area/biz-investment"
+  },
+  {
+   "s": "lab:topic/diversification",
+   "p": "lab:broader",
+   "o": "lab:area/biz-risk-management"
+  },
+  {
+   "s": "lab:topic/risk-measurement",
+   "p": "lab:broader",
+   "o": "lab:area/biz-risk-management"
+  },
+  {
+   "s": "lab:topic/hedging",
+   "p": "lab:broader",
+   "o": "lab:area/biz-risk-management"
+  },
+  {
+   "s": "lab:topic/recruitment",
+   "p": "lab:broader",
+   "o": "lab:area/biz-hrm"
+  },
+  {
+   "s": "lab:topic/performance-appraisal",
+   "p": "lab:broader",
+   "o": "lab:area/biz-hrm"
+  },
+  {
+   "s": "lab:topic/compensation",
+   "p": "lab:broader",
+   "o": "lab:area/biz-hrm"
+  },
+  {
+   "s": "lab:topic/training-development",
+   "p": "lab:broader",
+   "o": "lab:area/biz-hrm"
+  },
+  {
+   "s": "lab:topic/motivation-theories",
+   "p": "lab:broader",
+   "o": "lab:area/biz-org-behavior"
+  },
+  {
+   "s": "lab:topic/teams",
+   "p": "lab:broader",
+   "o": "lab:area/biz-org-behavior"
+  },
+  {
+   "s": "lab:topic/leadership-theories",
+   "p": "lab:broader",
+   "o": "lab:area/biz-org-behavior"
+  },
+  {
+   "s": "lab:topic/change-management",
+   "p": "lab:broader",
+   "o": "lab:area/biz-org-behavior"
+  },
+  {
+   "s": "lab:topic/decision-trees-biz",
+   "p": "lab:broader",
+   "o": "lab:area/biz-decision-science"
+  },
+  {
+   "s": "lab:topic/expected-value-decision",
+   "p": "lab:broader",
+   "o": "lab:area/biz-decision-science"
+  },
+  {
+   "s": "lab:topic/business-simulation",
+   "p": "lab:broader",
+   "o": "lab:area/biz-decision-science"
+  },
+  {
+   "s": "lab:topic/linear-programming",
+   "p": "lab:partOf",
+   "o": "lab:area/biz-decision-science",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/information-systems",
+   "p": "lab:broader",
+   "o": "lab:area/biz-digital"
+  },
+  {
+   "s": "lab:topic/data-driven-management",
+   "p": "lab:broader",
+   "o": "lab:area/biz-digital"
+  },
+  {
+   "s": "lab:topic/platforms",
+   "p": "lab:broader",
+   "o": "lab:area/biz-digital"
+  },
+  {
+   "s": "lab:topic/ai-transformation",
+   "p": "lab:broader",
+   "o": "lab:area/biz-digital"
+  },
+  {
+   "s": "lab:topic/opportunity-discovery",
+   "p": "lab:broader",
+   "o": "lab:area/biz-entrepreneurship"
+  },
+  {
+   "s": "lab:topic/business-model",
+   "p": "lab:broader",
+   "o": "lab:area/biz-entrepreneurship"
+  },
+  {
+   "s": "lab:topic/validation-experiments",
+   "p": "lab:broader",
+   "o": "lab:area/biz-entrepreneurship"
+  },
+  {
+   "s": "lab:topic/board",
+   "p": "lab:broader",
+   "o": "lab:area/biz-governance"
+  },
+  {
+   "s": "lab:topic/agency-problem",
+   "p": "lab:broader",
+   "o": "lab:area/biz-governance"
+  },
+  {
+   "s": "lab:topic/sustainability-esg",
+   "p": "lab:broader",
+   "o": "lab:area/biz-governance"
+  },
+  {
+   "s": "lab:topic/market-entry",
+   "p": "lab:broader",
+   "o": "lab:area/biz-international-biz"
+  },
+  {
+   "s": "lab:topic/cultural-differences",
+   "p": "lab:broader",
+   "o": "lab:area/biz-international-biz"
+  },
+  {
+   "s": "lab:topic/global-supply-chain",
+   "p": "lab:broader",
+   "o": "lab:area/biz-international-biz"
+  },
+  {
+   "s": "lab:area/biz-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-organization"
+  },
+  {
+   "s": "lab:area/biz-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-strategy"
+  },
+  {
+   "s": "lab:area/biz-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-marketing"
+  },
+  {
+   "s": "lab:area/biz-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-corporate-finance"
+  },
+  {
+   "s": "lab:area/biz-marketing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-consumer-behavior"
+  },
+  {
+   "s": "lab:area/biz-marketing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-pricing"
+  },
+  {
+   "s": "lab:area/biz-operations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-supply-chain"
+  },
+  {
+   "s": "lab:area/biz-operations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-quality"
+  },
+  {
+   "s": "lab:area/biz-corporate-finance",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-investment"
+  },
+  {
+   "s": "lab:area/biz-investment",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-risk-management"
+  },
+  {
+   "s": "lab:area/biz-organization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-hrm"
+  },
+  {
+   "s": "lab:area/biz-organization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-org-behavior"
+  },
+  {
+   "s": "lab:area/biz-corporate-finance",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-decision-science"
+  },
+  {
+   "s": "lab:area/biz-operations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-decision-science"
+  },
+  {
+   "s": "lab:area/biz-strategy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-digital"
+  },
+  {
+   "s": "lab:area/biz-strategy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-entrepreneurship"
+  },
+  {
+   "s": "lab:area/biz-strategy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-governance"
+  },
+  {
+   "s": "lab:area/biz-strategy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-international-biz"
+  }
+ ]
+}

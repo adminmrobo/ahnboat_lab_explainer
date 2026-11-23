@@ -1,0 +1,521 @@
+{
+ "version": "0.1",
+ "name": "데이터 공학·DB 영역 뼈대 (초안)",
+ "domain": "data",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(ACM CCS) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/data-data-modeling",
+   "type": "Area",
+   "label": {
+    "ko": "데이터 모델링",
+    "en": "Data modeling"
+   },
+   "level": 1,
+   "family": "data-modeling",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/entity-relationship",
+   "type": "Topic",
+   "label": {
+    "ko": "개체-관계 모형(ERD)",
+    "en": "Entity–relationship modeling"
+   },
+   "level": 1,
+   "family": "data-modeling",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/normalization-db",
+   "type": "Topic",
+   "label": {
+    "ko": "정규화",
+    "en": "Normalization"
+   },
+   "level": 1,
+   "family": "data-modeling",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/keys-constraints",
+   "type": "Topic",
+   "label": {
+    "ko": "키와 제약조건",
+    "en": "Keys and constraints"
+   },
+   "level": 1,
+   "family": "data-modeling",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/data-relational",
+   "type": "Area",
+   "label": {
+    "ko": "관계형 데이터베이스",
+    "en": "Relational databases"
+   },
+   "level": 1,
+   "family": "relational",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/relational-model",
+   "type": "Topic",
+   "label": {
+    "ko": "관계 모형",
+    "en": "Relational model"
+   },
+   "level": 1,
+   "family": "relational",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sql",
+   "type": "Topic",
+   "label": {
+    "ko": "SQL",
+    "en": "SQL"
+   },
+   "level": 1,
+   "family": "relational",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/joins",
+   "type": "Topic",
+   "label": {
+    "ko": "조인",
+    "en": "Joins"
+   },
+   "level": 1,
+   "family": "relational",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transactions",
+   "type": "Topic",
+   "label": {
+    "ko": "트랜잭션과 ACID",
+    "en": "Transactions and ACID"
+   },
+   "level": 1,
+   "family": "relational",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/data-nosql-vector",
+   "type": "Area",
+   "label": {
+    "ko": "NoSQL과 벡터 DB",
+    "en": "NoSQL and vector databases"
+   },
+   "level": 3,
+   "family": "nosql-vector",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/document-kv-stores",
+   "type": "Topic",
+   "label": {
+    "ko": "문서·키-값 저장소",
+    "en": "Document and key–value stores"
+   },
+   "level": 3,
+   "family": "nosql-vector",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/vector-database",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터 데이터베이스",
+    "en": "Vector databases"
+   },
+   "level": 3,
+   "family": "nosql-vector",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/graph-database",
+   "type": "Topic",
+   "label": {
+    "ko": "그래프 데이터베이스",
+    "en": "Graph databases"
+   },
+   "level": 3,
+   "family": "nosql-vector",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/data-pipelines",
+   "type": "Area",
+   "label": {
+    "ko": "데이터 파이프라인",
+    "en": "Data pipelines"
+   },
+   "level": 2,
+   "family": "pipelines",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/etl-elt",
+   "type": "Topic",
+   "label": {
+    "ko": "ETL·ELT",
+    "en": "ETL and ELT"
+   },
+   "level": 2,
+   "family": "pipelines",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/data-cleaning",
+   "type": "Topic",
+   "label": {
+    "ko": "데이터 정제·결측치",
+    "en": "Data cleaning and missing values"
+   },
+   "level": 2,
+   "family": "pipelines",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/spreadsheets-automation",
+   "type": "Topic",
+   "label": {
+    "ko": "스프레드시트 자동화",
+    "en": "Spreadsheet automation"
+   },
+   "level": 2,
+   "family": "pipelines",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/data-data-to-numbers",
+   "type": "Area",
+   "label": {
+    "ko": "데이터의 수치화",
+    "en": "Turning data into numbers"
+   },
+   "level": 1,
+   "family": "data-to-numbers",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/encoding-categorical",
+   "type": "Topic",
+   "label": {
+    "ko": "범주형 인코딩",
+    "en": "Encoding categorical data"
+   },
+   "level": 1,
+   "family": "data-to-numbers",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/image-as-array",
+   "type": "Topic",
+   "label": {
+    "ko": "이미지를 배열로",
+    "en": "Images as arrays"
+   },
+   "level": 1,
+   "family": "data-to-numbers",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/audio-signal",
+   "type": "Topic",
+   "label": {
+    "ko": "소리 신호의 수치화",
+    "en": "Digitizing audio"
+   },
+   "level": 1,
+   "family": "data-to-numbers",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/text-vectorization",
+   "type": "Topic",
+   "label": {
+    "ko": "텍스트 벡터화",
+    "en": "Text vectorization"
+   },
+   "level": 1,
+   "family": "data-to-numbers",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/data-visualization",
+   "type": "Area",
+   "label": {
+    "ko": "데이터 시각화",
+    "en": "Data visualization"
+   },
+   "level": 1,
+   "family": "visualization",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/chart-selection",
+   "type": "Topic",
+   "label": {
+    "ko": "차트 고르기",
+    "en": "Choosing charts"
+   },
+   "level": 1,
+   "family": "visualization",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dashboards",
+   "type": "Topic",
+   "label": {
+    "ko": "대시보드",
+    "en": "Dashboards"
+   },
+   "level": 1,
+   "family": "visualization",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/animated-visualization",
+   "type": "Topic",
+   "label": {
+    "ko": "움직이는 시각화",
+    "en": "Animated visualization"
+   },
+   "level": 1,
+   "family": "visualization",
+   "domain": [
+    "data"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/entity-relationship",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-modeling"
+  },
+  {
+   "s": "lab:topic/normalization-db",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-modeling"
+  },
+  {
+   "s": "lab:topic/keys-constraints",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-modeling"
+  },
+  {
+   "s": "lab:topic/relational-model",
+   "p": "lab:broader",
+   "o": "lab:area/data-relational"
+  },
+  {
+   "s": "lab:topic/sql",
+   "p": "lab:broader",
+   "o": "lab:area/data-relational"
+  },
+  {
+   "s": "lab:topic/joins",
+   "p": "lab:broader",
+   "o": "lab:area/data-relational"
+  },
+  {
+   "s": "lab:topic/transactions",
+   "p": "lab:broader",
+   "o": "lab:area/data-relational"
+  },
+  {
+   "s": "lab:topic/document-kv-stores",
+   "p": "lab:broader",
+   "o": "lab:area/data-nosql-vector"
+  },
+  {
+   "s": "lab:topic/vector-database",
+   "p": "lab:broader",
+   "o": "lab:area/data-nosql-vector"
+  },
+  {
+   "s": "lab:topic/graph-database",
+   "p": "lab:broader",
+   "o": "lab:area/data-nosql-vector"
+  },
+  {
+   "s": "lab:topic/etl-elt",
+   "p": "lab:broader",
+   "o": "lab:area/data-pipelines"
+  },
+  {
+   "s": "lab:topic/data-cleaning",
+   "p": "lab:broader",
+   "o": "lab:area/data-pipelines"
+  },
+  {
+   "s": "lab:topic/spreadsheets-automation",
+   "p": "lab:broader",
+   "o": "lab:area/data-pipelines"
+  },
+  {
+   "s": "lab:topic/encoding-categorical",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-to-numbers"
+  },
+  {
+   "s": "lab:topic/image-as-array",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-to-numbers"
+  },
+  {
+   "s": "lab:topic/audio-signal",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-to-numbers"
+  },
+  {
+   "s": "lab:topic/text-vectorization",
+   "p": "lab:broader",
+   "o": "lab:area/data-data-to-numbers"
+  },
+  {
+   "s": "lab:topic/chart-selection",
+   "p": "lab:broader",
+   "o": "lab:area/data-visualization"
+  },
+  {
+   "s": "lab:topic/dashboards",
+   "p": "lab:broader",
+   "o": "lab:area/data-visualization"
+  },
+  {
+   "s": "lab:topic/animated-visualization",
+   "p": "lab:broader",
+   "o": "lab:area/data-visualization"
+  },
+  {
+   "s": "lab:area/data-data-modeling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/data-relational"
+  },
+  {
+   "s": "lab:area/data-relational",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/data-nosql-vector"
+  },
+  {
+   "s": "lab:area/data-relational",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/data-pipelines"
+  },
+  {
+   "s": "lab:area/data-data-to-numbers",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/data-visualization"
+  }
+ ]
+}

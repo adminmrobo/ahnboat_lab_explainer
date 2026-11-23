@@ -1,0 +1,392 @@
+{
+ "version": "0.1",
+ "updated": "2026-11-24",
+ "name": "분야 사이 다리 (초안)",
+ "note": "뼈대 파일들 사이의 관계만 모은 파일. 작성자 초안. equivalentTo는 같은 지식이 두 분야 뼈대에 다른 ID로 있을 때(ID는 바꾸지 않는다), specialCaseOf·prerequisiteOf·analogyOf·relatedTo는 분야를 넘는 연결. relatedTo는 15% 이하.",
+ "edges": [
+  {
+   "s": "lab:topic/linear-algebra",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/math-linear-algebra",
+   "why": "AI 수학 기초의 선형대수 = 수학 선형대수 영역"
+  },
+  {
+   "s": "lab:topic/probability-statistics",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/stats-probability",
+   "why": "AI 확률·통계 주제 = 통계 확률 영역(입구)"
+  },
+  {
+   "s": "lab:topic/calculus-optimization-math",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/math-optimization-theory",
+   "why": "AI 최적화 수학 = 수학 최적화 이론"
+  },
+  {
+   "s": "lab:topic/linear-regression",
+   "p": "lab:specialCaseOf",
+   "o": "lab:topic/regression-analysis",
+   "why": "선형 회귀는 회귀분석의 한 경우"
+  },
+  {
+   "s": "lab:topic/logistic-regression",
+   "p": "lab:equivalentTo",
+   "o": "lab:topic/glm-logistic",
+   "why": "같은 모형, 분야만 다름"
+  },
+  {
+   "s": "lab:topic/pca",
+   "p": "lab:equivalentTo",
+   "o": "lab:topic/principal-components",
+   "why": "같은 기법"
+  },
+  {
+   "s": "lab:topic/clustering",
+   "p": "lab:equivalentTo",
+   "o": "lab:topic/cluster-analysis",
+   "why": "같은 기법"
+  },
+  {
+   "s": "lab:topic/time-series",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/stats-timeseries",
+   "why": "시계열"
+  },
+  {
+   "s": "lab:topic/kernel-density",
+   "p": "lab:specialCaseOf",
+   "o": "lab:topic/density-estimation",
+   "why": "커널 밀도는 밀도 추정의 한 방법"
+  },
+  {
+   "s": "lab:topic/data-splitting",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/cross-validation",
+   "why": "분리 → 교차검증"
+  },
+  {
+   "s": "lab:topic/knowledge-graph",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/logic-knowledge-representation",
+   "why": "지식 그래프 ↔ 지식 표현"
+  },
+  {
+   "s": "lab:topic/rag",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/llm-retrieval",
+   "why": "검색 증강"
+  },
+  {
+   "s": "lab:topic/prompting",
+   "p": "lab:equivalentTo",
+   "o": "lab:area/llm-prompting",
+   "why": "프롬프팅"
+  },
+  {
+   "s": "lab:topic/diffusion",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/latent-diffusion",
+   "why": "확산 → 잠재 확산"
+  },
+  {
+   "s": "lab:topic/transformer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/decoder-only",
+   "why": "트랜스포머 → 디코더 전용"
+  },
+  {
+   "s": "lab:topic/pretrained-lm",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/llm-training",
+   "why": "사전학습 LM → LLM 학습"
+  },
+  {
+   "s": "lab:topic/embedding-space",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/vector-search",
+   "why": "임베딩 → 벡터 검색"
+  },
+  {
+   "s": "lab:topic/vector-database",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/vector-search",
+   "why": "벡터 DB → 벡터 검색"
+  },
+  {
+   "s": "lab:topic/message-passing",
+   "p": "lab:analogyOf",
+   "o": "lab:topic/network-externality",
+   "why": "이웃 수요 모으기 = 메시지 전달 (네트워크재 정리 2026-11-24)"
+  },
+  {
+   "s": "lab:topic/gnn",
+   "p": "lab:relatedTo",
+   "o": "lab:area/econ-network",
+   "why": "그래프 신경망과 네트워크 경제"
+  },
+  {
+   "s": "lab:topic/graph-theory",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/graph",
+   "why": "그래프 이론 → 그래프 학습"
+  },
+  {
+   "s": "lab:topic/graph-theory",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-network",
+   "why": "그래프 이론 → 네트워크 경제"
+  },
+  {
+   "s": "lab:topic/gradient",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/gradient-descent",
+   "why": "그래디언트 → 경사하강"
+  },
+  {
+   "s": "lab:topic/chain-rule-multivar",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/backpropagation",
+   "why": "연쇄법칙 → 역전파"
+  },
+  {
+   "s": "lab:topic/tensors-algebra",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/tensor-transformation",
+   "why": "다중선형 → 텐서 변환 법칙"
+  },
+  {
+   "s": "lab:topic/euclidean-space",
+   "p": "lab:specialCaseOf",
+   "o": "lab:topic/hilbert-space",
+   "why": "유클리드 공간은 유한 차원 힐베르트 공간"
+  },
+  {
+   "s": "lab:topic/lagrange-multipliers",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/consumer-choice",
+   "why": "제약 최적화 → 효용 극대화"
+  },
+  {
+   "s": "lab:topic/duality-optimization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/duality-consumer",
+   "why": "쌍대성"
+  },
+  {
+   "s": "lab:topic/optimal-control",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/optimal-growth",
+   "why": "최적제어 → 최적 성장"
+  },
+  {
+   "s": "lab:topic/hamiltonian",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/optimal-control",
+   "why": "해밀토니안 → 폰트랴긴"
+  },
+  {
+   "s": "lab:topic/zeta-function",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/riemann-hypothesis",
+   "why": "제타 함수 → 리만 가설"
+  },
+  {
+   "s": "lab:topic/manifold-hypothesis",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/embedding-space",
+   "why": "다양체 가설과 임베딩"
+  },
+  {
+   "s": "lab:topic/persistent-homology",
+   "p": "lab:relatedTo",
+   "o": "lab:area/unsupervised",
+   "why": "TDA와 비지도 기법"
+  },
+  {
+   "s": "lab:topic/bayes-theorem",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/naive-bayes",
+   "why": "베이즈 정리 → 나이브 베이즈"
+  },
+  {
+   "s": "lab:topic/bayes-theorem",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-bayes",
+   "why": "베이즈 정리 → 베이즈 통계"
+  },
+  {
+   "s": "lab:topic/maximum-likelihood",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/loss-function",
+   "why": "최대우도 → 손실 함수(교차 엔트로피)"
+  },
+  {
+   "s": "lab:topic/probability-space",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-probability",
+   "why": "측도 확률 → 확률"
+  },
+  {
+   "s": "lab:topic/description-logic",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/knowledge-graph",
+   "why": "기술 논리 → 지식 그래프"
+  },
+  {
+   "s": "lab:topic/sat-solving",
+   "p": "lab:relatedTo",
+   "o": "lab:area/llm-reasoning",
+   "why": "기호 추론과 LLM 추론"
+  },
+  {
+   "s": "lab:topic/regression-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-econometrics",
+   "why": "회귀 → 계량경제"
+  },
+  {
+   "s": "lab:topic/volatility-models",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/fin-volatility",
+   "why": "GARCH → 변동성"
+  },
+  {
+   "s": "lab:topic/risk-return",
+   "p": "lab:equivalentTo",
+   "o": "lab:topic/diversification",
+   "why": "금융·경영의 위험-분산 (근사)"
+  },
+  {
+   "s": "lab:topic/time-value-of-money",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/valuation",
+   "why": "화폐의 시간가치 → 가치 평가"
+  },
+  {
+   "s": "lab:topic/npv",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/valuation",
+   "why": "NPV → 가치 평가"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/biz-corporate-finance",
+   "why": "재무제표 → 재무관리"
+  },
+  {
+   "s": "lab:topic/cf-activities",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/valuation",
+   "why": "현금흐름 → 가치 평가"
+  },
+  {
+   "s": "lab:topic/break-even",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/cost-based-pricing",
+   "why": "손익분기 → 원가 기반 가격"
+  },
+  {
+   "s": "lab:topic/control-charts",
+   "p": "lab:specialCaseOf",
+   "o": "lab:area/stats-testing",
+   "why": "관리도는 반복 검정의 한 형태"
+  },
+  {
+   "s": "lab:topic/ab-testing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/validation-experiments",
+   "why": "A/B 테스트 → 창업 검증 실험"
+  },
+  {
+   "s": "lab:area/stats-timeseries",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/demand-forecasting",
+   "why": "시계열 → 수요 예측"
+  },
+  {
+   "s": "lab:topic/behavioral-marketing",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-behavioral",
+   "why": "행동경제학 응용"
+  },
+  {
+   "s": "lab:topic/two-sided-markets",
+   "p": "lab:equivalentTo",
+   "o": "lab:topic/platforms",
+   "why": "양면 시장 = 플랫폼 (근사)"
+  },
+  {
+   "s": "lab:topic/automation-labor",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/factor-demand",
+   "why": "AI와 조건부 노동수요"
+  },
+  {
+   "s": "lab:topic/deepfakes",
+   "p": "lab:partOf",
+   "o": "lab:area/synthetic-media",
+   "why": "딥페이크는 합성 미디어 범죄 영역에도 속함"
+  },
+  {
+   "s": "lab:topic/jailbreak-defense",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/ai-safety",
+   "why": "탈옥 방어와 AI 안전"
+  },
+  {
+   "s": "lab:topic/smart-contracts",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/defi-risk",
+   "why": "스마트 계약 → DeFi 리스크"
+  },
+  {
+   "s": "lab:topic/image-as-array",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/convolution",
+   "why": "이미지 배열 → 합성곱"
+  },
+  {
+   "s": "lab:topic/text-vectorization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/word-embedding",
+   "why": "텍스트 벡터화 → 임베딩"
+  },
+  {
+   "s": "lab:topic/character-sheet",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/style-consistency",
+   "why": "그림의 캐릭터 시트 ↔ 생성 AI 일관성"
+  },
+  {
+   "s": "lab:topic/simplify-forms",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/3d-reconstruction",
+   "why": "형태 단순화와 3D 복원"
+  },
+  {
+   "s": "lab:topic/sql",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/accounting-data-python",
+   "why": "SQL·파이썬 → 회계 데이터 분석"
+  },
+  {
+   "s": "lab:topic/fallacies",
+   "p": "lab:relatedTo",
+   "o": "lab:topic/heuristics-biases",
+   "why": "오류와 인지 편향"
+  },
+  {
+   "s": "lab:topic/mathematical-induction",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:topic/recurrence",
+   "why": "귀납법 → 점화식"
+  },
+  {
+   "s": "lab:topic/epsilon-delta",
+   "p": "lab:partOf",
+   "o": "lab:area/logic-proof",
+   "why": "엡실론-델타는 증명 기법의 한 형태"
+  }
+ ]
+}

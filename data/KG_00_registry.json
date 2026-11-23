@@ -1,7 +1,7 @@
 {
- "version": "0.2",
- "updated": "2026-11-23",
- "note": "시리즈 개념·문헌 ID 좌석표. 같은 개념이면 이 ID를 쓴다. 뼈대(Area·Topic)는 작성자 초안.",
+ "version": "0.3",
+ "updated": "2026-11-24",
+ "note": "시리즈 개념·문헌 ID 좌석표. 같은 개념이면 이 ID를 쓴다. 뼈대(Area·Topic)는 작성자 초안. 0.3: 분야 뼈대 12개(경제·통계·수학·기하위상·논리·생성형 AI·LLM·데이터·금융·경영·회계·그림)의 영역·주제를 더함.",
  "entries": [
   {
    "id": "lab:area/math",
@@ -2079,6 +2079,6926 @@
    "pages": [
     "ai_crime_lab/R001"
    ]
+  },
+  {
+   "id": "lab:area/econ-thinking",
+   "type": "Area",
+   "label_ko": "경제학적 사고",
+   "label_en": "Economic thinking",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/scarcity",
+   "type": "Topic",
+   "label_ko": "희소성",
+   "label_en": "Scarcity",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/opportunity-cost",
+   "type": "Topic",
+   "label_ko": "기회비용",
+   "label_en": "Opportunity cost",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/marginal-thinking",
+   "type": "Topic",
+   "label_ko": "한계적 사고",
+   "label_en": "Marginal thinking",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/incentives",
+   "type": "Topic",
+   "label_ko": "유인",
+   "label_en": "Incentives",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/economic-models-assumptions",
+   "type": "Topic",
+   "label_ko": "모형과 가정",
+   "label_en": "Economic models and assumptions",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-supply-demand",
+   "type": "Area",
+   "label_ko": "수요와 공급",
+   "label_en": "Supply and demand",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/demand-supply-curves",
+   "type": "Topic",
+   "label_ko": "수요·공급 곡선",
+   "label_en": "Demand and supply curves",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/market-equilibrium",
+   "type": "Topic",
+   "label_ko": "시장 균형",
+   "label_en": "Market equilibrium",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/curve-shifts",
+   "type": "Topic",
+   "label_ko": "곡선의 이동",
+   "label_en": "Shifts of demand and supply",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/elasticity",
+   "type": "Topic",
+   "label_ko": "탄력성",
+   "label_en": "Elasticity",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/price-controls",
+   "type": "Topic",
+   "label_ko": "가격 통제",
+   "label_en": "Price controls",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-consumer",
+   "type": "Area",
+   "label_ko": "소비자 이론",
+   "label_en": "Consumer theory",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/utility",
+   "type": "Topic",
+   "label_ko": "효용",
+   "label_en": "Utility",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/budget-constraint",
+   "type": "Topic",
+   "label_ko": "예산 제약",
+   "label_en": "Budget constraint",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/indifference-curves",
+   "type": "Topic",
+   "label_ko": "무차별곡선",
+   "label_en": "Indifference curves",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/consumer-choice",
+   "type": "Topic",
+   "label_ko": "소비자 선택(효용 극대화)",
+   "label_en": "Consumer choice",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/demand-theory",
+   "type": "Topic",
+   "label_ko": "수요이론(마셜·힉스 수요)",
+   "label_en": "Demand theory (Marshallian and Hicksian)",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/income-substitution-effects",
+   "type": "Topic",
+   "label_ko": "소득·대체 효과(슬러츠키)",
+   "label_en": "Income and substitution effects (Slutsky)",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/duality-consumer",
+   "type": "Topic",
+   "label_ko": "지출 최소화와 쌍대성",
+   "label_en": "Expenditure minimization and duality",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-producer",
+   "type": "Area",
+   "label_ko": "생산자 이론",
+   "label_en": "Producer theory",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/production-function",
+   "type": "Topic",
+   "label_ko": "생산함수",
+   "label_en": "Production function",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cost-curves",
+   "type": "Topic",
+   "label_ko": "비용곡선",
+   "label_en": "Cost curves",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/short-long-run",
+   "type": "Topic",
+   "label_ko": "단기와 장기",
+   "label_en": "Short run and long run",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/economies-of-scale",
+   "type": "Topic",
+   "label_ko": "규모의 경제",
+   "label_en": "Economies of scale",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/factor-demand",
+   "type": "Topic",
+   "label_ko": "요소 수요(조건부 노동수요)",
+   "label_en": "Factor demand (conditional labor demand)",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-market-structure",
+   "type": "Area",
+   "label_ko": "시장 구조",
+   "label_en": "Market structure",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/perfect-competition",
+   "type": "Topic",
+   "label_ko": "완전경쟁",
+   "label_en": "Perfect competition",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/monopoly",
+   "type": "Topic",
+   "label_ko": "독점",
+   "label_en": "Monopoly",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/oligopoly",
+   "type": "Topic",
+   "label_ko": "과점",
+   "label_en": "Oligopoly",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/monopolistic-competition",
+   "type": "Topic",
+   "label_ko": "독점적 경쟁",
+   "label_en": "Monopolistic competition",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/price-discrimination",
+   "type": "Topic",
+   "label_ko": "가격 차별",
+   "label_en": "Price discrimination",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-games",
+   "type": "Area",
+   "label_ko": "게임이론",
+   "label_en": "Game theory",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/payoff-matrix",
+   "type": "Topic",
+   "label_ko": "보수행렬",
+   "label_en": "Payoff matrix",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/nash-equilibrium",
+   "type": "Topic",
+   "label_ko": "내쉬균형",
+   "label_en": "Nash equilibrium",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/repeated-games",
+   "type": "Topic",
+   "label_ko": "반복 게임",
+   "label_en": "Repeated games",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sequential-games",
+   "type": "Topic",
+   "label_ko": "순차 게임",
+   "label_en": "Sequential games",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mechanism-design",
+   "type": "Topic",
+   "label_ko": "메커니즘 설계·경매",
+   "label_en": "Mechanism design and auctions",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-welfare",
+   "type": "Area",
+   "label_ko": "후생과 시장 실패",
+   "label_en": "Welfare and market failure",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/economic-surplus",
+   "type": "Topic",
+   "label_ko": "잉여",
+   "label_en": "Economic surplus",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/deadweight-loss",
+   "type": "Topic",
+   "label_ko": "사중손실",
+   "label_en": "Deadweight loss",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/externality",
+   "type": "Topic",
+   "label_ko": "외부효과",
+   "label_en": "Externality",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/public-goods",
+   "type": "Topic",
+   "label_ko": "공공재",
+   "label_en": "Public goods",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/information-asymmetry",
+   "type": "Topic",
+   "label_ko": "정보 비대칭",
+   "label_en": "Information asymmetry",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/general-equilibrium-welfare",
+   "type": "Topic",
+   "label_ko": "일반균형과 후생정리",
+   "label_en": "General equilibrium and welfare theorems",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-network",
+   "type": "Area",
+   "label_ko": "네트워크 경제",
+   "label_en": "Network economics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/network-economics",
+   "type": "Topic",
+   "label_ko": "네트워크 경제학",
+   "label_en": "Network economics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/network-externality",
+   "type": "Topic",
+   "label_ko": "네트워크 외부성",
+   "label_en": "Network externality",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bandwagon-effect",
+   "type": "Topic",
+   "label_ko": "편승·속물 효과",
+   "label_en": "Bandwagon and snob effects",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/critical-mass",
+   "type": "Topic",
+   "label_ko": "임계질량과 다중균형",
+   "label_en": "Critical mass and multiple equilibria",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/path-dependence",
+   "type": "Topic",
+   "label_ko": "경로의존성·고착",
+   "label_en": "Path dependence and lock-in",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/two-sided-markets",
+   "type": "Topic",
+   "label_ko": "양면 시장·플랫폼",
+   "label_en": "Two-sided markets and platforms",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/token-economics",
+   "type": "Topic",
+   "label_ko": "토큰 경제",
+   "label_en": "Token economics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-labor",
+   "type": "Area",
+   "label_ko": "노동과 분배",
+   "label_en": "Labor and distribution",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/labor-supply-demand",
+   "type": "Topic",
+   "label_ko": "노동 수요·공급",
+   "label_en": "Labor supply and demand",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/wage-determination",
+   "type": "Topic",
+   "label_ko": "임금 결정",
+   "label_en": "Wage determination",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inequality-measures",
+   "type": "Topic",
+   "label_ko": "불평등 지표",
+   "label_en": "Inequality measures",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/automation-labor",
+   "type": "Topic",
+   "label_ko": "자동화·AI와 노동",
+   "label_en": "Automation, AI and labor",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-accounts",
+   "type": "Area",
+   "label_ko": "국민소득 계정",
+   "label_en": "National income accounts",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gdp",
+   "type": "Topic",
+   "label_ko": "국내총생산",
+   "label_en": "Gross domestic product",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/nominal-real",
+   "type": "Topic",
+   "label_ko": "명목과 실질",
+   "label_en": "Nominal and real",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/price-index",
+   "type": "Topic",
+   "label_ko": "물가지수",
+   "label_en": "Price indices",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/unemployment-rate",
+   "type": "Topic",
+   "label_ko": "실업률",
+   "label_en": "Unemployment rate",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-growth",
+   "type": "Area",
+   "label_ko": "경제성장",
+   "label_en": "Economic growth",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/growth-accounting",
+   "type": "Topic",
+   "label_ko": "성장 회계",
+   "label_en": "Growth accounting",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/solow-model",
+   "type": "Topic",
+   "label_ko": "솔로 모형",
+   "label_en": "Solow model",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/technical-progress",
+   "type": "Topic",
+   "label_ko": "기술 진보",
+   "label_en": "Technical progress",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/institutions",
+   "type": "Topic",
+   "label_ko": "제도",
+   "label_en": "Institutions",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/optimal-growth",
+   "type": "Topic",
+   "label_ko": "최적 성장(램지 모형)",
+   "label_en": "Optimal growth (Ramsey model)",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-money",
+   "type": "Area",
+   "label_ko": "화폐와 물가",
+   "label_en": "Money and prices",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/functions-of-money",
+   "type": "Topic",
+   "label_ko": "화폐의 기능",
+   "label_en": "Functions of money",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/money-supply",
+   "type": "Topic",
+   "label_ko": "통화량",
+   "label_en": "Money supply",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inflation",
+   "type": "Topic",
+   "label_ko": "인플레이션",
+   "label_en": "Inflation",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/expectations",
+   "type": "Topic",
+   "label_ko": "기대",
+   "label_en": "Expectations",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-cycles",
+   "type": "Area",
+   "label_ko": "경기변동과 총수요",
+   "label_en": "Business cycles and aggregate demand",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ad-as",
+   "type": "Topic",
+   "label_ko": "총수요·총공급",
+   "label_en": "Aggregate demand and supply",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multiplier",
+   "type": "Topic",
+   "label_ko": "승수",
+   "label_en": "Multiplier",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/business-cycle",
+   "type": "Topic",
+   "label_ko": "경기 순환",
+   "label_en": "Business cycle",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/is-lm",
+   "type": "Topic",
+   "label_ko": "IS-LM 모형",
+   "label_en": "IS-LM model",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-monetary",
+   "type": "Area",
+   "label_ko": "통화정책",
+   "label_en": "Monetary policy",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/central-bank",
+   "type": "Topic",
+   "label_ko": "중앙은행",
+   "label_en": "Central bank",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/policy-rate",
+   "type": "Topic",
+   "label_ko": "기준금리",
+   "label_en": "Policy rate",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transmission-channels",
+   "type": "Topic",
+   "label_ko": "전달 경로",
+   "label_en": "Transmission channels",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/policy-rules",
+   "type": "Topic",
+   "label_ko": "정책 규칙",
+   "label_en": "Policy rules",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-fiscal",
+   "type": "Area",
+   "label_ko": "재정정책",
+   "label_en": "Fiscal policy",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/government-spending",
+   "type": "Topic",
+   "label_ko": "정부 지출",
+   "label_en": "Government spending",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/taxation",
+   "type": "Topic",
+   "label_ko": "조세",
+   "label_en": "Taxation",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fiscal-deficit",
+   "type": "Topic",
+   "label_ko": "재정 적자",
+   "label_en": "Fiscal deficit",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/public-debt",
+   "type": "Topic",
+   "label_ko": "국가 채무",
+   "label_en": "Public debt",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-trade",
+   "type": "Area",
+   "label_ko": "국제무역",
+   "label_en": "International trade",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/comparative-advantage",
+   "type": "Topic",
+   "label_ko": "비교우위",
+   "label_en": "Comparative advantage",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/terms-of-trade",
+   "type": "Topic",
+   "label_ko": "교역 조건",
+   "label_en": "Terms of trade",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tariffs",
+   "type": "Topic",
+   "label_ko": "관세",
+   "label_en": "Tariffs",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/trade-policy",
+   "type": "Topic",
+   "label_ko": "무역 정책",
+   "label_en": "Trade policy",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-intl-finance",
+   "type": "Area",
+   "label_ko": "국제금융",
+   "label_en": "International finance",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/exchange-rate",
+   "type": "Topic",
+   "label_ko": "환율",
+   "label_en": "Exchange rate",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/current-account",
+   "type": "Topic",
+   "label_ko": "경상수지",
+   "label_en": "Current account",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/capital-flows",
+   "type": "Topic",
+   "label_ko": "자본 이동",
+   "label_en": "Capital flows",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-behavioral",
+   "type": "Area",
+   "label_ko": "행동경제학",
+   "label_en": "Behavioral economics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/heuristics-biases",
+   "type": "Topic",
+   "label_ko": "휴리스틱과 편향",
+   "label_en": "Heuristics and biases",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/framing-effect",
+   "type": "Topic",
+   "label_ko": "틀 효과",
+   "label_en": "Framing effect",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/present-bias",
+   "type": "Topic",
+   "label_ko": "현재 편향",
+   "label_en": "Present bias",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/nudge",
+   "type": "Topic",
+   "label_ko": "넛지",
+   "label_en": "Nudge",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/prospect-theory",
+   "type": "Topic",
+   "label_ko": "전망 이론",
+   "label_en": "Prospect theory",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-econometrics",
+   "type": "Area",
+   "label_ko": "계량경제",
+   "label_en": "Econometrics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/endogeneity",
+   "type": "Topic",
+   "label_ko": "내생성",
+   "label_en": "Endogeneity",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/panel-data",
+   "type": "Topic",
+   "label_ko": "패널 자료",
+   "label_en": "Panel data",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/labor-demand-estimation",
+   "type": "Topic",
+   "label_ko": "노동수요 추정(CES)",
+   "label_en": "Labor demand estimation (CES)",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/econ-dynamic",
+   "type": "Area",
+   "label_ko": "동학 최적화와 경제",
+   "label_en": "Dynamic optimization in economics",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/intertemporal-choice",
+   "type": "Topic",
+   "label_ko": "기간 간 선택",
+   "label_en": "Intertemporal choice",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dynamic-programming-econ",
+   "type": "Topic",
+   "label_ko": "동적계획과 벨만 방정식",
+   "label_en": "Dynamic programming and the Bellman equation",
+   "domain": [
+    "econ"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-descriptive",
+   "type": "Area",
+   "label_ko": "자료와 기술통계",
+   "label_en": "Data and descriptive statistics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-types",
+   "type": "Topic",
+   "label_ko": "자료 종류",
+   "label_en": "Types of data",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/central-tendency",
+   "type": "Topic",
+   "label_ko": "대표값",
+   "label_en": "Measures of central tendency",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dispersion",
+   "type": "Topic",
+   "label_ko": "퍼짐",
+   "label_en": "Measures of dispersion",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/statistical-graphics",
+   "type": "Topic",
+   "label_ko": "통계 그래프",
+   "label_en": "Statistical graphics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/correlation",
+   "type": "Topic",
+   "label_ko": "상관",
+   "label_en": "Correlation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-probability",
+   "type": "Area",
+   "label_ko": "확률",
+   "label_en": "Probability",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/probability-rules",
+   "type": "Topic",
+   "label_ko": "확률 규칙",
+   "label_en": "Rules of probability",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/conditional-probability",
+   "type": "Topic",
+   "label_ko": "조건부확률",
+   "label_en": "Conditional probability",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/independence",
+   "type": "Topic",
+   "label_ko": "독립",
+   "label_en": "Independence",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bayes-theorem",
+   "type": "Topic",
+   "label_ko": "베이즈 정리",
+   "label_en": "Bayes' theorem",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-distributions",
+   "type": "Area",
+   "label_ko": "확률변수와 분포",
+   "label_en": "Random variables and distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/discrete-distributions",
+   "type": "Topic",
+   "label_ko": "이산분포",
+   "label_en": "Discrete distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/continuous-distributions",
+   "type": "Topic",
+   "label_ko": "연속분포",
+   "label_en": "Continuous distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/expectation-variance",
+   "type": "Topic",
+   "label_ko": "기댓값·분산",
+   "label_en": "Expectation and variance",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/joint-distributions",
+   "type": "Topic",
+   "label_ko": "결합분포",
+   "label_en": "Joint distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/distribution-family-map",
+   "type": "Topic",
+   "label_ko": "분포 사이의 관계",
+   "label_en": "Relationships among distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-sampling",
+   "type": "Area",
+   "label_ko": "표본분포와 극한정리",
+   "label_en": "Sampling distributions and limit theorems",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sampling-distribution-mean",
+   "type": "Topic",
+   "label_ko": "표본평균의 분포",
+   "label_en": "Sampling distribution of the mean",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/law-of-large-numbers",
+   "type": "Topic",
+   "label_ko": "대수의 법칙",
+   "label_en": "Law of large numbers",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/central-limit-theorem",
+   "type": "Topic",
+   "label_ko": "중심극한정리",
+   "label_en": "Central limit theorem",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/t-chi2-f",
+   "type": "Topic",
+   "label_ko": "t·카이제곱·F 분포",
+   "label_en": "t, chi-square and F distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-estimation",
+   "type": "Area",
+   "label_ko": "점추정",
+   "label_en": "Point estimation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/unbiasedness",
+   "type": "Topic",
+   "label_ko": "불편성",
+   "label_en": "Unbiasedness",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/consistency-estimator",
+   "type": "Topic",
+   "label_ko": "일치성",
+   "label_en": "Consistency",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/maximum-likelihood",
+   "type": "Topic",
+   "label_ko": "최대우도",
+   "label_en": "Maximum likelihood",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/method-of-moments",
+   "type": "Topic",
+   "label_ko": "적률법",
+   "label_en": "Method of moments",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-intervals",
+   "type": "Area",
+   "label_ko": "구간추정",
+   "label_en": "Interval estimation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/confidence-interval",
+   "type": "Topic",
+   "label_ko": "신뢰구간",
+   "label_en": "Confidence interval",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ci-interpretation",
+   "type": "Topic",
+   "label_ko": "신뢰구간 해석",
+   "label_en": "Interpreting confidence intervals",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sample-size",
+   "type": "Topic",
+   "label_ko": "표본 크기 정하기",
+   "label_en": "Sample size determination",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-testing",
+   "type": "Area",
+   "label_ko": "가설검정",
+   "label_en": "Hypothesis testing",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/null-alternative",
+   "type": "Topic",
+   "label_ko": "귀무·대립가설",
+   "label_en": "Null and alternative hypotheses",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/p-value",
+   "type": "Topic",
+   "label_ko": "p값",
+   "label_en": "p-value",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/type-i-ii-errors",
+   "type": "Topic",
+   "label_ko": "오류 두 종류",
+   "label_en": "Type I and type II errors",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/statistical-power",
+   "type": "Topic",
+   "label_ko": "검정력",
+   "label_en": "Statistical power",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multiple-comparisons",
+   "type": "Topic",
+   "label_ko": "다중 비교",
+   "label_en": "Multiple comparisons",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-categorical",
+   "type": "Area",
+   "label_ko": "범주형 자료",
+   "label_en": "Categorical data",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/contingency-table",
+   "type": "Topic",
+   "label_ko": "분할표",
+   "label_en": "Contingency table",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/chi-square-test",
+   "type": "Topic",
+   "label_ko": "카이제곱 검정",
+   "label_en": "Chi-square test",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/simpsons-paradox",
+   "type": "Topic",
+   "label_ko": "심슨의 역설",
+   "label_en": "Simpson's paradox",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/proportion-comparison",
+   "type": "Topic",
+   "label_ko": "비율 비교",
+   "label_en": "Comparing proportions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-design",
+   "type": "Area",
+   "label_ko": "분산분석과 실험 설계",
+   "label_en": "ANOVA and experimental design",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/anova",
+   "type": "Topic",
+   "label_ko": "분산분석",
+   "label_en": "Analysis of variance",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/randomization",
+   "type": "Topic",
+   "label_ko": "무작위화",
+   "label_en": "Randomization",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/blocking",
+   "type": "Topic",
+   "label_ko": "블록",
+   "label_en": "Blocking",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/factorial-design",
+   "type": "Topic",
+   "label_ko": "요인 설계",
+   "label_en": "Factorial design",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ab-testing",
+   "type": "Topic",
+   "label_ko": "A/B 테스트",
+   "label_en": "A/B testing",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-regression",
+   "type": "Area",
+   "label_ko": "회귀분석",
+   "label_en": "Regression analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/regression-analysis",
+   "type": "Topic",
+   "label_ko": "회귀분석(단순·다중)",
+   "label_en": "Regression analysis (simple and multiple)",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/residual-diagnostics",
+   "type": "Topic",
+   "label_ko": "잔차 진단",
+   "label_en": "Residual diagnostics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multicollinearity",
+   "type": "Topic",
+   "label_ko": "다중공선성",
+   "label_en": "Multicollinearity",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/variable-selection",
+   "type": "Topic",
+   "label_ko": "변수 선택",
+   "label_en": "Variable selection",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-glm",
+   "type": "Area",
+   "label_ko": "일반화선형모형",
+   "label_en": "Generalized linear models",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/glm-logistic",
+   "type": "Topic",
+   "label_ko": "로지스틱 회귀(GLM)",
+   "label_en": "Logistic regression (GLM)",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/poisson-regression",
+   "type": "Topic",
+   "label_ko": "포아송 회귀",
+   "label_en": "Poisson regression",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/link-function",
+   "type": "Topic",
+   "label_ko": "연결 함수",
+   "label_en": "Link function",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-nonparametric",
+   "type": "Area",
+   "label_ko": "비모수 통계",
+   "label_en": "Nonparametric statistics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rank-tests",
+   "type": "Topic",
+   "label_ko": "순위 검정",
+   "label_en": "Rank tests",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/kernel-density",
+   "type": "Topic",
+   "label_ko": "커널 밀도",
+   "label_en": "Kernel density estimation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-bayes",
+   "type": "Area",
+   "label_ko": "베이즈 통계",
+   "label_en": "Bayesian statistics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/prior-posterior",
+   "type": "Topic",
+   "label_ko": "사전·사후분포",
+   "label_en": "Prior and posterior distributions",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/conjugate-prior",
+   "type": "Topic",
+   "label_ko": "켤레 사전분포",
+   "label_en": "Conjugate priors",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/credible-interval",
+   "type": "Topic",
+   "label_ko": "신용구간",
+   "label_en": "Credible interval",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mcmc",
+   "type": "Topic",
+   "label_ko": "계산(MCMC)",
+   "label_en": "Computation (MCMC)",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hierarchical-models",
+   "type": "Topic",
+   "label_ko": "계층 모형",
+   "label_en": "Hierarchical models",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-survey",
+   "type": "Area",
+   "label_ko": "표본조사",
+   "label_en": "Survey sampling",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sampling-design",
+   "type": "Topic",
+   "label_ko": "표본 설계",
+   "label_en": "Sampling design",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stratified-cluster",
+   "type": "Topic",
+   "label_ko": "층화·군집 추출",
+   "label_en": "Stratified and cluster sampling",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/survey-weights",
+   "type": "Topic",
+   "label_ko": "가중치",
+   "label_en": "Survey weights",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/nonresponse-adjustment",
+   "type": "Topic",
+   "label_ko": "무응답 보정",
+   "label_en": "Nonresponse adjustment",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/poll-calibration",
+   "type": "Topic",
+   "label_ko": "여론조사 보정",
+   "label_en": "Poll calibration",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-timeseries",
+   "type": "Area",
+   "label_ko": "시계열",
+   "label_en": "Time series analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/trend-seasonality",
+   "type": "Topic",
+   "label_ko": "추세·계절",
+   "label_en": "Trend and seasonality",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/autocorrelation",
+   "type": "Topic",
+   "label_ko": "자기상관",
+   "label_en": "Autocorrelation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/arima",
+   "type": "Topic",
+   "label_ko": "ARIMA",
+   "label_en": "ARIMA",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stationarity",
+   "type": "Topic",
+   "label_ko": "정상성",
+   "label_en": "Stationarity",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/volatility-models",
+   "type": "Topic",
+   "label_ko": "변동성 모형(GARCH)",
+   "label_en": "Volatility models (GARCH)",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-multivariate",
+   "type": "Area",
+   "label_ko": "다변량",
+   "label_en": "Multivariate statistics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/principal-components",
+   "type": "Topic",
+   "label_ko": "주성분",
+   "label_en": "Principal components",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/factor-analysis",
+   "type": "Topic",
+   "label_ko": "요인분석",
+   "label_en": "Factor analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cluster-analysis",
+   "type": "Topic",
+   "label_ko": "군집분석",
+   "label_en": "Cluster analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/discriminant-analysis",
+   "type": "Topic",
+   "label_ko": "판별분석",
+   "label_en": "Discriminant analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-resampling",
+   "type": "Area",
+   "label_ko": "재표집과 계산통계",
+   "label_en": "Resampling and computational statistics",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bootstrap",
+   "type": "Topic",
+   "label_ko": "부트스트랩",
+   "label_en": "Bootstrap",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/permutation-test",
+   "type": "Topic",
+   "label_ko": "순열 검정",
+   "label_en": "Permutation test",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cross-validation",
+   "type": "Topic",
+   "label_ko": "교차검증",
+   "label_en": "Cross-validation",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-causal",
+   "type": "Area",
+   "label_ko": "인과추론",
+   "label_en": "Causal inference",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/potential-outcomes",
+   "type": "Topic",
+   "label_ko": "잠재 결과",
+   "label_en": "Potential outcomes",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/confounding",
+   "type": "Topic",
+   "label_ko": "교란",
+   "label_en": "Confounding",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/propensity-score",
+   "type": "Topic",
+   "label_ko": "성향점수",
+   "label_en": "Propensity score",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/instrumental-variables",
+   "type": "Topic",
+   "label_ko": "도구변수",
+   "label_en": "Instrumental variables",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/difference-in-differences",
+   "type": "Topic",
+   "label_ko": "이중차분",
+   "label_en": "Difference-in-differences",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/stats-biostat",
+   "type": "Area",
+   "label_ko": "보건·임상 통계",
+   "label_en": "Biostatistics and clinical trials",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/clinical-trial-phases",
+   "type": "Topic",
+   "label_ko": "임상시험 단계",
+   "label_en": "Clinical trial phases",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/survival-analysis",
+   "type": "Topic",
+   "label_ko": "생존분석",
+   "label_en": "Survival analysis",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/non-inferiority",
+   "type": "Topic",
+   "label_ko": "비열등성 검정",
+   "label_en": "Non-inferiority testing",
+   "domain": [
+    "stats"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-foundations",
+   "type": "Area",
+   "label_ko": "집합과 함수",
+   "label_en": "Sets and functions",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sets",
+   "type": "Topic",
+   "label_ko": "집합",
+   "label_en": "Sets",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/functions-maps",
+   "type": "Topic",
+   "label_ko": "함수와 사상",
+   "label_en": "Functions and maps",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/relations-equivalence",
+   "type": "Topic",
+   "label_ko": "관계와 동치관계",
+   "label_en": "Relations and equivalence relations",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cardinality",
+   "type": "Topic",
+   "label_ko": "기수와 무한",
+   "label_en": "Cardinality and infinity",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-real-analysis",
+   "type": "Area",
+   "label_ko": "해석학(실해석)",
+   "label_en": "Real analysis",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sequences-limits",
+   "type": "Topic",
+   "label_ko": "수열과 극한",
+   "label_en": "Sequences and limits",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/continuity",
+   "type": "Topic",
+   "label_ko": "연속",
+   "label_en": "Continuity",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/differentiation",
+   "type": "Topic",
+   "label_ko": "미분",
+   "label_en": "Differentiation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/riemann-integral",
+   "type": "Topic",
+   "label_ko": "적분",
+   "label_en": "Integration",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/series-convergence",
+   "type": "Topic",
+   "label_ko": "급수와 수렴",
+   "label_en": "Series and convergence",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/taylor-approximation",
+   "type": "Topic",
+   "label_ko": "테일러 근사",
+   "label_en": "Taylor approximation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/epsilon-delta",
+   "type": "Topic",
+   "label_ko": "엡실론-델타 논법",
+   "label_en": "Epsilon–delta arguments",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-vector-calculus",
+   "type": "Area",
+   "label_ko": "다변수 미적분과 벡터해석",
+   "label_en": "Multivariable and vector calculus",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/partial-derivatives",
+   "type": "Topic",
+   "label_ko": "편미분",
+   "label_en": "Partial derivatives",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gradient",
+   "type": "Topic",
+   "label_ko": "그래디언트(∇)",
+   "label_en": "Gradient (nabla)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/divergence-curl",
+   "type": "Topic",
+   "label_ko": "발산과 회전",
+   "label_en": "Divergence and curl",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/jacobian-hessian",
+   "type": "Topic",
+   "label_ko": "야코비안·헤시안",
+   "label_en": "Jacobian and Hessian",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/chain-rule-multivar",
+   "type": "Topic",
+   "label_ko": "다변수 연쇄법칙",
+   "label_en": "Multivariable chain rule",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/integral-theorems",
+   "type": "Topic",
+   "label_ko": "선적분과 적분 정리",
+   "label_en": "Line integrals and integral theorems",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-linear-algebra",
+   "type": "Area",
+   "label_ko": "선형대수",
+   "label_en": "Linear algebra",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vector-spaces",
+   "type": "Topic",
+   "label_ko": "벡터공간",
+   "label_en": "Vector spaces",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/matrices-linear-maps",
+   "type": "Topic",
+   "label_ko": "행렬과 선형사상",
+   "label_en": "Matrices and linear maps",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/eigenvalues",
+   "type": "Topic",
+   "label_ko": "고유값과 고유벡터",
+   "label_en": "Eigenvalues and eigenvectors",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inner-product-orthogonality",
+   "type": "Topic",
+   "label_ko": "내적과 직교",
+   "label_en": "Inner products and orthogonality",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/matrix-decompositions",
+   "type": "Topic",
+   "label_ko": "행렬 분해(SVD 등)",
+   "label_en": "Matrix decompositions (SVD etc.)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tensors-algebra",
+   "type": "Topic",
+   "label_ko": "텐서(다중선형대수)",
+   "label_en": "Tensors (multilinear algebra)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-abstract-algebra",
+   "type": "Area",
+   "label_ko": "추상대수",
+   "label_en": "Abstract algebra",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/groups",
+   "type": "Topic",
+   "label_ko": "군",
+   "label_en": "Groups",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rings-fields",
+   "type": "Topic",
+   "label_ko": "환과 체",
+   "label_en": "Rings and fields",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/symmetry-group-action",
+   "type": "Topic",
+   "label_ko": "대칭과 군의 작용",
+   "label_en": "Symmetry and group actions",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-functional-analysis",
+   "type": "Area",
+   "label_ko": "함수해석",
+   "label_en": "Functional analysis",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/normed-spaces",
+   "type": "Topic",
+   "label_ko": "노름공간과 거리",
+   "label_en": "Normed spaces and metrics",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hilbert-space",
+   "type": "Topic",
+   "label_ko": "힐베르트 공간",
+   "label_en": "Hilbert space",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/banach-space",
+   "type": "Topic",
+   "label_ko": "바나흐 공간",
+   "label_en": "Banach space",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/operators",
+   "type": "Topic",
+   "label_ko": "선형 연산자",
+   "label_en": "Linear operators",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-complex-analysis",
+   "type": "Area",
+   "label_ko": "복소해석",
+   "label_en": "Complex analysis",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/complex-numbers",
+   "type": "Topic",
+   "label_ko": "복소수와 복소평면",
+   "label_en": "Complex numbers and the complex plane",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/analytic-functions",
+   "type": "Topic",
+   "label_ko": "해석함수",
+   "label_en": "Analytic functions",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/analytic-continuation",
+   "type": "Topic",
+   "label_ko": "해석적 연속",
+   "label_en": "Analytic continuation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-number-theory",
+   "type": "Area",
+   "label_ko": "정수론",
+   "label_en": "Number theory",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/primes",
+   "type": "Topic",
+   "label_ko": "소수와 소수 분포",
+   "label_en": "Primes and their distribution",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/zeta-function",
+   "type": "Topic",
+   "label_ko": "제타 함수",
+   "label_en": "Zeta function",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/riemann-hypothesis",
+   "type": "Topic",
+   "label_ko": "리만 가설",
+   "label_en": "Riemann hypothesis",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-differential-equations",
+   "type": "Area",
+   "label_ko": "미분방정식",
+   "label_en": "Differential equations",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ode",
+   "type": "Topic",
+   "label_ko": "상미분방정식",
+   "label_en": "Ordinary differential equations",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/pde",
+   "type": "Topic",
+   "label_ko": "편미분방정식",
+   "label_en": "Partial differential equations",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dynamical-systems-stability",
+   "type": "Topic",
+   "label_ko": "동역학계와 안정성",
+   "label_en": "Dynamical systems and stability",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-optimization-theory",
+   "type": "Area",
+   "label_ko": "최적화 이론",
+   "label_en": "Optimization theory",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/convexity",
+   "type": "Topic",
+   "label_ko": "볼록성",
+   "label_en": "Convexity",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/unconstrained-optimization",
+   "type": "Topic",
+   "label_ko": "제약 없는 최적화(1·2계 조건)",
+   "label_en": "Unconstrained optimization (first- and second-order conditions)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lagrange-multipliers",
+   "type": "Topic",
+   "label_ko": "라그랑주 승수",
+   "label_en": "Lagrange multipliers",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/kkt-conditions",
+   "type": "Topic",
+   "label_ko": "KKT 조건",
+   "label_en": "KKT conditions",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/duality-optimization",
+   "type": "Topic",
+   "label_ko": "쌍대성",
+   "label_en": "Duality",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/linear-programming",
+   "type": "Topic",
+   "label_ko": "선형계획",
+   "label_en": "Linear programming",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-variational",
+   "type": "Area",
+   "label_ko": "변분법과 최적제어",
+   "label_en": "Calculus of variations and optimal control",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/euler-lagrange",
+   "type": "Topic",
+   "label_ko": "오일러-라그랑주 방정식",
+   "label_en": "Euler–Lagrange equation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lagrangian-mechanics",
+   "type": "Topic",
+   "label_ko": "라그랑지안",
+   "label_en": "Lagrangian formulation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hamiltonian",
+   "type": "Topic",
+   "label_ko": "해밀토니안",
+   "label_en": "Hamiltonian formulation",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/optimal-control",
+   "type": "Topic",
+   "label_ko": "최적제어(폰트랴긴)",
+   "label_en": "Optimal control (Pontryagin)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-discrete",
+   "type": "Area",
+   "label_ko": "이산수학·그래프 이론",
+   "label_en": "Discrete mathematics and graph theory",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/combinatorics",
+   "type": "Topic",
+   "label_ko": "조합",
+   "label_en": "Combinatorics",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/graph-theory",
+   "type": "Topic",
+   "label_ko": "그래프 이론",
+   "label_en": "Graph theory",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/adjacency-matrix",
+   "type": "Topic",
+   "label_ko": "인접행렬과 그래프의 행렬 표현",
+   "label_en": "Adjacency matrices",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/recurrence",
+   "type": "Topic",
+   "label_ko": "점화식",
+   "label_en": "Recurrence relations",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-numerical",
+   "type": "Area",
+   "label_ko": "수치해석",
+   "label_en": "Numerical analysis",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/numerical-error",
+   "type": "Topic",
+   "label_ko": "근사와 오차",
+   "label_en": "Approximation and error",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/iterative-methods",
+   "type": "Topic",
+   "label_ko": "반복법(뉴턴법 등)",
+   "label_en": "Iterative methods (Newton etc.)",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/numerical-integration",
+   "type": "Topic",
+   "label_ko": "수치 적분·미분방정식 풀이",
+   "label_en": "Numerical integration and ODE solvers",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/math-measure",
+   "type": "Area",
+   "label_ko": "측도론과 확률론",
+   "label_en": "Measure theory and probability",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/measure-sigma-algebra",
+   "type": "Topic",
+   "label_ko": "측도와 시그마 대수",
+   "label_en": "Measures and sigma-algebras",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lebesgue-integral",
+   "type": "Topic",
+   "label_ko": "르베그 적분",
+   "label_en": "Lebesgue integral",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/probability-space",
+   "type": "Topic",
+   "label_ko": "확률공간",
+   "label_en": "Probability space",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stochastic-processes",
+   "type": "Topic",
+   "label_ko": "확률과정",
+   "label_en": "Stochastic processes",
+   "domain": [
+    "math"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-euclidean",
+   "type": "Area",
+   "label_ko": "유클리드 기하",
+   "label_en": "Euclidean geometry",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/euclidean-space",
+   "type": "Topic",
+   "label_ko": "유클리드 공간",
+   "label_en": "Euclidean space",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/distance-angle",
+   "type": "Topic",
+   "label_ko": "거리와 각",
+   "label_en": "Distance and angle",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/coordinates",
+   "type": "Topic",
+   "label_ko": "좌표계",
+   "label_en": "Coordinate systems",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transformations",
+   "type": "Topic",
+   "label_ko": "합동·닮음·변환",
+   "label_en": "Congruence, similarity and transformations",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-analytic-geometry",
+   "type": "Area",
+   "label_ko": "좌표·벡터 기하",
+   "label_en": "Analytic and vector geometry",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vectors-geometry",
+   "type": "Topic",
+   "label_ko": "벡터와 내적의 기하",
+   "label_en": "Vectors and the geometry of inner products",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lines-planes",
+   "type": "Topic",
+   "label_ko": "직선과 평면",
+   "label_en": "Lines and planes",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/projections",
+   "type": "Topic",
+   "label_ko": "사영",
+   "label_en": "Projections",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/high-dim-geometry",
+   "type": "Topic",
+   "label_ko": "고차원 공간의 기하",
+   "label_en": "Geometry of high-dimensional space",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-non-euclidean",
+   "type": "Area",
+   "label_ko": "비유클리드와 시공간",
+   "label_en": "Non-Euclidean geometry and spacetime",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/non-euclidean-geometry",
+   "type": "Topic",
+   "label_ko": "비유클리드 기하",
+   "label_en": "Non-Euclidean geometry",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/minkowski-spacetime",
+   "type": "Topic",
+   "label_ko": "민코프스키 시공간",
+   "label_en": "Minkowski spacetime",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/metric-signature",
+   "type": "Topic",
+   "label_ko": "계량 부호",
+   "label_en": "Metric signature",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-differential-geometry",
+   "type": "Area",
+   "label_ko": "미분기하",
+   "label_en": "Differential geometry",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/curves-surfaces",
+   "type": "Topic",
+   "label_ko": "곡선과 곡면",
+   "label_en": "Curves and surfaces",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/curvature",
+   "type": "Topic",
+   "label_ko": "곡률",
+   "label_en": "Curvature",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tangent-space",
+   "type": "Topic",
+   "label_ko": "접공간",
+   "label_en": "Tangent space",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/covariant-derivative",
+   "type": "Topic",
+   "label_ko": "공변미분과 접속",
+   "label_en": "Covariant derivative and connection",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/geodesics",
+   "type": "Topic",
+   "label_ko": "측지선",
+   "label_en": "Geodesics",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/riemannian-metric",
+   "type": "Topic",
+   "label_ko": "리만 계량",
+   "label_en": "Riemannian metric",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/parallel-transport",
+   "type": "Topic",
+   "label_ko": "평행 이동",
+   "label_en": "Parallel transport",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-manifolds",
+   "type": "Area",
+   "label_ko": "다양체",
+   "label_en": "Manifolds",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/manifold",
+   "type": "Topic",
+   "label_ko": "다양체",
+   "label_en": "Manifold",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/charts-atlas",
+   "type": "Topic",
+   "label_ko": "좌표 조각과 아틀라스",
+   "label_en": "Charts and atlases",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/manifold-hypothesis",
+   "type": "Topic",
+   "label_ko": "다양체 가설",
+   "label_en": "Manifold hypothesis",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/information-geometry",
+   "type": "Topic",
+   "label_ko": "정보 기하",
+   "label_en": "Information geometry",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-tensor-fields",
+   "type": "Area",
+   "label_ko": "텐서와 텐서장",
+   "label_en": "Tensors and tensor fields",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tensor-transformation",
+   "type": "Topic",
+   "label_ko": "텐서의 변환 법칙",
+   "label_en": "Tensor transformation laws",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/index-notation",
+   "type": "Topic",
+   "label_ko": "첨자 표기와 아인슈타인 합",
+   "label_en": "Index notation and Einstein summation",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/differential-forms",
+   "type": "Topic",
+   "label_ko": "미분형식",
+   "label_en": "Differential forms",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-point-set",
+   "type": "Area",
+   "label_ko": "위상공간 기초",
+   "label_en": "Point-set topology",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/topological-space",
+   "type": "Topic",
+   "label_ko": "위상공간",
+   "label_en": "Topological space",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/open-closed-sets",
+   "type": "Topic",
+   "label_ko": "열린집합과 닫힌집합",
+   "label_en": "Open and closed sets",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/continuity-topology",
+   "type": "Topic",
+   "label_ko": "위상적 연속",
+   "label_en": "Continuity (topological)",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/homeomorphism",
+   "type": "Topic",
+   "label_ko": "위상동형",
+   "label_en": "Homeomorphism",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/metric-space",
+   "type": "Topic",
+   "label_ko": "거리공간",
+   "label_en": "Metric space",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-connectedness",
+   "type": "Area",
+   "label_ko": "연결성과 콤팩트성",
+   "label_en": "Connectedness and compactness",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/connectedness",
+   "type": "Topic",
+   "label_ko": "연결성",
+   "label_en": "Connectedness",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/compactness",
+   "type": "Topic",
+   "label_ko": "콤팩트성",
+   "label_en": "Compactness",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/topological-invariants",
+   "type": "Topic",
+   "label_ko": "위상 불변량",
+   "label_en": "Topological invariants",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-algebraic-topology",
+   "type": "Area",
+   "label_ko": "대수적 위상",
+   "label_en": "Algebraic topology",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fundamental-group",
+   "type": "Topic",
+   "label_ko": "기본군",
+   "label_en": "Fundamental group",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/homology",
+   "type": "Topic",
+   "label_ko": "호몰로지",
+   "label_en": "Homology",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/euler-characteristic",
+   "type": "Topic",
+   "label_ko": "오일러 표수",
+   "label_en": "Euler characteristic",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/knots-surfaces",
+   "type": "Topic",
+   "label_ko": "매듭과 곡면 분류",
+   "label_en": "Knots and classification of surfaces",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/geom-tda",
+   "type": "Area",
+   "label_ko": "위상 데이터 분석",
+   "label_en": "Topological data analysis",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/simplicial-complex",
+   "type": "Topic",
+   "label_ko": "단체 복합체",
+   "label_en": "Simplicial complexes",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/persistent-homology",
+   "type": "Topic",
+   "label_ko": "지속 호몰로지",
+   "label_en": "Persistent homology",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mapper",
+   "type": "Topic",
+   "label_ko": "매퍼 알고리즘",
+   "label_en": "Mapper algorithm",
+   "domain": [
+    "geom"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-propositional",
+   "type": "Area",
+   "label_ko": "명제논리",
+   "label_en": "Propositional logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/propositions-connectives",
+   "type": "Topic",
+   "label_ko": "명제와 연결사",
+   "label_en": "Propositions and connectives",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/truth-tables",
+   "type": "Topic",
+   "label_ko": "진리표",
+   "label_en": "Truth tables",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tautology-validity",
+   "type": "Topic",
+   "label_ko": "항진명제와 타당성",
+   "label_en": "Tautology and validity",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/normal-forms",
+   "type": "Topic",
+   "label_ko": "정규형(CNF·DNF)",
+   "label_en": "Normal forms (CNF, DNF)",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-predicate",
+   "type": "Area",
+   "label_ko": "술어논리",
+   "label_en": "Predicate (first-order) logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/quantifiers",
+   "type": "Topic",
+   "label_ko": "양화사",
+   "label_en": "Quantifiers",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/first-order-logic",
+   "type": "Topic",
+   "label_ko": "1차 논리",
+   "label_en": "First-order logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/unification-resolution",
+   "type": "Topic",
+   "label_ko": "단일화와 도출",
+   "label_en": "Unification and resolution",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-proof",
+   "type": "Area",
+   "label_ko": "증명 방법",
+   "label_en": "Methods of proof",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/direct-proof",
+   "type": "Topic",
+   "label_ko": "직접 증명",
+   "label_en": "Direct proof",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/proof-by-contradiction",
+   "type": "Topic",
+   "label_ko": "귀류법",
+   "label_en": "Proof by contradiction",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mathematical-induction",
+   "type": "Topic",
+   "label_ko": "수학적 귀납법",
+   "label_en": "Mathematical induction",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/counterexample",
+   "type": "Topic",
+   "label_ko": "반례",
+   "label_en": "Counterexamples",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/necessary-sufficient",
+   "type": "Topic",
+   "label_ko": "필요조건과 충분조건",
+   "label_en": "Necessary and sufficient conditions",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-set-theory-axioms",
+   "type": "Area",
+   "label_ko": "집합론과 공리계",
+   "label_en": "Set theory and axiomatic systems",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/axiomatic-method",
+   "type": "Topic",
+   "label_ko": "공리적 방법",
+   "label_en": "Axiomatic method",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/zfc",
+   "type": "Topic",
+   "label_ko": "ZFC 공리계",
+   "label_en": "ZFC axioms",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/consistency-completeness",
+   "type": "Topic",
+   "label_ko": "무모순성과 완전성",
+   "label_en": "Consistency and completeness",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/incompleteness",
+   "type": "Topic",
+   "label_ko": "불완전성 정리",
+   "label_en": "Incompleteness theorems",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-semantics",
+   "type": "Area",
+   "label_ko": "모형론과 의미론",
+   "label_en": "Model theory and semantics",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/models-interpretation",
+   "type": "Topic",
+   "label_ko": "모형과 해석",
+   "label_en": "Models and interpretations",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/soundness-completeness",
+   "type": "Topic",
+   "label_ko": "건전성과 완전성 정리",
+   "label_en": "Soundness and completeness theorems",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-computability",
+   "type": "Area",
+   "label_ko": "계산가능성과 복잡도",
+   "label_en": "Computability and complexity",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/turing-machine",
+   "type": "Topic",
+   "label_ko": "튜링 기계",
+   "label_en": "Turing machine",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/decidability",
+   "type": "Topic",
+   "label_ko": "결정가능성",
+   "label_en": "Decidability",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/complexity-classes",
+   "type": "Topic",
+   "label_ko": "복잡도 등급(P·NP)",
+   "label_en": "Complexity classes (P, NP)",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sat-solving",
+   "type": "Topic",
+   "label_ko": "SAT 문제와 풀이기",
+   "label_en": "SAT and solvers",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-inductive",
+   "type": "Area",
+   "label_ko": "귀납·확률 추론",
+   "label_en": "Inductive and probabilistic reasoning",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/deduction-induction-abduction",
+   "type": "Topic",
+   "label_ko": "연역·귀납·가추",
+   "label_en": "Deduction, induction and abduction",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/probabilistic-logic",
+   "type": "Topic",
+   "label_ko": "확률 논리",
+   "label_en": "Probabilistic logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/causal-reasoning-logic",
+   "type": "Topic",
+   "label_ko": "인과 추론의 논리",
+   "label_en": "Logic of causal reasoning",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-knowledge-representation",
+   "type": "Area",
+   "label_ko": "기술 논리와 지식 표현",
+   "label_en": "Description logic and knowledge representation",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/description-logic",
+   "type": "Topic",
+   "label_ko": "기술 논리",
+   "label_en": "Description logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rdf-owl",
+   "type": "Topic",
+   "label_ko": "RDF·OWL",
+   "label_en": "RDF and OWL",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/skos-thesaurus",
+   "type": "Topic",
+   "label_ko": "SKOS와 시소러스",
+   "label_en": "SKOS and thesauri",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ontology-reasoning",
+   "type": "Topic",
+   "label_ko": "온톨로지 추론",
+   "label_en": "Ontology reasoning",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/logic-programming",
+   "type": "Topic",
+   "label_ko": "논리 프로그래밍",
+   "label_en": "Logic programming",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-nonclassical",
+   "type": "Area",
+   "label_ko": "비고전 논리",
+   "label_en": "Non-classical logics",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/modal-logic",
+   "type": "Topic",
+   "label_ko": "양상 논리",
+   "label_en": "Modal logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fuzzy-logic",
+   "type": "Topic",
+   "label_ko": "퍼지 논리",
+   "label_en": "Fuzzy logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/many-valued-logic",
+   "type": "Topic",
+   "label_ko": "다치 논리",
+   "label_en": "Many-valued logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/temporal-logic",
+   "type": "Topic",
+   "label_ko": "시간 논리",
+   "label_en": "Temporal logic",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/logic-argumentation",
+   "type": "Area",
+   "label_ko": "논증과 오류",
+   "label_en": "Argumentation and fallacies",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/argument-structure",
+   "type": "Topic",
+   "label_ko": "논증의 구조",
+   "label_en": "Structure of arguments",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fallacies",
+   "type": "Topic",
+   "label_ko": "논리적 오류",
+   "label_en": "Logical fallacies",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/debate-reasoning",
+   "type": "Topic",
+   "label_ko": "토론과 반론",
+   "label_en": "Debate and rebuttal",
+   "domain": [
+    "logic"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-foundations",
+   "type": "Area",
+   "label_ko": "생성 모델의 원리",
+   "label_en": "Principles of generative modeling",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/likelihood-generative",
+   "type": "Topic",
+   "label_ko": "우도 기반 생성",
+   "label_en": "Likelihood-based generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/latent-variable-models",
+   "type": "Topic",
+   "label_ko": "잠재 변수 모형",
+   "label_en": "Latent variable models",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sampling-generation",
+   "type": "Topic",
+   "label_ko": "샘플링과 온도",
+   "label_en": "Sampling and temperature",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/generative-evaluation",
+   "type": "Topic",
+   "label_ko": "생성 품질 평가",
+   "label_en": "Evaluating generative models",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-image-generation",
+   "type": "Area",
+   "label_ko": "이미지 생성",
+   "label_en": "Image generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/text-to-image",
+   "type": "Topic",
+   "label_ko": "텍스트→이미지",
+   "label_en": "Text-to-image",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/latent-diffusion",
+   "type": "Topic",
+   "label_ko": "잠재 확산",
+   "label_en": "Latent diffusion",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/conditioning-guidance",
+   "type": "Topic",
+   "label_ko": "조건과 가이던스",
+   "label_en": "Conditioning and guidance",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/image-editing-inpainting",
+   "type": "Topic",
+   "label_ko": "이미지 편집·인페인팅",
+   "label_en": "Image editing and inpainting",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/style-consistency",
+   "type": "Topic",
+   "label_ko": "캐릭터·스타일 일관성",
+   "label_en": "Character and style consistency",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-video-audio",
+   "type": "Area",
+   "label_ko": "영상·음성 생성",
+   "label_en": "Video and audio generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/video-generation",
+   "type": "Topic",
+   "label_ko": "영상 생성",
+   "label_en": "Video generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/speech-synthesis",
+   "type": "Topic",
+   "label_ko": "음성 합성",
+   "label_en": "Speech synthesis",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/music-generation",
+   "type": "Topic",
+   "label_ko": "음악 생성",
+   "label_en": "Music generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-3d-generation",
+   "type": "Area",
+   "label_ko": "3D·월드 생성",
+   "label_en": "3D and world generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/3d-reconstruction",
+   "type": "Topic",
+   "label_ko": "3D 복원",
+   "label_en": "3D reconstruction",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inverse-rendering",
+   "type": "Topic",
+   "label_ko": "역렌더링",
+   "label_en": "Inverse rendering",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/world-models",
+   "type": "Topic",
+   "label_ko": "월드 모델",
+   "label_en": "World models",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-multimodal",
+   "type": "Area",
+   "label_ko": "멀티모달",
+   "label_en": "Multimodal models",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vision-language",
+   "type": "Topic",
+   "label_ko": "시각-언어 모델",
+   "label_en": "Vision-language models",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/clip-alignment",
+   "type": "Topic",
+   "label_ko": "이미지-텍스트 정렬(CLIP)",
+   "label_en": "Image–text alignment (CLIP)",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/any-to-any",
+   "type": "Topic",
+   "label_ko": "다중 입출력 생성",
+   "label_en": "Any-to-any generation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-creative-workflow",
+   "type": "Area",
+   "label_ko": "생성 AI 작업 흐름",
+   "label_en": "Generative AI workflows",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/prompt-for-images",
+   "type": "Topic",
+   "label_ko": "이미지 프롬프트 작성",
+   "label_en": "Prompting for images",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/human-in-the-loop-creation",
+   "type": "Topic",
+   "label_ko": "사람이 고르는 반복 제작",
+   "label_en": "Human-in-the-loop creation",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/asset-pipeline",
+   "type": "Topic",
+   "label_ko": "에셋 파이프라인",
+   "label_en": "Asset pipelines",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/genai-risks",
+   "type": "Area",
+   "label_ko": "생성 AI의 위험과 권리",
+   "label_en": "Risks and rights in generative AI",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/deepfakes",
+   "type": "Topic",
+   "label_ko": "딥페이크",
+   "label_en": "Deepfakes",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/copyright-generative",
+   "type": "Topic",
+   "label_ko": "저작권과 학습 데이터",
+   "label_en": "Copyright and training data",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/watermark-provenance",
+   "type": "Topic",
+   "label_ko": "워터마크·출처 표시",
+   "label_en": "Watermarking and provenance",
+   "domain": [
+    "genai"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-architecture",
+   "type": "Area",
+   "label_ko": "LLM 구조",
+   "label_en": "LLM architecture",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/decoder-only",
+   "type": "Topic",
+   "label_ko": "디코더 전용 트랜스포머",
+   "label_en": "Decoder-only transformers",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/kv-cache",
+   "type": "Topic",
+   "label_ko": "KV 캐시",
+   "label_en": "KV cache",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/mixture-of-experts",
+   "type": "Topic",
+   "label_ko": "전문가 혼합(MoE)",
+   "label_en": "Mixture of experts",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/long-context",
+   "type": "Topic",
+   "label_ko": "긴 문맥",
+   "label_en": "Long context",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-training",
+   "type": "Area",
+   "label_ko": "사전학습과 정렬",
+   "label_en": "Pretraining and alignment",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/scaling-laws",
+   "type": "Topic",
+   "label_ko": "스케일링 법칙",
+   "label_en": "Scaling laws",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/instruction-tuning",
+   "type": "Topic",
+   "label_ko": "지시 튜닝",
+   "label_en": "Instruction tuning",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/rlhf",
+   "type": "Topic",
+   "label_ko": "사람 피드백 강화학습(RLHF)",
+   "label_en": "RLHF",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/preference-optimization",
+   "type": "Topic",
+   "label_ko": "선호 최적화(DPO 등)",
+   "label_en": "Preference optimization (DPO etc.)",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/distillation",
+   "type": "Topic",
+   "label_ko": "지식 증류",
+   "label_en": "Knowledge distillation",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-inference",
+   "type": "Area",
+   "label_ko": "추론 엔지니어링",
+   "label_en": "Inference engineering",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/decoding-strategies",
+   "type": "Topic",
+   "label_ko": "디코딩 전략",
+   "label_en": "Decoding strategies",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/speculative-decoding",
+   "type": "Topic",
+   "label_ko": "추측 디코딩",
+   "label_en": "Speculative decoding",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/quantization",
+   "type": "Topic",
+   "label_ko": "양자화",
+   "label_en": "Quantization",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/batching-serving",
+   "type": "Topic",
+   "label_ko": "배칭과 서빙",
+   "label_en": "Batching and serving",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inference-cost",
+   "type": "Topic",
+   "label_ko": "추론 비용과 지연",
+   "label_en": "Inference cost and latency",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-reasoning",
+   "type": "Area",
+   "label_ko": "추론·사고 연쇄",
+   "label_en": "Reasoning",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/chain-of-thought",
+   "type": "Topic",
+   "label_ko": "사고 연쇄",
+   "label_en": "Chain of thought",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/test-time-compute",
+   "type": "Topic",
+   "label_ko": "추론 시간 계산",
+   "label_en": "Test-time compute",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/self-consistency",
+   "type": "Topic",
+   "label_ko": "자기 일관성",
+   "label_en": "Self-consistency",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/reasoning-limits",
+   "type": "Topic",
+   "label_ko": "추론의 한계",
+   "label_en": "Limits of LLM reasoning",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-prompting",
+   "type": "Area",
+   "label_ko": "프롬프트 공학",
+   "label_en": "Prompt engineering",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/prompt-patterns",
+   "type": "Topic",
+   "label_ko": "프롬프트 패턴",
+   "label_en": "Prompt patterns",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/few-shot",
+   "type": "Topic",
+   "label_ko": "퓨샷 예시",
+   "label_en": "Few-shot examples",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/structured-output",
+   "type": "Topic",
+   "label_ko": "구조화 출력",
+   "label_en": "Structured output",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/system-prompts",
+   "type": "Topic",
+   "label_ko": "시스템 지시문",
+   "label_en": "System prompts",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-retrieval",
+   "type": "Area",
+   "label_ko": "검색 증강과 기억",
+   "label_en": "Retrieval and memory",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vector-search",
+   "type": "Topic",
+   "label_ko": "벡터 검색",
+   "label_en": "Vector search",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/chunking-indexing",
+   "type": "Topic",
+   "label_ko": "청크 나누기와 색인",
+   "label_en": "Chunking and indexing",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/long-term-memory-llm",
+   "type": "Topic",
+   "label_ko": "장기 기억과 대화 압축",
+   "label_en": "Long-term memory and context compression",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/graph-rag",
+   "type": "Topic",
+   "label_ko": "그래프 RAG",
+   "label_en": "Graph RAG",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-agents",
+   "type": "Area",
+   "label_ko": "에이전트",
+   "label_en": "Agents",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tool-use",
+   "type": "Topic",
+   "label_ko": "도구 사용",
+   "label_en": "Tool use",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/planning-agents",
+   "type": "Topic",
+   "label_ko": "계획과 반복 실행",
+   "label_en": "Planning and iteration",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/multi-agent",
+   "type": "Topic",
+   "label_ko": "다중 에이전트",
+   "label_en": "Multi-agent systems",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/agent-evaluation",
+   "type": "Topic",
+   "label_ko": "에이전트 평가",
+   "label_en": "Agent evaluation",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/llm-evaluation-llm",
+   "type": "Area",
+   "label_ko": "LLM 평가와 안전",
+   "label_en": "LLM evaluation and safety",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/llm-benchmarks",
+   "type": "Topic",
+   "label_ko": "벤치마크",
+   "label_en": "Benchmarks",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hallucination",
+   "type": "Topic",
+   "label_ko": "환각",
+   "label_en": "Hallucination",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/llm-as-judge",
+   "type": "Topic",
+   "label_ko": "LLM 심사관",
+   "label_en": "LLM-as-a-judge",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/jailbreak-defense",
+   "type": "Topic",
+   "label_ko": "탈옥과 방어",
+   "label_en": "Jailbreaks and defenses",
+   "domain": [
+    "llm"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-data-modeling",
+   "type": "Area",
+   "label_ko": "데이터 모델링",
+   "label_en": "Data modeling",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/entity-relationship",
+   "type": "Topic",
+   "label_ko": "개체-관계 모형(ERD)",
+   "label_en": "Entity–relationship modeling",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/normalization-db",
+   "type": "Topic",
+   "label_ko": "정규화",
+   "label_en": "Normalization",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/keys-constraints",
+   "type": "Topic",
+   "label_ko": "키와 제약조건",
+   "label_en": "Keys and constraints",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-relational",
+   "type": "Area",
+   "label_ko": "관계형 데이터베이스",
+   "label_en": "Relational databases",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/relational-model",
+   "type": "Topic",
+   "label_ko": "관계 모형",
+   "label_en": "Relational model",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sql",
+   "type": "Topic",
+   "label_ko": "SQL",
+   "label_en": "SQL",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/joins",
+   "type": "Topic",
+   "label_ko": "조인",
+   "label_en": "Joins",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transactions",
+   "type": "Topic",
+   "label_ko": "트랜잭션과 ACID",
+   "label_en": "Transactions and ACID",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-nosql-vector",
+   "type": "Area",
+   "label_ko": "NoSQL과 벡터 DB",
+   "label_en": "NoSQL and vector databases",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/document-kv-stores",
+   "type": "Topic",
+   "label_ko": "문서·키-값 저장소",
+   "label_en": "Document and key–value stores",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/vector-database",
+   "type": "Topic",
+   "label_ko": "벡터 데이터베이스",
+   "label_en": "Vector databases",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/graph-database",
+   "type": "Topic",
+   "label_ko": "그래프 데이터베이스",
+   "label_en": "Graph databases",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-pipelines",
+   "type": "Area",
+   "label_ko": "데이터 파이프라인",
+   "label_en": "Data pipelines",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/etl-elt",
+   "type": "Topic",
+   "label_ko": "ETL·ELT",
+   "label_en": "ETL and ELT",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-cleaning",
+   "type": "Topic",
+   "label_ko": "데이터 정제·결측치",
+   "label_en": "Data cleaning and missing values",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/spreadsheets-automation",
+   "type": "Topic",
+   "label_ko": "스프레드시트 자동화",
+   "label_en": "Spreadsheet automation",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-data-to-numbers",
+   "type": "Area",
+   "label_ko": "데이터의 수치화",
+   "label_en": "Turning data into numbers",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/encoding-categorical",
+   "type": "Topic",
+   "label_ko": "범주형 인코딩",
+   "label_en": "Encoding categorical data",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/image-as-array",
+   "type": "Topic",
+   "label_ko": "이미지를 배열로",
+   "label_en": "Images as arrays",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/audio-signal",
+   "type": "Topic",
+   "label_ko": "소리 신호의 수치화",
+   "label_en": "Digitizing audio",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/text-vectorization",
+   "type": "Topic",
+   "label_ko": "텍스트 벡터화",
+   "label_en": "Text vectorization",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/data-visualization",
+   "type": "Area",
+   "label_ko": "데이터 시각화",
+   "label_en": "Data visualization",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/chart-selection",
+   "type": "Topic",
+   "label_ko": "차트 고르기",
+   "label_en": "Choosing charts",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dashboards",
+   "type": "Topic",
+   "label_ko": "대시보드",
+   "label_en": "Dashboards",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/animated-visualization",
+   "type": "Topic",
+   "label_ko": "움직이는 시각화",
+   "label_en": "Animated visualization",
+   "domain": [
+    "data"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-markets",
+   "type": "Area",
+   "label_ko": "금융시장",
+   "label_en": "Financial markets",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stock-market",
+   "type": "Topic",
+   "label_ko": "주식시장",
+   "label_en": "Stock market",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bond-market",
+   "type": "Topic",
+   "label_ko": "채권시장",
+   "label_en": "Bond market",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/market-microstructure",
+   "type": "Topic",
+   "label_ko": "시장 미시구조",
+   "label_en": "Market microstructure",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-asset-pricing",
+   "type": "Area",
+   "label_ko": "자산 가격",
+   "label_en": "Asset pricing",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/risk-return",
+   "type": "Topic",
+   "label_ko": "위험과 수익",
+   "label_en": "Risk and return",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/capm",
+   "type": "Topic",
+   "label_ko": "CAPM과 요인 모형",
+   "label_en": "CAPM and factor models",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/efficient-market-hypothesis",
+   "type": "Topic",
+   "label_ko": "효율적 시장 가설(논쟁 표시)",
+   "label_en": "Efficient market hypothesis (contested)",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/valuation",
+   "type": "Topic",
+   "label_ko": "기업가치 평가",
+   "label_en": "Valuation",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-volatility",
+   "type": "Area",
+   "label_ko": "변동성",
+   "label_en": "Volatility",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/volatility-decomposition",
+   "type": "Topic",
+   "label_ko": "변동성 분해",
+   "label_en": "Volatility decomposition",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/systematic-idiosyncratic",
+   "type": "Topic",
+   "label_ko": "체계적·고유 위험",
+   "label_en": "Systematic and idiosyncratic risk",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-fintech",
+   "type": "Area",
+   "label_ko": "핀테크",
+   "label_en": "Fintech",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/digital-payments",
+   "type": "Topic",
+   "label_ko": "디지털 결제",
+   "label_en": "Digital payments",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/credit-scoring",
+   "type": "Topic",
+   "label_ko": "신용평가 모형",
+   "label_en": "Credit scoring",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/robo-advisor",
+   "type": "Topic",
+   "label_ko": "로보어드바이저",
+   "label_en": "Robo-advisors",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fintech-data",
+   "type": "Topic",
+   "label_ko": "금융 데이터 분석",
+   "label_en": "Financial data analytics",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-blockchain",
+   "type": "Area",
+   "label_ko": "블록체인",
+   "label_en": "Blockchain",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ledger-evolution",
+   "type": "Topic",
+   "label_ko": "장부의 진화",
+   "label_en": "Evolution of ledgers",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/blockchain-consensus",
+   "type": "Topic",
+   "label_ko": "합의 알고리즘",
+   "label_en": "Consensus algorithms",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bitcoin",
+   "type": "Topic",
+   "label_ko": "비트코인",
+   "label_en": "Bitcoin",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/smart-contracts",
+   "type": "Topic",
+   "label_ko": "스마트 계약",
+   "label_en": "Smart contracts",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/fin-crypto-assets",
+   "type": "Area",
+   "label_ko": "가상자산",
+   "label_en": "Crypto assets",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/crypto-market-efficiency",
+   "type": "Topic",
+   "label_ko": "가상자산 시장 효율성",
+   "label_en": "Crypto market efficiency",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/crypto-forecasting",
+   "type": "Topic",
+   "label_ko": "가상자산 예측",
+   "label_en": "Crypto price forecasting",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/defi-risk",
+   "type": "Topic",
+   "label_ko": "DeFi 리스크",
+   "label_en": "DeFi risk",
+   "domain": [
+    "fin"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-foundations",
+   "type": "Area",
+   "label_ko": "경영 기초",
+   "label_en": "Foundations of management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/management-functions",
+   "type": "Topic",
+   "label_ko": "경영의 기능",
+   "label_en": "Functions of management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/business-forms",
+   "type": "Topic",
+   "label_ko": "기업 형태",
+   "label_en": "Forms of business",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stakeholders",
+   "type": "Topic",
+   "label_ko": "이해관계자",
+   "label_en": "Stakeholders",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/business-environment",
+   "type": "Topic",
+   "label_ko": "경영 환경",
+   "label_en": "Business environment",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-organization",
+   "type": "Area",
+   "label_ko": "조직",
+   "label_en": "Organization",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/org-structure",
+   "type": "Topic",
+   "label_ko": "조직 구조",
+   "label_en": "Organizational structure",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/org-design",
+   "type": "Topic",
+   "label_ko": "조직 설계",
+   "label_en": "Organizational design",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/org-culture",
+   "type": "Topic",
+   "label_ko": "조직 문화",
+   "label_en": "Organizational culture",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-strategy",
+   "type": "Area",
+   "label_ko": "경영 전략",
+   "label_en": "Business strategy",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/industry-analysis",
+   "type": "Topic",
+   "label_ko": "산업 분석",
+   "label_en": "Industry analysis",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/competitive-advantage",
+   "type": "Topic",
+   "label_ko": "경쟁 우위",
+   "label_en": "Competitive advantage",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/resource-based-view",
+   "type": "Topic",
+   "label_ko": "자원 기반 관점",
+   "label_en": "Resource-based view",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/corporate-strategy",
+   "type": "Topic",
+   "label_ko": "사업·기업 전략",
+   "label_en": "Business and corporate strategy",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-marketing",
+   "type": "Area",
+   "label_ko": "마케팅",
+   "label_en": "Marketing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/stp",
+   "type": "Topic",
+   "label_ko": "세분화·표적·포지셔닝",
+   "label_en": "Segmentation, targeting, positioning",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/marketing-mix",
+   "type": "Topic",
+   "label_ko": "마케팅 믹스",
+   "label_en": "Marketing mix",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/branding",
+   "type": "Topic",
+   "label_ko": "브랜드",
+   "label_en": "Branding",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-consumer-behavior",
+   "type": "Area",
+   "label_ko": "소비자 행동",
+   "label_en": "Consumer behavior",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/purchase-decision",
+   "type": "Topic",
+   "label_ko": "구매 의사결정",
+   "label_en": "Purchase decision",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/attitudes",
+   "type": "Topic",
+   "label_ko": "태도",
+   "label_en": "Attitudes",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/behavioral-marketing",
+   "type": "Topic",
+   "label_ko": "행동경제학의 적용",
+   "label_en": "Applied behavioral economics",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/voice-of-customer",
+   "type": "Topic",
+   "label_ko": "고객의 목소리·리뷰 분석",
+   "label_en": "Voice of the customer and review analysis",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-pricing",
+   "type": "Area",
+   "label_ko": "가격 책정",
+   "label_en": "Pricing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cost-based-pricing",
+   "type": "Topic",
+   "label_ko": "원가 기반 가격",
+   "label_en": "Cost-based pricing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/value-based-pricing",
+   "type": "Topic",
+   "label_ko": "가치 기반 가격",
+   "label_en": "Value-based pricing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bid-pricing",
+   "type": "Topic",
+   "label_ko": "입찰 가격 전략",
+   "label_en": "Bid pricing strategy",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-operations",
+   "type": "Area",
+   "label_ko": "운영관리",
+   "label_en": "Operations management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/process-design",
+   "type": "Topic",
+   "label_ko": "공정 설계",
+   "label_en": "Process design",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/capacity",
+   "type": "Topic",
+   "label_ko": "생산 능력",
+   "label_en": "Capacity",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/queueing",
+   "type": "Topic",
+   "label_ko": "대기행렬",
+   "label_en": "Queueing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/scheduling",
+   "type": "Topic",
+   "label_ko": "일정 계획",
+   "label_en": "Scheduling",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/smart-manufacturing",
+   "type": "Topic",
+   "label_ko": "스마트 제조",
+   "label_en": "Smart manufacturing",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-supply-chain",
+   "type": "Area",
+   "label_ko": "공급망 관리",
+   "label_en": "Supply chain management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inventory-models",
+   "type": "Topic",
+   "label_ko": "재고 모형",
+   "label_en": "Inventory models",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/demand-forecasting",
+   "type": "Topic",
+   "label_ko": "수요 예측",
+   "label_en": "Demand forecasting",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/bullwhip-effect",
+   "type": "Topic",
+   "label_ko": "채찍 효과",
+   "label_en": "Bullwhip effect",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-quality",
+   "type": "Area",
+   "label_ko": "품질관리",
+   "label_en": "Quality management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/control-charts",
+   "type": "Topic",
+   "label_ko": "관리도",
+   "label_en": "Control charts",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/process-capability",
+   "type": "Topic",
+   "label_ko": "공정 능력",
+   "label_en": "Process capability",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/continuous-improvement",
+   "type": "Topic",
+   "label_ko": "지속적 개선",
+   "label_en": "Continuous improvement",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-corporate-finance",
+   "type": "Area",
+   "label_ko": "재무관리",
+   "label_en": "Corporate finance",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/time-value-of-money",
+   "type": "Topic",
+   "label_ko": "화폐의 시간가치",
+   "label_en": "Time value of money",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cost-of-capital",
+   "type": "Topic",
+   "label_ko": "자본비용",
+   "label_en": "Cost of capital",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/capital-structure",
+   "type": "Topic",
+   "label_ko": "자본 구조",
+   "label_en": "Capital structure",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-investment",
+   "type": "Area",
+   "label_ko": "투자 결정",
+   "label_en": "Investment decisions",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/npv",
+   "type": "Topic",
+   "label_ko": "순현재가치",
+   "label_en": "Net present value",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/irr",
+   "type": "Topic",
+   "label_ko": "내부수익률",
+   "label_en": "Internal rate of return",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/payback-period",
+   "type": "Topic",
+   "label_ko": "회수기간",
+   "label_en": "Payback period",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/real-options",
+   "type": "Topic",
+   "label_ko": "실물옵션",
+   "label_en": "Real options",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-risk-management",
+   "type": "Area",
+   "label_ko": "위험 관리",
+   "label_en": "Risk management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/diversification",
+   "type": "Topic",
+   "label_ko": "분산",
+   "label_en": "Diversification",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/risk-measurement",
+   "type": "Topic",
+   "label_ko": "위험 측정",
+   "label_en": "Risk measurement",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hedging",
+   "type": "Topic",
+   "label_ko": "헤지의 개념",
+   "label_en": "Hedging",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-hrm",
+   "type": "Area",
+   "label_ko": "인적자원관리",
+   "label_en": "Human resource management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/recruitment",
+   "type": "Topic",
+   "label_ko": "채용",
+   "label_en": "Recruitment",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/performance-appraisal",
+   "type": "Topic",
+   "label_ko": "평가",
+   "label_en": "Performance appraisal",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/compensation",
+   "type": "Topic",
+   "label_ko": "보상",
+   "label_en": "Compensation",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/training-development",
+   "type": "Topic",
+   "label_ko": "교육",
+   "label_en": "Training and development",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-org-behavior",
+   "type": "Area",
+   "label_ko": "조직행동과 리더십",
+   "label_en": "Organizational behavior and leadership",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/motivation-theories",
+   "type": "Topic",
+   "label_ko": "동기 이론",
+   "label_en": "Motivation theories",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/teams",
+   "type": "Topic",
+   "label_ko": "팀",
+   "label_en": "Teams",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/leadership-theories",
+   "type": "Topic",
+   "label_ko": "리더십 이론",
+   "label_en": "Leadership theories",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/change-management",
+   "type": "Topic",
+   "label_ko": "변화 관리",
+   "label_en": "Change management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-decision-science",
+   "type": "Area",
+   "label_ko": "의사결정 과학",
+   "label_en": "Decision science",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/decision-trees-biz",
+   "type": "Topic",
+   "label_ko": "결정 나무(의사결정 분석)",
+   "label_en": "Decision trees (decision analysis)",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/expected-value-decision",
+   "type": "Topic",
+   "label_ko": "기대값 의사결정",
+   "label_en": "Expected-value decisions",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/business-simulation",
+   "type": "Topic",
+   "label_ko": "경영 시뮬레이션",
+   "label_en": "Business simulation",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-digital",
+   "type": "Area",
+   "label_ko": "경영정보와 디지털 전환",
+   "label_en": "Information systems and digital transformation",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/information-systems",
+   "type": "Topic",
+   "label_ko": "정보 시스템",
+   "label_en": "Information systems",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/data-driven-management",
+   "type": "Topic",
+   "label_ko": "데이터 기반 경영",
+   "label_en": "Data-driven management",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/platforms",
+   "type": "Topic",
+   "label_ko": "플랫폼",
+   "label_en": "Platforms",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ai-transformation",
+   "type": "Topic",
+   "label_ko": "AI 전환(AX)",
+   "label_en": "AI transformation (AX)",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-entrepreneurship",
+   "type": "Area",
+   "label_ko": "창업과 비즈니스 모델",
+   "label_en": "Entrepreneurship and business models",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/opportunity-discovery",
+   "type": "Topic",
+   "label_ko": "기회 발견",
+   "label_en": "Opportunity discovery",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/business-model",
+   "type": "Topic",
+   "label_ko": "비즈니스 모델",
+   "label_en": "Business model",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/validation-experiments",
+   "type": "Topic",
+   "label_ko": "검증 실험",
+   "label_en": "Validation experiments",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-governance",
+   "type": "Area",
+   "label_ko": "기업윤리와 지배구조",
+   "label_en": "Business ethics and governance",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/board",
+   "type": "Topic",
+   "label_ko": "이사회",
+   "label_en": "Board of directors",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/agency-problem",
+   "type": "Topic",
+   "label_ko": "대리인 문제",
+   "label_en": "Agency problem",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/sustainability-esg",
+   "type": "Topic",
+   "label_ko": "지속가능경영",
+   "label_en": "Sustainability (ESG)",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/biz-international-biz",
+   "type": "Area",
+   "label_ko": "국제경영",
+   "label_en": "International business",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/market-entry",
+   "type": "Topic",
+   "label_ko": "해외 진출 방식",
+   "label_en": "Market entry modes",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cultural-differences",
+   "type": "Topic",
+   "label_ko": "문화 차이",
+   "label_en": "Cultural differences",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/global-supply-chain",
+   "type": "Topic",
+   "label_ko": "글로벌 공급망",
+   "label_en": "Global supply chains",
+   "domain": [
+    "biz"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-framework",
+   "type": "Area",
+   "label_ko": "회계의 기초와 개념체계",
+   "label_en": "Accounting foundations and conceptual framework",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/users-of-accounting",
+   "type": "Topic",
+   "label_ko": "회계 정보 이용자",
+   "label_en": "Users of accounting information",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/qualitative-characteristics",
+   "type": "Topic",
+   "label_ko": "질적 특성",
+   "label_en": "Qualitative characteristics",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fs-elements",
+   "type": "Topic",
+   "label_ko": "재무제표 요소",
+   "label_en": "Elements of financial statements",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/recognition-measurement",
+   "type": "Topic",
+   "label_ko": "인식·측정",
+   "label_en": "Recognition and measurement",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-bookkeeping",
+   "type": "Area",
+   "label_ko": "복식부기와 회계 순환",
+   "label_en": "Double-entry bookkeeping and the accounting cycle",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/accounting-equation",
+   "type": "Topic",
+   "label_ko": "회계 등식",
+   "label_en": "Accounting equation",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/journal-entries",
+   "type": "Topic",
+   "label_ko": "분개",
+   "label_en": "Journal entries",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/posting-ledger",
+   "type": "Topic",
+   "label_ko": "전기",
+   "label_en": "Posting to the ledger",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/trial-balance",
+   "type": "Topic",
+   "label_ko": "시산표",
+   "label_en": "Trial balance",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/adjusting-entries",
+   "type": "Topic",
+   "label_ko": "수정분개",
+   "label_en": "Adjusting entries",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/closing",
+   "type": "Topic",
+   "label_ko": "결산",
+   "label_en": "Closing",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-statements",
+   "type": "Area",
+   "label_ko": "재무제표 표시",
+   "label_en": "Presentation of financial statements",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/balance-sheet",
+   "type": "Topic",
+   "label_ko": "재무상태표",
+   "label_en": "Statement of financial position",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/income-statement",
+   "type": "Topic",
+   "label_ko": "포괄손익계산서",
+   "label_en": "Statement of comprehensive income",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/equity-statement",
+   "type": "Topic",
+   "label_ko": "자본변동표",
+   "label_en": "Statement of changes in equity",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/notes-fs",
+   "type": "Topic",
+   "label_ko": "주석",
+   "label_en": "Notes",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-revenue",
+   "type": "Area",
+   "label_ko": "수익인식",
+   "label_en": "Revenue recognition",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/contract-identification",
+   "type": "Topic",
+   "label_ko": "계약 식별",
+   "label_en": "Identifying the contract",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/performance-obligations",
+   "type": "Topic",
+   "label_ko": "수행의무",
+   "label_en": "Performance obligations",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/transaction-price",
+   "type": "Topic",
+   "label_ko": "거래가격",
+   "label_en": "Transaction price",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/price-allocation",
+   "type": "Topic",
+   "label_ko": "배분",
+   "label_en": "Allocation",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/recognition-timing",
+   "type": "Topic",
+   "label_ko": "인식 시점",
+   "label_en": "Timing of recognition",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-inventory",
+   "type": "Area",
+   "label_ko": "재고자산",
+   "label_en": "Inventories",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/inventory-cost",
+   "type": "Topic",
+   "label_ko": "취득원가",
+   "label_en": "Cost of inventories",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cost-flow-assumptions",
+   "type": "Topic",
+   "label_ko": "원가흐름 가정",
+   "label_en": "Cost flow assumptions",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lower-of-cost",
+   "type": "Topic",
+   "label_ko": "저가법",
+   "label_en": "Lower of cost and net realisable value",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-ppe",
+   "type": "Area",
+   "label_ko": "유형·무형자산",
+   "label_en": "Property, plant, equipment and intangibles",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/asset-acquisition",
+   "type": "Topic",
+   "label_ko": "취득",
+   "label_en": "Acquisition",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/depreciation",
+   "type": "Topic",
+   "label_ko": "감가상각",
+   "label_en": "Depreciation",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/impairment",
+   "type": "Topic",
+   "label_ko": "손상",
+   "label_en": "Impairment",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/revaluation",
+   "type": "Topic",
+   "label_ko": "재평가",
+   "label_en": "Revaluation",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/amortization",
+   "type": "Topic",
+   "label_ko": "무형자산 상각",
+   "label_en": "Amortisation",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-financial-instruments",
+   "type": "Area",
+   "label_ko": "금융자산과 금융부채",
+   "label_en": "Financial instruments",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fi-classification",
+   "type": "Topic",
+   "label_ko": "분류",
+   "label_en": "Classification",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/amortized-cost",
+   "type": "Topic",
+   "label_ko": "상각후원가",
+   "label_en": "Amortised cost",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/fair-value",
+   "type": "Topic",
+   "label_ko": "공정가치",
+   "label_en": "Fair value",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/expected-credit-loss",
+   "type": "Topic",
+   "label_ko": "기대신용손실",
+   "label_en": "Expected credit loss",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-leases",
+   "type": "Area",
+   "label_ko": "리스",
+   "label_en": "Leases",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/right-of-use",
+   "type": "Topic",
+   "label_ko": "사용권자산",
+   "label_en": "Right-of-use asset",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lease-liability",
+   "type": "Topic",
+   "label_ko": "리스부채",
+   "label_en": "Lease liability",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/lessor-accounting",
+   "type": "Topic",
+   "label_ko": "리스 제공자",
+   "label_en": "Lessor accounting",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-provisions",
+   "type": "Area",
+   "label_ko": "충당부채와 우발부채",
+   "label_en": "Provisions and contingencies",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/provision-recognition",
+   "type": "Topic",
+   "label_ko": "인식 조건",
+   "label_en": "Recognition criteria",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/provision-measurement",
+   "type": "Topic",
+   "label_ko": "측정",
+   "label_en": "Measurement",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/contingency-disclosure",
+   "type": "Topic",
+   "label_ko": "공시",
+   "label_en": "Disclosure",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-equity",
+   "type": "Area",
+   "label_ko": "자본",
+   "label_en": "Equity",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/share-capital",
+   "type": "Topic",
+   "label_ko": "자본금",
+   "label_en": "Share capital",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/retained-earnings",
+   "type": "Topic",
+   "label_ko": "이익잉여금",
+   "label_en": "Retained earnings",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/treasury-shares",
+   "type": "Topic",
+   "label_ko": "자기주식",
+   "label_en": "Treasury shares",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/dividends",
+   "type": "Topic",
+   "label_ko": "배당",
+   "label_en": "Dividends",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-income-tax",
+   "type": "Area",
+   "label_ko": "법인세 회계",
+   "label_en": "Income tax accounting",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/current-tax",
+   "type": "Topic",
+   "label_ko": "당기법인세",
+   "label_en": "Current tax",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/deferred-tax",
+   "type": "Topic",
+   "label_ko": "이연법인세",
+   "label_en": "Deferred tax",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/temporary-differences",
+   "type": "Topic",
+   "label_ko": "일시적 차이",
+   "label_en": "Temporary differences",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-cash-flow",
+   "type": "Area",
+   "label_ko": "현금흐름표",
+   "label_en": "Statement of cash flows",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cf-activities",
+   "type": "Topic",
+   "label_ko": "영업·투자·재무 활동",
+   "label_en": "Operating, investing and financing activities",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/direct-indirect-method",
+   "type": "Topic",
+   "label_ko": "직접법·간접법",
+   "label_en": "Direct and indirect methods",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-consolidation",
+   "type": "Area",
+   "label_ko": "연결재무제표",
+   "label_en": "Consolidated financial statements",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/control",
+   "type": "Topic",
+   "label_ko": "지배력",
+   "label_en": "Control",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/intragroup-elimination",
+   "type": "Topic",
+   "label_ko": "내부거래 제거",
+   "label_en": "Elimination of intragroup transactions",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/non-controlling-interest",
+   "type": "Topic",
+   "label_ko": "비지배지분",
+   "label_en": "Non-controlling interest",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-analysis",
+   "type": "Area",
+   "label_ko": "재무제표 분석",
+   "label_en": "Financial statement analysis",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/financial-ratios",
+   "type": "Topic",
+   "label_ko": "수익성·안정성·활동성 비율",
+   "label_en": "Profitability, solvency and activity ratios",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/earnings-quality",
+   "type": "Topic",
+   "label_ko": "이익의 질",
+   "label_en": "Earnings quality",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/accounting-data-python",
+   "type": "Topic",
+   "label_ko": "파이썬 회계 데이터 분석",
+   "label_en": "Accounting data analysis with Python",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-cost",
+   "type": "Area",
+   "label_ko": "원가회계",
+   "label_en": "Cost accounting",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/cost-classification",
+   "type": "Topic",
+   "label_ko": "원가 분류",
+   "label_en": "Cost classification",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/job-process-costing",
+   "type": "Topic",
+   "label_ko": "개별·종합원가",
+   "label_en": "Job and process costing",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/activity-based-costing",
+   "type": "Topic",
+   "label_ko": "활동기준원가",
+   "label_en": "Activity-based costing",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-managerial",
+   "type": "Area",
+   "label_ko": "관리회계",
+   "label_en": "Managerial accounting",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/break-even",
+   "type": "Topic",
+   "label_ko": "손익분기",
+   "label_en": "Break-even analysis",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/budgeting",
+   "type": "Topic",
+   "label_ko": "예산",
+   "label_en": "Budgeting",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/standard-cost-variance",
+   "type": "Topic",
+   "label_ko": "표준원가와 차이 분석",
+   "label_en": "Standard costs and variance analysis",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/managerial-decisions",
+   "type": "Topic",
+   "label_ko": "관리적 의사결정",
+   "label_en": "Managerial decision making",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-audit",
+   "type": "Area",
+   "label_ko": "감사",
+   "label_en": "Auditing",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/audit-risk",
+   "type": "Topic",
+   "label_ko": "감사 위험",
+   "label_en": "Audit risk",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/internal-control",
+   "type": "Topic",
+   "label_ko": "내부통제",
+   "label_en": "Internal control",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/audit-sampling",
+   "type": "Topic",
+   "label_ko": "감사 표본",
+   "label_en": "Audit sampling",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/audit-opinion",
+   "type": "Topic",
+   "label_ko": "감사의견",
+   "label_en": "Audit opinion",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-tax",
+   "type": "Area",
+   "label_ko": "세무 기초",
+   "label_en": "Taxation basics",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/corporate-vat-structure",
+   "type": "Topic",
+   "label_ko": "법인세·부가가치세 구조",
+   "label_en": "Corporate tax and VAT structure",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/tax-adjustment",
+   "type": "Topic",
+   "label_ko": "세무조정",
+   "label_en": "Tax adjustments",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/acct-disclosure",
+   "type": "Area",
+   "label_ko": "공시와 회계 정보 시스템",
+   "label_en": "Disclosure and accounting information systems",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/disclosure-system",
+   "type": "Topic",
+   "label_ko": "공시 체계",
+   "label_en": "Disclosure system",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/xbrl",
+   "type": "Topic",
+   "label_ko": "XBRL",
+   "label_en": "XBRL",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/ais-flow",
+   "type": "Topic",
+   "label_ko": "회계 시스템 흐름",
+   "label_en": "Accounting system flow",
+   "domain": [
+    "acct"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/art-structure",
+   "type": "Area",
+   "label_ko": "구조 먼저 보기",
+   "label_en": "Structure-first drawing",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/simplify-forms",
+   "type": "Topic",
+   "label_ko": "도형으로 단순화",
+   "label_en": "Simplifying into basic forms",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/proportion",
+   "type": "Topic",
+   "label_ko": "비례",
+   "label_en": "Proportion",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/perspective",
+   "type": "Topic",
+   "label_ko": "원근",
+   "label_en": "Perspective",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/gesture",
+   "type": "Topic",
+   "label_ko": "자세와 움직임선",
+   "label_en": "Gesture and line of action",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/art-surface",
+   "type": "Area",
+   "label_ko": "면·주름·그림자",
+   "label_en": "Surfaces, folds and shading",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/clothing-folds",
+   "type": "Topic",
+   "label_ko": "옷 주름",
+   "label_en": "Clothing folds",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/light-shadow",
+   "type": "Topic",
+   "label_ko": "빛과 그림자",
+   "label_en": "Light and shadow",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/volume-planes",
+   "type": "Topic",
+   "label_ko": "면의 방향과 부피",
+   "label_en": "Planes and volume",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/art-expression",
+   "type": "Area",
+   "label_ko": "표정과 머리카락",
+   "label_en": "Expression and hair",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/facial-expression",
+   "type": "Topic",
+   "label_ko": "표정",
+   "label_en": "Facial expression",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/hair-structure",
+   "type": "Topic",
+   "label_ko": "머리카락 덩어리",
+   "label_en": "Hair masses",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:area/art-style",
+   "type": "Area",
+   "label_ko": "픽셀에서 실사까지",
+   "label_en": "From pixel art to realism",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/pixel-art",
+   "type": "Topic",
+   "label_ko": "픽셀아트",
+   "label_en": "Pixel art",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/style-transfer-drawing",
+   "type": "Topic",
+   "label_ko": "스타일 바꾸기",
+   "label_en": "Changing styles",
+   "domain": [
+    "art"
+   ],
+   "pages": []
+  },
+  {
+   "id": "lab:topic/character-sheet",
+   "type": "Topic",
+   "label_ko": "캐릭터 시트와 일관성",
+   "label_en": "Character sheets and consistency",
+   "domain": [
+    "art"
+   ],
+   "pages": []
   }
  ]
 }

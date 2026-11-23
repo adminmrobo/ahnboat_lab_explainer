@@ -1,0 +1,241 @@
+{
+ "version": "1.0",
+ "updated": "2026-11-24",
+ "note": "연구실 온톨로지의 학문 분야(도메인) 등록부. 노드의 domain 배열 값은 여기 code 중 하나다. 새 분야는 이 파일에 한 줄 + backbone_{code}.json + (선택) 분야 팩으로 더한다(코어 19-4). ahnboat.xyz 콘텐츠 색인(2026-11-24)의 8개 콘텐츠 분류와는 따로 간다 — 콘텐츠 분류는 서버랙(주제 묶음), 도메인은 지식이 속한 학문.",
+ "add_rule": [
+  "code는 영어 소문자 2~12자",
+  "backbone 파일을 먼저 만들고(O5-3 형식) 등록부(KG_00_registry.json)에 Area·Topic을 더한다",
+  "색은 기존 색과 구분되게, 화면 범례에 쓰인다",
+  "parent가 있으면 지도에서 그 분야 렌즈를 고를 때 함께 묶어 볼 수 있다"
+ ],
+ "domains": [
+  {
+   "code": "ai",
+   "label": {
+    "ko": "인공지능(공통)",
+    "en": "Artificial intelligence (general)"
+   },
+   "color": "#3d3d8f",
+   "parent": null,
+   "backbone": "data/backbone_ai.json",
+   "pack": "SKILL.md (내장)",
+   "note": "AI 뼈대 전체. 아래 ml·dl·neuro·rl은 이 뼈대의 영역을 나눠 본 렌즈"
+  },
+  {
+   "code": "ml",
+   "label": {
+    "ko": "머신러닝",
+    "en": "Machine learning"
+   },
+   "color": "#2f7d5b",
+   "parent": "ai",
+   "backbone": "data/backbone_ai.json",
+   "backbone_areas": [
+    "lab:area/ml-basics",
+    "lab:area/classical",
+    "lab:area/ensemble",
+    "lab:area/unsupervised",
+    "lab:area/evaluation"
+   ]
+  },
+  {
+   "code": "dl",
+   "label": {
+    "ko": "딥러닝",
+    "en": "Deep learning"
+   },
+   "color": "#6a4fb3",
+   "parent": "ai",
+   "backbone": "data/backbone_ai.json",
+   "backbone_areas": [
+    "lab:area/nn-basics",
+    "lab:area/optimization",
+    "lab:area/regularization",
+    "lab:area/vision",
+    "lab:area/sequence",
+    "lab:area/attention",
+    "lab:area/representation",
+    "lab:area/graph"
+   ]
+  },
+  {
+   "code": "neuro",
+   "label": {
+    "ko": "뇌과학",
+    "en": "Neuroscience"
+   },
+   "color": "#8f5fbf",
+   "parent": "ai",
+   "backbone": "data/backbone_ai.json",
+   "backbone_areas": [
+    "lab:area/neuro"
+   ]
+  },
+  {
+   "code": "rl",
+   "label": {
+    "ko": "강화학습·로봇",
+    "en": "Reinforcement learning and robotics"
+   },
+   "color": "#3f8f6f",
+   "parent": "ai",
+   "backbone": "data/backbone_ai.json",
+   "backbone_areas": [
+    "lab:area/rl"
+   ]
+  },
+  {
+   "code": "genai",
+   "label": {
+    "ko": "생성형 AI",
+    "en": "Generative AI"
+   },
+   "color": "#c0613a",
+   "parent": "ai",
+   "backbone": "data/backbone_genai.json",
+   "pack": "packs/domain/DOMAIN_genai.md",
+   "backbone_areas_extra": [
+    "lab:area/generative"
+   ]
+  },
+  {
+   "code": "llm",
+   "label": {
+    "ko": "LLM·추론 엔지니어링",
+    "en": "LLMs and inference engineering"
+   },
+   "color": "#2f5f9e",
+   "parent": "ai",
+   "backbone": "data/backbone_llm.json",
+   "pack": "packs/domain/DOMAIN_llm.md",
+   "backbone_areas_extra": [
+    "lab:area/language",
+    "lab:area/attention"
+   ]
+  },
+  {
+   "code": "stats",
+   "label": {
+    "ko": "통계학",
+    "en": "Statistics"
+   },
+   "color": "#1f8a8a",
+   "parent": null,
+   "backbone": "data/backbone_stats.json",
+   "pack": "packs/domain/DOMAIN_stats.md"
+  },
+  {
+   "code": "data",
+   "label": {
+    "ko": "데이터 공학·DB",
+    "en": "Data engineering and databases"
+   },
+   "color": "#4f6d7a",
+   "parent": null,
+   "backbone": "data/backbone_data.json",
+   "pack": "packs/domain/DOMAIN_data.md"
+  },
+  {
+   "code": "math",
+   "label": {
+    "ko": "수학(해석·대수)",
+    "en": "Mathematics (analysis and algebra)"
+   },
+   "color": "#5b4a9e",
+   "parent": null,
+   "backbone": "data/backbone_math.json",
+   "pack": "packs/domain/DOMAIN_math.md"
+  },
+  {
+   "code": "geom",
+   "label": {
+    "ko": "기하·위상수학",
+    "en": "Geometry and topology"
+   },
+   "color": "#3b7a3b",
+   "parent": "math",
+   "backbone": "data/backbone_geom.json",
+   "pack": "packs/domain/DOMAIN_geom.md"
+  },
+  {
+   "code": "logic",
+   "label": {
+    "ko": "논리학",
+    "en": "Logic"
+   },
+   "color": "#6b6b2f",
+   "parent": null,
+   "backbone": "data/backbone_logic.json",
+   "pack": "packs/domain/DOMAIN_logic.md"
+  },
+  {
+   "code": "econ",
+   "label": {
+    "ko": "경제학",
+    "en": "Economics"
+   },
+   "color": "#8b5a2b",
+   "parent": null,
+   "backbone": "data/backbone_econ.json",
+   "pack": "packs/domain/DOMAIN_econ.md"
+  },
+  {
+   "code": "fin",
+   "label": {
+    "ko": "금융·핀테크·블록체인",
+    "en": "Finance, fintech and blockchain"
+   },
+   "color": "#a07d12",
+   "parent": "econ",
+   "backbone": "data/backbone_fin.json",
+   "pack": "packs/domain/DOMAIN_fin.md"
+  },
+  {
+   "code": "biz",
+   "label": {
+    "ko": "경영학",
+    "en": "Business administration"
+   },
+   "color": "#7a4f8a",
+   "parent": null,
+   "backbone": "data/backbone_biz.json",
+   "pack": "packs/domain/DOMAIN_biz.md"
+  },
+  {
+   "code": "acct",
+   "label": {
+    "ko": "회계학",
+    "en": "Accounting"
+   },
+   "color": "#9c4a3c",
+   "parent": null,
+   "backbone": "data/backbone_acct.json",
+   "pack": "packs/domain/DOMAIN_acct.md"
+  },
+  {
+   "code": "crime",
+   "label": {
+    "ko": "AI 범죄·보안",
+    "en": "AI crime and security"
+   },
+   "color": "#7a2f2f",
+   "parent": "ai",
+   "backbone": "data/backbone_crime.json",
+   "pack": "packs/domain/DOMAIN_crime.md",
+   "backbone_areas_extra": [
+    "lab:area/responsible"
+   ]
+  },
+  {
+   "code": "art",
+   "label": {
+    "ko": "그림·캐릭터 구조",
+    "en": "Drawing and character structure"
+   },
+   "color": "#b0567a",
+   "parent": null,
+   "backbone": "data/backbone_art.json",
+   "pack": "packs/domain/DOMAIN_art.md"
+  }
+ ]
+}

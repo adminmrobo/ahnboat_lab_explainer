@@ -1,0 +1,326 @@
+{
+ "version": "0.1",
+ "name": "그림·캐릭터 구조 영역 뼈대 (초안)",
+ "domain": "art",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(Getty AAT) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/art-structure",
+   "type": "Area",
+   "label": {
+    "ko": "구조 먼저 보기",
+    "en": "Structure-first drawing"
+   },
+   "level": 1,
+   "family": "structure",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/simplify-forms",
+   "type": "Topic",
+   "label": {
+    "ko": "도형으로 단순화",
+    "en": "Simplifying into basic forms"
+   },
+   "level": 1,
+   "family": "structure",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/proportion",
+   "type": "Topic",
+   "label": {
+    "ko": "비례",
+    "en": "Proportion"
+   },
+   "level": 1,
+   "family": "structure",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/perspective",
+   "type": "Topic",
+   "label": {
+    "ko": "원근",
+    "en": "Perspective"
+   },
+   "level": 1,
+   "family": "structure",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/gesture",
+   "type": "Topic",
+   "label": {
+    "ko": "자세와 움직임선",
+    "en": "Gesture and line of action"
+   },
+   "level": 1,
+   "family": "structure",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/art-surface",
+   "type": "Area",
+   "label": {
+    "ko": "면·주름·그림자",
+    "en": "Surfaces, folds and shading"
+   },
+   "level": 2,
+   "family": "surface",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/clothing-folds",
+   "type": "Topic",
+   "label": {
+    "ko": "옷 주름",
+    "en": "Clothing folds"
+   },
+   "level": 2,
+   "family": "surface",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/light-shadow",
+   "type": "Topic",
+   "label": {
+    "ko": "빛과 그림자",
+    "en": "Light and shadow"
+   },
+   "level": 2,
+   "family": "surface",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/volume-planes",
+   "type": "Topic",
+   "label": {
+    "ko": "면의 방향과 부피",
+    "en": "Planes and volume"
+   },
+   "level": 2,
+   "family": "surface",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/art-expression",
+   "type": "Area",
+   "label": {
+    "ko": "표정과 머리카락",
+    "en": "Expression and hair"
+   },
+   "level": 2,
+   "family": "expression",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/facial-expression",
+   "type": "Topic",
+   "label": {
+    "ko": "표정",
+    "en": "Facial expression"
+   },
+   "level": 2,
+   "family": "expression",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hair-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "머리카락 덩어리",
+    "en": "Hair masses"
+   },
+   "level": 2,
+   "family": "expression",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/art-style",
+   "type": "Area",
+   "label": {
+    "ko": "픽셀에서 실사까지",
+    "en": "From pixel art to realism"
+   },
+   "level": 2,
+   "family": "style",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/pixel-art",
+   "type": "Topic",
+   "label": {
+    "ko": "픽셀아트",
+    "en": "Pixel art"
+   },
+   "level": 2,
+   "family": "style",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/style-transfer-drawing",
+   "type": "Topic",
+   "label": {
+    "ko": "스타일 바꾸기",
+    "en": "Changing styles"
+   },
+   "level": 2,
+   "family": "style",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/character-sheet",
+   "type": "Topic",
+   "label": {
+    "ko": "캐릭터 시트와 일관성",
+    "en": "Character sheets and consistency"
+   },
+   "level": 2,
+   "family": "style",
+   "domain": [
+    "art"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/simplify-forms",
+   "p": "lab:broader",
+   "o": "lab:area/art-structure"
+  },
+  {
+   "s": "lab:topic/proportion",
+   "p": "lab:broader",
+   "o": "lab:area/art-structure"
+  },
+  {
+   "s": "lab:topic/perspective",
+   "p": "lab:broader",
+   "o": "lab:area/art-structure"
+  },
+  {
+   "s": "lab:topic/gesture",
+   "p": "lab:broader",
+   "o": "lab:area/art-structure"
+  },
+  {
+   "s": "lab:topic/clothing-folds",
+   "p": "lab:broader",
+   "o": "lab:area/art-surface"
+  },
+  {
+   "s": "lab:topic/light-shadow",
+   "p": "lab:broader",
+   "o": "lab:area/art-surface"
+  },
+  {
+   "s": "lab:topic/volume-planes",
+   "p": "lab:broader",
+   "o": "lab:area/art-surface"
+  },
+  {
+   "s": "lab:topic/facial-expression",
+   "p": "lab:broader",
+   "o": "lab:area/art-expression"
+  },
+  {
+   "s": "lab:topic/hair-structure",
+   "p": "lab:broader",
+   "o": "lab:area/art-expression"
+  },
+  {
+   "s": "lab:topic/pixel-art",
+   "p": "lab:broader",
+   "o": "lab:area/art-style"
+  },
+  {
+   "s": "lab:topic/style-transfer-drawing",
+   "p": "lab:broader",
+   "o": "lab:area/art-style"
+  },
+  {
+   "s": "lab:topic/character-sheet",
+   "p": "lab:broader",
+   "o": "lab:area/art-style"
+  },
+  {
+   "s": "lab:area/art-structure",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/art-surface"
+  },
+  {
+   "s": "lab:area/art-structure",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/art-expression"
+  },
+  {
+   "s": "lab:area/art-structure",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/art-style"
+  }
+ ]
+}

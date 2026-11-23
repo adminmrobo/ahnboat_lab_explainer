@@ -1,0 +1,2266 @@
+{
+ "version": "0.1",
+ "name": "경제학 영역 뼈대 (초안)",
+ "domain": "econ",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(JEL, STW) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/econ-thinking",
+   "type": "Area",
+   "label": {
+    "ko": "경제학적 사고",
+    "en": "Economic thinking"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/scarcity",
+   "type": "Topic",
+   "label": {
+    "ko": "희소성",
+    "en": "Scarcity"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/opportunity-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "기회비용",
+    "en": "Opportunity cost"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/marginal-thinking",
+   "type": "Topic",
+   "label": {
+    "ko": "한계적 사고",
+    "en": "Marginal thinking"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/incentives",
+   "type": "Topic",
+   "label": {
+    "ko": "유인",
+    "en": "Incentives"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/economic-models-assumptions",
+   "type": "Topic",
+   "label": {
+    "ko": "모형과 가정",
+    "en": "Economic models and assumptions"
+   },
+   "level": 1,
+   "family": "thinking",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-supply-demand",
+   "type": "Area",
+   "label": {
+    "ko": "수요와 공급",
+    "en": "Supply and demand"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/demand-supply-curves",
+   "type": "Topic",
+   "label": {
+    "ko": "수요·공급 곡선",
+    "en": "Demand and supply curves"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/market-equilibrium",
+   "type": "Topic",
+   "label": {
+    "ko": "시장 균형",
+    "en": "Market equilibrium"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/curve-shifts",
+   "type": "Topic",
+   "label": {
+    "ko": "곡선의 이동",
+    "en": "Shifts of demand and supply"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/elasticity",
+   "type": "Topic",
+   "label": {
+    "ko": "탄력성",
+    "en": "Elasticity"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/price-controls",
+   "type": "Topic",
+   "label": {
+    "ko": "가격 통제",
+    "en": "Price controls"
+   },
+   "level": 1,
+   "family": "supply-demand",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-consumer",
+   "type": "Area",
+   "label": {
+    "ko": "소비자 이론",
+    "en": "Consumer theory"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/utility",
+   "type": "Topic",
+   "label": {
+    "ko": "효용",
+    "en": "Utility"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/budget-constraint",
+   "type": "Topic",
+   "label": {
+    "ko": "예산 제약",
+    "en": "Budget constraint"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/indifference-curves",
+   "type": "Topic",
+   "label": {
+    "ko": "무차별곡선",
+    "en": "Indifference curves"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/consumer-choice",
+   "type": "Topic",
+   "label": {
+    "ko": "소비자 선택(효용 극대화)",
+    "en": "Consumer choice"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/demand-theory",
+   "type": "Topic",
+   "label": {
+    "ko": "수요이론(마셜·힉스 수요)",
+    "en": "Demand theory (Marshallian and Hicksian)"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/income-substitution-effects",
+   "type": "Topic",
+   "label": {
+    "ko": "소득·대체 효과(슬러츠키)",
+    "en": "Income and substitution effects (Slutsky)"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/duality-consumer",
+   "type": "Topic",
+   "label": {
+    "ko": "지출 최소화와 쌍대성",
+    "en": "Expenditure minimization and duality"
+   },
+   "level": 2,
+   "family": "consumer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-producer",
+   "type": "Area",
+   "label": {
+    "ko": "생산자 이론",
+    "en": "Producer theory"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/production-function",
+   "type": "Topic",
+   "label": {
+    "ko": "생산함수",
+    "en": "Production function"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cost-curves",
+   "type": "Topic",
+   "label": {
+    "ko": "비용곡선",
+    "en": "Cost curves"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/short-long-run",
+   "type": "Topic",
+   "label": {
+    "ko": "단기와 장기",
+    "en": "Short run and long run"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/economies-of-scale",
+   "type": "Topic",
+   "label": {
+    "ko": "규모의 경제",
+    "en": "Economies of scale"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/factor-demand",
+   "type": "Topic",
+   "label": {
+    "ko": "요소 수요(조건부 노동수요)",
+    "en": "Factor demand (conditional labor demand)"
+   },
+   "level": 2,
+   "family": "producer",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-market-structure",
+   "type": "Area",
+   "label": {
+    "ko": "시장 구조",
+    "en": "Market structure"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/perfect-competition",
+   "type": "Topic",
+   "label": {
+    "ko": "완전경쟁",
+    "en": "Perfect competition"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/monopoly",
+   "type": "Topic",
+   "label": {
+    "ko": "독점",
+    "en": "Monopoly"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/oligopoly",
+   "type": "Topic",
+   "label": {
+    "ko": "과점",
+    "en": "Oligopoly"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/monopolistic-competition",
+   "type": "Topic",
+   "label": {
+    "ko": "독점적 경쟁",
+    "en": "Monopolistic competition"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/price-discrimination",
+   "type": "Topic",
+   "label": {
+    "ko": "가격 차별",
+    "en": "Price discrimination"
+   },
+   "level": 2,
+   "family": "market-structure",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-games",
+   "type": "Area",
+   "label": {
+    "ko": "게임이론",
+    "en": "Game theory"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/payoff-matrix",
+   "type": "Topic",
+   "label": {
+    "ko": "보수행렬",
+    "en": "Payoff matrix"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/nash-equilibrium",
+   "type": "Topic",
+   "label": {
+    "ko": "내쉬균형",
+    "en": "Nash equilibrium"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/repeated-games",
+   "type": "Topic",
+   "label": {
+    "ko": "반복 게임",
+    "en": "Repeated games"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sequential-games",
+   "type": "Topic",
+   "label": {
+    "ko": "순차 게임",
+    "en": "Sequential games"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mechanism-design",
+   "type": "Topic",
+   "label": {
+    "ko": "메커니즘 설계·경매",
+    "en": "Mechanism design and auctions"
+   },
+   "level": 2,
+   "family": "games",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-welfare",
+   "type": "Area",
+   "label": {
+    "ko": "후생과 시장 실패",
+    "en": "Welfare and market failure"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/economic-surplus",
+   "type": "Topic",
+   "label": {
+    "ko": "잉여",
+    "en": "Economic surplus"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/deadweight-loss",
+   "type": "Topic",
+   "label": {
+    "ko": "사중손실",
+    "en": "Deadweight loss"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/externality",
+   "type": "Topic",
+   "label": {
+    "ko": "외부효과",
+    "en": "Externality"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/public-goods",
+   "type": "Topic",
+   "label": {
+    "ko": "공공재",
+    "en": "Public goods"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/information-asymmetry",
+   "type": "Topic",
+   "label": {
+    "ko": "정보 비대칭",
+    "en": "Information asymmetry"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/general-equilibrium-welfare",
+   "type": "Topic",
+   "label": {
+    "ko": "일반균형과 후생정리",
+    "en": "General equilibrium and welfare theorems"
+   },
+   "level": 2,
+   "family": "welfare",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-network",
+   "type": "Area",
+   "label": {
+    "ko": "네트워크 경제",
+    "en": "Network economics"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/network-economics",
+   "type": "Topic",
+   "label": {
+    "ko": "네트워크 경제학",
+    "en": "Network economics"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/network-externality",
+   "type": "Topic",
+   "label": {
+    "ko": "네트워크 외부성",
+    "en": "Network externality"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bandwagon-effect",
+   "type": "Topic",
+   "label": {
+    "ko": "편승·속물 효과",
+    "en": "Bandwagon and snob effects"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/critical-mass",
+   "type": "Topic",
+   "label": {
+    "ko": "임계질량과 다중균형",
+    "en": "Critical mass and multiple equilibria"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/path-dependence",
+   "type": "Topic",
+   "label": {
+    "ko": "경로의존성·고착",
+    "en": "Path dependence and lock-in"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/two-sided-markets",
+   "type": "Topic",
+   "label": {
+    "ko": "양면 시장·플랫폼",
+    "en": "Two-sided markets and platforms"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/token-economics",
+   "type": "Topic",
+   "label": {
+    "ko": "토큰 경제",
+    "en": "Token economics"
+   },
+   "level": 3,
+   "family": "network",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-labor",
+   "type": "Area",
+   "label": {
+    "ko": "노동과 분배",
+    "en": "Labor and distribution"
+   },
+   "level": 2,
+   "family": "labor",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/labor-supply-demand",
+   "type": "Topic",
+   "label": {
+    "ko": "노동 수요·공급",
+    "en": "Labor supply and demand"
+   },
+   "level": 2,
+   "family": "labor",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/wage-determination",
+   "type": "Topic",
+   "label": {
+    "ko": "임금 결정",
+    "en": "Wage determination"
+   },
+   "level": 2,
+   "family": "labor",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inequality-measures",
+   "type": "Topic",
+   "label": {
+    "ko": "불평등 지표",
+    "en": "Inequality measures"
+   },
+   "level": 2,
+   "family": "labor",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/automation-labor",
+   "type": "Topic",
+   "label": {
+    "ko": "자동화·AI와 노동",
+    "en": "Automation, AI and labor"
+   },
+   "level": 2,
+   "family": "labor",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-accounts",
+   "type": "Area",
+   "label": {
+    "ko": "국민소득 계정",
+    "en": "National income accounts"
+   },
+   "level": 1,
+   "family": "accounts",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/gdp",
+   "type": "Topic",
+   "label": {
+    "ko": "국내총생산",
+    "en": "Gross domestic product"
+   },
+   "level": 1,
+   "family": "accounts",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/nominal-real",
+   "type": "Topic",
+   "label": {
+    "ko": "명목과 실질",
+    "en": "Nominal and real"
+   },
+   "level": 1,
+   "family": "accounts",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/price-index",
+   "type": "Topic",
+   "label": {
+    "ko": "물가지수",
+    "en": "Price indices"
+   },
+   "level": 1,
+   "family": "accounts",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/unemployment-rate",
+   "type": "Topic",
+   "label": {
+    "ko": "실업률",
+    "en": "Unemployment rate"
+   },
+   "level": 1,
+   "family": "accounts",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-growth",
+   "type": "Area",
+   "label": {
+    "ko": "경제성장",
+    "en": "Economic growth"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/growth-accounting",
+   "type": "Topic",
+   "label": {
+    "ko": "성장 회계",
+    "en": "Growth accounting"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/solow-model",
+   "type": "Topic",
+   "label": {
+    "ko": "솔로 모형",
+    "en": "Solow model"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/technical-progress",
+   "type": "Topic",
+   "label": {
+    "ko": "기술 진보",
+    "en": "Technical progress"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/institutions",
+   "type": "Topic",
+   "label": {
+    "ko": "제도",
+    "en": "Institutions"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/optimal-growth",
+   "type": "Topic",
+   "label": {
+    "ko": "최적 성장(램지 모형)",
+    "en": "Optimal growth (Ramsey model)"
+   },
+   "level": 3,
+   "family": "growth",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-money",
+   "type": "Area",
+   "label": {
+    "ko": "화폐와 물가",
+    "en": "Money and prices"
+   },
+   "level": 2,
+   "family": "money",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/functions-of-money",
+   "type": "Topic",
+   "label": {
+    "ko": "화폐의 기능",
+    "en": "Functions of money"
+   },
+   "level": 2,
+   "family": "money",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/money-supply",
+   "type": "Topic",
+   "label": {
+    "ko": "통화량",
+    "en": "Money supply"
+   },
+   "level": 2,
+   "family": "money",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inflation",
+   "type": "Topic",
+   "label": {
+    "ko": "인플레이션",
+    "en": "Inflation"
+   },
+   "level": 2,
+   "family": "money",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/expectations",
+   "type": "Topic",
+   "label": {
+    "ko": "기대",
+    "en": "Expectations"
+   },
+   "level": 2,
+   "family": "money",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-cycles",
+   "type": "Area",
+   "label": {
+    "ko": "경기변동과 총수요",
+    "en": "Business cycles and aggregate demand"
+   },
+   "level": 3,
+   "family": "cycles",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/ad-as",
+   "type": "Topic",
+   "label": {
+    "ko": "총수요·총공급",
+    "en": "Aggregate demand and supply"
+   },
+   "level": 3,
+   "family": "cycles",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multiplier",
+   "type": "Topic",
+   "label": {
+    "ko": "승수",
+    "en": "Multiplier"
+   },
+   "level": 3,
+   "family": "cycles",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/business-cycle",
+   "type": "Topic",
+   "label": {
+    "ko": "경기 순환",
+    "en": "Business cycle"
+   },
+   "level": 3,
+   "family": "cycles",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/is-lm",
+   "type": "Topic",
+   "label": {
+    "ko": "IS-LM 모형",
+    "en": "IS-LM model"
+   },
+   "level": 3,
+   "family": "cycles",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-monetary",
+   "type": "Area",
+   "label": {
+    "ko": "통화정책",
+    "en": "Monetary policy"
+   },
+   "level": 3,
+   "family": "monetary",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/central-bank",
+   "type": "Topic",
+   "label": {
+    "ko": "중앙은행",
+    "en": "Central bank"
+   },
+   "level": 3,
+   "family": "monetary",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/policy-rate",
+   "type": "Topic",
+   "label": {
+    "ko": "기준금리",
+    "en": "Policy rate"
+   },
+   "level": 3,
+   "family": "monetary",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transmission-channels",
+   "type": "Topic",
+   "label": {
+    "ko": "전달 경로",
+    "en": "Transmission channels"
+   },
+   "level": 3,
+   "family": "monetary",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/policy-rules",
+   "type": "Topic",
+   "label": {
+    "ko": "정책 규칙",
+    "en": "Policy rules"
+   },
+   "level": 3,
+   "family": "monetary",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-fiscal",
+   "type": "Area",
+   "label": {
+    "ko": "재정정책",
+    "en": "Fiscal policy"
+   },
+   "level": 3,
+   "family": "fiscal",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/government-spending",
+   "type": "Topic",
+   "label": {
+    "ko": "정부 지출",
+    "en": "Government spending"
+   },
+   "level": 3,
+   "family": "fiscal",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/taxation",
+   "type": "Topic",
+   "label": {
+    "ko": "조세",
+    "en": "Taxation"
+   },
+   "level": 3,
+   "family": "fiscal",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fiscal-deficit",
+   "type": "Topic",
+   "label": {
+    "ko": "재정 적자",
+    "en": "Fiscal deficit"
+   },
+   "level": 3,
+   "family": "fiscal",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/public-debt",
+   "type": "Topic",
+   "label": {
+    "ko": "국가 채무",
+    "en": "Public debt"
+   },
+   "level": 3,
+   "family": "fiscal",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-trade",
+   "type": "Area",
+   "label": {
+    "ko": "국제무역",
+    "en": "International trade"
+   },
+   "level": 2,
+   "family": "trade",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/comparative-advantage",
+   "type": "Topic",
+   "label": {
+    "ko": "비교우위",
+    "en": "Comparative advantage"
+   },
+   "level": 2,
+   "family": "trade",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/terms-of-trade",
+   "type": "Topic",
+   "label": {
+    "ko": "교역 조건",
+    "en": "Terms of trade"
+   },
+   "level": 2,
+   "family": "trade",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tariffs",
+   "type": "Topic",
+   "label": {
+    "ko": "관세",
+    "en": "Tariffs"
+   },
+   "level": 2,
+   "family": "trade",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/trade-policy",
+   "type": "Topic",
+   "label": {
+    "ko": "무역 정책",
+    "en": "Trade policy"
+   },
+   "level": 2,
+   "family": "trade",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-intl-finance",
+   "type": "Area",
+   "label": {
+    "ko": "국제금융",
+    "en": "International finance"
+   },
+   "level": 3,
+   "family": "intl-finance",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/exchange-rate",
+   "type": "Topic",
+   "label": {
+    "ko": "환율",
+    "en": "Exchange rate"
+   },
+   "level": 3,
+   "family": "intl-finance",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/current-account",
+   "type": "Topic",
+   "label": {
+    "ko": "경상수지",
+    "en": "Current account"
+   },
+   "level": 3,
+   "family": "intl-finance",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/capital-flows",
+   "type": "Topic",
+   "label": {
+    "ko": "자본 이동",
+    "en": "Capital flows"
+   },
+   "level": 3,
+   "family": "intl-finance",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-behavioral",
+   "type": "Area",
+   "label": {
+    "ko": "행동경제학",
+    "en": "Behavioral economics"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/heuristics-biases",
+   "type": "Topic",
+   "label": {
+    "ko": "휴리스틱과 편향",
+    "en": "Heuristics and biases"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/framing-effect",
+   "type": "Topic",
+   "label": {
+    "ko": "틀 효과",
+    "en": "Framing effect"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/present-bias",
+   "type": "Topic",
+   "label": {
+    "ko": "현재 편향",
+    "en": "Present bias"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/nudge",
+   "type": "Topic",
+   "label": {
+    "ko": "넛지",
+    "en": "Nudge"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/prospect-theory",
+   "type": "Topic",
+   "label": {
+    "ko": "전망 이론",
+    "en": "Prospect theory"
+   },
+   "level": 3,
+   "family": "behavioral",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-econometrics",
+   "type": "Area",
+   "label": {
+    "ko": "계량경제",
+    "en": "Econometrics"
+   },
+   "level": 3,
+   "family": "econometrics",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/endogeneity",
+   "type": "Topic",
+   "label": {
+    "ko": "내생성",
+    "en": "Endogeneity"
+   },
+   "level": 3,
+   "family": "econometrics",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/panel-data",
+   "type": "Topic",
+   "label": {
+    "ko": "패널 자료",
+    "en": "Panel data"
+   },
+   "level": 3,
+   "family": "econometrics",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/labor-demand-estimation",
+   "type": "Topic",
+   "label": {
+    "ko": "노동수요 추정(CES)",
+    "en": "Labor demand estimation (CES)"
+   },
+   "level": 3,
+   "family": "econometrics",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/econ-dynamic",
+   "type": "Area",
+   "label": {
+    "ko": "동학 최적화와 경제",
+    "en": "Dynamic optimization in economics"
+   },
+   "level": 4,
+   "family": "dynamic",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/intertemporal-choice",
+   "type": "Topic",
+   "label": {
+    "ko": "기간 간 선택",
+    "en": "Intertemporal choice"
+   },
+   "level": 4,
+   "family": "dynamic",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dynamic-programming-econ",
+   "type": "Topic",
+   "label": {
+    "ko": "동적계획과 벨만 방정식",
+    "en": "Dynamic programming and the Bellman equation"
+   },
+   "level": 4,
+   "family": "dynamic",
+   "domain": [
+    "econ"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/scarcity",
+   "p": "lab:broader",
+   "o": "lab:area/econ-thinking"
+  },
+  {
+   "s": "lab:topic/opportunity-cost",
+   "p": "lab:broader",
+   "o": "lab:area/econ-thinking"
+  },
+  {
+   "s": "lab:topic/marginal-thinking",
+   "p": "lab:broader",
+   "o": "lab:area/econ-thinking"
+  },
+  {
+   "s": "lab:topic/incentives",
+   "p": "lab:broader",
+   "o": "lab:area/econ-thinking"
+  },
+  {
+   "s": "lab:topic/economic-models-assumptions",
+   "p": "lab:broader",
+   "o": "lab:area/econ-thinking"
+  },
+  {
+   "s": "lab:topic/demand-supply-curves",
+   "p": "lab:broader",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:topic/market-equilibrium",
+   "p": "lab:broader",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:topic/curve-shifts",
+   "p": "lab:broader",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:topic/elasticity",
+   "p": "lab:broader",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:topic/price-controls",
+   "p": "lab:broader",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:topic/utility",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/budget-constraint",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/indifference-curves",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/consumer-choice",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/demand-theory",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/income-substitution-effects",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/duality-consumer",
+   "p": "lab:broader",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:topic/production-function",
+   "p": "lab:broader",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:topic/cost-curves",
+   "p": "lab:broader",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:topic/short-long-run",
+   "p": "lab:broader",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:topic/economies-of-scale",
+   "p": "lab:broader",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:topic/factor-demand",
+   "p": "lab:broader",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:topic/perfect-competition",
+   "p": "lab:broader",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:topic/monopoly",
+   "p": "lab:broader",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:topic/oligopoly",
+   "p": "lab:broader",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:topic/monopolistic-competition",
+   "p": "lab:broader",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:topic/price-discrimination",
+   "p": "lab:broader",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:topic/payoff-matrix",
+   "p": "lab:broader",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:topic/nash-equilibrium",
+   "p": "lab:broader",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:topic/repeated-games",
+   "p": "lab:broader",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:topic/sequential-games",
+   "p": "lab:broader",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:topic/mechanism-design",
+   "p": "lab:broader",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:topic/economic-surplus",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/deadweight-loss",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/externality",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/public-goods",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/information-asymmetry",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/general-equilibrium-welfare",
+   "p": "lab:broader",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:topic/network-economics",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/network-externality",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/bandwagon-effect",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/critical-mass",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/path-dependence",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/two-sided-markets",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/token-economics",
+   "p": "lab:broader",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:topic/labor-supply-demand",
+   "p": "lab:broader",
+   "o": "lab:area/econ-labor"
+  },
+  {
+   "s": "lab:topic/wage-determination",
+   "p": "lab:broader",
+   "o": "lab:area/econ-labor"
+  },
+  {
+   "s": "lab:topic/inequality-measures",
+   "p": "lab:broader",
+   "o": "lab:area/econ-labor"
+  },
+  {
+   "s": "lab:topic/automation-labor",
+   "p": "lab:broader",
+   "o": "lab:area/econ-labor"
+  },
+  {
+   "s": "lab:topic/gdp",
+   "p": "lab:broader",
+   "o": "lab:area/econ-accounts"
+  },
+  {
+   "s": "lab:topic/nominal-real",
+   "p": "lab:broader",
+   "o": "lab:area/econ-accounts"
+  },
+  {
+   "s": "lab:topic/price-index",
+   "p": "lab:broader",
+   "o": "lab:area/econ-accounts"
+  },
+  {
+   "s": "lab:topic/unemployment-rate",
+   "p": "lab:broader",
+   "o": "lab:area/econ-accounts"
+  },
+  {
+   "s": "lab:topic/growth-accounting",
+   "p": "lab:broader",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:topic/solow-model",
+   "p": "lab:broader",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:topic/technical-progress",
+   "p": "lab:broader",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:topic/institutions",
+   "p": "lab:broader",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:topic/optimal-growth",
+   "p": "lab:broader",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:topic/functions-of-money",
+   "p": "lab:broader",
+   "o": "lab:area/econ-money"
+  },
+  {
+   "s": "lab:topic/money-supply",
+   "p": "lab:broader",
+   "o": "lab:area/econ-money"
+  },
+  {
+   "s": "lab:topic/inflation",
+   "p": "lab:broader",
+   "o": "lab:area/econ-money"
+  },
+  {
+   "s": "lab:topic/expectations",
+   "p": "lab:broader",
+   "o": "lab:area/econ-money"
+  },
+  {
+   "s": "lab:topic/ad-as",
+   "p": "lab:broader",
+   "o": "lab:area/econ-cycles"
+  },
+  {
+   "s": "lab:topic/multiplier",
+   "p": "lab:broader",
+   "o": "lab:area/econ-cycles"
+  },
+  {
+   "s": "lab:topic/business-cycle",
+   "p": "lab:broader",
+   "o": "lab:area/econ-cycles"
+  },
+  {
+   "s": "lab:topic/is-lm",
+   "p": "lab:broader",
+   "o": "lab:area/econ-cycles"
+  },
+  {
+   "s": "lab:topic/central-bank",
+   "p": "lab:broader",
+   "o": "lab:area/econ-monetary"
+  },
+  {
+   "s": "lab:topic/policy-rate",
+   "p": "lab:broader",
+   "o": "lab:area/econ-monetary"
+  },
+  {
+   "s": "lab:topic/transmission-channels",
+   "p": "lab:broader",
+   "o": "lab:area/econ-monetary"
+  },
+  {
+   "s": "lab:topic/policy-rules",
+   "p": "lab:broader",
+   "o": "lab:area/econ-monetary"
+  },
+  {
+   "s": "lab:topic/government-spending",
+   "p": "lab:broader",
+   "o": "lab:area/econ-fiscal"
+  },
+  {
+   "s": "lab:topic/taxation",
+   "p": "lab:broader",
+   "o": "lab:area/econ-fiscal"
+  },
+  {
+   "s": "lab:topic/fiscal-deficit",
+   "p": "lab:broader",
+   "o": "lab:area/econ-fiscal"
+  },
+  {
+   "s": "lab:topic/public-debt",
+   "p": "lab:broader",
+   "o": "lab:area/econ-fiscal"
+  },
+  {
+   "s": "lab:topic/comparative-advantage",
+   "p": "lab:broader",
+   "o": "lab:area/econ-trade"
+  },
+  {
+   "s": "lab:topic/terms-of-trade",
+   "p": "lab:broader",
+   "o": "lab:area/econ-trade"
+  },
+  {
+   "s": "lab:topic/tariffs",
+   "p": "lab:broader",
+   "o": "lab:area/econ-trade"
+  },
+  {
+   "s": "lab:topic/trade-policy",
+   "p": "lab:broader",
+   "o": "lab:area/econ-trade"
+  },
+  {
+   "s": "lab:topic/exchange-rate",
+   "p": "lab:broader",
+   "o": "lab:area/econ-intl-finance"
+  },
+  {
+   "s": "lab:topic/current-account",
+   "p": "lab:broader",
+   "o": "lab:area/econ-intl-finance"
+  },
+  {
+   "s": "lab:topic/capital-flows",
+   "p": "lab:broader",
+   "o": "lab:area/econ-intl-finance"
+  },
+  {
+   "s": "lab:topic/heuristics-biases",
+   "p": "lab:broader",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:topic/framing-effect",
+   "p": "lab:broader",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:topic/present-bias",
+   "p": "lab:broader",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:topic/nudge",
+   "p": "lab:broader",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:topic/prospect-theory",
+   "p": "lab:broader",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:topic/endogeneity",
+   "p": "lab:broader",
+   "o": "lab:area/econ-econometrics"
+  },
+  {
+   "s": "lab:topic/panel-data",
+   "p": "lab:broader",
+   "o": "lab:area/econ-econometrics"
+  },
+  {
+   "s": "lab:topic/labor-demand-estimation",
+   "p": "lab:broader",
+   "o": "lab:area/econ-econometrics"
+  },
+  {
+   "s": "lab:topic/regression-analysis",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-econometrics",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/instrumental-variables",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-econometrics",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/difference-in-differences",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-econometrics",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/intertemporal-choice",
+   "p": "lab:broader",
+   "o": "lab:area/econ-dynamic"
+  },
+  {
+   "s": "lab:topic/dynamic-programming-econ",
+   "p": "lab:broader",
+   "o": "lab:area/econ-dynamic"
+  },
+  {
+   "s": "lab:topic/lagrange-multipliers",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-dynamic",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:topic/optimal-control",
+   "p": "lab:partOf",
+   "o": "lab:area/econ-dynamic",
+   "note": "다른 분야 주제를 함께 씀"
+  },
+  {
+   "s": "lab:area/econ-thinking",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-supply-demand"
+  },
+  {
+   "s": "lab:area/econ-supply-demand",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-consumer"
+  },
+  {
+   "s": "lab:area/econ-supply-demand",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-producer"
+  },
+  {
+   "s": "lab:area/econ-supply-demand",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-trade"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-games"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-welfare"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-behavioral"
+  },
+  {
+   "s": "lab:area/econ-producer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-market-structure"
+  },
+  {
+   "s": "lab:area/econ-producer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-labor"
+  },
+  {
+   "s": "lab:area/econ-welfare",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:area/econ-games",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-network"
+  },
+  {
+   "s": "lab:area/econ-accounts",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-money"
+  },
+  {
+   "s": "lab:area/econ-accounts",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-growth"
+  },
+  {
+   "s": "lab:area/econ-money",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-cycles"
+  },
+  {
+   "s": "lab:area/econ-cycles",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-monetary"
+  },
+  {
+   "s": "lab:area/econ-cycles",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-fiscal"
+  },
+  {
+   "s": "lab:area/econ-trade",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-intl-finance"
+  },
+  {
+   "s": "lab:area/econ-consumer",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-dynamic"
+  },
+  {
+   "s": "lab:area/econ-growth",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/econ-dynamic"
+  }
+ ]
+}

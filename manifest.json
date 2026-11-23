@@ -1,11 +1,11 @@
 {
   "repo": "ahnboat_lab_explainer",
   "author": "안상선 ((주)M-Robo 대표) / Ahn Sangsun",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "core": {
     "id": "ai-lab-explainer",
     "path": "SKILL.md",
-    "version": "1.17",
+    "version": "1.18",
     "builtin_domain": "ai"
   },
   "packs": [
@@ -53,7 +53,8 @@
       "label": "통계학",
       "path": "packs/domain/DOMAIN_stats.md",
       "version": "1.0",
-      "core_min": "1.8"
+      "core_min": "1.8",
+      "backbone": "data/backbone_stats.json"
     },
     {
       "id": "domain/econ",
@@ -62,7 +63,8 @@
       "label": "경제학",
       "path": "packs/domain/DOMAIN_econ.md",
       "version": "1.0",
-      "core_min": "1.8"
+      "core_min": "1.8",
+      "backbone": "data/backbone_econ.json"
     },
     {
       "id": "domain/acct",
@@ -71,7 +73,8 @@
       "label": "회계학",
       "path": "packs/domain/DOMAIN_acct.md",
       "version": "1.0",
-      "core_min": "1.8"
+      "core_min": "1.8",
+      "backbone": "data/backbone_acct.json"
     },
     {
       "id": "domain/biz",
@@ -80,7 +83,8 @@
       "label": "경영학",
       "path": "packs/domain/DOMAIN_biz.md",
       "version": "1.0",
-      "core_min": "1.8"
+      "core_min": "1.8",
+      "backbone": "data/backbone_biz.json"
     },
     {
       "id": "domain/crime",
@@ -91,6 +95,86 @@
       "version": "1.0",
       "core_min": "1.8",
       "backbone": "data/backbone_crime.json"
+    },
+    {
+      "id": "domain/math",
+      "kind": "domain",
+      "code": "math",
+      "label": "수학(해석·대수)",
+      "path": "packs/domain/DOMAIN_math.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_math.json"
+    },
+    {
+      "id": "domain/geom",
+      "kind": "domain",
+      "code": "geom",
+      "label": "기하·위상수학",
+      "path": "packs/domain/DOMAIN_geom.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_geom.json"
+    },
+    {
+      "id": "domain/logic",
+      "kind": "domain",
+      "code": "logic",
+      "label": "논리학",
+      "path": "packs/domain/DOMAIN_logic.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_logic.json"
+    },
+    {
+      "id": "domain/genai",
+      "kind": "domain",
+      "code": "genai",
+      "label": "생성형 AI",
+      "path": "packs/domain/DOMAIN_genai.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_genai.json"
+    },
+    {
+      "id": "domain/llm",
+      "kind": "domain",
+      "code": "llm",
+      "label": "LLM·추론 엔지니어링",
+      "path": "packs/domain/DOMAIN_llm.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_llm.json"
+    },
+    {
+      "id": "domain/data",
+      "kind": "domain",
+      "code": "data",
+      "label": "데이터 공학·DB",
+      "path": "packs/domain/DOMAIN_data.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_data.json"
+    },
+    {
+      "id": "domain/fin",
+      "kind": "domain",
+      "code": "fin",
+      "label": "금융·핀테크·블록체인",
+      "path": "packs/domain/DOMAIN_fin.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_fin.json"
+    },
+    {
+      "id": "domain/art",
+      "kind": "domain",
+      "code": "art",
+      "label": "그림·캐릭터 구조",
+      "path": "packs/domain/DOMAIN_art.md",
+      "version": "1.0",
+      "core_min": "1.18",
+      "backbone": "data/backbone_art.json"
     },
     {
       "id": "lang/series-build-i18n",
@@ -137,8 +221,8 @@
       "id": "task/onto-retrofit",
       "kind": "task",
       "path": "packs/task/onto-retrofit/SKILL.md",
-      "version": "1.6",
-      "core_min": "1.9",
+      "version": "1.7",
+      "core_min": "1.18",
       "includes": [
         "packs/task/onto-retrofit/O5_pipeline.md",
         "packs/task/onto-retrofit/tools/",
@@ -146,27 +230,54 @@
       ],
       "needs_data": [
         "data/KG_00_registry.json",
-        "data/backbone_ai.json",
-        "data/backbone_crime.json"
+        "data/domains.json",
+        "data/backbone_*.json",
+        "data/backbone_bridge.json"
       ]
     }
   ],
   "data": [
     {
       "path": "data/KG_00_registry.json",
-      "what": "개념·문헌 ID 등록부 (모든 분야 공용)"
+      "what": "개념·문헌 ID 등록부 (모든 분야 공용) v0.3"
+    },
+    {
+      "path": "data/domains.json",
+      "what": "분야 등록부 18개 — 분야 코드·이름·색·뼈대의 원본"
     },
     {
       "path": "data/backbone_ai.json",
       "what": "인공지능 영역 뼈대 초안 v0.1 (작성자 초안, 공식 분류 체계 아님)"
+    },
+    {
+      "path": "data/backbone_{code}.json",
+      "what": "분야 뼈대 초안 v0.1 13개 (econ·stats·math·geom·logic·genai·llm·data·fin·biz·acct·art·crime)"
+    },
+    {
+      "path": "data/backbone_bridge.json",
+      "what": "분야 사이 다리 v0.1"
     }
   ],
   "domains": {
+    "_source": "data/domains.json",
     "ai": "SKILL.md (내장)",
+    "ml": "SKILL.md (ai 렌즈)",
+    "dl": "SKILL.md (ai 렌즈)",
+    "neuro": "SKILL.md (ai 렌즈)",
+    "rl": "SKILL.md (ai 렌즈)",
+    "genai": "domain/genai",
+    "llm": "domain/llm",
+    "crime": "domain/crime",
     "stats": "domain/stats",
+    "data": "domain/data",
+    "math": "domain/math",
+    "geom": "domain/geom",
+    "logic": "domain/logic",
     "econ": "domain/econ",
+    "fin": "domain/fin",
+    "biz": "domain/biz",
     "acct": "domain/acct",
-    "biz": "domain/biz"
+    "art": "domain/art"
   },
   "related_repos": {
     "character_add_packs": "ahnboat_lab_character_add_packs (준비 중)",

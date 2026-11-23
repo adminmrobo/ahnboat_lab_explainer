@@ -1,0 +1,1506 @@
+{
+ "version": "0.1",
+ "name": "수학(해석·대수) 영역 뼈대 (초안)",
+ "domain": "math",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(MSC2020) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/math-foundations",
+   "type": "Area",
+   "label": {
+    "ko": "집합과 함수",
+    "en": "Sets and functions"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/sets",
+   "type": "Topic",
+   "label": {
+    "ko": "집합",
+    "en": "Sets"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/functions-maps",
+   "type": "Topic",
+   "label": {
+    "ko": "함수와 사상",
+    "en": "Functions and maps"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/relations-equivalence",
+   "type": "Topic",
+   "label": {
+    "ko": "관계와 동치관계",
+    "en": "Relations and equivalence relations"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cardinality",
+   "type": "Topic",
+   "label": {
+    "ko": "기수와 무한",
+    "en": "Cardinality and infinity"
+   },
+   "level": 1,
+   "family": "foundations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-real-analysis",
+   "type": "Area",
+   "label": {
+    "ko": "해석학(실해석)",
+    "en": "Real analysis"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/sequences-limits",
+   "type": "Topic",
+   "label": {
+    "ko": "수열과 극한",
+    "en": "Sequences and limits"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/continuity",
+   "type": "Topic",
+   "label": {
+    "ko": "연속",
+    "en": "Continuity"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/differentiation",
+   "type": "Topic",
+   "label": {
+    "ko": "미분",
+    "en": "Differentiation"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/riemann-integral",
+   "type": "Topic",
+   "label": {
+    "ko": "적분",
+    "en": "Integration"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/series-convergence",
+   "type": "Topic",
+   "label": {
+    "ko": "급수와 수렴",
+    "en": "Series and convergence"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/taylor-approximation",
+   "type": "Topic",
+   "label": {
+    "ko": "테일러 근사",
+    "en": "Taylor approximation"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/epsilon-delta",
+   "type": "Topic",
+   "label": {
+    "ko": "엡실론-델타 논법",
+    "en": "Epsilon–delta arguments"
+   },
+   "level": 2,
+   "family": "real-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-vector-calculus",
+   "type": "Area",
+   "label": {
+    "ko": "다변수 미적분과 벡터해석",
+    "en": "Multivariable and vector calculus"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/partial-derivatives",
+   "type": "Topic",
+   "label": {
+    "ko": "편미분",
+    "en": "Partial derivatives"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/gradient",
+   "type": "Topic",
+   "label": {
+    "ko": "그래디언트(∇)",
+    "en": "Gradient (nabla)"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/divergence-curl",
+   "type": "Topic",
+   "label": {
+    "ko": "발산과 회전",
+    "en": "Divergence and curl"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/jacobian-hessian",
+   "type": "Topic",
+   "label": {
+    "ko": "야코비안·헤시안",
+    "en": "Jacobian and Hessian"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/chain-rule-multivar",
+   "type": "Topic",
+   "label": {
+    "ko": "다변수 연쇄법칙",
+    "en": "Multivariable chain rule"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/integral-theorems",
+   "type": "Topic",
+   "label": {
+    "ko": "선적분과 적분 정리",
+    "en": "Line integrals and integral theorems"
+   },
+   "level": 2,
+   "family": "vector-calculus",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-linear-algebra",
+   "type": "Area",
+   "label": {
+    "ko": "선형대수",
+    "en": "Linear algebra"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/vector-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "벡터공간",
+    "en": "Vector spaces"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/matrices-linear-maps",
+   "type": "Topic",
+   "label": {
+    "ko": "행렬과 선형사상",
+    "en": "Matrices and linear maps"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/eigenvalues",
+   "type": "Topic",
+   "label": {
+    "ko": "고유값과 고유벡터",
+    "en": "Eigenvalues and eigenvectors"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/inner-product-orthogonality",
+   "type": "Topic",
+   "label": {
+    "ko": "내적과 직교",
+    "en": "Inner products and orthogonality"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/matrix-decompositions",
+   "type": "Topic",
+   "label": {
+    "ko": "행렬 분해(SVD 등)",
+    "en": "Matrix decompositions (SVD etc.)"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tensors-algebra",
+   "type": "Topic",
+   "label": {
+    "ko": "텐서(다중선형대수)",
+    "en": "Tensors (multilinear algebra)"
+   },
+   "level": 1,
+   "family": "linear-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-abstract-algebra",
+   "type": "Area",
+   "label": {
+    "ko": "추상대수",
+    "en": "Abstract algebra"
+   },
+   "level": 3,
+   "family": "abstract-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/groups",
+   "type": "Topic",
+   "label": {
+    "ko": "군",
+    "en": "Groups"
+   },
+   "level": 3,
+   "family": "abstract-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/rings-fields",
+   "type": "Topic",
+   "label": {
+    "ko": "환과 체",
+    "en": "Rings and fields"
+   },
+   "level": 3,
+   "family": "abstract-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/symmetry-group-action",
+   "type": "Topic",
+   "label": {
+    "ko": "대칭과 군의 작용",
+    "en": "Symmetry and group actions"
+   },
+   "level": 3,
+   "family": "abstract-algebra",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-functional-analysis",
+   "type": "Area",
+   "label": {
+    "ko": "함수해석",
+    "en": "Functional analysis"
+   },
+   "level": 3,
+   "family": "functional-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/normed-spaces",
+   "type": "Topic",
+   "label": {
+    "ko": "노름공간과 거리",
+    "en": "Normed spaces and metrics"
+   },
+   "level": 3,
+   "family": "functional-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hilbert-space",
+   "type": "Topic",
+   "label": {
+    "ko": "힐베르트 공간",
+    "en": "Hilbert space"
+   },
+   "level": 3,
+   "family": "functional-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/banach-space",
+   "type": "Topic",
+   "label": {
+    "ko": "바나흐 공간",
+    "en": "Banach space"
+   },
+   "level": 3,
+   "family": "functional-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/operators",
+   "type": "Topic",
+   "label": {
+    "ko": "선형 연산자",
+    "en": "Linear operators"
+   },
+   "level": 3,
+   "family": "functional-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-complex-analysis",
+   "type": "Area",
+   "label": {
+    "ko": "복소해석",
+    "en": "Complex analysis"
+   },
+   "level": 3,
+   "family": "complex-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/complex-numbers",
+   "type": "Topic",
+   "label": {
+    "ko": "복소수와 복소평면",
+    "en": "Complex numbers and the complex plane"
+   },
+   "level": 3,
+   "family": "complex-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/analytic-functions",
+   "type": "Topic",
+   "label": {
+    "ko": "해석함수",
+    "en": "Analytic functions"
+   },
+   "level": 3,
+   "family": "complex-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/analytic-continuation",
+   "type": "Topic",
+   "label": {
+    "ko": "해석적 연속",
+    "en": "Analytic continuation"
+   },
+   "level": 3,
+   "family": "complex-analysis",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-number-theory",
+   "type": "Area",
+   "label": {
+    "ko": "정수론",
+    "en": "Number theory"
+   },
+   "level": 3,
+   "family": "number-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/primes",
+   "type": "Topic",
+   "label": {
+    "ko": "소수와 소수 분포",
+    "en": "Primes and their distribution"
+   },
+   "level": 3,
+   "family": "number-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/zeta-function",
+   "type": "Topic",
+   "label": {
+    "ko": "제타 함수",
+    "en": "Zeta function"
+   },
+   "level": 3,
+   "family": "number-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/riemann-hypothesis",
+   "type": "Topic",
+   "label": {
+    "ko": "리만 가설",
+    "en": "Riemann hypothesis"
+   },
+   "level": 3,
+   "family": "number-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-differential-equations",
+   "type": "Area",
+   "label": {
+    "ko": "미분방정식",
+    "en": "Differential equations"
+   },
+   "level": 3,
+   "family": "differential-equations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/ode",
+   "type": "Topic",
+   "label": {
+    "ko": "상미분방정식",
+    "en": "Ordinary differential equations"
+   },
+   "level": 3,
+   "family": "differential-equations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/pde",
+   "type": "Topic",
+   "label": {
+    "ko": "편미분방정식",
+    "en": "Partial differential equations"
+   },
+   "level": 3,
+   "family": "differential-equations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dynamical-systems-stability",
+   "type": "Topic",
+   "label": {
+    "ko": "동역학계와 안정성",
+    "en": "Dynamical systems and stability"
+   },
+   "level": 3,
+   "family": "differential-equations",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-optimization-theory",
+   "type": "Area",
+   "label": {
+    "ko": "최적화 이론",
+    "en": "Optimization theory"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/convexity",
+   "type": "Topic",
+   "label": {
+    "ko": "볼록성",
+    "en": "Convexity"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/unconstrained-optimization",
+   "type": "Topic",
+   "label": {
+    "ko": "제약 없는 최적화(1·2계 조건)",
+    "en": "Unconstrained optimization (first- and second-order conditions)"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lagrange-multipliers",
+   "type": "Topic",
+   "label": {
+    "ko": "라그랑주 승수",
+    "en": "Lagrange multipliers"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/kkt-conditions",
+   "type": "Topic",
+   "label": {
+    "ko": "KKT 조건",
+    "en": "KKT conditions"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/duality-optimization",
+   "type": "Topic",
+   "label": {
+    "ko": "쌍대성",
+    "en": "Duality"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/linear-programming",
+   "type": "Topic",
+   "label": {
+    "ko": "선형계획",
+    "en": "Linear programming"
+   },
+   "level": 2,
+   "family": "optimization-theory",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-variational",
+   "type": "Area",
+   "label": {
+    "ko": "변분법과 최적제어",
+    "en": "Calculus of variations and optimal control"
+   },
+   "level": 4,
+   "family": "variational",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/euler-lagrange",
+   "type": "Topic",
+   "label": {
+    "ko": "오일러-라그랑주 방정식",
+    "en": "Euler–Lagrange equation"
+   },
+   "level": 4,
+   "family": "variational",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lagrangian-mechanics",
+   "type": "Topic",
+   "label": {
+    "ko": "라그랑지안",
+    "en": "Lagrangian formulation"
+   },
+   "level": 4,
+   "family": "variational",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hamiltonian",
+   "type": "Topic",
+   "label": {
+    "ko": "해밀토니안",
+    "en": "Hamiltonian formulation"
+   },
+   "level": 4,
+   "family": "variational",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/optimal-control",
+   "type": "Topic",
+   "label": {
+    "ko": "최적제어(폰트랴긴)",
+    "en": "Optimal control (Pontryagin)"
+   },
+   "level": 4,
+   "family": "variational",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-discrete",
+   "type": "Area",
+   "label": {
+    "ko": "이산수학·그래프 이론",
+    "en": "Discrete mathematics and graph theory"
+   },
+   "level": 2,
+   "family": "discrete",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/combinatorics",
+   "type": "Topic",
+   "label": {
+    "ko": "조합",
+    "en": "Combinatorics"
+   },
+   "level": 2,
+   "family": "discrete",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/graph-theory",
+   "type": "Topic",
+   "label": {
+    "ko": "그래프 이론",
+    "en": "Graph theory"
+   },
+   "level": 2,
+   "family": "discrete",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/adjacency-matrix",
+   "type": "Topic",
+   "label": {
+    "ko": "인접행렬과 그래프의 행렬 표현",
+    "en": "Adjacency matrices"
+   },
+   "level": 2,
+   "family": "discrete",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/recurrence",
+   "type": "Topic",
+   "label": {
+    "ko": "점화식",
+    "en": "Recurrence relations"
+   },
+   "level": 2,
+   "family": "discrete",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-numerical",
+   "type": "Area",
+   "label": {
+    "ko": "수치해석",
+    "en": "Numerical analysis"
+   },
+   "level": 3,
+   "family": "numerical",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/numerical-error",
+   "type": "Topic",
+   "label": {
+    "ko": "근사와 오차",
+    "en": "Approximation and error"
+   },
+   "level": 3,
+   "family": "numerical",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/iterative-methods",
+   "type": "Topic",
+   "label": {
+    "ko": "반복법(뉴턴법 등)",
+    "en": "Iterative methods (Newton etc.)"
+   },
+   "level": 3,
+   "family": "numerical",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/numerical-integration",
+   "type": "Topic",
+   "label": {
+    "ko": "수치 적분·미분방정식 풀이",
+    "en": "Numerical integration and ODE solvers"
+   },
+   "level": 3,
+   "family": "numerical",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/math-measure",
+   "type": "Area",
+   "label": {
+    "ko": "측도론과 확률론",
+    "en": "Measure theory and probability"
+   },
+   "level": 4,
+   "family": "measure",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/measure-sigma-algebra",
+   "type": "Topic",
+   "label": {
+    "ko": "측도와 시그마 대수",
+    "en": "Measures and sigma-algebras"
+   },
+   "level": 4,
+   "family": "measure",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lebesgue-integral",
+   "type": "Topic",
+   "label": {
+    "ko": "르베그 적분",
+    "en": "Lebesgue integral"
+   },
+   "level": 4,
+   "family": "measure",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/probability-space",
+   "type": "Topic",
+   "label": {
+    "ko": "확률공간",
+    "en": "Probability space"
+   },
+   "level": 4,
+   "family": "measure",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stochastic-processes",
+   "type": "Topic",
+   "label": {
+    "ko": "확률과정",
+    "en": "Stochastic processes"
+   },
+   "level": 4,
+   "family": "measure",
+   "domain": [
+    "math"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/sets",
+   "p": "lab:broader",
+   "o": "lab:area/math-foundations"
+  },
+  {
+   "s": "lab:topic/functions-maps",
+   "p": "lab:broader",
+   "o": "lab:area/math-foundations"
+  },
+  {
+   "s": "lab:topic/relations-equivalence",
+   "p": "lab:broader",
+   "o": "lab:area/math-foundations"
+  },
+  {
+   "s": "lab:topic/cardinality",
+   "p": "lab:broader",
+   "o": "lab:area/math-foundations"
+  },
+  {
+   "s": "lab:topic/sequences-limits",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/continuity",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/differentiation",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/riemann-integral",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/series-convergence",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/taylor-approximation",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/epsilon-delta",
+   "p": "lab:broader",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:topic/partial-derivatives",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/gradient",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/divergence-curl",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/jacobian-hessian",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/chain-rule-multivar",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/integral-theorems",
+   "p": "lab:broader",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:topic/vector-spaces",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/matrices-linear-maps",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/eigenvalues",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/inner-product-orthogonality",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/matrix-decompositions",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/tensors-algebra",
+   "p": "lab:broader",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:topic/groups",
+   "p": "lab:broader",
+   "o": "lab:area/math-abstract-algebra"
+  },
+  {
+   "s": "lab:topic/rings-fields",
+   "p": "lab:broader",
+   "o": "lab:area/math-abstract-algebra"
+  },
+  {
+   "s": "lab:topic/symmetry-group-action",
+   "p": "lab:broader",
+   "o": "lab:area/math-abstract-algebra"
+  },
+  {
+   "s": "lab:topic/normed-spaces",
+   "p": "lab:broader",
+   "o": "lab:area/math-functional-analysis"
+  },
+  {
+   "s": "lab:topic/hilbert-space",
+   "p": "lab:broader",
+   "o": "lab:area/math-functional-analysis"
+  },
+  {
+   "s": "lab:topic/banach-space",
+   "p": "lab:broader",
+   "o": "lab:area/math-functional-analysis"
+  },
+  {
+   "s": "lab:topic/operators",
+   "p": "lab:broader",
+   "o": "lab:area/math-functional-analysis"
+  },
+  {
+   "s": "lab:topic/complex-numbers",
+   "p": "lab:broader",
+   "o": "lab:area/math-complex-analysis"
+  },
+  {
+   "s": "lab:topic/analytic-functions",
+   "p": "lab:broader",
+   "o": "lab:area/math-complex-analysis"
+  },
+  {
+   "s": "lab:topic/analytic-continuation",
+   "p": "lab:broader",
+   "o": "lab:area/math-complex-analysis"
+  },
+  {
+   "s": "lab:topic/primes",
+   "p": "lab:broader",
+   "o": "lab:area/math-number-theory"
+  },
+  {
+   "s": "lab:topic/zeta-function",
+   "p": "lab:broader",
+   "o": "lab:area/math-number-theory"
+  },
+  {
+   "s": "lab:topic/riemann-hypothesis",
+   "p": "lab:broader",
+   "o": "lab:area/math-number-theory"
+  },
+  {
+   "s": "lab:topic/ode",
+   "p": "lab:broader",
+   "o": "lab:area/math-differential-equations"
+  },
+  {
+   "s": "lab:topic/pde",
+   "p": "lab:broader",
+   "o": "lab:area/math-differential-equations"
+  },
+  {
+   "s": "lab:topic/dynamical-systems-stability",
+   "p": "lab:broader",
+   "o": "lab:area/math-differential-equations"
+  },
+  {
+   "s": "lab:topic/convexity",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/unconstrained-optimization",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/lagrange-multipliers",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/kkt-conditions",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/duality-optimization",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/linear-programming",
+   "p": "lab:broader",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:topic/euler-lagrange",
+   "p": "lab:broader",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:topic/lagrangian-mechanics",
+   "p": "lab:broader",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:topic/hamiltonian",
+   "p": "lab:broader",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:topic/optimal-control",
+   "p": "lab:broader",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:topic/combinatorics",
+   "p": "lab:broader",
+   "o": "lab:area/math-discrete"
+  },
+  {
+   "s": "lab:topic/graph-theory",
+   "p": "lab:broader",
+   "o": "lab:area/math-discrete"
+  },
+  {
+   "s": "lab:topic/adjacency-matrix",
+   "p": "lab:broader",
+   "o": "lab:area/math-discrete"
+  },
+  {
+   "s": "lab:topic/recurrence",
+   "p": "lab:broader",
+   "o": "lab:area/math-discrete"
+  },
+  {
+   "s": "lab:topic/numerical-error",
+   "p": "lab:broader",
+   "o": "lab:area/math-numerical"
+  },
+  {
+   "s": "lab:topic/iterative-methods",
+   "p": "lab:broader",
+   "o": "lab:area/math-numerical"
+  },
+  {
+   "s": "lab:topic/numerical-integration",
+   "p": "lab:broader",
+   "o": "lab:area/math-numerical"
+  },
+  {
+   "s": "lab:topic/measure-sigma-algebra",
+   "p": "lab:broader",
+   "o": "lab:area/math-measure"
+  },
+  {
+   "s": "lab:topic/lebesgue-integral",
+   "p": "lab:broader",
+   "o": "lab:area/math-measure"
+  },
+  {
+   "s": "lab:topic/probability-space",
+   "p": "lab:broader",
+   "o": "lab:area/math-measure"
+  },
+  {
+   "s": "lab:topic/stochastic-processes",
+   "p": "lab:broader",
+   "o": "lab:area/math-measure"
+  },
+  {
+   "s": "lab:area/math-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-real-analysis"
+  },
+  {
+   "s": "lab:area/math-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-linear-algebra"
+  },
+  {
+   "s": "lab:area/math-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-discrete"
+  },
+  {
+   "s": "lab:area/math-foundations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-abstract-algebra"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-complex-analysis"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-differential-equations"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-measure"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-numerical"
+  },
+  {
+   "s": "lab:area/math-linear-algebra",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-vector-calculus"
+  },
+  {
+   "s": "lab:area/math-linear-algebra",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-functional-analysis"
+  },
+  {
+   "s": "lab:area/math-linear-algebra",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-abstract-algebra"
+  },
+  {
+   "s": "lab:area/math-vector-calculus",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-optimization-theory"
+  },
+  {
+   "s": "lab:area/math-optimization-theory",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:area/math-differential-equations",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-variational"
+  },
+  {
+   "s": "lab:area/math-complex-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-number-theory"
+  },
+  {
+   "s": "lab:area/math-real-analysis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/math-functional-analysis"
+  }
+ ]
+}

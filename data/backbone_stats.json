@@ -1,0 +1,1966 @@
+{
+ "version": "0.1",
+ "name": "통계학 영역 뼈대 (초안)",
+ "domain": "stats",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(MSC2020 62) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/stats-descriptive",
+   "type": "Area",
+   "label": {
+    "ko": "자료와 기술통계",
+    "en": "Data and descriptive statistics"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/data-types",
+   "type": "Topic",
+   "label": {
+    "ko": "자료 종류",
+    "en": "Types of data"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/central-tendency",
+   "type": "Topic",
+   "label": {
+    "ko": "대표값",
+    "en": "Measures of central tendency"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dispersion",
+   "type": "Topic",
+   "label": {
+    "ko": "퍼짐",
+    "en": "Measures of dispersion"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/statistical-graphics",
+   "type": "Topic",
+   "label": {
+    "ko": "통계 그래프",
+    "en": "Statistical graphics"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/correlation",
+   "type": "Topic",
+   "label": {
+    "ko": "상관",
+    "en": "Correlation"
+   },
+   "level": 1,
+   "family": "descriptive",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-probability",
+   "type": "Area",
+   "label": {
+    "ko": "확률",
+    "en": "Probability"
+   },
+   "level": 1,
+   "family": "probability",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/probability-rules",
+   "type": "Topic",
+   "label": {
+    "ko": "확률 규칙",
+    "en": "Rules of probability"
+   },
+   "level": 1,
+   "family": "probability",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/conditional-probability",
+   "type": "Topic",
+   "label": {
+    "ko": "조건부확률",
+    "en": "Conditional probability"
+   },
+   "level": 1,
+   "family": "probability",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/independence",
+   "type": "Topic",
+   "label": {
+    "ko": "독립",
+    "en": "Independence"
+   },
+   "level": 1,
+   "family": "probability",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/bayes-theorem",
+   "type": "Topic",
+   "label": {
+    "ko": "베이즈 정리",
+    "en": "Bayes' theorem"
+   },
+   "level": 1,
+   "family": "probability",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-distributions",
+   "type": "Area",
+   "label": {
+    "ko": "확률변수와 분포",
+    "en": "Random variables and distributions"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/discrete-distributions",
+   "type": "Topic",
+   "label": {
+    "ko": "이산분포",
+    "en": "Discrete distributions"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/continuous-distributions",
+   "type": "Topic",
+   "label": {
+    "ko": "연속분포",
+    "en": "Continuous distributions"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/expectation-variance",
+   "type": "Topic",
+   "label": {
+    "ko": "기댓값·분산",
+    "en": "Expectation and variance"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/joint-distributions",
+   "type": "Topic",
+   "label": {
+    "ko": "결합분포",
+    "en": "Joint distributions"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/distribution-family-map",
+   "type": "Topic",
+   "label": {
+    "ko": "분포 사이의 관계",
+    "en": "Relationships among distributions"
+   },
+   "level": 1,
+   "family": "distributions",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-sampling",
+   "type": "Area",
+   "label": {
+    "ko": "표본분포와 극한정리",
+    "en": "Sampling distributions and limit theorems"
+   },
+   "level": 2,
+   "family": "sampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/sampling-distribution-mean",
+   "type": "Topic",
+   "label": {
+    "ko": "표본평균의 분포",
+    "en": "Sampling distribution of the mean"
+   },
+   "level": 2,
+   "family": "sampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/law-of-large-numbers",
+   "type": "Topic",
+   "label": {
+    "ko": "대수의 법칙",
+    "en": "Law of large numbers"
+   },
+   "level": 2,
+   "family": "sampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/central-limit-theorem",
+   "type": "Topic",
+   "label": {
+    "ko": "중심극한정리",
+    "en": "Central limit theorem"
+   },
+   "level": 2,
+   "family": "sampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/t-chi2-f",
+   "type": "Topic",
+   "label": {
+    "ko": "t·카이제곱·F 분포",
+    "en": "t, chi-square and F distributions"
+   },
+   "level": 2,
+   "family": "sampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-estimation",
+   "type": "Area",
+   "label": {
+    "ko": "점추정",
+    "en": "Point estimation"
+   },
+   "level": 2,
+   "family": "estimation",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/unbiasedness",
+   "type": "Topic",
+   "label": {
+    "ko": "불편성",
+    "en": "Unbiasedness"
+   },
+   "level": 2,
+   "family": "estimation",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/consistency-estimator",
+   "type": "Topic",
+   "label": {
+    "ko": "일치성",
+    "en": "Consistency"
+   },
+   "level": 2,
+   "family": "estimation",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/maximum-likelihood",
+   "type": "Topic",
+   "label": {
+    "ko": "최대우도",
+    "en": "Maximum likelihood"
+   },
+   "level": 2,
+   "family": "estimation",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/method-of-moments",
+   "type": "Topic",
+   "label": {
+    "ko": "적률법",
+    "en": "Method of moments"
+   },
+   "level": 2,
+   "family": "estimation",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-intervals",
+   "type": "Area",
+   "label": {
+    "ko": "구간추정",
+    "en": "Interval estimation"
+   },
+   "level": 2,
+   "family": "intervals",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/confidence-interval",
+   "type": "Topic",
+   "label": {
+    "ko": "신뢰구간",
+    "en": "Confidence interval"
+   },
+   "level": 2,
+   "family": "intervals",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ci-interpretation",
+   "type": "Topic",
+   "label": {
+    "ko": "신뢰구간 해석",
+    "en": "Interpreting confidence intervals"
+   },
+   "level": 2,
+   "family": "intervals",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/sample-size",
+   "type": "Topic",
+   "label": {
+    "ko": "표본 크기 정하기",
+    "en": "Sample size determination"
+   },
+   "level": 2,
+   "family": "intervals",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-testing",
+   "type": "Area",
+   "label": {
+    "ko": "가설검정",
+    "en": "Hypothesis testing"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/null-alternative",
+   "type": "Topic",
+   "label": {
+    "ko": "귀무·대립가설",
+    "en": "Null and alternative hypotheses"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/p-value",
+   "type": "Topic",
+   "label": {
+    "ko": "p값",
+    "en": "p-value"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/type-i-ii-errors",
+   "type": "Topic",
+   "label": {
+    "ko": "오류 두 종류",
+    "en": "Type I and type II errors"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/statistical-power",
+   "type": "Topic",
+   "label": {
+    "ko": "검정력",
+    "en": "Statistical power"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multiple-comparisons",
+   "type": "Topic",
+   "label": {
+    "ko": "다중 비교",
+    "en": "Multiple comparisons"
+   },
+   "level": 2,
+   "family": "testing",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-categorical",
+   "type": "Area",
+   "label": {
+    "ko": "범주형 자료",
+    "en": "Categorical data"
+   },
+   "level": 2,
+   "family": "categorical",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/contingency-table",
+   "type": "Topic",
+   "label": {
+    "ko": "분할표",
+    "en": "Contingency table"
+   },
+   "level": 2,
+   "family": "categorical",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/chi-square-test",
+   "type": "Topic",
+   "label": {
+    "ko": "카이제곱 검정",
+    "en": "Chi-square test"
+   },
+   "level": 2,
+   "family": "categorical",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/simpsons-paradox",
+   "type": "Topic",
+   "label": {
+    "ko": "심슨의 역설",
+    "en": "Simpson's paradox"
+   },
+   "level": 2,
+   "family": "categorical",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/proportion-comparison",
+   "type": "Topic",
+   "label": {
+    "ko": "비율 비교",
+    "en": "Comparing proportions"
+   },
+   "level": 2,
+   "family": "categorical",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-design",
+   "type": "Area",
+   "label": {
+    "ko": "분산분석과 실험 설계",
+    "en": "ANOVA and experimental design"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/anova",
+   "type": "Topic",
+   "label": {
+    "ko": "분산분석",
+    "en": "Analysis of variance"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/randomization",
+   "type": "Topic",
+   "label": {
+    "ko": "무작위화",
+    "en": "Randomization"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/blocking",
+   "type": "Topic",
+   "label": {
+    "ko": "블록",
+    "en": "Blocking"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/factorial-design",
+   "type": "Topic",
+   "label": {
+    "ko": "요인 설계",
+    "en": "Factorial design"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ab-testing",
+   "type": "Topic",
+   "label": {
+    "ko": "A/B 테스트",
+    "en": "A/B testing"
+   },
+   "level": 2,
+   "family": "design",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-regression",
+   "type": "Area",
+   "label": {
+    "ko": "회귀분석",
+    "en": "Regression analysis"
+   },
+   "level": 2,
+   "family": "regression",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/regression-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "회귀분석(단순·다중)",
+    "en": "Regression analysis (simple and multiple)"
+   },
+   "level": 2,
+   "family": "regression",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/residual-diagnostics",
+   "type": "Topic",
+   "label": {
+    "ko": "잔차 진단",
+    "en": "Residual diagnostics"
+   },
+   "level": 2,
+   "family": "regression",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/multicollinearity",
+   "type": "Topic",
+   "label": {
+    "ko": "다중공선성",
+    "en": "Multicollinearity"
+   },
+   "level": 2,
+   "family": "regression",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/variable-selection",
+   "type": "Topic",
+   "label": {
+    "ko": "변수 선택",
+    "en": "Variable selection"
+   },
+   "level": 2,
+   "family": "regression",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-glm",
+   "type": "Area",
+   "label": {
+    "ko": "일반화선형모형",
+    "en": "Generalized linear models"
+   },
+   "level": 3,
+   "family": "glm",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/glm-logistic",
+   "type": "Topic",
+   "label": {
+    "ko": "로지스틱 회귀(GLM)",
+    "en": "Logistic regression (GLM)"
+   },
+   "level": 3,
+   "family": "glm",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/poisson-regression",
+   "type": "Topic",
+   "label": {
+    "ko": "포아송 회귀",
+    "en": "Poisson regression"
+   },
+   "level": 3,
+   "family": "glm",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/link-function",
+   "type": "Topic",
+   "label": {
+    "ko": "연결 함수",
+    "en": "Link function"
+   },
+   "level": 3,
+   "family": "glm",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-nonparametric",
+   "type": "Area",
+   "label": {
+    "ko": "비모수 통계",
+    "en": "Nonparametric statistics"
+   },
+   "level": 3,
+   "family": "nonparametric",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/rank-tests",
+   "type": "Topic",
+   "label": {
+    "ko": "순위 검정",
+    "en": "Rank tests"
+   },
+   "level": 3,
+   "family": "nonparametric",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/kernel-density",
+   "type": "Topic",
+   "label": {
+    "ko": "커널 밀도",
+    "en": "Kernel density estimation"
+   },
+   "level": 3,
+   "family": "nonparametric",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-bayes",
+   "type": "Area",
+   "label": {
+    "ko": "베이즈 통계",
+    "en": "Bayesian statistics"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/prior-posterior",
+   "type": "Topic",
+   "label": {
+    "ko": "사전·사후분포",
+    "en": "Prior and posterior distributions"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/conjugate-prior",
+   "type": "Topic",
+   "label": {
+    "ko": "켤레 사전분포",
+    "en": "Conjugate priors"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/credible-interval",
+   "type": "Topic",
+   "label": {
+    "ko": "신용구간",
+    "en": "Credible interval"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/mcmc",
+   "type": "Topic",
+   "label": {
+    "ko": "계산(MCMC)",
+    "en": "Computation (MCMC)"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/hierarchical-models",
+   "type": "Topic",
+   "label": {
+    "ko": "계층 모형",
+    "en": "Hierarchical models"
+   },
+   "level": 3,
+   "family": "bayes",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-survey",
+   "type": "Area",
+   "label": {
+    "ko": "표본조사",
+    "en": "Survey sampling"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/sampling-design",
+   "type": "Topic",
+   "label": {
+    "ko": "표본 설계",
+    "en": "Sampling design"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stratified-cluster",
+   "type": "Topic",
+   "label": {
+    "ko": "층화·군집 추출",
+    "en": "Stratified and cluster sampling"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/survey-weights",
+   "type": "Topic",
+   "label": {
+    "ko": "가중치",
+    "en": "Survey weights"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/nonresponse-adjustment",
+   "type": "Topic",
+   "label": {
+    "ko": "무응답 보정",
+    "en": "Nonresponse adjustment"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/poll-calibration",
+   "type": "Topic",
+   "label": {
+    "ko": "여론조사 보정",
+    "en": "Poll calibration"
+   },
+   "level": 3,
+   "family": "survey",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-timeseries",
+   "type": "Area",
+   "label": {
+    "ko": "시계열",
+    "en": "Time series analysis"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/trend-seasonality",
+   "type": "Topic",
+   "label": {
+    "ko": "추세·계절",
+    "en": "Trend and seasonality"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/autocorrelation",
+   "type": "Topic",
+   "label": {
+    "ko": "자기상관",
+    "en": "Autocorrelation"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/arima",
+   "type": "Topic",
+   "label": {
+    "ko": "ARIMA",
+    "en": "ARIMA"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/stationarity",
+   "type": "Topic",
+   "label": {
+    "ko": "정상성",
+    "en": "Stationarity"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/volatility-models",
+   "type": "Topic",
+   "label": {
+    "ko": "변동성 모형(GARCH)",
+    "en": "Volatility models (GARCH)"
+   },
+   "level": 3,
+   "family": "timeseries",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-multivariate",
+   "type": "Area",
+   "label": {
+    "ko": "다변량",
+    "en": "Multivariate statistics"
+   },
+   "level": 3,
+   "family": "multivariate",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/principal-components",
+   "type": "Topic",
+   "label": {
+    "ko": "주성분",
+    "en": "Principal components"
+   },
+   "level": 3,
+   "family": "multivariate",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/factor-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "요인분석",
+    "en": "Factor analysis"
+   },
+   "level": 3,
+   "family": "multivariate",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cluster-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "군집분석",
+    "en": "Cluster analysis"
+   },
+   "level": 3,
+   "family": "multivariate",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/discriminant-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "판별분석",
+    "en": "Discriminant analysis"
+   },
+   "level": 3,
+   "family": "multivariate",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-resampling",
+   "type": "Area",
+   "label": {
+    "ko": "재표집과 계산통계",
+    "en": "Resampling and computational statistics"
+   },
+   "level": 3,
+   "family": "resampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/bootstrap",
+   "type": "Topic",
+   "label": {
+    "ko": "부트스트랩",
+    "en": "Bootstrap"
+   },
+   "level": 3,
+   "family": "resampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/permutation-test",
+   "type": "Topic",
+   "label": {
+    "ko": "순열 검정",
+    "en": "Permutation test"
+   },
+   "level": 3,
+   "family": "resampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cross-validation",
+   "type": "Topic",
+   "label": {
+    "ko": "교차검증",
+    "en": "Cross-validation"
+   },
+   "level": 3,
+   "family": "resampling",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-causal",
+   "type": "Area",
+   "label": {
+    "ko": "인과추론",
+    "en": "Causal inference"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/potential-outcomes",
+   "type": "Topic",
+   "label": {
+    "ko": "잠재 결과",
+    "en": "Potential outcomes"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/confounding",
+   "type": "Topic",
+   "label": {
+    "ko": "교란",
+    "en": "Confounding"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/propensity-score",
+   "type": "Topic",
+   "label": {
+    "ko": "성향점수",
+    "en": "Propensity score"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/instrumental-variables",
+   "type": "Topic",
+   "label": {
+    "ko": "도구변수",
+    "en": "Instrumental variables"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/difference-in-differences",
+   "type": "Topic",
+   "label": {
+    "ko": "이중차분",
+    "en": "Difference-in-differences"
+   },
+   "level": 4,
+   "family": "causal",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/stats-biostat",
+   "type": "Area",
+   "label": {
+    "ko": "보건·임상 통계",
+    "en": "Biostatistics and clinical trials"
+   },
+   "level": 3,
+   "family": "biostat",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/clinical-trial-phases",
+   "type": "Topic",
+   "label": {
+    "ko": "임상시험 단계",
+    "en": "Clinical trial phases"
+   },
+   "level": 3,
+   "family": "biostat",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/survival-analysis",
+   "type": "Topic",
+   "label": {
+    "ko": "생존분석",
+    "en": "Survival analysis"
+   },
+   "level": 3,
+   "family": "biostat",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/non-inferiority",
+   "type": "Topic",
+   "label": {
+    "ko": "비열등성 검정",
+    "en": "Non-inferiority testing"
+   },
+   "level": 3,
+   "family": "biostat",
+   "domain": [
+    "stats"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/data-types",
+   "p": "lab:broader",
+   "o": "lab:area/stats-descriptive"
+  },
+  {
+   "s": "lab:topic/central-tendency",
+   "p": "lab:broader",
+   "o": "lab:area/stats-descriptive"
+  },
+  {
+   "s": "lab:topic/dispersion",
+   "p": "lab:broader",
+   "o": "lab:area/stats-descriptive"
+  },
+  {
+   "s": "lab:topic/statistical-graphics",
+   "p": "lab:broader",
+   "o": "lab:area/stats-descriptive"
+  },
+  {
+   "s": "lab:topic/correlation",
+   "p": "lab:broader",
+   "o": "lab:area/stats-descriptive"
+  },
+  {
+   "s": "lab:topic/probability-rules",
+   "p": "lab:broader",
+   "o": "lab:area/stats-probability"
+  },
+  {
+   "s": "lab:topic/conditional-probability",
+   "p": "lab:broader",
+   "o": "lab:area/stats-probability"
+  },
+  {
+   "s": "lab:topic/independence",
+   "p": "lab:broader",
+   "o": "lab:area/stats-probability"
+  },
+  {
+   "s": "lab:topic/bayes-theorem",
+   "p": "lab:broader",
+   "o": "lab:area/stats-probability"
+  },
+  {
+   "s": "lab:topic/discrete-distributions",
+   "p": "lab:broader",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:topic/continuous-distributions",
+   "p": "lab:broader",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:topic/expectation-variance",
+   "p": "lab:broader",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:topic/joint-distributions",
+   "p": "lab:broader",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:topic/distribution-family-map",
+   "p": "lab:broader",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:topic/sampling-distribution-mean",
+   "p": "lab:broader",
+   "o": "lab:area/stats-sampling"
+  },
+  {
+   "s": "lab:topic/law-of-large-numbers",
+   "p": "lab:broader",
+   "o": "lab:area/stats-sampling"
+  },
+  {
+   "s": "lab:topic/central-limit-theorem",
+   "p": "lab:broader",
+   "o": "lab:area/stats-sampling"
+  },
+  {
+   "s": "lab:topic/t-chi2-f",
+   "p": "lab:broader",
+   "o": "lab:area/stats-sampling"
+  },
+  {
+   "s": "lab:topic/unbiasedness",
+   "p": "lab:broader",
+   "o": "lab:area/stats-estimation"
+  },
+  {
+   "s": "lab:topic/consistency-estimator",
+   "p": "lab:broader",
+   "o": "lab:area/stats-estimation"
+  },
+  {
+   "s": "lab:topic/maximum-likelihood",
+   "p": "lab:broader",
+   "o": "lab:area/stats-estimation"
+  },
+  {
+   "s": "lab:topic/method-of-moments",
+   "p": "lab:broader",
+   "o": "lab:area/stats-estimation"
+  },
+  {
+   "s": "lab:topic/confidence-interval",
+   "p": "lab:broader",
+   "o": "lab:area/stats-intervals"
+  },
+  {
+   "s": "lab:topic/ci-interpretation",
+   "p": "lab:broader",
+   "o": "lab:area/stats-intervals"
+  },
+  {
+   "s": "lab:topic/sample-size",
+   "p": "lab:broader",
+   "o": "lab:area/stats-intervals"
+  },
+  {
+   "s": "lab:topic/null-alternative",
+   "p": "lab:broader",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:topic/p-value",
+   "p": "lab:broader",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:topic/type-i-ii-errors",
+   "p": "lab:broader",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:topic/statistical-power",
+   "p": "lab:broader",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:topic/multiple-comparisons",
+   "p": "lab:broader",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:topic/contingency-table",
+   "p": "lab:broader",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:topic/chi-square-test",
+   "p": "lab:broader",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:topic/simpsons-paradox",
+   "p": "lab:broader",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:topic/proportion-comparison",
+   "p": "lab:broader",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:topic/anova",
+   "p": "lab:broader",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:topic/randomization",
+   "p": "lab:broader",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:topic/blocking",
+   "p": "lab:broader",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:topic/factorial-design",
+   "p": "lab:broader",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:topic/ab-testing",
+   "p": "lab:broader",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:topic/regression-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:topic/residual-diagnostics",
+   "p": "lab:broader",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:topic/multicollinearity",
+   "p": "lab:broader",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:topic/variable-selection",
+   "p": "lab:broader",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:topic/glm-logistic",
+   "p": "lab:broader",
+   "o": "lab:area/stats-glm"
+  },
+  {
+   "s": "lab:topic/poisson-regression",
+   "p": "lab:broader",
+   "o": "lab:area/stats-glm"
+  },
+  {
+   "s": "lab:topic/link-function",
+   "p": "lab:broader",
+   "o": "lab:area/stats-glm"
+  },
+  {
+   "s": "lab:topic/rank-tests",
+   "p": "lab:broader",
+   "o": "lab:area/stats-nonparametric"
+  },
+  {
+   "s": "lab:topic/kernel-density",
+   "p": "lab:broader",
+   "o": "lab:area/stats-nonparametric"
+  },
+  {
+   "s": "lab:topic/prior-posterior",
+   "p": "lab:broader",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:topic/conjugate-prior",
+   "p": "lab:broader",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:topic/credible-interval",
+   "p": "lab:broader",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:topic/mcmc",
+   "p": "lab:broader",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:topic/hierarchical-models",
+   "p": "lab:broader",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:topic/sampling-design",
+   "p": "lab:broader",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:topic/stratified-cluster",
+   "p": "lab:broader",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:topic/survey-weights",
+   "p": "lab:broader",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:topic/nonresponse-adjustment",
+   "p": "lab:broader",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:topic/poll-calibration",
+   "p": "lab:broader",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:topic/trend-seasonality",
+   "p": "lab:broader",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:topic/autocorrelation",
+   "p": "lab:broader",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:topic/arima",
+   "p": "lab:broader",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:topic/stationarity",
+   "p": "lab:broader",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:topic/volatility-models",
+   "p": "lab:broader",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:topic/principal-components",
+   "p": "lab:broader",
+   "o": "lab:area/stats-multivariate"
+  },
+  {
+   "s": "lab:topic/factor-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/stats-multivariate"
+  },
+  {
+   "s": "lab:topic/cluster-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/stats-multivariate"
+  },
+  {
+   "s": "lab:topic/discriminant-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/stats-multivariate"
+  },
+  {
+   "s": "lab:topic/bootstrap",
+   "p": "lab:broader",
+   "o": "lab:area/stats-resampling"
+  },
+  {
+   "s": "lab:topic/permutation-test",
+   "p": "lab:broader",
+   "o": "lab:area/stats-resampling"
+  },
+  {
+   "s": "lab:topic/cross-validation",
+   "p": "lab:broader",
+   "o": "lab:area/stats-resampling"
+  },
+  {
+   "s": "lab:topic/potential-outcomes",
+   "p": "lab:broader",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:topic/confounding",
+   "p": "lab:broader",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:topic/propensity-score",
+   "p": "lab:broader",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:topic/instrumental-variables",
+   "p": "lab:broader",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:topic/difference-in-differences",
+   "p": "lab:broader",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:topic/clinical-trial-phases",
+   "p": "lab:broader",
+   "o": "lab:area/stats-biostat"
+  },
+  {
+   "s": "lab:topic/survival-analysis",
+   "p": "lab:broader",
+   "o": "lab:area/stats-biostat"
+  },
+  {
+   "s": "lab:topic/non-inferiority",
+   "p": "lab:broader",
+   "o": "lab:area/stats-biostat"
+  },
+  {
+   "s": "lab:area/stats-descriptive",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:area/stats-probability",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-distributions"
+  },
+  {
+   "s": "lab:area/stats-distributions",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-sampling"
+  },
+  {
+   "s": "lab:area/stats-sampling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-estimation"
+  },
+  {
+   "s": "lab:area/stats-sampling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-intervals"
+  },
+  {
+   "s": "lab:area/stats-sampling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-testing"
+  },
+  {
+   "s": "lab:area/stats-sampling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-resampling"
+  },
+  {
+   "s": "lab:area/stats-estimation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:area/stats-estimation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:area/stats-estimation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:area/stats-testing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-categorical"
+  },
+  {
+   "s": "lab:area/stats-testing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-design"
+  },
+  {
+   "s": "lab:area/stats-testing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-regression"
+  },
+  {
+   "s": "lab:area/stats-testing",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-biostat"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-glm"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-timeseries"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-multivariate"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-survey"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-bayes"
+  },
+  {
+   "s": "lab:area/stats-glm",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:area/stats-regression",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-causal"
+  },
+  {
+   "s": "lab:area/stats-probability",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/stats-bayes"
+  }
+ ]
+}

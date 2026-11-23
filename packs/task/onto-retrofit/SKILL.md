@@ -613,7 +613,38 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 ---
 
+## 15. v1.7 변경: 18개 분야와 다시 걸기
+
+### 15-1. 분야 정하기 (14-1을 바꿈)
+
+분야 목록의 원본은 `data/domains.json`이다(본편 19-4). 옛 페이지를 읽고 신호어로 분야를 추정하되, 인공지능 페이지도 `ml`·`dl`·`neuro`·`rl`·`genai`·`llm`·`crime` 가운데 맞는 렌즈를 함께 적는다(`["ai","dl"]`). 노드마다 분야가 다를 수 있다 — 미시경제 페이지의 라그랑주 승수 노드는 `["econ","math"]`.
+
+### 15-2. 다시 걸기 (이미 꼬리표가 있는 페이지)
+
+인공지능 뼈대밖에 없던 시절에 꼬리표를 단 경제·통계·수학·기하·논리 페이지는 개념이 걸 곳이 없어 `relatedTo`로 몰리거나 지도에서 따로 떨어져 있다. 본문은 그대로 두고 `kg-raw`만 고친다.
+
+1. 노드마다 `domain`을 다시 정한다(15-1).
+2. 개념 노드를 그 분야 뼈대 주제에 `broader`로 건다(주 분야 1 + 보조 분야 1까지). **후보는 표지 현황 저장소 `data/crosswalk.json`**에 있다 — 지식 노드 지도를 만들 때 이름이 뼈대 주제와 맞는 노드를 자동으로 짝지은 목록이다(`auto: true`, 확신 mid). 사람이 보고 맞는 것만 옮긴다.
+3. 수학·논리·통계의 명제·정의는 새 종류로 바꾼다: 증명된 명제 `Concept` → `Theorem`, 정의문 → `Definition`, 공리 → `Axiom`, 공간·대상 → `Structure`, 추정량·검정통계량 → `Estimator`. ID는 바꾸지 않는다(종류만 바꿈).
+4. `relatedTo`로 적었던 관계 가운데 수학적 포함은 `specialCaseOf`, 예는 `instanceOf`, 동치는 `equivalentTo`, 함의는 `implies`로 바꾼다. 목표 `relatedTo` 15% 이하.
+5. `check.py`로 점검(등록되지 않은 분야 코드는 경고).
+
+### 15-3. 새 종류·관계 (본편 O1-3·O1-4)
+
+| 새 종류 | 뜻 | 새 관계 | 뜻 |
+|---|---|---|---|
+| `Definition` | 정의 | `lab:implies` | 함의 (조건 → 결론) |
+| `Theorem` | 증명된 명제 | `lab:specialCaseOf` | 특수한 경우 (특수 → 일반) |
+| `Axiom` | 공리 | `lab:equivalentTo` | 서로 같음 |
+| `Proof` | 증명·유도 | `lab:provedBy` | 이 증명으로 보인다 |
+| `Structure` | 수학적 대상·공간 | `lab:instanceOf` | 구체적인 예 |
+| `Estimator` | 추정량·검정통계량 | `lab:counterexampleTo` | 반례 |
+
+`kgx.js`·`assembler.html`의 종류 색·관계 이름, `check.py`의 허용 목록에 반영했다.
+
 ---
+
+*ai-lab-retrofit v1.7 (2026-11-24): 18개 분야(`data/domains.json`)와 분야별 뼈대 12개를 받도록 하고, 이미 꼬리표가 있는 비(非)인공지능 페이지를 다시 거는 절차(15장)를 더했다. 수학·논리·통계용 종류 6개와 관계 6개를 `check.py`·`kgx.js`·`assembler.html`에 반영했다.*
 
 *ai-lab-retrofit v1.6 (2026-11-23): 표지 `<img>`의 인라인 `image-rendering:pixelated`와 `.cover img` 강제 규칙을 뺐다. 꼬리표를 붙이는 페이지에 픽셀 깨짐 보정 코드(px-fix v1, 본편 18-15-3)가 없으면 함께 넣는다. 꾸러미 조수 얼굴(`kgx.js`·`assembler.html`)도 각진 픽셀 고정을 뺐다.*
 

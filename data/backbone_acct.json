@@ -1,0 +1,1751 @@
+{
+ "version": "0.1",
+ "name": "회계학 영역 뼈대 (초안)",
+ "domain": "acct",
+ "updated": "2026-11-24",
+ "note": "작성자 초안, 공식 분류 체계 아님. 표준 교과서 목차와 ahnboat.xyz 콘텐츠 색인(2026-11-24)을 참고해 만들었다. 외부 분류(IFRS Taxonomy) 대응은 P7에서 확인한 것만 넣는다.",
+ "nodes": [
+  {
+   "id": "lab:area/acct-framework",
+   "type": "Area",
+   "label": {
+    "ko": "회계의 기초와 개념체계",
+    "en": "Accounting foundations and conceptual framework"
+   },
+   "level": 1,
+   "family": "framework",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/users-of-accounting",
+   "type": "Topic",
+   "label": {
+    "ko": "회계 정보 이용자",
+    "en": "Users of accounting information"
+   },
+   "level": 1,
+   "family": "framework",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/qualitative-characteristics",
+   "type": "Topic",
+   "label": {
+    "ko": "질적 특성",
+    "en": "Qualitative characteristics"
+   },
+   "level": 1,
+   "family": "framework",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fs-elements",
+   "type": "Topic",
+   "label": {
+    "ko": "재무제표 요소",
+    "en": "Elements of financial statements"
+   },
+   "level": 1,
+   "family": "framework",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/recognition-measurement",
+   "type": "Topic",
+   "label": {
+    "ko": "인식·측정",
+    "en": "Recognition and measurement"
+   },
+   "level": 1,
+   "family": "framework",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-bookkeeping",
+   "type": "Area",
+   "label": {
+    "ko": "복식부기와 회계 순환",
+    "en": "Double-entry bookkeeping and the accounting cycle"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/accounting-equation",
+   "type": "Topic",
+   "label": {
+    "ko": "회계 등식",
+    "en": "Accounting equation"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/journal-entries",
+   "type": "Topic",
+   "label": {
+    "ko": "분개",
+    "en": "Journal entries"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/posting-ledger",
+   "type": "Topic",
+   "label": {
+    "ko": "전기",
+    "en": "Posting to the ledger"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/trial-balance",
+   "type": "Topic",
+   "label": {
+    "ko": "시산표",
+    "en": "Trial balance"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/adjusting-entries",
+   "type": "Topic",
+   "label": {
+    "ko": "수정분개",
+    "en": "Adjusting entries"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/closing",
+   "type": "Topic",
+   "label": {
+    "ko": "결산",
+    "en": "Closing"
+   },
+   "level": 1,
+   "family": "bookkeeping",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-statements",
+   "type": "Area",
+   "label": {
+    "ko": "재무제표 표시",
+    "en": "Presentation of financial statements"
+   },
+   "level": 1,
+   "family": "statements",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/balance-sheet",
+   "type": "Topic",
+   "label": {
+    "ko": "재무상태표",
+    "en": "Statement of financial position"
+   },
+   "level": 1,
+   "family": "statements",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/income-statement",
+   "type": "Topic",
+   "label": {
+    "ko": "포괄손익계산서",
+    "en": "Statement of comprehensive income"
+   },
+   "level": 1,
+   "family": "statements",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/equity-statement",
+   "type": "Topic",
+   "label": {
+    "ko": "자본변동표",
+    "en": "Statement of changes in equity"
+   },
+   "level": 1,
+   "family": "statements",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/notes-fs",
+   "type": "Topic",
+   "label": {
+    "ko": "주석",
+    "en": "Notes"
+   },
+   "level": 1,
+   "family": "statements",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-revenue",
+   "type": "Area",
+   "label": {
+    "ko": "수익인식",
+    "en": "Revenue recognition"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/contract-identification",
+   "type": "Topic",
+   "label": {
+    "ko": "계약 식별",
+    "en": "Identifying the contract"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/performance-obligations",
+   "type": "Topic",
+   "label": {
+    "ko": "수행의무",
+    "en": "Performance obligations"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/transaction-price",
+   "type": "Topic",
+   "label": {
+    "ko": "거래가격",
+    "en": "Transaction price"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/price-allocation",
+   "type": "Topic",
+   "label": {
+    "ko": "배분",
+    "en": "Allocation"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/recognition-timing",
+   "type": "Topic",
+   "label": {
+    "ko": "인식 시점",
+    "en": "Timing of recognition"
+   },
+   "level": 2,
+   "family": "revenue",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-inventory",
+   "type": "Area",
+   "label": {
+    "ko": "재고자산",
+    "en": "Inventories"
+   },
+   "level": 2,
+   "family": "inventory",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/inventory-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "취득원가",
+    "en": "Cost of inventories"
+   },
+   "level": 2,
+   "family": "inventory",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/cost-flow-assumptions",
+   "type": "Topic",
+   "label": {
+    "ko": "원가흐름 가정",
+    "en": "Cost flow assumptions"
+   },
+   "level": 2,
+   "family": "inventory",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lower-of-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "저가법",
+    "en": "Lower of cost and net realisable value"
+   },
+   "level": 2,
+   "family": "inventory",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-ppe",
+   "type": "Area",
+   "label": {
+    "ko": "유형·무형자산",
+    "en": "Property, plant, equipment and intangibles"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/asset-acquisition",
+   "type": "Topic",
+   "label": {
+    "ko": "취득",
+    "en": "Acquisition"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/depreciation",
+   "type": "Topic",
+   "label": {
+    "ko": "감가상각",
+    "en": "Depreciation"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/impairment",
+   "type": "Topic",
+   "label": {
+    "ko": "손상",
+    "en": "Impairment"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/revaluation",
+   "type": "Topic",
+   "label": {
+    "ko": "재평가",
+    "en": "Revaluation"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/amortization",
+   "type": "Topic",
+   "label": {
+    "ko": "무형자산 상각",
+    "en": "Amortisation"
+   },
+   "level": 2,
+   "family": "ppe",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-financial-instruments",
+   "type": "Area",
+   "label": {
+    "ko": "금융자산과 금융부채",
+    "en": "Financial instruments"
+   },
+   "level": 3,
+   "family": "financial-instruments",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/fi-classification",
+   "type": "Topic",
+   "label": {
+    "ko": "분류",
+    "en": "Classification"
+   },
+   "level": 3,
+   "family": "financial-instruments",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/amortized-cost",
+   "type": "Topic",
+   "label": {
+    "ko": "상각후원가",
+    "en": "Amortised cost"
+   },
+   "level": 3,
+   "family": "financial-instruments",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/fair-value",
+   "type": "Topic",
+   "label": {
+    "ko": "공정가치",
+    "en": "Fair value"
+   },
+   "level": 3,
+   "family": "financial-instruments",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/expected-credit-loss",
+   "type": "Topic",
+   "label": {
+    "ko": "기대신용손실",
+    "en": "Expected credit loss"
+   },
+   "level": 3,
+   "family": "financial-instruments",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-leases",
+   "type": "Area",
+   "label": {
+    "ko": "리스",
+    "en": "Leases"
+   },
+   "level": 3,
+   "family": "leases",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/right-of-use",
+   "type": "Topic",
+   "label": {
+    "ko": "사용권자산",
+    "en": "Right-of-use asset"
+   },
+   "level": 3,
+   "family": "leases",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lease-liability",
+   "type": "Topic",
+   "label": {
+    "ko": "리스부채",
+    "en": "Lease liability"
+   },
+   "level": 3,
+   "family": "leases",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/lessor-accounting",
+   "type": "Topic",
+   "label": {
+    "ko": "리스 제공자",
+    "en": "Lessor accounting"
+   },
+   "level": 3,
+   "family": "leases",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-provisions",
+   "type": "Area",
+   "label": {
+    "ko": "충당부채와 우발부채",
+    "en": "Provisions and contingencies"
+   },
+   "level": 2,
+   "family": "provisions",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/provision-recognition",
+   "type": "Topic",
+   "label": {
+    "ko": "인식 조건",
+    "en": "Recognition criteria"
+   },
+   "level": 2,
+   "family": "provisions",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/provision-measurement",
+   "type": "Topic",
+   "label": {
+    "ko": "측정",
+    "en": "Measurement"
+   },
+   "level": 2,
+   "family": "provisions",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/contingency-disclosure",
+   "type": "Topic",
+   "label": {
+    "ko": "공시",
+    "en": "Disclosure"
+   },
+   "level": 2,
+   "family": "provisions",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-equity",
+   "type": "Area",
+   "label": {
+    "ko": "자본",
+    "en": "Equity"
+   },
+   "level": 2,
+   "family": "equity",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/share-capital",
+   "type": "Topic",
+   "label": {
+    "ko": "자본금",
+    "en": "Share capital"
+   },
+   "level": 2,
+   "family": "equity",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/retained-earnings",
+   "type": "Topic",
+   "label": {
+    "ko": "이익잉여금",
+    "en": "Retained earnings"
+   },
+   "level": 2,
+   "family": "equity",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/treasury-shares",
+   "type": "Topic",
+   "label": {
+    "ko": "자기주식",
+    "en": "Treasury shares"
+   },
+   "level": 2,
+   "family": "equity",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/dividends",
+   "type": "Topic",
+   "label": {
+    "ko": "배당",
+    "en": "Dividends"
+   },
+   "level": 2,
+   "family": "equity",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-income-tax",
+   "type": "Area",
+   "label": {
+    "ko": "법인세 회계",
+    "en": "Income tax accounting"
+   },
+   "level": 3,
+   "family": "income-tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/current-tax",
+   "type": "Topic",
+   "label": {
+    "ko": "당기법인세",
+    "en": "Current tax"
+   },
+   "level": 3,
+   "family": "income-tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/deferred-tax",
+   "type": "Topic",
+   "label": {
+    "ko": "이연법인세",
+    "en": "Deferred tax"
+   },
+   "level": 3,
+   "family": "income-tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/temporary-differences",
+   "type": "Topic",
+   "label": {
+    "ko": "일시적 차이",
+    "en": "Temporary differences"
+   },
+   "level": 3,
+   "family": "income-tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-cash-flow",
+   "type": "Area",
+   "label": {
+    "ko": "현금흐름표",
+    "en": "Statement of cash flows"
+   },
+   "level": 2,
+   "family": "cash-flow",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/cf-activities",
+   "type": "Topic",
+   "label": {
+    "ko": "영업·투자·재무 활동",
+    "en": "Operating, investing and financing activities"
+   },
+   "level": 2,
+   "family": "cash-flow",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/direct-indirect-method",
+   "type": "Topic",
+   "label": {
+    "ko": "직접법·간접법",
+    "en": "Direct and indirect methods"
+   },
+   "level": 2,
+   "family": "cash-flow",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-consolidation",
+   "type": "Area",
+   "label": {
+    "ko": "연결재무제표",
+    "en": "Consolidated financial statements"
+   },
+   "level": 3,
+   "family": "consolidation",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/control",
+   "type": "Topic",
+   "label": {
+    "ko": "지배력",
+    "en": "Control"
+   },
+   "level": 3,
+   "family": "consolidation",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/intragroup-elimination",
+   "type": "Topic",
+   "label": {
+    "ko": "내부거래 제거",
+    "en": "Elimination of intragroup transactions"
+   },
+   "level": 3,
+   "family": "consolidation",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/non-controlling-interest",
+   "type": "Topic",
+   "label": {
+    "ko": "비지배지분",
+    "en": "Non-controlling interest"
+   },
+   "level": 3,
+   "family": "consolidation",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-analysis",
+   "type": "Area",
+   "label": {
+    "ko": "재무제표 분석",
+    "en": "Financial statement analysis"
+   },
+   "level": 2,
+   "family": "analysis",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/financial-ratios",
+   "type": "Topic",
+   "label": {
+    "ko": "수익성·안정성·활동성 비율",
+    "en": "Profitability, solvency and activity ratios"
+   },
+   "level": 2,
+   "family": "analysis",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/earnings-quality",
+   "type": "Topic",
+   "label": {
+    "ko": "이익의 질",
+    "en": "Earnings quality"
+   },
+   "level": 2,
+   "family": "analysis",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/accounting-data-python",
+   "type": "Topic",
+   "label": {
+    "ko": "파이썬 회계 데이터 분석",
+    "en": "Accounting data analysis with Python"
+   },
+   "level": 2,
+   "family": "analysis",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-cost",
+   "type": "Area",
+   "label": {
+    "ko": "원가회계",
+    "en": "Cost accounting"
+   },
+   "level": 2,
+   "family": "cost",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/cost-classification",
+   "type": "Topic",
+   "label": {
+    "ko": "원가 분류",
+    "en": "Cost classification"
+   },
+   "level": 2,
+   "family": "cost",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/job-process-costing",
+   "type": "Topic",
+   "label": {
+    "ko": "개별·종합원가",
+    "en": "Job and process costing"
+   },
+   "level": 2,
+   "family": "cost",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/activity-based-costing",
+   "type": "Topic",
+   "label": {
+    "ko": "활동기준원가",
+    "en": "Activity-based costing"
+   },
+   "level": 2,
+   "family": "cost",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-managerial",
+   "type": "Area",
+   "label": {
+    "ko": "관리회계",
+    "en": "Managerial accounting"
+   },
+   "level": 2,
+   "family": "managerial",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/break-even",
+   "type": "Topic",
+   "label": {
+    "ko": "손익분기",
+    "en": "Break-even analysis"
+   },
+   "level": 2,
+   "family": "managerial",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/budgeting",
+   "type": "Topic",
+   "label": {
+    "ko": "예산",
+    "en": "Budgeting"
+   },
+   "level": 2,
+   "family": "managerial",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/standard-cost-variance",
+   "type": "Topic",
+   "label": {
+    "ko": "표준원가와 차이 분석",
+    "en": "Standard costs and variance analysis"
+   },
+   "level": 2,
+   "family": "managerial",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/managerial-decisions",
+   "type": "Topic",
+   "label": {
+    "ko": "관리적 의사결정",
+    "en": "Managerial decision making"
+   },
+   "level": 2,
+   "family": "managerial",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-audit",
+   "type": "Area",
+   "label": {
+    "ko": "감사",
+    "en": "Auditing"
+   },
+   "level": 3,
+   "family": "audit",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/audit-risk",
+   "type": "Topic",
+   "label": {
+    "ko": "감사 위험",
+    "en": "Audit risk"
+   },
+   "level": 3,
+   "family": "audit",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/internal-control",
+   "type": "Topic",
+   "label": {
+    "ko": "내부통제",
+    "en": "Internal control"
+   },
+   "level": 3,
+   "family": "audit",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/audit-sampling",
+   "type": "Topic",
+   "label": {
+    "ko": "감사 표본",
+    "en": "Audit sampling"
+   },
+   "level": 3,
+   "family": "audit",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/audit-opinion",
+   "type": "Topic",
+   "label": {
+    "ko": "감사의견",
+    "en": "Audit opinion"
+   },
+   "level": 3,
+   "family": "audit",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-tax",
+   "type": "Area",
+   "label": {
+    "ko": "세무 기초",
+    "en": "Taxation basics"
+   },
+   "level": 2,
+   "family": "tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/corporate-vat-structure",
+   "type": "Topic",
+   "label": {
+    "ko": "법인세·부가가치세 구조",
+    "en": "Corporate tax and VAT structure"
+   },
+   "level": 2,
+   "family": "tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/tax-adjustment",
+   "type": "Topic",
+   "label": {
+    "ko": "세무조정",
+    "en": "Tax adjustments"
+   },
+   "level": 2,
+   "family": "tax",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:area/acct-disclosure",
+   "type": "Area",
+   "label": {
+    "ko": "공시와 회계 정보 시스템",
+    "en": "Disclosure and accounting information systems"
+   },
+   "level": 3,
+   "family": "disclosure",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 1
+  },
+  {
+   "id": "lab:topic/disclosure-system",
+   "type": "Topic",
+   "label": {
+    "ko": "공시 체계",
+    "en": "Disclosure system"
+   },
+   "level": 3,
+   "family": "disclosure",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/xbrl",
+   "type": "Topic",
+   "label": {
+    "ko": "XBRL",
+    "en": "XBRL"
+   },
+   "level": 3,
+   "family": "disclosure",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  },
+  {
+   "id": "lab:topic/ais-flow",
+   "type": "Topic",
+   "label": {
+    "ko": "회계 시스템 흐름",
+    "en": "Accounting system flow"
+   },
+   "level": 3,
+   "family": "disclosure",
+   "domain": [
+    "acct"
+   ],
+   "status": "known",
+   "tier": 2
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:topic/users-of-accounting",
+   "p": "lab:broader",
+   "o": "lab:area/acct-framework"
+  },
+  {
+   "s": "lab:topic/qualitative-characteristics",
+   "p": "lab:broader",
+   "o": "lab:area/acct-framework"
+  },
+  {
+   "s": "lab:topic/fs-elements",
+   "p": "lab:broader",
+   "o": "lab:area/acct-framework"
+  },
+  {
+   "s": "lab:topic/recognition-measurement",
+   "p": "lab:broader",
+   "o": "lab:area/acct-framework"
+  },
+  {
+   "s": "lab:topic/accounting-equation",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/journal-entries",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/posting-ledger",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/trial-balance",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/adjusting-entries",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/closing",
+   "p": "lab:broader",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:topic/balance-sheet",
+   "p": "lab:broader",
+   "o": "lab:area/acct-statements"
+  },
+  {
+   "s": "lab:topic/income-statement",
+   "p": "lab:broader",
+   "o": "lab:area/acct-statements"
+  },
+  {
+   "s": "lab:topic/equity-statement",
+   "p": "lab:broader",
+   "o": "lab:area/acct-statements"
+  },
+  {
+   "s": "lab:topic/notes-fs",
+   "p": "lab:broader",
+   "o": "lab:area/acct-statements"
+  },
+  {
+   "s": "lab:topic/contract-identification",
+   "p": "lab:broader",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:topic/performance-obligations",
+   "p": "lab:broader",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:topic/transaction-price",
+   "p": "lab:broader",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:topic/price-allocation",
+   "p": "lab:broader",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:topic/recognition-timing",
+   "p": "lab:broader",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:topic/inventory-cost",
+   "p": "lab:broader",
+   "o": "lab:area/acct-inventory"
+  },
+  {
+   "s": "lab:topic/cost-flow-assumptions",
+   "p": "lab:broader",
+   "o": "lab:area/acct-inventory"
+  },
+  {
+   "s": "lab:topic/lower-of-cost",
+   "p": "lab:broader",
+   "o": "lab:area/acct-inventory"
+  },
+  {
+   "s": "lab:topic/asset-acquisition",
+   "p": "lab:broader",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:topic/depreciation",
+   "p": "lab:broader",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:topic/impairment",
+   "p": "lab:broader",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:topic/revaluation",
+   "p": "lab:broader",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:topic/amortization",
+   "p": "lab:broader",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:topic/fi-classification",
+   "p": "lab:broader",
+   "o": "lab:area/acct-financial-instruments"
+  },
+  {
+   "s": "lab:topic/amortized-cost",
+   "p": "lab:broader",
+   "o": "lab:area/acct-financial-instruments"
+  },
+  {
+   "s": "lab:topic/fair-value",
+   "p": "lab:broader",
+   "o": "lab:area/acct-financial-instruments"
+  },
+  {
+   "s": "lab:topic/expected-credit-loss",
+   "p": "lab:broader",
+   "o": "lab:area/acct-financial-instruments"
+  },
+  {
+   "s": "lab:topic/right-of-use",
+   "p": "lab:broader",
+   "o": "lab:area/acct-leases"
+  },
+  {
+   "s": "lab:topic/lease-liability",
+   "p": "lab:broader",
+   "o": "lab:area/acct-leases"
+  },
+  {
+   "s": "lab:topic/lessor-accounting",
+   "p": "lab:broader",
+   "o": "lab:area/acct-leases"
+  },
+  {
+   "s": "lab:topic/provision-recognition",
+   "p": "lab:broader",
+   "o": "lab:area/acct-provisions"
+  },
+  {
+   "s": "lab:topic/provision-measurement",
+   "p": "lab:broader",
+   "o": "lab:area/acct-provisions"
+  },
+  {
+   "s": "lab:topic/contingency-disclosure",
+   "p": "lab:broader",
+   "o": "lab:area/acct-provisions"
+  },
+  {
+   "s": "lab:topic/share-capital",
+   "p": "lab:broader",
+   "o": "lab:area/acct-equity"
+  },
+  {
+   "s": "lab:topic/retained-earnings",
+   "p": "lab:broader",
+   "o": "lab:area/acct-equity"
+  },
+  {
+   "s": "lab:topic/treasury-shares",
+   "p": "lab:broader",
+   "o": "lab:area/acct-equity"
+  },
+  {
+   "s": "lab:topic/dividends",
+   "p": "lab:broader",
+   "o": "lab:area/acct-equity"
+  },
+  {
+   "s": "lab:topic/current-tax",
+   "p": "lab:broader",
+   "o": "lab:area/acct-income-tax"
+  },
+  {
+   "s": "lab:topic/deferred-tax",
+   "p": "lab:broader",
+   "o": "lab:area/acct-income-tax"
+  },
+  {
+   "s": "lab:topic/temporary-differences",
+   "p": "lab:broader",
+   "o": "lab:area/acct-income-tax"
+  },
+  {
+   "s": "lab:topic/cf-activities",
+   "p": "lab:broader",
+   "o": "lab:area/acct-cash-flow"
+  },
+  {
+   "s": "lab:topic/direct-indirect-method",
+   "p": "lab:broader",
+   "o": "lab:area/acct-cash-flow"
+  },
+  {
+   "s": "lab:topic/control",
+   "p": "lab:broader",
+   "o": "lab:area/acct-consolidation"
+  },
+  {
+   "s": "lab:topic/intragroup-elimination",
+   "p": "lab:broader",
+   "o": "lab:area/acct-consolidation"
+  },
+  {
+   "s": "lab:topic/non-controlling-interest",
+   "p": "lab:broader",
+   "o": "lab:area/acct-consolidation"
+  },
+  {
+   "s": "lab:topic/financial-ratios",
+   "p": "lab:broader",
+   "o": "lab:area/acct-analysis"
+  },
+  {
+   "s": "lab:topic/earnings-quality",
+   "p": "lab:broader",
+   "o": "lab:area/acct-analysis"
+  },
+  {
+   "s": "lab:topic/accounting-data-python",
+   "p": "lab:broader",
+   "o": "lab:area/acct-analysis"
+  },
+  {
+   "s": "lab:topic/cost-classification",
+   "p": "lab:broader",
+   "o": "lab:area/acct-cost"
+  },
+  {
+   "s": "lab:topic/job-process-costing",
+   "p": "lab:broader",
+   "o": "lab:area/acct-cost"
+  },
+  {
+   "s": "lab:topic/activity-based-costing",
+   "p": "lab:broader",
+   "o": "lab:area/acct-cost"
+  },
+  {
+   "s": "lab:topic/break-even",
+   "p": "lab:broader",
+   "o": "lab:area/acct-managerial"
+  },
+  {
+   "s": "lab:topic/budgeting",
+   "p": "lab:broader",
+   "o": "lab:area/acct-managerial"
+  },
+  {
+   "s": "lab:topic/standard-cost-variance",
+   "p": "lab:broader",
+   "o": "lab:area/acct-managerial"
+  },
+  {
+   "s": "lab:topic/managerial-decisions",
+   "p": "lab:broader",
+   "o": "lab:area/acct-managerial"
+  },
+  {
+   "s": "lab:topic/audit-risk",
+   "p": "lab:broader",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:topic/internal-control",
+   "p": "lab:broader",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:topic/audit-sampling",
+   "p": "lab:broader",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:topic/audit-opinion",
+   "p": "lab:broader",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:topic/corporate-vat-structure",
+   "p": "lab:broader",
+   "o": "lab:area/acct-tax"
+  },
+  {
+   "s": "lab:topic/tax-adjustment",
+   "p": "lab:broader",
+   "o": "lab:area/acct-tax"
+  },
+  {
+   "s": "lab:topic/disclosure-system",
+   "p": "lab:broader",
+   "o": "lab:area/acct-disclosure"
+  },
+  {
+   "s": "lab:topic/xbrl",
+   "p": "lab:broader",
+   "o": "lab:area/acct-disclosure"
+  },
+  {
+   "s": "lab:topic/ais-flow",
+   "p": "lab:broader",
+   "o": "lab:area/acct-disclosure"
+  },
+  {
+   "s": "lab:area/acct-framework",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-bookkeeping"
+  },
+  {
+   "s": "lab:area/acct-bookkeeping",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-statements"
+  },
+  {
+   "s": "lab:area/acct-bookkeeping",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-revenue"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-inventory"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-ppe"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-provisions"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-equity"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-cash-flow"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-tax"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-disclosure"
+  },
+  {
+   "s": "lab:area/acct-statements",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-audit"
+  },
+  {
+   "s": "lab:area/acct-revenue",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-financial-instruments"
+  },
+  {
+   "s": "lab:area/acct-revenue",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-leases"
+  },
+  {
+   "s": "lab:area/acct-revenue",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-income-tax"
+  },
+  {
+   "s": "lab:area/acct-revenue",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-consolidation"
+  },
+  {
+   "s": "lab:area/acct-consolidation",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-analysis"
+  },
+  {
+   "s": "lab:area/acct-cash-flow",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-analysis"
+  },
+  {
+   "s": "lab:area/acct-cost",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:area/acct-managerial"
+  }
+ ]
+}
