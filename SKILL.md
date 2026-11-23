@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.16 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.17 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats.md, DOMAIN_econ.md, DOMAIN_acct.md, DOMAIN_biz.md · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념정리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -614,7 +614,7 @@ v1.9부터 5장 전체(5-1~5-9: 네 캐릭터의 성격, 말투, 등장 자리, 
 
 - **벌집(겹눈) 무늬:** 히어로 배경, 오른쪽 위에만 보이게 방사형 마스크.
 - **육각형 번호 배지:** `clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)`.
-- **픽셀아트:** 캐릭터·히어로 배경·행동 시뮬레이션. `image-rendering:pixelated`, 확대 시 `imageSmoothingEnabled=false`.
+- **픽셀아트:** 캐릭터·히어로 배경·행동 시뮬레이션. `<img>` 그림에는 `image-rendering`을 CSS로 직접 걸지 않고 18-15-3 보정 코드에 맡긴다(실제 표시 배율 2배 이상만 각진 픽셀). 캔버스에 직접 그려 키울 때만 `imageSmoothingEnabled=false`.
 - **캔버스 격자:** 24px, `rgba(22,33,43,.05)`. 캔버스 바탕은 흰색.
 
 ### 8-6. 구성 요소 (클래스 이름 고정)
@@ -1587,17 +1587,17 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 
 ```css
 .cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}
-.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;image-rendering:pixelated}
+.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
 .cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid var(--rule);color:var(--text);font-size:13px}
 @media (max-width:600px){.cover{max-height:none}}
 ```
 
 - **그림이 아직 없을 때 (픽셀 대체 표지):** `<img>` 없이 그라데이션 + 벌집 무늬 위에 **픽셀 소품**과 **픽셀 캐릭터 넷**을 올린 대체 표지를 그린다(부록 A). 높이는 `max-height:48vh`. 페이지는 그림 없이도 완성 상태다.
   - 픽셀 소품: 그 챕터의 주제 은유(18-14-3)를 16~24개 격자 지도로 그린 것. SVG `<rect>`를 격자마다 놓고 `shape-rendering="crispEdges"`. 창문·바닥 타일도 네모 격자로
-  - 픽셀 캐릭터 넷: 캐릭터 팩 그림(`img[data-who]`)을 한 줄로 세우고 `image-rendering:pixelated`. 그림 파일이 없으면 부록 A 픽셀 지도
+  - 픽셀 캐릭터 넷: 캐릭터 팩 그림(`img[data-who]`)을 한 줄로 세운다(그리는 방식은 18-15-3 보정 코드가 정함). 그림 파일이 없으면 부록 A 픽셀 지도
   - **금지:** 매끈한 벡터 도형(원·곡선·그라데이션 채움)으로 그린 일러스트를 대체 표지로 쓰지 않는다
   - 표지 그림이 들어오면 대체 표지(소품·캐릭터 모두)를 숨긴다
-- **캐릭터 그림 렌더링:** 페이지의 모든 `img[data-who]`와 **표지 그림 `.cover img`**에 `image-rendering:pixelated`를 건다. 표지에 빠지면 브라우저가 크기를 맞추며 픽셀 경계를 뭉갠다.
+- **그림 렌더링:** `img[data-who]`·`.cover img`를 포함해 어떤 그림에도 `image-rendering:pixelated`를 CSS로 직접 걸지 않는다. 대신 모든 페이지 `</head>` 바로 앞에 **18-15-3 보정 코드(px-fix v1)**를 넣는다 — 실제 표시 배율이 2배 이상인 그림만 각진 픽셀, 나머지는 부드럽게 그린다. 각진 픽셀을 강제하면 화면 배율(윈도 125%·150%)·브라우저 확대에서 배율이 딱 떨어지지 않아 픽셀 크기가 들쭉날쭉해지고 깨져 보인다(2026-11-23 저장소 144곳 점검에서 61곳 확인).
 - **작은 크기 사본(960 등)을 `srcset`으로 따로 만들지 않는다.** 픽셀아트는 한 장을 CSS로 키우고 줄이는 편이 더 선명하다.
 - **단일 파일 페이지:** `src`에 원래 픽셀 크기 무손실 WebP(base64) 하나만 넣는다(18-15-2).
 - **챕터 띠 재사용 (`cover_ch{n}`):** 같은 챕터의 다른 페이지에서는 `class="cover cover-strip"`로 `aspect-ratio:16/5`, `object-position:50% 45%`. 같은 파일을 쓴다.
@@ -1624,7 +1624,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 - [ ] 결과 암시 없음, 생물 앵커가 아닌 챕터에 현미경·해부 소품 없음
 - [ ] 같은 시리즈의 표지끼리 포즈·장소·소품이 겹치지 않음
 - [ ] 반영 후 390·768·1280 폭에서 얼굴이 잘리지 않음
-- [ ] 표지가 원래 픽셀 격자의 정수배 무손실 WebP이고(18-15-2) `.cover img`에 `image-rendering:pixelated`가 걸림. 2배 이상 확대해 봐도 픽셀 경계가 번지지 않음
+- [ ] 표지가 원래 픽셀 격자의 정수배 무손실 WebP이고(18-15-2), 페이지에 보정 코드(px-fix v1, 18-15-3)가 있으며, CSS·인라인 스타일에 `image-rendering:pixelated` 직접 지정이 없음. PC(배율 125%)와 휴대폰에서 표지·얼굴이 깨지거나 흐리지 않음
 - [ ] 표지 파일 300 KB 이하(단일 파일은 원래 크기), 페이지 그림 합계 600 KB 이하
 - [ ] `<img>`에 `width`·`height`·`alt`·`fetchpriority="high"`
 
@@ -1636,7 +1636,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 2. **원래 그림 뽑기:** 덩어리마다 한 점만 뽑아 원래 크기(가로 W, 세로 H) 그림을 만든다.
 3. **표지:** 원래 그림을 `NEAREST`로 **정수배 m**만큼 키운다. m은 가로가 1600 이상이 되는 가장 작은 정수(480 → 4, 640 → 3). **무손실 WebP**(`lossless=True`)로 저장한다.
 4. **썸네일·공유 미리보기:** 원래 그림에서 3:2(썸네일), 1200:630 비율(공유) 영역을 잘라 정수배로 키운 뒤, 필요하면 가장자리 몇 픽셀만 잘라 1200×800·1200×630에 맞춘다. 이것도 무손실.
-5. **화면:** `.cover img`에 `image-rendering:pixelated`.
+5. **화면:** `.cover img`에 각진 픽셀을 직접 걸지 않는다. 18-15-3 보정 코드가 표시 배율을 보고 정한다 — 1920 표지가 화면에서 1,000px 안팎으로 보이면 선명한 원본을 부드럽게 줄여 고르고 또렷하게, 2배 이상으로 커지면 각진 픽셀로 그린다.
 6. **점검:** 결과 표지의 한 부분을 4배로 확대해 픽셀 경계가 계단처럼 또렷한지 눈으로 본다.
 
 ```python
@@ -1656,6 +1656,18 @@ nat.resize((nat.width*m, nat.height*m), Image.NEAREST).save(out, 'WEBP', lossles
 **그림 자체의 세밀함이 부족할 때:** 원래 그림이 480×270이면 아무리 잘 변환해도 그 이상 세밀해지지 않는다. 더 세밀한 표지가 필요하면 지시문에 *higher pixel density, about 640×360 native pixel grid, each pixel crisp, no blur*를 더해 다시 받는다.
 
 ---
+
+#### 18-15-3. 픽셀 깨짐 보정 코드 넣기 (모든 페이지)
+
+픽셀아트 그림에 `image-rendering:pixelated`를 고정해 두면, 화면에서 원본과 **딱 떨어지지 않는 배율**로 키우거나 줄일 때 어떤 픽셀은 화면 점 4개·어떤 픽셀은 5개로 들쭉날쭉해져 깨져 보인다(윈도 화면 배율 125%·150%, 브라우저 확대, 1920 표지를 1,000px 안팎으로 보일 때). 그래서 모든 페이지 `</head>` 바로 앞에 아래 보정 코드를 그대로 넣는다. 그림마다 실제 표시 배율(화면 폭 × 기기 배율 ÷ 원본 폭)을 재서 **2배 이상이면 각진 픽셀, 아니면 부드럽게** 그리고, 창 크기·늦게 뜨는 그림·나중에 붙는 그림도 다시 잰다.
+
+```html
+<!-- px-fix v1 --><style id="px-fix">img{image-rendering:auto!important}</style><script id="px-fix-js">(function(){var R=window.ResizeObserver;function f(i){var n=i.naturalWidth,w=i.getBoundingClientRect().width;if(!n||!w)return;var s=w*(window.devicePixelRatio||1)/n;i.style.setProperty("image-rendering",s>=1.95?"pixelated":"auto","important")}var ro=R?new R(function(es){es.forEach(function(e){f(e.target)})}):null;function a(i){if(i.__px)return;i.__px=1;i.addEventListener("load",function(){f(i)});if(ro)ro.observe(i);f(i)}function all(r){(r||document).querySelectorAll&&(r||document).querySelectorAll("img").forEach(a)}function go(){all();if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;if(n.tagName==="IMG")a(n);else all(n)})})}).observe(document.documentElement,{childList:true,subtree:true});window.addEventListener("resize",function(){document.querySelectorAll("img").forEach(f)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go()})();</script><!-- /px-fix -->
+```
+
+- 표시 `<!-- px-fix v1 -->`로 이미 들어 있는지 확인하고, 있으면 다시 넣지 않는다.
+- 조립 스크립트로 만드는 저장소는 **조립 원본(머리 틀)**에 넣는다. 만든 HTML에만 넣으면 다시 조립할 때 빠진다.
+- 관리용 현황판의 **그림 점검**(`ahnboat_lab_cover_status/pixel.html`)이 하루 두 번 모든 저장소 페이지에서 이 표시를 검사한다. 보정 코드 없이 각진 픽셀 설정이 있는 페이지는 '보정 권장'으로 뜬다.
 
 ### 18-16. 표지 목록 파일 `cover_manifest.json` (현황판 연결)
 
@@ -2720,6 +2732,8 @@ function buildPackage(scope){
 ---
 
 *이 스킬은 "초파리 뇌로 배우는 딥러닝" 1·2번 페이지와 "인공지능 알고리즘 패밀리" 시리즈의 캐릭터 설정을 바탕으로 만들었다. 캐릭터 설정이 바뀌면 5장과 부록 A만 고친다.*
+
+*v1.17 (2026-11-23): 18-15-3 픽셀 깨짐 보정 코드(px-fix v1)를 새로 두고 모든 페이지에 넣게 했다. `.cover img`·`img[data-who]`의 `image-rendering:pixelated` 강제를 뺐다 — 딱 떨어지지 않는 배율에서 픽셀이 들쭉날쭉해져 깨져 보이던 원인(저장소 144곳 점검에서 61곳). 정수배 무손실 1920 표지(18-15-2)는 그대로 둔다.*
 
 *v1.16 (2026-11-23): 18-15-2 픽셀아트 표지 변환을 새로 두었다 — 원래 픽셀 격자를 찾아 정수배·무손실로만 키우고, `.cover img`에 `image-rendering:pixelated`. 1600×900 손실 WebP 규칙(흐려짐의 원인)과 960 사본을 뺐다. 꾸러미의 조수 말풍선은 글자 상자가 아니라 캐릭터 그림으로(O-섹션 캐릭터 규칙, `kgx.js` v1.5).*
 

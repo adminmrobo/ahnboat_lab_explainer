@@ -49,7 +49,7 @@ ahnboat_lab_explainer/
 │  └─ task/                         작업 팩
 │     ├─ TASK_add_lang.md           언어 하나 추가 (기본값 vi)
 │     ├─ TASK_review.md             검수 (범용 평가 프롬프트 + 해설 대시보드 연결)
-│     └─ onto-retrofit/             온톨로지 보강 (ai-lab-retrofit v1.3 + O5 파이프라인)
+│     └─ onto-retrofit/             온톨로지 보강 (ai-lab-retrofit v1.6 + O5 파이프라인)
 ├─ skills/                          연구실 스킬 4종 백업 (계정에 설치된 판과 같게 유지)
 │  ├─ ai-lab-explainer-plain/       v1.2 · 비전공자판 새로 만들기 (교수법 9장 내장)
 │  ├─ ai-lab-extend/                v1.2 · 기존 페이지 업데이트·교안 검토 (교수법 8장 내장)

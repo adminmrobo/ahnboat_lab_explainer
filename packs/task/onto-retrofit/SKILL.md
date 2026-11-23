@@ -5,7 +5,7 @@ description: 완성된 해설 HTML의 본문은 그대로 두고 지식 색인(#
 
 # 완성된 HTML 꼬리표 달기 스킬 (ai-lab-retrofit)
 
-> **스킬 정보:** version: 1.5 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
+> **스킬 정보:** version: 1.6 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
 >
 > **자세한 설명:** 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
 
@@ -548,14 +548,14 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 <style>.cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid #d5dbe2;color:#16212b;font-size:13px}@media (max-width:600px){.cover{max-height:none}}</style>
 <header class="cover" id="cover" data-img="cover_{N}">
   <picture>
-    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async" style="image-rendering:pixelated">
+    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async">
   </picture>
   <span class="cover-chip">{시리즈 이름} · {N}</span>
 </header>
 <!-- /lab-cover -->
 ```
 
-`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다. 표지 CSS의 `.cover img`에는 반드시 `image-rendering:pixelated`를 건다(없으면 브라우저가 픽셀 경계를 뭉갠다).
+`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다. 표지 CSS의 `.cover img`에는 `image-rendering:pixelated`를 걸지 않는다. 대신 페이지 `</head>` 앞에 픽셀 깨짐 보정 코드(px-fix v1, 본편 18-15-3)가 없으면 넣는다 — 표시 배율 2배 이상만 각진 픽셀로 그린다.
 
 ### 13-5. 프롬프트
 
@@ -614,6 +614,8 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 ---
 
 ---
+
+*ai-lab-retrofit v1.6 (2026-11-23): 표지 `<img>`의 인라인 `image-rendering:pixelated`와 `.cover img` 강제 규칙을 뺐다. 꼬리표를 붙이는 페이지에 픽셀 깨짐 보정 코드(px-fix v1, 본편 18-15-3)가 없으면 함께 넣는다. 꾸러미 조수 얼굴(`kgx.js`·`assembler.html`)도 각진 픽셀 고정을 뺐다.*
 
 *ai-lab-retrofit v1.5 (2026-11-23): 꾸러미의 조수 말풍선을 "조수" 글자 상자에서 페이지의 조수(하루) 캐릭터 그림으로 바꿨다(`kgx.js`·`assembler.html` — 페이지의 `Cast`·`SPRITE`·`LAB_PACK`에서 그림을 찾고, 그림이 없는 페이지에서는 빈 그림 자리를 남기지 않는다). 표지 변환을 본편 18-15-2(정수배·무손실·pixelated)로 바꿨다.*
 

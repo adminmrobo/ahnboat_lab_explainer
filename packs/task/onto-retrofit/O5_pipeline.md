@@ -388,14 +388,14 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 <style>.cover{position:relative;margin:0;background:linear-gradient(160deg,#eef2f8,#ffffff);aspect-ratio:16/9;max-height:72vh;overflow:hidden}.cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}.cover-chip{position:absolute;left:16px;bottom:14px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.88);border:1px solid #d5dbe2;color:#16212b;font-size:13px}@media (max-width:600px){.cover{max-height:none}}</style>
 <header class="cover" id="cover" data-img="cover_{N}">
   <picture>
-    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async" style="image-rendering:pixelated">
+    <img src="assets/img/cover_{N}.webp" width="1920" height="1080" alt="{대체 글}" fetchpriority="high" decoding="async">
   </picture>
   <span class="cover-chip">{시리즈 이름} · {N}</span>
 </header>
 <!-- /lab-cover -->
 ```
 
-`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다. 표지 CSS의 `.cover img`에는 반드시 `image-rendering:pixelated`를 건다(없으면 브라우저가 픽셀 경계를 뭉갠다).
+`lab-cover` 표시가 있으므로 다시 넣거나 뺄 때 그 사이만 바꾼다. 꼬리표 점검(본문 차이 0)에서도 이 블록은 덧붙인 부분으로 본다. 표지 CSS의 `.cover img`에는 `image-rendering:pixelated`를 걸지 않는다. 대신 페이지 `</head>` 앞에 픽셀 깨짐 보정 코드(px-fix v1, 본편 18-15-3)가 없으면 넣는다 — 표시 배율 2배 이상만 각진 픽셀로 그린다.
 
 ### C-5. 프롬프트
 
