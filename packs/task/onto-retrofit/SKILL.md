@@ -629,6 +629,19 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 4. `relatedTo`로 적었던 관계 가운데 수학적 포함은 `specialCaseOf`, 예는 `instanceOf`, 동치는 `equivalentTo`, 함의는 `implies`로 바꾼다. 목표 `relatedTo` 15% 이하.
 5. `check.py`로 점검(등록되지 않은 분야 코드는 경고).
 
+**도구 `tools/rehang.py`** (2026-11-24): 위 1~4를 저장소 단위로 한다. 결정은 저장소의 `kg/rehang.json`(덧씌우기)에 남기고, 페이지의 `kg-raw`·`kg-ld` 두 블록만 고친다(본문이 바뀌면 멈춤).
+
+```bash
+python3 tools/rehang.py plan  저장소 --domains econ,math [--retag ai:math] [--skill 이 저장소]   # 자동 후보 → kg/rehang.json
+#   (사람이 kg/rehang.json의 links를 보고 틀린 줄을 지우거나 고친다)
+python3 tools/rehang.py apply 저장소                                                         # 적용 (여러 번 돌려도 같음)
+```
+
+- 덧씌우기로 더한 관계·주제 노드에는 `"via": "rehang-2026-11-24"`가 붙어, 다시 적용하면 지우고 새로 쓴다.
+- `--retag`: 분야 표시가 틀린 옛 페이지 고치기. `ai:geom`(정확히 `["ai"]`인 노드를 `["geom"]`으로), 빈 분야는 `:stats`, 여러 규칙은 `;`로.
+- 빌드 스크립트로 페이지를 다시 만드는 저장소는 빌드 끝에 `kg/rehang.py apply`를 부르는 몇 줄을 둔다(파이썬·노드 공통). 저장소에 `kg/rehang.py` 사본을 함께 둔다.
+- 2026-11-24 첫 적용: 경제·수학·기하·통계·데이터·금융·경영·회계·그림·논리 저장소 43곳.
+
 ### 15-3. 새 종류·관계 (본편 O1-3·O1-4)
 
 | 새 종류 | 뜻 | 새 관계 | 뜻 |
