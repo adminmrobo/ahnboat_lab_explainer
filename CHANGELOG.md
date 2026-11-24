@@ -1,5 +1,11 @@
 # 변경 기록
 
+## 2026-11-24 · 온톨로지 보강 팩 — 자동 초안 도구 `autokg.py`와 저장소 28곳 첫 꼬리표
+
+- **`packs/task/onto-retrofit/tools/autokg.py`·`autokg_reapply.py` 신설**: 꼬리표가 없는 저장소에 사이트 개념(같은 ID)과 분야 뼈대 주제로 지식 색인 초안을 만들어 retrofit.py로 덧붙임. 사용법은 보강 팩 SKILL.md 15-2b
+- 적용: 홈페이지에 올라 있지만 지식 색인이 없던 콘텐츠 28곳(페이지 145). 손으로 쓴 것 1곳(Automate_prompt_lab). 안내 페이지만 남은 3곳(시멘트 07·08, 데이터베이스 01of04)은 내용 저장소로 따라가 셈
+- 결과: 지식 노드 지도의 분야별 콘텐츠 수가 홈페이지 랙 수와 같아짐(남은 차이는 GitHub 밖 콘텐츠 7개)
+
 ## 2026-11-24 · 온톨로지 보강 팩 v1.7 — 다시 걸기 도구 `rehang.py`와 저장소 43곳 적용
 
 - **`packs/task/onto-retrofit/tools/rehang.py` 신설**: 이미 꼬리표가 있는 페이지의 개념을 분야 뼈대 주제에 `broader`로 건다. 자동 후보(이름 같음·포함·영어 낱말) → 사람이 고침 → 적용. 결정은 각 저장소 `kg/rehang.json`, 페이지는 `kg-raw`·`kg-ld`만 고침(본문 차이 검사). 옛 분야 표시 고치기(`--retag`, `db`→`data`, `fintech`→`fin`, `accounting`→`acct`, `mfg`→`biz`, 빈 값·`ai` → 실제 분야)
