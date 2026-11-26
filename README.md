@@ -85,14 +85,14 @@ Claude 계정에 설치한 본 스킬(맨 위 `SKILL.md` + `packs/`)과 `skills/
 
 | 팩 | 파일 | 판 | 필요한 본 스킬 |
 |---|---|---|---|
-| 본 스킬 | `SKILL.md` | 1.18 | — |
+| 본 스킬 | `SKILL.md` | 1.19 | — |
 | 캐릭터 | `packs/character/CHAR_lab4.md` (+ 그림 팩 1.4, 동작 fight 1.2) | 1.4 | 1.9 |
 | 분야 · 통계 / 경제 / 회계 / 경영 / AI 범죄학 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.8 |
 | 분야 · 수학 / 기하·위상 / 논리 / 생성형 AI / LLM / 데이터 / 금융 / 그림 | `packs/domain/DOMAIN_*.md` | 각 1.0 | 1.18 |
 | 번역 | `packs/lang/` (지시서 + langpack) | 1.0 / langpack 1.3 | 1.9 |
 | 작업 · 언어 추가 | `packs/task/TASK_add_lang.md` | 1.0 | 1.9 |
 | 작업 · 검수 | `packs/task/TASK_review.md` | 1.0 | 1.9 |
-| 작업 · 온톨로지 보강 | `packs/task/onto-retrofit/` | 1.7 | 1.18 |
+| 작업 · 온톨로지 보강 | `packs/task/onto-retrofit/` | 1.8 | 1.19 |
 
 자세한 의존 관계는 `manifest.json`, 바뀐 내용은 `CHANGELOG.md`.
 

@@ -5,7 +5,7 @@ description: 논문·교과서 한 장을 박사·조수·초파리 연구원·�
 
 # 연구실 해설 대시보드 생성 스킬 (인공지능·통계·경제·회계·경영)
 
-> **스킬 정보:** version: 1.18 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats·econ·acct·biz·crime·math·geom·logic·genai·llm·data·fin·art.md · domain_registry: data/domains.json (18개 분야) · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
+> **스킬 정보:** version: 1.19 · targets: Claude, ChatGPT, Gemini, Genspark (모델 공통) · domain_packs: 인공지능(이 문서에 내장), DOMAIN_stats·econ·acct·biz·crime·math·geom·logic·genai·llm·data·fin·art.md · domain_registry: data/domains.json (18개 분야) · required_packs: packs/character/CHAR_lab4.md (모든 페이지) · repository: ahnboat_lab_explainer — 파일 위치와 작업별 필요한 파일은 저장소 README.md · language: ko
 >
 > **자세한 설명:** 인공지능·통계학·경제학·회계학·경영학 등의 논문이나 교과서 한 장을 받아, 작업 전에 먼저 분야를 묻고(자료에서 추정한 분야를 근거와 함께 추천으로 보여 준다) 그 분야 팩의 규칙으로, 박사·조수·초파리 연구원·주판봇 네 캐릭터가 진행하는 단일 HTML 교육 대시보드로 만든다. 개념정리, 직접 돌려 보는 시뮬레이션, 초파리와 주판봇의 대결, 행동으로 보기, 용어 말풍선, 확인 퀴즈, 정확성 표시를 포함하고, 그 페이지에 필요한 캐릭터 표정·장면·배경·컷의 이미지 제작 명세서(프롬프트 포함)와, 목차·챕터마다 네 캐릭터가 함께 나오는 글 표지 그림의 생성 지시문(Genspark 등에 그대로 붙여 넣는 형식)도 함께 만든다. 페이지 맨 끝에는 검색 가능한 지식 색인과, 온톨로지를 서지 정보와 함께 따로 내려받는 꾸러미(JSON-LD·Turtle·CSV·CSL-JSON·BibTeX·RIS, ZIP)를 넣는다. 여러 페이지의 꾸러미를 분야 뼈대 온톨로지에 합쳐 시리즈가 어디까지 다뤘는지 재고 다음 페이지를 고르는 영역 완성 파이프라인(O5)도 담았다. "논문을 대시보드로", "이 장을 연구실 HTML로", "초파리 시리즈 스타일로", "이 경제학 논문을 연구실 HTML로", "회계 교과서 장을 대시보드로", "통계 강의를 초파리·로봇 대결로" 같은 요청에 쓴다.
 
@@ -1409,7 +1409,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 
 | 조각 | 문장 |
 |---|---|
-| 공통 스타일 | *16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images; no smooth gradients, no painterly, vector, watercolor or 3D look* — **모든 그림에 조건 없이 넣는다.** "참고 이미지가 없을 때만" 같은 조건을 달지 않는다 (참고 이미지가 있어도 도구가 매끈한 그림으로 바꾸는 일이 잦다) |
+| 공통 스타일 | *16-bit RPG style pixel art rendered natively at high resolution with small, dense pixels (each art pixel about 2 screen pixels at 1600 px width — NOT a small image blown up into big square blocks), rich detail in faces, hair, hands, clothes and props, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images; no smooth gradients, no painterly, vector, watercolor or 3D look* — **모든 그림에 조건 없이 넣는다.** "참고 이미지가 없을 때만" 같은 조건을 달지 않는다 (참고 이미지가 있어도 도구가 매끈한 그림으로 바꾸는 일이 잦다) |
 | 시즌 구절 | 기본: *bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents* / 시즌이 있으면 그 구절 (밤 장면 금지: *night, dark room, neon glow* 같은 말을 넣지 않는다) |
 | 판 구절 | A~D: *single character, transparent background, centered with a small margin, {facing right / facing left / facing front}, {bust / full body}* · E: *3:2 landscape scene, medium brightness* · F: *wide 8:3 background, left side simple and calm for title text, details on the right* · G: *16:9 illustration panel* · H: *simple icon, transparent background, readable at 16 pixels* · J: *16:9 series cover, all four characters together* · L: *website top cover illustration, wide 16:9, all four characters together* (전체 조립은 18-14-4) |
 | 캐릭터·장소 | 18-4 영어 묘사, 18-7 장소 묘사 |
@@ -1496,7 +1496,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 | 항목 | 값 |
 |---|---|
 | 생성 크기 | **16:9, 가로 1920 이상** (도구에서 16:9를 고른다. 2배인 3840×2160도 좋다) |
-| 빌드 크기 | **픽셀아트는 18-15-2 규칙**: 그림의 원래 픽셀 격자를 찾아 **정수배로만** 키운 **무손실 WebP**(가로 1600 이상이 되는 가장 작은 정수배, 예 480×270 → ×4 = 1920×1080, 300 KB 이하). 단일 파일 페이지는 원래 픽셀 크기(예 480×270) 무손실 WebP 하나를 넣고 CSS로 키운다. 1600×900처럼 정수배가 아닌 크기로 줄이거나 손실 압축하지 않는다 |
+| 빌드 크기 | **18-15-2 규칙**: 고해상도 픽셀아트를 받아 `LANCZOS` **1600×900** 손실 WebP(**220 KB 이하**)로 넣는다. 작은 격자를 4배로 키운 큰 블록 그림은 다시 받는다(예외만 정수배 무손실) |
 | 캐릭터 | **넷 모두** (전신 또는 무릎 위). 18-4 고정 외형 그대로 |
 | 안전 영역 | 얼굴·손·핵심 소품은 **좌우 12%, 위 10%, 아래 18% 안쪽**에. 화면 높이 제한이나 모바일에서 잘릴 수 있는 자리다 |
 | 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 18-3. 매끈한 일러스트·벡터·수채화·3D로 받으면 다시 받는다 (18-15) |
@@ -1541,7 +1541,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 그림체는 반드시 16비트 RPG풍 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 그림체는 반드시 16비트 RPG풍 픽셀아트 (가로 1600 이상에서 그린 작고 촘촘한 픽셀로 세밀하게 — 작은 그림을 확대한 큰 네모 블록 금지, 매끈한 일러스트·벡터·수채화·3D 금지)
 - 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 외형으로, 넷 모두 픽셀아트로 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
 - 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게
@@ -1557,7 +1557,7 @@ D 앵커의 장소는 7-3 표의 "대응 예"에서 고른다. 예: RAG → 도�
 
 ```
 Website top cover illustration, wide 16:9.
-Art style (required, always): 16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline,
+Art style (required, always): 16-bit RPG style pixel art rendered natively at high resolution with small, dense pixels (each art pixel about 2 screen pixels at 1600 px width — NOT a small image blown up into big square blocks), rich detail in faces, hair, hands, clothes and props, bold dark outline,
   2–3 tone shading, small highlights; no smooth gradients, no painterly, vector, watercolor or 3D look.
 Match the characters' proportions and colors of the attached reference images exactly, drawn in this same pixel-art style.
 {시즌 구절}.
@@ -1610,8 +1610,8 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 |---|---|---|
 | 1 확인 | 비율, 크기, 글자, 캐릭터, 그림체 | **그림체가 16비트 픽셀아트가 아니면(매끈한 일러스트·벡터·3D) 쓰지 않고 다시 생성을 권한다.** 16:9(±3%) 아니면 가운데 기준 자르기 안을 보여 주고 묻는다. 가로 1600 미만이면 다시 받기를 권한다. 그림 안 글자가 있으면 잘라낼 수 있는지 보고, 안 되면 다시 생성을 권한다. 넷 중 빠진 캐릭터나 18-4와 다른 외형이 있으면 **무엇이 다른지 적고** 쓸지 묻는다 |
 | 2 안전 영역 | 얼굴·손이 18-14-2 안전 영역 안인지 | 밖이면 `object-position`을 조정하고, 그래도 잘리면 알린다 |
-| 3 변환 | 18-15-2 픽셀아트 변환 | 원래 픽셀 격자를 찾아 정수배 무손실 WebP로. **손실 압축·정수배 아닌 크기 줄이기 금지.** 원본은 `assets/img/src/`에 보관(저장소일 때) |
-| 4 넣기 | `data-img="cover_{N}"` 자리를 채운다 | 대체 글은 지시문의 alt. 썸네일 `thumb_{N}`(3:2)과 공유 미리보기 `og_{N}`(1200×630)도 **원래 픽셀 그림에서 잘라 정수배로** 만든다(18-15-2) |
+| 3 변환 | 18-15-2 고해상도 넣기 | 큰 블록 그림이면 다시 받기를 권한다. 고해상도면 1600×900 손실 WebP(220 KB 이하). 원본은 `assets/img/src/`에 보관(저장소일 때) |
+| 4 넣기 | `data-img="cover_{N}"` 자리를 채운다 | 대체 글은 지시문의 alt. 썸네일 `thumb_{N}`(3:2)과 공유 미리보기 `og_{N}`(1200×630)은 표지에서 잘라 만든다(18-15-2) |
 | 5 점검 | 폭 390·768·1280에서 화면 확인 | 얼굴 잘림 없음, 칩이 얼굴을 가리지 않음, 콘솔 오류 0, 가로 넘침 0, 페이지 그림 합계 **표지 포함 600 KB 이하** |
 | 6 기록 | 이미지 매니페스트 갱신 | `cover_{N}`의 `status`를 `done`으로, 파일 크기와 받은 날 |
 
@@ -1624,36 +1624,46 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 - [ ] 결과 암시 없음, 생물 앵커가 아닌 챕터에 현미경·해부 소품 없음
 - [ ] 같은 시리즈의 표지끼리 포즈·장소·소품이 겹치지 않음
 - [ ] 반영 후 390·768·1280 폭에서 얼굴이 잘리지 않음
-- [ ] 표지가 원래 픽셀 격자의 정수배 무손실 WebP이고(18-15-2), 페이지에 보정 코드(px-fix v1, 18-15-3)가 있으며, CSS·인라인 스타일에 `image-rendering:pixelated` 직접 지정이 없음. PC(배율 125%)와 휴대폰에서 표지·얼굴이 깨지거나 흐리지 않음
+- [ ] 표지가 가로 1600 이상에서 그린 고해상도 픽셀아트이고(2배 확대해도 얼굴·손·소품이 세밀함, 큰 네모 블록 아님) 1600×900 WebP 220 KB 이하이며(18-15-2), 페이지에 보정 코드(px-fix v1, 18-15-3)가 있으며, CSS·인라인 스타일에 `image-rendering:pixelated` 직접 지정이 없음. PC(배율 125%)와 휴대폰에서 표지·얼굴이 깨지거나 흐리지 않음
 - [ ] 표지 파일 300 KB 이하(단일 파일은 원래 크기), 페이지 그림 합계 600 KB 이하
 - [ ] `<img>`에 `width`·`height`·`alt`·`fetchpriority="high"`
 
-#### 18-15-2. 픽셀아트 표지 변환 (흐려짐 방지)
+#### 18-15-2. 고해상도 픽셀아트로 받고 넣기 (v1.19)
 
-생성 도구가 주는 픽셀아트 PNG는 보통 **작은 원래 그림(예 480×270)을 4배쯤 키운 것**이다. 이것을 1600×900처럼 **정수배가 아닌 크기로 줄이고 손실 압축**하면 픽셀 경계가 번져 흐릿해 보인다(2026-11 vector_db_lab에서 세 번 지적됨). 그래서 이렇게 변환한다.
+**받는 규격:** 그림은 **가로 1600 이상(표지 1920×1080, 장면 1536×1024)에서 직접 그린, 픽셀이 작고 촘촘한 16비트 픽셀아트**로 받는다. 얼굴·눈·머리카락·손·옷 주름·소품이 세밀하게 보여야 한다. 세밀함 기준은 `ai_text_read_ability` 표지(`cover_07.webp`)다.
 
-1. **격자 찾기:** 원본을 k×k 덩어리로 나눴을 때 덩어리 안 색이 모두 같은 가장 큰 k를 찾는다(보통 4, 가끔 3·5·6·8). 덩어리 안 표준편차가 1 미만이면 그 k가 맞다. 맞는 k가 없으면(생성 도구가 매끈하게 키운 그림) 픽셀아트로 다시 받기를 먼저 권한다.
-2. **원래 그림 뽑기:** 덩어리마다 한 점만 뽑아 원래 크기(가로 W, 세로 H) 그림을 만든다.
-3. **표지:** 원래 그림을 `NEAREST`로 **정수배 m**만큼 키운다. m은 가로가 1600 이상이 되는 가장 작은 정수(480 → 4, 640 → 3). **무손실 WebP**(`lossless=True`)로 저장한다.
-4. **썸네일·공유 미리보기:** 원래 그림에서 3:2(썸네일), 1200:630 비율(공유) 영역을 잘라 정수배로 키운 뒤, 필요하면 가장자리 몇 픽셀만 잘라 1200×800·1200×630에 맞춘다. 이것도 무손실.
-5. **화면:** `.cover img`에 각진 픽셀을 직접 걸지 않는다. 18-15-3 보정 코드가 표시 배율을 보고 정한다 — 1920 표지가 화면에서 1,000px 안팎으로 보이면 선명한 원본을 부드럽게 줄여 고르고 또렷하게, 2배 이상으로 커지면 각진 픽셀로 그린다.
-6. **점검:** 결과 표지의 한 부분을 4배로 확대해 픽셀 경계가 계단처럼 또렷한지 눈으로 본다.
+**쓰지 않는 지시:** "작은 격자(480×270·300×200)로 그린 뒤 4배로 확대(nearest-neighbor)", "clearly visible square pixels"는 지시문에 쓰지 않는다. 이렇게 받으면 그림이 처음부터 큰 네모 블록이라, 아무리 잘 변환해도 화면에서 해상도가 낮아 보인다(2026-11 `fintech_data_analysis` 실전 #01에서 지적). 18-3 공통 스타일 문장과 18-14 표지 틀은 이 규격으로 고쳤다.
+
+**받은 뒤 처리:**
+1. **점검:** 한 부분을 2배로 확대해 얼굴·손·소품이 세밀한지 본다. k×k(k ≥ 3) 덩어리 색이 모두 같은 큰 블록 그림이면 다시 받기를 권한다(아래 코드의 `grid_k`).
+2. **표지:** 16:9로 맞춰 `LANCZOS`로 **1600×900**, 손실 WebP(품질 90에서 시작해 70까지 낮추며) **220 KB 이하**.
+3. **장면·구조 일러스트:** 3:2면 **1200×800**, 손실 WebP **180 KB 이하**. 한 편 그림 합계는 18-15 기준을 따른다.
+4. **썸네일·공유 미리보기:** 표지에서 잘라 600×400(3:2)·1200×630으로 만든다.
+5. **화면:** `image-rendering:pixelated`를 직접 걸지 않는다. 18-15-3 보정 코드가 표시 배율로 정한다(고해상도 그림은 보통 부드럽게 표시).
+
+**예외 — 이미 받은 거친 격자 그림:** 다시 받을 수 없을 때만 예전 규칙을 쓴다. 원래 격자를 찾아(`grid_k`) `NEAREST` 정수배로 키운 무손실 WebP로 넣는다. 이 경우 페이지에 "그림 다시 받기 필요"를 작업 메모로 남긴다.
 
 ```python
-from PIL import Image; import numpy as np
-a = np.asarray(Image.open(src).convert('RGB'))
-for k in (8, 6, 5, 4, 3, 2):
-    H, W = a.shape[0]//k, a.shape[1]//k
-    blk = a[:H*k, :W*k].reshape(H, k, W, k, 3)
-    if blk.std(axis=(1, 3)).max() < 1: break
-else:
-    raise SystemExit('픽셀 격자가 없음 → 픽셀아트로 다시 받기')
-nat = Image.fromarray(blk[:, 0, :, 0, :])                 # 원래 그림 W×H
-m = -(-1600 // nat.width)                                  # 가로 1600 이상이 되는 정수배
-nat.resize((nat.width*m, nat.height*m), Image.NEAREST).save(out, 'WEBP', lossless=True, method=6)
+from PIL import Image; import numpy as np, os
+def grid_k(im):                      # 큰 블록 그림이면 k(3 이상), 아니면 0
+    a = np.asarray(im.convert('RGB')).astype(int)
+    for k in (8, 6, 5, 4, 3):
+        H, W = a.shape[0]//k, a.shape[1]//k
+        blk = a[:H*k, :W*k].reshape(H, k, W, k, 3)
+        if (blk - blk[:, :1, :, :1]).__abs__().max(axis=(1, 3, 4)).mean() < 1: return k
+    return 0
+def save_fit(im, w, h, out, max_kb):
+    W, H = im.size; r = w / h
+    if W / H > r: nw = int(H * r); im = im.crop(((W-nw)//2, 0, (W-nw)//2 + nw, H))
+    else: nh = int(W / r); im = im.crop((0, (H-nh)//2, W, (H-nh)//2 + nh))
+    im = im.convert('RGB').resize((w, h), Image.LANCZOS)
+    for q in (90, 86, 82, 78, 74, 70):
+        im.save(out, 'WEBP', quality=q, method=6)
+        if os.path.getsize(out) <= max_kb * 1024: break
+src = Image.open('cover.png')
+if grid_k(src): print('큰 블록 그림 → 고해상도 픽셀아트로 다시 받기를 권함')
+save_fit(src, 1600, 900, 'cover.webp', 220)
 ```
-
-**그림 자체의 세밀함이 부족할 때:** 원래 그림이 480×270이면 아무리 잘 변환해도 그 이상 세밀해지지 않는다. 더 세밀한 표지가 필요하면 지시문에 *higher pixel density, about 640×360 native pixel grid, each pixel crisp, no blur*를 더해 다시 받는다.
 
 ---
 
@@ -2016,12 +2026,12 @@ AI는 아래 틀을 그대로 채워 낸다. `{ }`는 채울 공란이다. 예�
 
 (예) `bg_07`
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, wide 8:3 background, left side simple and calm for title text, details on the right, a quiet reading desk inside the same bright daytime lab world with an open book of blank striped pages and several highlighter pens in different colors, sunlight coming in from the left, no characters, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art rendered at high resolution with small, dense pixels (not big square blocks), detailed faces, hands and props, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, wide 8:3 background, left side simple and calm for title text, details on the right, a quiet reading desk inside the same bright daytime lab world with an open book of blank striped pages and several highlighter pens in different colors, sunlight coming in from the left, no characters, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
 ```
 
 (예) `sc_07_hero`
 ```
-16-bit RPG style pixel art, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped sales record sheet at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
+16-bit RPG style pixel art rendered at high resolution with small, dense pixels (not big square blocks), detailed faces, hands and props, bold dark outline, 2–3 tone shading, small highlights, consistent with the reference images, bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents, 3:2 landscape scene, medium brightness, chibi scientist with thin teal rectangular glasses, black hair with one white streak and a small ponytail in a white lab coat over black vest and tie standing at the back center with a hand on his chin, anthropomorphic fruit fly researcher with big red compound eyes and a blue helmet with a gold stripe on the left looking right with one eye narrowed, boxy beige retro CRT-monitor robot with a dark green screen face and mint pixel eyes, a short antenna topped with a red-brown abacus bead and small tank treads, on the right looking left holding up a wooden abacus, girl researcher with long pink hair in two round buns and a navy streak holding a striped sales record sheet at the side, between them a long sentence shown as a row of blank colored cards with a few cards glowing, no text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands
 ```
 
 ## 4. 일관성 지침
@@ -2767,6 +2777,8 @@ function buildPackage(scope){
 ---
 
 *이 스킬은 "초파리 뇌로 배우는 딥러닝" 1·2번 페이지와 "인공지능 알고리즘 패밀리" 시리즈의 캐릭터 설정을 바탕으로 만들었다. 캐릭터 설정이 바뀌면 5장과 부록 A만 고친다.*
+
+*v1.19 (2026-11-26): 18-15-2를 "고해상도 픽셀아트로 받고 넣기"로 바꿨다 — 지시문에서 "작은 격자로 그린 뒤 4배 확대"와 "clearly visible square pixels"를 빼고, 가로 1600 이상에서 직접 그린 촘촘한 픽셀아트(세밀함 기준: ai_text_read_ability 표지)를 요구한다. 받은 그림은 1600×900·1200×800 손실 WebP로 넣고, 거친 격자 그림의 정수배 무손실 변환은 예외로만 남겼다. 18-3 공통 스타일·18-14 표지 틀·18-15 체크리스트를 함께 고쳤다(계기: fintech_data_analysis 실전 #01 그림 해상도 지적).*
 
 *v1.18 (2026-11-24): 분야를 18개로 넓히고 분야 등록부 `data/domains.json`을 원본으로 삼았다(19-4). 뼈대 12개(경제·통계·수학·기하위상·논리·생성형 AI·LLM·데이터·금융·경영·회계·그림, 영역 142·주제 550)와 분야 사이 다리 `backbone_bridge.json`을 더하고, `ml`·`dl`·`neuro`·`rl`을 인공지능 뼈대의 렌즈로 정했다. 수학·논리·통계용 클래스 6개(Definition·Theorem·Axiom·Proof·Structure·Estimator)와 관계 6개(implies·specialCaseOf·equivalentTo·provedBy·instanceOf·counterexampleTo)를 더했다(O1-3·O1-4·O1-5). 계기: 인공지능 용어 중심 온톨로지라 경제·통계·수학·위상·해석·기하·논리 페이지가 걸 곳이 없어 페이지마다 임시 뼈대를 만들던 문제(네트워크재 수요 정리의 `backbone_econ 0.1`).*
 

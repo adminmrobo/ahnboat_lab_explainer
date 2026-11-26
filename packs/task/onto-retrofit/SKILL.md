@@ -5,9 +5,11 @@ description: 완성된 해설 HTML의 본문은 그대로 두고 지식 색인(#
 
 # 완성된 HTML 꼬리표 달기 스킬 (ai-lab-retrofit)
 
-> **스킬 정보:** version: 1.6 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
+> **스킬 정보:** version: 1.8 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
 >
 > **자세한 설명:** 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
+>
+> **용어 규칙(최우선):** 개념을 차례로 쌓는 구성은 **개념정리**, 그 안의 한 덩어리는 **단계**, 표·양식의 한 자리는 **항목**, 비워 둘 곳은 **공란**, 입력 자리는 **상자**, 여러 주제를 하나로 꿰는 흐름은 **하나로 잇는·공통으로 흐르는**, 시리즈 커버리지에서 아직 다루지 않은 주제는 **빈 주제**라고만 쓴다. 오르내리는 기구에 빗댄 말, 뚫고 지나간다는 말, 구획을 세는 단위어는 꾸러미·보고서·기획 카드·대사·파일 이름·표지 지시문 어디에도 쓰지 않는다. 부속 파일(O5_pipeline.md 등)에 그런 말이 남아 있어도 결과물에는 위 용어로 바꿔 쓴다(초파리 대사도 "한 단계만 더요"처럼).
 
 > **한 줄 요약:** 완성된 페이지를 읽는다 → 지식 그래프·참고문헌·페이지 정보 JSON 세 개를 만든다 → 조립 도구로 페이지 끝에 두 섹션을 붙인다 → 점검 도구로 "본문 차이 0"을 확인한다 → 꾸러미를 KG_00 지도에 넣는다.
 >
@@ -488,7 +490,7 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 | 항목 | 값 |
 |---|---|
 | 생성 | 16:9, 가로 1920 이상 |
-| 빌드 | 픽셀아트 원래 격자의 **정수배 무손실 WebP**(가로 1600 이상이 되는 가장 작은 정수배, 예 480×270 → 1920×1080, 300 KB 이하). 단일 파일 페이지는 원래 픽셀 크기 무손실 WebP 하나를 base64로. 정수배 아닌 크기 줄이기·손실 압축 금지 (본편 18-15-2) |
+| 빌드 | **고해상도 픽셀아트**(가로 1600 이상에서 직접 그린 촘촘한 픽셀)를 `LANCZOS` 1600×900 손실 WebP(220 KB 이하)로. 단일 파일 페이지는 그 WebP를 base64로. 작은 격자를 4배로 키운 큰 블록 그림은 다시 받기를 권하고, 다시 받을 수 없을 때만 정수배 무손실 (본편 18-15-2 v1.19) |
 | 캐릭터 | **넷 모두**: 박사, 조수, 초파리 연구원, 주판봇 |
 | 안전 영역 | 얼굴·손·핵심 소품은 좌우 12%, 위 10%, 아래 18% 안쪽 |
 | 그림체 | **16비트 RPG풍 픽셀아트 (필수, 고정)** — 매끈한 일러스트·벡터·3D로 받으면 다시 받는다 |
@@ -509,14 +511,14 @@ python3 tools/check.py 원본.html 결과.html --backbone ../../../data/backbone
 ```
 웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
 - 비율 16:9, 가로 1920px 이상
-- 그림체는 반드시 16비트 RPG풍 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 그림체는 반드시 16비트 RPG풍 픽셀아트 (가로 1600 이상에서 그린 작고 촘촘한 픽셀로 세밀하게 — 작은 그림을 확대한 큰 네모 블록 금지, 매끈한 일러스트·벡터·수채화·3D 금지)
 - 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 외형으로, 넷 모두 픽셀아트로 등장
 - 그림 안에 글자·숫자·로고를 넣지 말 것
 - 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게
 아래 영어 프롬프트를 그대로 써 줘.
 
 Website top cover illustration, wide 16:9.
-Art style (required, always): 16-bit RPG style pixel art with clearly visible square pixels, limited palette, bold dark outline, 2-3 tone shading, small highlights; no smooth gradients, no painterly, vector, watercolor or 3D look. Match the characters' proportions and colors of the attached reference images exactly, drawn in this same pixel-art style.
+Art style (required, always): 16-bit RPG style pixel art rendered natively at high resolution with small, dense pixels (each art pixel about 2 screen pixels at 1600 px width — NOT a small image blown up into big square blocks), rich detail in faces, hair, hands, clothes and props, bold dark outline, 2-3 tone shading, small highlights; no smooth gradients, no painterly, vector, watercolor or 3D look. Match the characters' proportions and colors of the attached reference images exactly, drawn in this same pixel-art style.
 Bright daytime laboratory mood, soft natural sunlight through large windows, clean white walls, light lavender, mint and pink accents.
 Scene: {장소 영어}.
 All four characters together:
@@ -539,7 +541,7 @@ No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol
 | 단계 | 할 일 |
 |---|---|
 | 1 확인 | 16:9(±3%), 가로 1600 이상, 그림 안 글자 없음, 네 캐릭터가 모두 있고 외형이 같은지. 다르면 무엇이 다른지 적고 쓸지 묻는다 |
-| 2 변환 | 본편 18-15-2: 원래 픽셀 격자를 찾아 `NEAREST` 정수배로 키우고 무손실 WebP. 썸네일·공유 미리보기도 원래 그림에서 잘라 정수배로. 4배 확대해 픽셀 경계가 또렷한지 본다 |
+| 2 변환 | 본편 18-15-2 v1.19: 큰 블록 그림이면 다시 받기를 권한다. 고해상도면 1600×900 손실 WebP(220 KB 이하), 썸네일·공유 미리보기는 표지에서 잘라 만든다. 2배로 확대해 얼굴·손·소품이 세밀한지 본다 |
 | 3 넣기 | 아래 블록을 상단 내비 바로 아래에, `<!-- lab-cover -->`로 시작해 `<!-- /lab-cover -->`와 줄바꿈 하나로 끝나게 넣는다(앞에 줄바꿈을 더하지 않음). **블록 밖 본문은 바꾸지 않는다** |
 | 4 점검 | 폭 390·768·1280에서 얼굴 잘림 없음, 콘솔 오류 0, 가로 넘침 0, 페이지 그림 합계 600 KB 이하 |
 
@@ -673,6 +675,8 @@ python3 tools/autokg.py 저장소폴더 --repo-name 이름 --series "콘텐츠 �
 `kgx.js`·`assembler.html`의 종류 색·관계 이름, `check.py`의 허용 목록에 반영했다.
 
 ---
+
+*ai-lab-retrofit v1.8 (2026-11-26): 표지 규격을 본편 18-15-2 v1.19(고해상도 픽셀아트로 받고 1600×900 WebP로 넣기)에 맞췄다. 지시문 틀에서 "clearly visible square pixels"를 빼고 촘촘한 고해상도 픽셀을 요구한다. 거친 격자 그림의 정수배 무손실 변환은 예외로만 남겼다.*
 
 *ai-lab-retrofit v1.7 (2026-11-24): 18개 분야(`data/domains.json`)와 분야별 뼈대 12개를 받도록 하고, 이미 꼬리표가 있는 비(非)인공지능 페이지를 다시 거는 절차(15장)를 더했다. 수학·논리·통계용 종류 6개와 관계 6개를 `check.py`·`kgx.js`·`assembler.html`에 반영했다.*
 
