@@ -1,6 +1,6 @@
 {
  "version": "0.3",
- "updated": "2026-11-24",
+ "updated": "2026-11-28",
  "note": "시리즈 개념·문헌 ID 좌석표. 같은 개념이면 이 ID를 쓴다. 뼈대(Area·Topic)는 작성자 초안. 0.3: 분야 뼈대 12개(경제·통계·수학·기하위상·논리·생성형 AI·LLM·데이터·금융·경영·회계·그림)의 영역·주제를 더함.",
  "entries": [
   {
@@ -1122,7 +1122,8 @@
    "label_ko": "경사하강법",
    "label_en": "Gradient descent",
    "pages": [
-    "01"
+    "01",
+    "Dropout-neural-network-tutorial"
    ]
   },
   {
@@ -1203,7 +1204,8 @@
    "label_ko": "과적합",
    "label_en": "Overfitting",
    "pages": [
-    "01"
+    "01",
+    "Dropout-neural-network-tutorial"
    ]
   },
   {
@@ -1257,7 +1259,8 @@
    "label_ko": "합성곱 신경망",
    "label_en": "Convolutional neural network",
    "pages": [
-    "01"
+    "01",
+    "CNN-neural-network-tutorial"
    ]
   },
   {
@@ -1266,7 +1269,8 @@
    "label_ko": "가중치 공유",
    "label_en": "Weight sharing",
    "pages": [
-    "01"
+    "01",
+    "CNN-neural-network-tutorial"
    ]
   },
   {
@@ -1303,7 +1307,8 @@
    "label_en": "Frozen pretrained weights",
    "pages": [
     "01",
-    "02"
+    "02",
+    "LoRA-fine-tuning-tutorial"
    ]
   },
   {
@@ -1555,7 +1560,8 @@
    "label_ko": "LoRA",
    "label_en": "LoRA",
    "pages": [
-    "02"
+    "02",
+    "LoRA-fine-tuning-tutorial"
    ]
   },
   {
@@ -8999,6 +9005,1116 @@
     "art"
    ],
    "pages": []
+  },
+  {
+   "id": "lab:concept/distance-metric",
+   "type": "Concept",
+   "label_ko": "거리 척도",
+   "label_en": "Distance metric",
+   "pages": [
+    "Distance-metrics-tutorial-part2",
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/hamming-distance",
+   "type": "Concept",
+   "label_ko": "해밍 거리",
+   "label_en": "Hamming distance",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/jaccard-index",
+   "type": "Concept",
+   "label_ko": "자카드 지수",
+   "label_en": "Jaccard index",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/sorensen-dice",
+   "type": "Concept",
+   "label_ko": "쇠렌센-다이스 계수",
+   "label_en": "Sørensen–Dice coefficient",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/set-overlap",
+   "type": "Concept",
+   "label_ko": "집합 겹침",
+   "label_en": "Set overlap",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/hamming-threshold",
+   "type": "Method",
+   "label_ko": "해밍 기준선 판정",
+   "label_en": "Hamming threshold rule",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/threshold-failure",
+   "type": "Limitation",
+   "label_ko": "점 개수만 세는 자의 한계",
+   "label_en": "Counting-only ruler fails",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:method/logistic-regression",
+   "type": "Method",
+   "label_ko": "로지스틱 회귀",
+   "label_en": "Logistic regression",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/learning-curve",
+   "type": "Concept",
+   "label_ko": "학습 곡선",
+   "label_en": "Learning curve",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:metric/accuracy",
+   "type": "Metric",
+   "label_ko": "정확도",
+   "label_en": "Accuracy",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:dataset/stamp-prints",
+   "type": "Dataset",
+   "label_ko": "도장 인영 800장",
+   "label_en": "800 stamp prints",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:sim/stamp-compare",
+   "type": "Simulation",
+   "label_ko": "도장 비교와 AI 모델 홀로그램",
+   "label_en": "Stamp comparison",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:sim/figurine-blocks",
+   "type": "Simulation",
+   "label_ko": "피규어 블록 겹치기 (3D)",
+   "label_en": "Figurine block overlap in 3D",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:question/ruler-vs-model",
+   "type": "Question",
+   "label_ko": "자로 충분한가, 모델이 필요한가",
+   "label_en": "Ruler or model?",
+   "pages": [
+    "Distance-metrics-tutorial-part2"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/euclidean-distance",
+   "type": "Concept",
+   "label_ko": "유클리드 거리",
+   "label_en": "Euclidean distance",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/manhattan-distance",
+   "type": "Concept",
+   "label_ko": "맨해튼 거리",
+   "label_en": "Manhattan distance",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/chebyshev-distance",
+   "type": "Concept",
+   "label_ko": "체비쇼프 거리",
+   "label_en": "Chebyshev distance",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/minkowski-distance",
+   "type": "Concept",
+   "label_ko": "민코프스키 거리",
+   "label_en": "Minkowski distance",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/unit-ball",
+   "type": "Concept",
+   "label_ko": "거리가 1인 면",
+   "label_en": "Unit ball of a norm",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/cosine-similarity",
+   "type": "Concept",
+   "label_ko": "코사인 유사도",
+   "label_en": "Cosine similarity",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/haversine-distance",
+   "type": "Concept",
+   "label_ko": "하버사인 거리",
+   "label_en": "Haversine distance",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/metric-inequality",
+   "type": "Concept",
+   "label_ko": "체비쇼프 ≤ 유클리드 ≤ 맨해튼",
+   "label_en": "Chebyshev ≤ Euclidean ≤ Manhattan",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/review-clustering",
+   "type": "Concept",
+   "label_ko": "비슷한 후기 묶기",
+   "label_en": "Grouping similar reviews",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/word-count-vector",
+   "type": "Concept",
+   "label_ko": "낱말 횟수 벡터",
+   "label_en": "Word-count vector",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/curved-space",
+   "type": "Limitation",
+   "label_ko": "둥근 땅에서는 곧은 자가 틀린다",
+   "label_en": "Straight rulers fail on a sphere",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:sim/distance-3d",
+   "type": "Simulation",
+   "label_ko": "좌표 방에서 자 바꿔 재기 (3D)",
+   "label_en": "Measuring in the 3D room",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:sim/haversine-globe",
+   "type": "Simulation",
+   "label_ko": "지구본 위 호 (3D)",
+   "label_en": "Arc on a globe",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:sim/distance-code",
+   "type": "Simulation",
+   "label_ko": "코드: 자마다 한 줄",
+   "label_en": "Code: one line per metric",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:question/which-ruler",
+   "type": "Question",
+   "label_ko": "어떤 자를 골라야 하나",
+   "label_en": "Which ruler to choose",
+   "pages": [
+    "Distance-metrics-tutorial"
+   ],
+   "domain": [
+    "geom",
+    "math",
+    "ml"
+   ]
+  },
+  {
+   "id": "lab:concept/tokenization",
+   "type": "Concept",
+   "label_ko": "토큰 나누기 (토큰화)",
+   "label_en": "Tokenization",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/bpe",
+   "type": "Method",
+   "label_ko": "BPE (Byte Pair Encoding)",
+   "label_en": "Byte Pair Encoding",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/merge-rule",
+   "type": "Concept",
+   "label_ko": "합치기 규칙",
+   "label_en": "Merge rule",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/subword",
+   "type": "Concept",
+   "label_ko": "낱말 조각 (서브워드)",
+   "label_en": "Subword unit",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/vocabulary",
+   "type": "Concept",
+   "label_ko": "사전과 번호",
+   "label_en": "Vocabulary and token ids",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/word-level-tokenization",
+   "type": "Method",
+   "label_ko": "낱말 단위로 자르기",
+   "label_en": "Word-level tokenization",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/oov",
+   "type": "Limitation",
+   "label_ko": "사전에 없는 낱말",
+   "label_en": "Out-of-vocabulary words",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/char-level-tokenization",
+   "type": "Method",
+   "label_ko": "한 글자씩 자르기",
+   "label_en": "Character-level tokenization",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/utf8-bytes",
+   "type": "Concept",
+   "label_ko": "UTF-8 바이트 (한글)",
+   "label_en": "UTF-8 bytes for Hangul",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/token-embedding",
+   "type": "Concept",
+   "label_ko": "조각 → 숫자 → 벡터",
+   "label_en": "Token to id to vector",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/ppmi-svd",
+   "type": "Method",
+   "label_ko": "PPMI + SVD로 줄인 좌표",
+   "label_en": "PPMI with SVD",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl",
+    "math"
+   ]
+  },
+  {
+   "id": "lab:sim/bpe-terrain-3d",
+   "type": "Simulation",
+   "label_ko": "30번의 합치기 지형 (3D)",
+   "label_en": "3D merge terrain",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:sim/bpe-code",
+   "type": "Simulation",
+   "label_ko": "코드: 핵심 19줄",
+   "label_en": "Code: 19 core lines",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:metric/compression-ratio",
+   "type": "Metric",
+   "label_ko": "짧아진 길이",
+   "label_en": "Compression ratio",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:claim/gage1994-bpe",
+   "type": "Claim",
+   "label_ko": "BPE는 Gage(1994)가 데이터 압축 방법으로 처음 냈다",
+   "label_en": "BPE was first introduced by Gage (1994) for data compression",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:claim/sennrich2016-subword",
+   "type": "Claim",
+   "label_ko": "Sennrich 외(2016)는 낱말 조각으로 드문 낱말을 번역했다",
+   "label_en": "Sennrich et al. (2016) used subword units for rare words",
+   "pages": [
+    "Tokenization-BPE-tutorial"
+   ],
+   "domain": [
+    "llm",
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/full-fine-tuning",
+   "type": "Method",
+   "label_ko": "전체 미세조정",
+   "label_en": "Full fine-tuning",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:concept/fine-tuning",
+   "type": "Concept",
+   "label_ko": "미세조정",
+   "label_en": "Fine-tuning",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:concept/low-rank-matrix",
+   "type": "Concept",
+   "label_ko": "낮은 계수 행렬 B·A",
+   "label_en": "Low-rank update B·A",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm",
+    "math"
+   ]
+  },
+  {
+   "id": "lab:concept/lora-rank",
+   "type": "Concept",
+   "label_ko": "rank (r)",
+   "label_en": "Rank r",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:concept/adapter-switch",
+   "type": "Concept",
+   "label_ko": "어댑터 켬·끔 스위치",
+   "label_en": "Adapter on/off switch",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:concept/catastrophic-forgetting",
+   "type": "Limitation",
+   "label_ko": "예전 과제 잊기",
+   "label_en": "Forgetting the original task",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:method/digit-mlp",
+   "type": "Method",
+   "label_ko": "숫자 읽는 망 256-128-10 (ReLU)",
+   "label_en": "Digit reader 256-128-10",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:method/adam",
+   "type": "Method",
+   "label_ko": "Adam",
+   "label_en": "Adam optimizer",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:dataset/sklearn-digits",
+   "type": "Dataset",
+   "label_ko": "손글씨 숫자 1,797장 (UCI, 8×8 → 16×16)",
+   "label_en": "UCI handwritten digits",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:metric/accuracy-flipped",
+   "type": "Metric",
+   "label_ko": "뒤집은 숫자 정답률",
+   "label_en": "Accuracy on flipped digits",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:sim/lora-3d",
+   "type": "Simulation",
+   "label_ko": "B·A 곡면과 얼린 바닥 W (3D)",
+   "label_en": "3D view of W and B·A",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:sim/lora-rank-results",
+   "type": "Simulation",
+   "label_ko": "rank별 점수 결과",
+   "label_en": "Score by rank",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:claim/hu2021-lora",
+   "type": "Claim",
+   "label_ko": "Hu 외(2021)는 큰 언어 모델을 낮은 계수 적응(LoRA)으로 미세조정하는 방법을 냈다",
+   "label_en": "Hu et al. (2021) introduced LoRA",
+   "pages": [
+    "LoRA-fine-tuning-tutorial"
+   ],
+   "domain": [
+    "dl",
+    "llm"
+   ]
+  },
+  {
+   "id": "lab:concept/convolution-filter",
+   "type": "Concept",
+   "label_ko": "필터 미끄러뜨리기 (합성곱)",
+   "label_en": "Sliding a filter (convolution)",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/feature-map",
+   "type": "Concept",
+   "label_ko": "특징 지도",
+   "label_en": "Feature map",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/max-pooling",
+   "type": "Concept",
+   "label_ko": "최댓값 줄이기 (최대 풀링)",
+   "label_en": "Max pooling",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/translation-invariance",
+   "type": "Concept",
+   "label_ko": "옮겨도 알아보기 (이동 불변성)",
+   "label_en": "Shift invariance",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/plain-mlp-256-32-3",
+   "type": "Method",
+   "label_ko": "일반 망 256-32-3",
+   "label_en": "Plain network 256-32-3",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/position-overfit",
+   "type": "Limitation",
+   "label_ko": "본 자리만 아는 망",
+   "label_en": "Position-bound plain network",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/compute-cost-cnn",
+   "type": "Limitation",
+   "label_ko": "곱셈이 3.3배 많은 대가",
+   "label_en": "3.3× more multiplications",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/sgd-momentum",
+   "type": "Method",
+   "label_ko": "모멘텀 경사하강법",
+   "label_en": "Gradient descent with momentum",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:dataset/cat-dog-fox-16",
+   "type": "Dataset",
+   "label_ko": "16×16 고양이·개·여우 얼굴",
+   "label_en": "16×16 cat/dog/fox faces",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:metric/shifted-accuracy",
+   "type": "Metric",
+   "label_ko": "옮긴 그림 정답률",
+   "label_en": "Accuracy on shifted images",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:sim/cnn-layers-3d",
+   "type": "Simulation",
+   "label_ko": "층을 쌓으면 (3D)",
+   "label_en": "Stacked layers in 3D",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:sim/cnn-filter-growth",
+   "type": "Simulation",
+   "label_ko": "학습 중: 필터가 자란다",
+   "label_en": "Filters growing during training",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/neocognitron",
+   "type": "Method",
+   "label_ko": "네오코그니트론",
+   "label_en": "Neocognitron",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:claim/lecun1989-zip",
+   "type": "Claim",
+   "label_ko": "LeCun 외(1989)는 역전파로 학습한 합성곱 망을 손글씨 우편번호 인식에 썼다",
+   "label_en": "LeCun et al. (1989) applied backprop CNN to zip codes",
+   "pages": [
+    "CNN-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/dropout",
+   "type": "Method",
+   "label_ko": "드롭아웃",
+   "label_en": "Dropout",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/inverted-dropout",
+   "type": "Method",
+   "label_ko": "역 드롭아웃 (×2)",
+   "label_en": "Inverted dropout",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/co-adaptation",
+   "type": "Limitation",
+   "label_ko": "뉴런끼리 기대기 (공동 적응)",
+   "label_en": "Co-adaptation of feature detectors",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/implicit-ensemble",
+   "type": "Concept",
+   "label_ko": "작은 망들의 평균 (암묵적 앙상블)",
+   "label_en": "Implicit ensemble of thinned networks",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/generalization-error",
+   "type": "Metric",
+   "label_ko": "새 점 오차",
+   "label_en": "Error on unseen points",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/training-error",
+   "type": "Metric",
+   "label_ko": "학습 점 오차",
+   "label_en": "Training error",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:method/mlp-1-64-1",
+   "type": "Method",
+   "label_ko": "1-64-1 tanh 망",
+   "label_en": "1-64-1 tanh network",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:concept/tanh",
+   "type": "Concept",
+   "label_ko": "tanh 활성화 함수",
+   "label_en": "tanh activation",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:dataset/noisy-sin3x",
+   "type": "Dataset",
+   "label_ko": "잡음 섞인 sin(3x) 점 12개",
+   "label_en": "12 noisy points of sin(3x)",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:sim/dropout-run",
+   "type": "Simulation",
+   "label_ko": "드롭아웃 실험 다시 돌리기 (60,000 스텝, 시드 51)",
+   "label_en": "Dropout rerun",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:sim/dropout-mask-code",
+   "type": "Simulation",
+   "label_ko": "코드: 마스크와 ×2",
+   "label_en": "Code: mask and ×2",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:question/dropout-tradeoff",
+   "type": "Question",
+   "label_ko": "덜 외우는 대가",
+   "label_en": "Cost of memorizing less",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
+  },
+  {
+   "id": "lab:claim/hinton2012-dropout",
+   "type": "Claim",
+   "label_ko": "Hinton 외(2012)는 특징 검출기의 공동 적응을 막으려 드롭아웃을 제안했다",
+   "label_en": "Hinton et al. (2012) proposed dropout to prevent co-adaptation",
+   "pages": [
+    "Dropout-neural-network-tutorial"
+   ],
+   "domain": [
+    "dl"
+   ]
   }
  ]
 }

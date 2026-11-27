@@ -5,7 +5,7 @@ description: 완성된 해설 HTML의 본문은 그대로 두고 지식 색인(#
 
 # 완성된 HTML 꼬리표 달기 스킬 (ai-lab-retrofit)
 
-> **스킬 정보:** version: 1.8 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
+> **스킬 정보:** version: 1.9 · targets: Claude, ChatGPT, Gemini, Genspark, 코딩 에이전트(Claude Code, Codex, Cursor 등) 공통 · language: ko
 >
 > **자세한 설명:** 이미 완성된 HTML 교육 페이지(단일 파일, 여러 파일로 된 사이트, GitHub 저장소)를 다시 만들지 않고, 본문은 그대로 둔 채 지식 색인(#kg)과 온톨로지·서지 꾸러미(#export)를 덧붙이고, 맨 위 글 표지가 없으면 네 캐릭터 표지의 생성 지시문(Genspark용)과 반영 절차도 함께 다룬다. 그 결과 꾸러미를 KG_00 시리즈 커버리지 지도에 합칠 수 있게 된다. "기존 페이지에 꼬리표 달아 줘", "이 저장소 페이지들 지도에 올려 줘", "완성된 HTML을 온톨로지에 연결" 같은 요청에 쓴다. 새 페이지를 만드는 일은 ai-lab-explainer 스킬이 맡는다.
 >
@@ -661,6 +661,27 @@ python3 tools/autokg.py 저장소폴더 --repo-name 이름 --series "콘텐츠 �
 - 결과: `kg/pages/<경로>.{kg,meta,refs}.json`, `kg/retrofit.py`·`kgx.js`, `kg/reapply.py`(다시 덧붙이기). 빌드 스크립트가 페이지를 다시 쓰면 빌드 끝에서 `kg/reapply.py`를 부른다.
 - 다 단 뒤 `check.py 원본 결과`로 페이지마다 본문 차이 0과 오류 0을 확인한다. 자동 초안이므로 노드에 `auto` 표시가 남고, 나중에 사람이 고쳐 `confidence`를 올린다.
 
+### 15-2c. 무대형 페이지(하루의 실험실 등) — 색인은 기본, 빌드할 때마다 다시 붙이기
+
+조수 하루의 3차원 실험실처럼 한 화면 무대(`#stage`)에서 대사를 넘기며 보는 페이지도 **처음 공개할 때부터** 지식 색인(#kg)·꾸러미(#export)를 단다. 새 회차를 만들 때 아래 셋을 함께 넣는다.
+
+1. `kg/pages/<페이지 경로, / → __>.{kg,refs,meta}.json` — 손으로 쓴 꼬리표(R1·R2). 본문에 섹션 id가 없으므로 모든 항목의 `anchor`는 `#stage`(문헌은 `#export`). 실험 숫자는 대사·실험 기록(`data/*_run.json`)과 같게, 문헌은 페이지 출처 칸에 적힌 것만.
+2. `kg/retrofit.py` · `kg/kgx.js` · `kg/reapply.py`(= `tools/autokg_reapply.py`) 사본.
+3. `tools/build_page.py` 끝에 다시 붙이기 — 페이지를 다시 만들어도 색인이 사라지지 않는다:
+
+```python
+# 지식 색인(#kg)·꾸러미(#export)는 기본 — 페이지를 다시 만들면 kg/pages/의 꼬리표를 다시 붙인다(본문은 그대로).
+import os, subprocess, sys
+if os.path.exists("kg/reapply.py"):
+    subprocess.run([sys.executable, "kg/reapply.py", "."], check=True)
+else:
+    print("경고: kg/reapply.py가 없습니다 — 지식 색인을 붙이지 못했습니다")
+```
+
+- 점검: 빌드 전 페이지(꼬리표 없는 판)와 빌드 뒤 페이지를 `check.py`로 비교해 오류 0·본문 차이 0. 분야가 여럿이면 쓰는 뼈대(`data/backbone_*.json`)의 `nodes`를 합친 파일을 `--backbone`에 준다.
+- 새 ID는 등록부에 더한다. 번역판은 한국어 원본의 `kg-raw`·`page-meta`를 언어팩으로 옮긴다.
+- 2026-11-28 첫 적용: EP.01 드롭아웃 · EP.02 LoRA · EP.03 CNN · EP.04 거리(1·2부) · EP.05 BPE.
+
 ### 15-3. 새 종류·관계 (본편 O1-3·O1-4)
 
 | 새 종류 | 뜻 | 새 관계 | 뜻 |
@@ -675,6 +696,8 @@ python3 tools/autokg.py 저장소폴더 --repo-name 이름 --series "콘텐츠 �
 `kgx.js`·`assembler.html`의 종류 색·관계 이름, `check.py`의 허용 목록에 반영했다.
 
 ---
+
+*ai-lab-retrofit v1.9 (2026-11-28): 무대형 페이지(하루의 실험실)에 색인을 기본으로 다는 절차(15-2c) — `kg/pages/` 꼬리표 + `build_page.py` 끝의 `kg/reapply.py` 호출.*
 
 *ai-lab-retrofit v1.8 (2026-11-26): 표지 규격을 본편 18-15-2 v1.19(고해상도 픽셀아트로 받고 1600×900 WebP로 넣기)에 맞췄다. 지시문 틀에서 "clearly visible square pixels"를 빼고 촘촘한 고해상도 픽셀을 요구한다. 거친 격자 그림의 정수배 무손실 변환은 예외로만 남겼다.*
 
